@@ -11,15 +11,10 @@ namespace CAPAENTIDAD
         public int IdEstadoVehiculo { get; set; }
         public int Conductor         { get; set; }
         public int Vehiculo          { get; set; }
-
         public DateTime Fecha            { get; set; }
-
         public string SistemaElectrico        { get; set; }
-        public Double preciossistemaelectrico { get; set; }
         public string SistemaMecanico        { get; set; }
-      
         public string LetoneriayPintura         { get; set; }
-     
         public string Otros              { get; set; }
         
     }
