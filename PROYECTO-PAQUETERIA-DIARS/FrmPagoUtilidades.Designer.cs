@@ -68,6 +68,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnCalcularApo = new System.Windows.Forms.Button();
             this.bunifuGradientPanel7 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtAportesTotal = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSctr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -83,7 +84,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpagoutilidades = new System.Windows.Forms.TextBox();
             this.txtTrabajador = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -96,7 +97,6 @@
             this.SeleccionarPla = new System.Windows.Forms.Button();
             this.txtPlanilla = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAportesTotal = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -561,6 +561,13 @@
             this.bunifuGradientPanel7.Size = new System.Drawing.Size(225, 72);
             this.bunifuGradientPanel7.TabIndex = 40;
             // 
+            // txtAportesTotal
+            // 
+            this.txtAportesTotal.Location = new System.Drawing.Point(29, 32);
+            this.txtAportesTotal.Name = "txtAportesTotal";
+            this.txtAportesTotal.Size = new System.Drawing.Size(185, 22);
+            this.txtAportesTotal.TabIndex = 1;
+            // 
             // bunifuCustomLabel20
             // 
             this.bunifuCustomLabel20.AutoSize = true;
@@ -725,12 +732,12 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Trabajador:";
             // 
-            // textBox1
+            // txtpagoutilidades
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 46;
+            this.txtpagoutilidades.Location = new System.Drawing.Point(174, 12);
+            this.txtpagoutilidades.Name = "txtpagoutilidades";
+            this.txtpagoutilidades.Size = new System.Drawing.Size(188, 22);
+            this.txtpagoutilidades.TabIndex = 46;
             // 
             // txtTrabajador
             // 
@@ -774,6 +781,7 @@
             this.btnEliminar.TabIndex = 51;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscar
             // 
@@ -786,6 +794,7 @@
             this.btnBuscar.TabIndex = 50;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnActualizar
             // 
@@ -798,6 +807,7 @@
             this.btnActualizar.TabIndex = 49;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnRegistrar
             // 
@@ -810,6 +820,7 @@
             this.btnRegistrar.TabIndex = 48;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dataGridView1
             // 
@@ -820,6 +831,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1161, 179);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnSeleccionarTra
             // 
@@ -857,13 +869,6 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Planilla:";
             // 
-            // txtAportesTotal
-            // 
-            this.txtAportesTotal.Location = new System.Drawing.Point(29, 32);
-            this.txtAportesTotal.Name = "txtAportesTotal";
-            this.txtAportesTotal.Size = new System.Drawing.Size(185, 22);
-            this.txtAportesTotal.TabIndex = 1;
-            // 
             // FrmPagoUtilidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -881,7 +886,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtTrabajador);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtpagoutilidades);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -968,7 +973,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpagoutilidades;
         private System.Windows.Forms.TextBox txtTrabajador;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnNuevo;

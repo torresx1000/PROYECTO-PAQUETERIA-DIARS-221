@@ -21,6 +21,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmPagoUtilidades()
         {
             InitializeComponent();
+            ListarPagoUtilidades();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
 
         public void SumarNetoPago() {
-            NetoPago = TotalRemuneraciones + TotalDescuentos + TotalAportes;
+            NetoPago = TotalRemuneraciones-(TotalDescuentos + TotalAportes);
             txtNetoPago.Text=Convert.ToString(NetoPago);
         }
         private void SeleccionarPla_Click(object sender, EventArgs e)
@@ -155,6 +156,111 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void txtAdelantos_MouseClick(object sender, MouseEventArgs e)
         {
             txtAdelantos.Text = "";
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            FrmReportePlanilla frmReportePlanilla = new FrmReportePlanilla();
+            FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
+            EntPagoUtilidades paut = new EntPagoUtilidades();
+            // paut.IdPagoUtilidades=Convert.ToInt32(txtpagoutilidades.Text.Trim());
+            //paut.IdPlanilla = Convert.ToInt32(txtPlanilla.Text.Trim());
+            paut.IdPlanilla = Convert.ToInt32(FrmReportePlanilla.id.Trim());
+            paut.IdTrabajador = Convert.ToInt32(FrmReporteTrabajadores.id.Trim());
+            paut.TotalRemuneraciones = Convert.ToDouble(txtAdicionalR.Text.Trim());
+            paut.TotalDescuentos=Convert.ToDouble(txttotalDescuentos.Text.Trim());
+            paut.TotalAportes = Convert.ToDouble(txtAportesTotal.Text.Trim());
+            paut.CtaAhorros = Convert.ToInt32(txtCuentaAhorro.Text.Trim());
+            paut.FechaPago = dtmFechaBoleta.Value;
+            paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
+
+            LogPagoUtilidades.Instancia.InsertaPagoUtilidades(paut);
+        }
+
+        public void ListarPagoUtilidades() {
+            dataGridView1.DataSource = LogPagoUtilidades.Instancia.ListarPagoUtilidades();
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtpagoutilidades.Text != "")
+            {
+                txtpagoutilidades.Focus();
+                EntPagoUtilidades P = new EntPagoUtilidades();
+
+                P.IdPagoUtilidades = Convert.ToInt32(txtpagoutilidades.Text.Trim());
+
+                DataTable dt = new DataTable();
+
+                dt = LogPagoUtilidades.Instancia.BuscarPagoUtilidadesId(P.IdPagoUtilidades);
+                if (txtpagoutilidades.Text != "")
+                {
+                    dataGridView1.DataSource = dt;
+                }
+                else
+                {
+
+                    dataGridView1.DataSource = LogPagoUtilidades.Instancia.ListarPagoUtilidades();
+                }
+                //Limpiar();
+            }
+            else
+            {
+                ListarPagoUtilidades();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                EntPagoUtilidades paut = new EntPagoUtilidades();
+                //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
+                paut.IdPagoUtilidades = Convert.ToInt32(txtpagoutilidades.Text.Trim());
+
+
+                LogPagoUtilidades.Instancia.ElimminarPagoUtilidades(paut);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex);
+            }
+            ListarPagoUtilidades();
+           // Limpiar();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmReportePlanilla frmReportePlanilla = new FrmReportePlanilla();
+                FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
+                EntPagoUtilidades paut = new EntPagoUtilidades();
+                paut.IdPagoUtilidades=Convert.ToInt32(txtpagoutilidades.Text.Trim());
+                //paut.IdPlanilla = Convert.ToInt32(txtPlanilla.Text.Trim());
+                paut.IdPlanilla = Convert.ToInt32(FrmReportePlanilla.id.Trim());
+                paut.IdTrabajador = Convert.ToInt32(FrmReporteTrabajadores.id.Trim());
+                paut.TotalRemuneraciones = Convert.ToDouble(txtAdicionalR.Text.Trim());
+                paut.TotalDescuentos = Convert.ToDouble(txttotalDescuentos.Text.Trim());
+                paut.TotalAportes = Convert.ToDouble(txtAportesTotal.Text.Trim());
+                paut.CtaAhorros = Convert.ToInt32(txtCuentaAhorro.Text.Trim());
+                paut.FechaPago = dtmFechaBoleta.Value;
+                paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
+
+                LogPagoUtilidades.Instancia.EditarPagoUtilidades(paut);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView1.Rows[e.RowIndex].Cells["IdPagoUtilidades"].Value.ToString();
+            txtpagoutilidades.Text = id;
         }
     }
 }
