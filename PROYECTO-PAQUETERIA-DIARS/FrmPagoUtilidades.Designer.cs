@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagoUtilidades));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtIngresoAss = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtIngresoAss1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btnCalcularRem = new System.Windows.Forms.Button();
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.txtAdicionalR = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -46,15 +45,10 @@
             this.txtSueldoComp = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtExpli = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtExpli1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btnCalcularDes = new System.Windows.Forms.Button();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.txttotalDescuentos = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtAfpFondo1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtAfpCom1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtAfpSeguro1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtOnpMonto1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtAdelantos = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtAfpFondo = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -72,11 +66,9 @@
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtOnpMonto = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnCalcularApo = new System.Windows.Forms.Button();
             this.bunifuGradientPanel7 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtTotalAportes = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtObsA = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtObsA1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtSctr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtEsalud = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -104,6 +96,7 @@
             this.SeleccionarPla = new System.Windows.Forms.Button();
             this.txtPlanilla = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtAportesTotal = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -117,8 +110,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.txtIngresoAss);
-            this.groupBox4.Controls.Add(this.txtIngresoAss1);
+            this.groupBox4.Controls.Add(this.btnCalcularRem);
             this.groupBox4.Controls.Add(this.bunifuGradientPanel5);
             this.groupBox4.Controls.Add(this.txtCts);
             this.groupBox4.Controls.Add(this.bunifuCustomLabel8);
@@ -138,24 +130,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "REMUNERACIONES\t\t\t";
             // 
-            // txtIngresoAss
+            // btnCalcularRem
             // 
-            this.txtIngresoAss.BackColor = System.Drawing.Color.LawnGreen;
-            this.txtIngresoAss.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtIngresoAss.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngresoAss.Location = new System.Drawing.Point(18, 164);
-            this.txtIngresoAss.Name = "txtIngresoAss";
-            this.txtIngresoAss.Size = new System.Drawing.Size(119, 22);
-            this.txtIngresoAss.TabIndex = 16;
-            // 
-            // txtIngresoAss1
-            // 
-            this.txtIngresoAss1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtIngresoAss1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngresoAss1.Location = new System.Drawing.Point(209, 164);
-            this.txtIngresoAss1.Name = "txtIngresoAss1";
-            this.txtIngresoAss1.Size = new System.Drawing.Size(45, 22);
-            this.txtIngresoAss1.TabIndex = 11;
+            this.btnCalcularRem.Location = new System.Drawing.Point(158, 172);
+            this.btnCalcularRem.Name = "btnCalcularRem";
+            this.btnCalcularRem.Size = new System.Drawing.Size(96, 27);
+            this.btnCalcularRem.TabIndex = 42;
+            this.btnCalcularRem.Text = "Calcular";
+            this.btnCalcularRem.UseVisualStyleBackColor = true;
+            this.btnCalcularRem.Click += new System.EventHandler(this.btnCalcularRem_Click);
             // 
             // bunifuGradientPanel5
             // 
@@ -203,6 +186,8 @@
             this.txtCts.Name = "txtCts";
             this.txtCts.Size = new System.Drawing.Size(45, 22);
             this.txtCts.TabIndex = 9;
+            this.txtCts.Text = "0";
+            this.txtCts.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCts_MouseClick);
             // 
             // bunifuCustomLabel8
             // 
@@ -222,6 +207,8 @@
             this.txtMovAsist.Name = "txtMovAsist";
             this.txtMovAsist.Size = new System.Drawing.Size(45, 22);
             this.txtMovAsist.TabIndex = 7;
+            this.txtMovAsist.Text = "0";
+            this.txtMovAsist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMovAsist_MouseClick);
             // 
             // bunifuCustomLabel3
             // 
@@ -241,6 +228,8 @@
             this.txtReumVac.Name = "txtReumVac";
             this.txtReumVac.Size = new System.Drawing.Size(45, 22);
             this.txtReumVac.TabIndex = 5;
+            this.txtReumVac.Text = "0";
+            this.txtReumVac.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtReumVac_MouseClick);
             // 
             // bunifuCustomLabel4
             // 
@@ -260,6 +249,8 @@
             this.txtAsigFam.Name = "txtAsigFam";
             this.txtAsigFam.Size = new System.Drawing.Size(45, 22);
             this.txtAsigFam.TabIndex = 3;
+            this.txtAsigFam.Text = "0";
+            this.txtAsigFam.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAsigFam_MouseClick);
             // 
             // bunifuCustomLabel2
             // 
@@ -279,6 +270,8 @@
             this.txtSueldoComp.Name = "txtSueldoComp";
             this.txtSueldoComp.Size = new System.Drawing.Size(45, 22);
             this.txtSueldoComp.TabIndex = 1;
+            this.txtSueldoComp.Text = "0";
+            this.txtSueldoComp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSueldoComp_MouseClick);
             // 
             // bunifuCustomLabel1
             // 
@@ -292,13 +285,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.txtExpli);
-            this.groupBox5.Controls.Add(this.txtExpli1);
+            this.groupBox5.Controls.Add(this.btnCalcularDes);
             this.groupBox5.Controls.Add(this.bunifuGradientPanel4);
-            this.groupBox5.Controls.Add(this.txtAfpFondo1);
-            this.groupBox5.Controls.Add(this.txtAfpCom1);
-            this.groupBox5.Controls.Add(this.txtAfpSeguro1);
-            this.groupBox5.Controls.Add(this.txtOnpMonto1);
             this.groupBox5.Controls.Add(this.txtAdelantos);
             this.groupBox5.Controls.Add(this.txtAfpFondo);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel9);
@@ -323,23 +311,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "RETENCIONES / DESCUENTOS\t\t\t\t\t\t";
             // 
-            // txtExpli
+            // btnCalcularDes
             // 
-            this.txtExpli.BackColor = System.Drawing.Color.LawnGreen;
-            this.txtExpli.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtExpli.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpli.Location = new System.Drawing.Point(17, 234);
-            this.txtExpli.Name = "txtExpli";
-            this.txtExpli.Size = new System.Drawing.Size(124, 22);
-            this.txtExpli.TabIndex = 37;
-            // 
-            // txtExpli1
-            // 
-            this.txtExpli1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtExpli1.Location = new System.Drawing.Point(189, 234);
-            this.txtExpli1.Name = "txtExpli1";
-            this.txtExpli1.Size = new System.Drawing.Size(68, 22);
-            this.txtExpli1.TabIndex = 36;
+            this.btnCalcularDes.Location = new System.Drawing.Point(243, 235);
+            this.btnCalcularDes.Name = "btnCalcularDes";
+            this.btnCalcularDes.Size = new System.Drawing.Size(96, 27);
+            this.btnCalcularDes.TabIndex = 42;
+            this.btnCalcularDes.Text = "Calcular";
+            this.btnCalcularDes.UseVisualStyleBackColor = true;
+            this.btnCalcularDes.Click += new System.EventHandler(this.btnCalcularDes_Click);
             // 
             // bunifuGradientPanel4
             // 
@@ -351,10 +331,10 @@
             this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.GreenYellow;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 260);
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 268);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(345, 72);
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(345, 64);
             this.bunifuGradientPanel4.TabIndex = 20;
             // 
             // txttotalDescuentos
@@ -378,38 +358,6 @@
             this.bunifuCustomLabel6.TabIndex = 0;
             this.bunifuCustomLabel6.Text = "Total Descuentos\t\t\t\t\t";
             // 
-            // txtAfpFondo1
-            // 
-            this.txtAfpFondo1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtAfpFondo1.Location = new System.Drawing.Point(263, 32);
-            this.txtAfpFondo1.Name = "txtAfpFondo1";
-            this.txtAfpFondo1.Size = new System.Drawing.Size(66, 22);
-            this.txtAfpFondo1.TabIndex = 32;
-            // 
-            // txtAfpCom1
-            // 
-            this.txtAfpCom1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtAfpCom1.Location = new System.Drawing.Point(263, 57);
-            this.txtAfpCom1.Name = "txtAfpCom1";
-            this.txtAfpCom1.Size = new System.Drawing.Size(66, 22);
-            this.txtAfpCom1.TabIndex = 33;
-            // 
-            // txtAfpSeguro1
-            // 
-            this.txtAfpSeguro1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtAfpSeguro1.Location = new System.Drawing.Point(263, 84);
-            this.txtAfpSeguro1.Name = "txtAfpSeguro1";
-            this.txtAfpSeguro1.Size = new System.Drawing.Size(66, 22);
-            this.txtAfpSeguro1.TabIndex = 34;
-            // 
-            // txtOnpMonto1
-            // 
-            this.txtOnpMonto1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtOnpMonto1.Location = new System.Drawing.Point(263, 109);
-            this.txtOnpMonto1.Name = "txtOnpMonto1";
-            this.txtOnpMonto1.Size = new System.Drawing.Size(66, 22);
-            this.txtOnpMonto1.TabIndex = 35;
-            // 
             // txtAdelantos
             // 
             this.txtAdelantos.BorderColor = System.Drawing.Color.SeaGreen;
@@ -417,6 +365,8 @@
             this.txtAdelantos.Name = "txtAdelantos";
             this.txtAdelantos.Size = new System.Drawing.Size(68, 22);
             this.txtAdelantos.TabIndex = 31;
+            this.txtAdelantos.Text = "0";
+            this.txtAdelantos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAdelantos_MouseClick);
             // 
             // txtAfpFondo
             // 
@@ -425,6 +375,8 @@
             this.txtAfpFondo.Name = "txtAfpFondo";
             this.txtAfpFondo.Size = new System.Drawing.Size(68, 22);
             this.txtAfpFondo.TabIndex = 17;
+            this.txtAfpFondo.Text = "0";
+            this.txtAfpFondo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpFondo_MouseClick);
             // 
             // bunifuCustomLabel9
             // 
@@ -453,6 +405,8 @@
             this.txtRetenJud.Name = "txtRetenJud";
             this.txtRetenJud.Size = new System.Drawing.Size(68, 22);
             this.txtRetenJud.TabIndex = 29;
+            this.txtRetenJud.Text = "0";
+            this.txtRetenJud.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRetenJud_MouseClick);
             // 
             // bunifuCustomLabel15
             // 
@@ -481,6 +435,8 @@
             this.txtAfpCom.Name = "txtAfpCom";
             this.txtAfpCom.Size = new System.Drawing.Size(68, 22);
             this.txtAfpCom.TabIndex = 19;
+            this.txtAfpCom.Text = "0";
+            this.txtAfpCom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpCom_MouseClick);
             // 
             // txtretenc5
             // 
@@ -489,6 +445,8 @@
             this.txtretenc5.Name = "txtretenc5";
             this.txtretenc5.Size = new System.Drawing.Size(68, 22);
             this.txtretenc5.TabIndex = 27;
+            this.txtretenc5.Text = "0";
+            this.txtretenc5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtretenc5_MouseClick);
             // 
             // bunifuCustomLabel14
             // 
@@ -517,6 +475,8 @@
             this.txtAfpSeguro.Name = "txtAfpSeguro";
             this.txtAfpSeguro.Size = new System.Drawing.Size(68, 22);
             this.txtAfpSeguro.TabIndex = 21;
+            this.txtAfpSeguro.Text = "0";
+            this.txtAfpSeguro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpSeguro_MouseClick);
             // 
             // txtFaltas
             // 
@@ -525,6 +485,8 @@
             this.txtFaltas.Name = "txtFaltas";
             this.txtFaltas.Size = new System.Drawing.Size(68, 22);
             this.txtFaltas.TabIndex = 25;
+            this.txtFaltas.Text = "0";
+            this.txtFaltas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFaltas_MouseClick);
             // 
             // bunifuCustomLabel13
             // 
@@ -553,12 +515,13 @@
             this.txtOnpMonto.Name = "txtOnpMonto";
             this.txtOnpMonto.Size = new System.Drawing.Size(68, 22);
             this.txtOnpMonto.TabIndex = 23;
+            this.txtOnpMonto.Text = "0";
+            this.txtOnpMonto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtOnpMonto_MouseClick);
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnCalcularApo);
             this.groupBox6.Controls.Add(this.bunifuGradientPanel7);
-            this.groupBox6.Controls.Add(this.txtObsA);
-            this.groupBox6.Controls.Add(this.txtObsA1);
             this.groupBox6.Controls.Add(this.txtSctr);
             this.groupBox6.Controls.Add(this.bunifuCustomLabel17);
             this.groupBox6.Controls.Add(this.txtEsalud);
@@ -570,12 +533,23 @@
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "APORTACIONES DEL EMPLEADOR\t\t\t\t";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
+            // 
+            // btnCalcularApo
+            // 
+            this.btnCalcularApo.Location = new System.Drawing.Point(118, 129);
+            this.btnCalcularApo.Name = "btnCalcularApo";
+            this.btnCalcularApo.Size = new System.Drawing.Size(96, 27);
+            this.btnCalcularApo.TabIndex = 41;
+            this.btnCalcularApo.Text = "Calcular";
+            this.btnCalcularApo.UseVisualStyleBackColor = true;
+            this.btnCalcularApo.Click += new System.EventHandler(this.btnCalcularApo_Click);
             // 
             // bunifuGradientPanel7
             // 
             this.bunifuGradientPanel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel7.BackgroundImage")));
             this.bunifuGradientPanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel7.Controls.Add(this.txtTotalAportes);
+            this.bunifuGradientPanel7.Controls.Add(this.txtAportesTotal);
             this.bunifuGradientPanel7.Controls.Add(this.bunifuCustomLabel20);
             this.bunifuGradientPanel7.GradientBottomLeft = System.Drawing.Color.GreenYellow;
             this.bunifuGradientPanel7.GradientBottomRight = System.Drawing.Color.DarkOliveGreen;
@@ -586,16 +560,6 @@
             this.bunifuGradientPanel7.Quality = 10;
             this.bunifuGradientPanel7.Size = new System.Drawing.Size(225, 72);
             this.bunifuGradientPanel7.TabIndex = 40;
-            // 
-            // txtTotalAportes
-            // 
-            this.txtTotalAportes.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtTotalAportes.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalAportes.Location = new System.Drawing.Point(9, 27);
-            this.txtTotalAportes.Multiline = true;
-            this.txtTotalAportes.Name = "txtTotalAportes";
-            this.txtTotalAportes.Size = new System.Drawing.Size(194, 28);
-            this.txtTotalAportes.TabIndex = 39;
             // 
             // bunifuCustomLabel20
             // 
@@ -608,25 +572,6 @@
             this.bunifuCustomLabel20.TabIndex = 0;
             this.bunifuCustomLabel20.Text = "Total Aportes\t\t\t\t";
             // 
-            // txtObsA
-            // 
-            this.txtObsA.BackColor = System.Drawing.Color.LawnGreen;
-            this.txtObsA.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtObsA.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObsA.Location = new System.Drawing.Point(15, 116);
-            this.txtObsA.Name = "txtObsA";
-            this.txtObsA.Size = new System.Drawing.Size(64, 22);
-            this.txtObsA.TabIndex = 37;
-            // 
-            // txtObsA1
-            // 
-            this.txtObsA1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtObsA1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObsA1.Location = new System.Drawing.Point(145, 122);
-            this.txtObsA1.Name = "txtObsA1";
-            this.txtObsA1.Size = new System.Drawing.Size(69, 22);
-            this.txtObsA1.TabIndex = 36;
-            // 
             // txtSctr
             // 
             this.txtSctr.BorderColor = System.Drawing.Color.SeaGreen;
@@ -635,6 +580,8 @@
             this.txtSctr.Name = "txtSctr";
             this.txtSctr.Size = new System.Drawing.Size(69, 22);
             this.txtSctr.TabIndex = 35;
+            this.txtSctr.Text = "0";
+            this.txtSctr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSctr_MouseClick);
             // 
             // bunifuCustomLabel17
             // 
@@ -654,6 +601,8 @@
             this.txtEsalud.Name = "txtEsalud";
             this.txtEsalud.Size = new System.Drawing.Size(69, 22);
             this.txtEsalud.TabIndex = 33;
+            this.txtEsalud.Text = "0";
+            this.txtEsalud.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEsalud_MouseClick);
             // 
             // bunifuCustomLabel18
             // 
@@ -904,9 +853,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(412, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 56;
             this.label4.Text = "Planilla:";
+            // 
+            // txtAportesTotal
+            // 
+            this.txtAportesTotal.Location = new System.Drawing.Point(29, 32);
+            this.txtAportesTotal.Name = "txtAportesTotal";
+            this.txtAportesTotal.Size = new System.Drawing.Size(185, 22);
+            this.txtAportesTotal.TabIndex = 1;
             // 
             // FrmPagoUtilidades
             // 
@@ -962,8 +918,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox4;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtIngresoAss;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtIngresoAss1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAdicionalR;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
@@ -978,15 +932,9 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtSueldoComp;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtExpli;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtExpli1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txttotalDescuentos;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAfpFondo1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAfpCom1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAfpSeguro1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtOnpMonto1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAdelantos;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtAfpFondo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
@@ -1005,10 +953,7 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtOnpMonto;
         private System.Windows.Forms.GroupBox groupBox6;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel7;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtTotalAportes;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel20;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtObsA;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtObsA1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtSctr;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtEsalud;
@@ -1036,5 +981,9 @@
         private System.Windows.Forms.Button SeleccionarPla;
         private System.Windows.Forms.TextBox txtPlanilla;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCalcularRem;
+        private System.Windows.Forms.Button btnCalcularDes;
+        private System.Windows.Forms.Button btnCalcularApo;
+        private System.Windows.Forms.TextBox txtAportesTotal;
     }
 }
