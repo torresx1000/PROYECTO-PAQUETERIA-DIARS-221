@@ -34,9 +34,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmProgramacionSalida());
             // Application.Run(new FrmReporteProgramacionSalida());
             //Application.Run(new FrmReportePlanilla());
-            //Application.Run(new FrmPagoUtilidades());
-            Application.Run(new FrmCotizacion());
-            //Application.Run(new FmrRegistroCheckList());
+            Application.Run(new FrmPagoUtilidades());
         }
     }
 }
