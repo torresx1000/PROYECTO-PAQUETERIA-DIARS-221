@@ -16,8 +16,10 @@ using CAPADATOS;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
+   
     public partial class FrmRemitente_Destinatario : Form
     {
+        ApisPeru ApisPeru = new ApisPeru();
         public FrmRemitente_Destinatario()
         {
             InitializeComponent();
@@ -98,7 +100,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            Close();
+         
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -162,6 +164,93 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow  filaActual = dataGridView1.Rows[e.RowIndex]; //
+            txtIdPedido.Text =            filaActual.Cells[0].Value.ToString();
+            txtDniR.Text =                filaActual.Cells[1].Value.ToString();
+            txtCorreoR.Text =             filaActual.Cells[2].Value.ToString();
+            txtTelefonoR.Text =           filaActual.Cells[3].Value.ToString();
+            txtDireccionR.Text =          filaActual.Cells[4].Value.ToString();
+            txtNombresR.Text =            filaActual.Cells[5].Value.ToString();
+            txtObservacionesR.Text =      filaActual.Cells[6].Value.ToString();
+            txtContactoR.Text =           filaActual.Cells[7].Value.ToString();
+            txtDistritoR.Text =           filaActual.Cells[8].Value.ToString();
+            txtProvinciaR.Text =          filaActual.Cells[9].Value.ToString();
+            txtDepartamentoR.Text =       filaActual.Cells[10].Value.ToString();
+            txtDniD.Text = filaActual.Cells[11].Value.ToString();
+            txtCorreoD.Text = filaActual.Cells[12].Value.ToString();
+            txtTelefonoD.Text = filaActual.Cells[13].Value.ToString();
+            txtDireccionD.Text = filaActual.Cells[14].Value.ToString();
+            txtNombresD.Text = filaActual.Cells[15].Value.ToString();
+            txtObservacionesD.Text = filaActual.Cells[16].Value.ToString();
+            txtContactoD.Text = filaActual.Cells[17].Value.ToString();
+            txtDistritoD.Text = filaActual.Cells[18].Value.ToString();
+            txtProvinciaD.Text = filaActual.Cells[19].Value.ToString();
+            txtDepartamentoD.Text = filaActual.Cells[20].Value.ToString();
+
+
+
+
+
+        }
+
+    private void SalirVentana_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDniD.Text.Length == 8)
+                {
+                    dynamic respuesta = ApisPeru.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDniD.Text + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhbnRvc2Jlcm51eTIwQGdtYWlsLmNvbSJ9.d7_Tcyi35EWR8QOFVdzd2OrcMiCP1D3juS5DZNOu6gQ");
+                    string Nombres = respuesta.nombres.ToString();
+                    string apellidosP = respuesta.apellidoPaterno.ToString();
+                    string apellidosM = respuesta.apellidoMaterno.ToString();
+                    txtNombresD.Text = Nombres + " " + apellidosP + " " + apellidosM;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un número de documento válido.", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un número de documento válido (Exception).", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDniR.Text.Length == 8)
+                {
+                    dynamic respuesta = ApisPeru.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDniR.Text + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhbnRvc2Jlcm51eTIwQGdtYWlsLmNvbSJ9.d7_Tcyi35EWR8QOFVdzd2OrcMiCP1D3juS5DZNOu6gQ");
+                    string Nombres = respuesta.nombres.ToString();
+                    string apellidosP = respuesta.apellidoPaterno.ToString();
+                    string apellidosM = respuesta.apellidoMaterno.ToString();
+                    txtNombresR.Text = Nombres + " " + apellidosP + " " + apellidosM;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un número de documento válido.", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un número de documento válido (Exception).", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnInabilitar_Click(object sender, EventArgs e)
         {
 
         }

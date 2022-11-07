@@ -16,13 +16,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Application.Run(new Login());
             //Application.Run(new FrmRemitente_Destinatario());
             //Application.Run(new FrmMenuGerente("Piter","PAKER"));
             //Application.Run(new FrmMenuSecretaria());
             //Application.Run(new FrmMenuJefeDeMantenimiento());
             //Application.Run(new FrmMenuAlmacenero());
-            //Application.Run(new FrmPlanilla());
+           Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
             //Application.Run(new FrmRuta());

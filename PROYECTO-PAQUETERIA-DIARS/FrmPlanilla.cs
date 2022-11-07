@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CAPAENTIDAD;
 using CAPALOGICA;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+
 namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmPlanilla : Form
@@ -18,6 +20,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
             ListarPlanilla();
+            groupBox1.Enabled = false;
             //llenarDatosComboIdAlumno();
         }
 
@@ -105,7 +108,26 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnBuscarDni_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (txtDniTr.Text.Length == 8)
+                {
+                    dynamic respuesta = ApisPeru.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDniTr.Text + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhbnRvc2Jlcm51eTIwQGdtYWlsLmNvbSJ9.d7_Tcyi35EWR8QOFVdzd2OrcMiCP1D3juS5DZNOu6gQ");
+                    
+                    txtnomTr.Text = respuesta.nombres.ToString();
+                    string apellidosP = respuesta.apellidoPaterno.ToString();
+                    string apellidosM = respuesta.apellidoMaterno.ToString();
+                     txtAppTr.Text=  " " + apellidosP + " " + apellidosM;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un número de documento válido.", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un número de documento válido (Exception).", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,11 +141,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             //nuevo
+           groupBox1.Enabled = true;
             btnAgregar.Visible = true;
             LimpiarDatos();
             btnActualizar.Enabled = false;
             btnInhabilitar.Enabled = true;
-            btnBuscar.Enabled = true;
+            btnBuscar.Visible = true;
 
         }/*
         private void llenarDatosComboIdAlumno()
@@ -159,7 +182,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Ent.Onp = txtOnp.Text.Trim();
             Ent.Afp = txtAfp.Text.Trim();
             Ent.Cuspp = txtCuspp.Text.Trim();
-            Ent.ImportOtro = Convert.ToInt32(txtImportOtro.Text.Trim());
+            Ent.ImportOtro = Convert.ToDouble(txtImportOtro.Text.Trim());
 
             Ent.FechIngreso = Convert.ToDateTime(dtmFechIngreso.Text.Trim());
             Ent.FechCese = Convert.ToDateTime(dtmFechCese.Text.Trim());
@@ -172,6 +195,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Ent.DiasNoLAb = Convert.ToInt32(txtDiasNoLAb.Text.Trim());
             LogPlanilla.Instancia.InsertaPlanilla(Ent);
             ListarPlanilla();
+            groupBox1.Enabled = false;
 
 
         }
@@ -255,7 +279,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 Ent.Onp = txtOnp.Text.Trim();
                 Ent.Afp = txtAfp.Text.Trim();
                 Ent.Cuspp = txtCuspp.Text.Trim();
-                Ent.ImportOtro = Convert.ToInt32(txtImportOtro.Text.Trim());
+                Ent.ImportOtro = Convert.ToDouble(txtImportOtro.Text.Trim());
 
                 Ent.FechIngreso = Convert.ToDateTime(dtmFechIngreso.Text.Trim());
                 Ent.FechCese = Convert.ToDateTime(dtmFechCese.Text.Trim());
@@ -298,6 +322,63 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex]; //
+            txtIdPlanilla.Text = filaActual.Cells[0].Value.ToString();
+            txtRuc.Text = filaActual.Cells[1].Value.ToString();
+            txtRazSocial.Text = filaActual.Cells[2].Value.ToString();
+            txtRubro.Text = filaActual.Cells[3].Value.ToString();
+            txtDireccion.Text = filaActual.Cells[4].Value.ToString();
+
+            txtIdTr.Text = filaActual.Cells[5].Value.ToString();
+            txtDniTr.Text = filaActual.Cells[6].Value.ToString();
+            txtnomTr.Text = filaActual.Cells[7].Value.ToString();
+            txtAppTr.Text = filaActual.Cells[8].Value.ToString();
+            cboHijos.Text = filaActual.Cells[9].Value.ToString();
+            txtFechNacTr.Text = filaActual.Cells[10].Value.ToString();
+            txtDirTr.Text = filaActual.Cells[11].Value.ToString();
+
+            cboCargo.Text = filaActual.Cells[12].Value.ToString();
+            cboCategoria.Text = filaActual.Cells[13].Value.ToString();
+            cboPerPago.Text = filaActual.Cells[14].Value.ToString();
+            txtOnp.Text = filaActual.Cells[15].Value.ToString();
+            txtAfp.Text = filaActual.Cells[16].Value.ToString();
+            txtCuspp.Text = filaActual.Cells[17].Value.ToString();
+            txtImportOtro.Text = filaActual.Cells[18].Value.ToString();
+
+            dtmFechIngreso.Text = filaActual.Cells[19].Value.ToString();
+            dtmFechCese.Text = filaActual.Cells[20].Value.ToString();
+            dtmInitVac.Text = filaActual.Cells[21].Value.ToString();
+            dtmFindVac.Text = filaActual.Cells[22].Value.ToString();
+            txtDiasVac.Text = filaActual.Cells[23].Value.ToString();
+            txtDiasLAb.Text = filaActual.Cells[15].Value.ToString();
+            txtHrTrab.Text = filaActual.Cells[16].Value.ToString();
+            txtHrExtr.Text = filaActual.Cells[17].Value.ToString();
+            txtDiasNoLAb.Text = filaActual.Cells[18].Value.ToString();
+           
+    }
+
+        private void dtmFindVac_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtmFindVac.Value < dtmInitVac.Value)
+            {
+                MessageBox.Show("ingresa una fecha mayor o igual" +
+                    "");
+                dtmFindVac.MinDate=dtmInitVac.Value;
+            }
+        }
+
+        private void dtmFechCese_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtmFechIngreso.Value < dtmFechCese.Value)
+            {
+                MessageBox.Show("ingresa una fecha mayor o igual" +
+                    "");
+                dtmFechCese.MinDate = dtmFechIngreso.Value;
+            }
         }
     }
 }

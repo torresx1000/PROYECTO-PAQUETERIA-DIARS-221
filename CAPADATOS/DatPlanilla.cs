@@ -40,7 +40,6 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@DniTr", Pla.DniTr);
                 cmd.Parameters.AddWithValue("@nomTr", Pla.nomTr);
                 cmd.Parameters.AddWithValue("@AppTr", Pla.AppTr);
-                cmd.Parameters.AddWithValue("@Direccion", Pla.Direccion);
                 cmd.Parameters.AddWithValue("@Hijos", Pla.Hijos);
                 cmd.Parameters.AddWithValue("@FechNacTr", Pla.FechNacTr);
                 cmd.Parameters.AddWithValue("@DirTr", Pla.DirTr);
@@ -114,7 +113,7 @@ namespace CAPADATOS
                     Pla.Onp = dr["Onp"].ToString();
                     Pla.Afp = dr["Afp"].ToString();
                     Pla.Cuspp = dr["Cuspp"].ToString();
-                    Pla.ImportOtro = Convert.ToInt32(dr["ImportOtro"]);
+                    Pla.ImportOtro = Convert.ToDouble(dr["ImportOtro"]);
 
                     Pla.FechIngreso = Convert.ToDateTime(dr["FechIngreso"]);
                     Pla.FechCese = Convert.ToDateTime(dr["FechCese"]);
@@ -150,6 +149,7 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spModificarPlanilla", cn);
 
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdPlanilla", Pla.IdPlanilla);
                 cmd.Parameters.AddWithValue("@Ruc", Pla.Ruc);
                 cmd.Parameters.AddWithValue("@RazSocial", Pla.RazSocial);
                 cmd.Parameters.AddWithValue("@Rubro", Pla.Rubro);
@@ -159,7 +159,6 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@DniTr", Pla.DniTr);
                 cmd.Parameters.AddWithValue("@nomTr", Pla.nomTr);
                 cmd.Parameters.AddWithValue("@AppTr", Pla.AppTr);
-                cmd.Parameters.AddWithValue("@Direccion", Pla.Direccion);
                 cmd.Parameters.AddWithValue("@Hijos", Pla.Hijos);
                 cmd.Parameters.AddWithValue("@FechNacTr", Pla.FechNacTr);
                 cmd.Parameters.AddWithValue("@DirTr", Pla.DirTr);
@@ -233,7 +232,7 @@ namespace CAPADATOS
                     Pla.Onp = dr["Onp"].ToString();
                     Pla.Afp = dr["Afp"].ToString();
                     Pla.Cuspp = dr["Cuspp"].ToString();
-                    Pla.ImportOtro = Convert.ToInt32(dr["ImportOtro"]);
+                    Pla.ImportOtro = Convert.ToDouble(dr["ImportOtro"]);
 
                     Pla.FechIngreso = Convert.ToDateTime(dr["FechIngreso"]);
                     Pla.FechCese = Convert.ToDateTime(dr["FechCese"]);

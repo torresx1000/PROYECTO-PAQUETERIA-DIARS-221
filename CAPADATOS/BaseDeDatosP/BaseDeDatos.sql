@@ -652,7 +652,7 @@ PerPago varchar(100),
 Onp varchar(2),
 Afp varchar(2),
 Cuspp varchar(20),
-ImportOtro int,
+ImportOtro numeric,
 
 FechIngreso date,
 FechCese date,

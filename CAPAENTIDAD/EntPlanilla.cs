@@ -29,7 +29,7 @@ namespace CAPAENTIDAD
         public string Onp { get; set; }
         public string Afp { get; set; }
         public string Cuspp { get; set; }
-        public int ImportOtro { get; set; }
+        public double ImportOtro { get; set; }
 
         public DateTime FechIngreso { get; set; }
         public DateTime FechCese { get; set; }

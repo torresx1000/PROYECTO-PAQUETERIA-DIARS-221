@@ -82,6 +82,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIdTr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtApellidos = new System.Windows.Forms.Label();
             this.txtAppTr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.txtDirTr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -106,7 +107,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRuc = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.txtIdTr = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panel3.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -369,13 +369,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 393);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1150, 322);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // groupBox3
             // 
@@ -542,6 +546,7 @@
             this.dtmFechCese.Name = "dtmFechCese";
             this.dtmFechCese.Size = new System.Drawing.Size(143, 22);
             this.dtmFechCese.TabIndex = 24;
+            this.dtmFechCese.ValueChanged += new System.EventHandler(this.dtmFechCese_ValueChanged);
             // 
             // dtmFindVac
             // 
@@ -549,6 +554,7 @@
             this.dtmFindVac.Name = "dtmFindVac";
             this.dtmFindVac.Size = new System.Drawing.Size(124, 22);
             this.dtmFindVac.TabIndex = 22;
+            this.dtmFindVac.ValueChanged += new System.EventHandler(this.dtmFindVac_ValueChanged);
             // 
             // dtmInitVac
             // 
@@ -695,6 +701,14 @@
             // cboPerPago
             // 
             this.cboPerPago.FormattingEnabled = true;
+            this.cboPerPago.Items.AddRange(new object[] {
+            "DIARIO",
+            "SEMANAL",
+            "QUINCENAL",
+            "MENSUAL",
+            "TRIMESTRAL",
+            "SEMESTRAL",
+            "ANUAL"});
             this.cboPerPago.Location = new System.Drawing.Point(437, 28);
             this.cboPerPago.Name = "cboPerPago";
             this.cboPerPago.Size = new System.Drawing.Size(88, 24);
@@ -781,6 +795,15 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS DEL TRABAJADOR:";
+            // 
+            // txtIdTr
+            // 
+            this.txtIdTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIdTr.Location = new System.Drawing.Point(47, 19);
+            this.txtIdTr.Multiline = true;
+            this.txtIdTr.Name = "txtIdTr";
+            this.txtIdTr.Size = new System.Drawing.Size(58, 21);
+            this.txtIdTr.TabIndex = 14;
             // 
             // txtApellidos
             // 
@@ -1016,15 +1039,6 @@
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(104, 21);
             this.txtRuc.TabIndex = 0;
-            // 
-            // txtIdTr
-            // 
-            this.txtIdTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIdTr.Location = new System.Drawing.Point(47, 19);
-            this.txtIdTr.Multiline = true;
-            this.txtIdTr.Name = "txtIdTr";
-            this.txtIdTr.Size = new System.Drawing.Size(58, 21);
-            this.txtIdTr.TabIndex = 14;
             // 
             // FrmPlanilla
             // 
