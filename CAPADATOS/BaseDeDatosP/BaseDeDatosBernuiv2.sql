@@ -852,6 +852,14 @@ as
 delete from PagoDeUtilidades where IdPagoUtilidades=@IdPagoUtilidades
 go
 
+--procedimineto para listar pago de utilidades 
+create procedure spListarPagoUtilidades
+as
+select IdPagoUtilidades, IdPlanilla, IdTrabajador ,TotalRemuneraciones ,TotalDescuentos ,TotalAportes ,CtaAhorros ,FechaPago ,NetoAPagar 
+	from PagoDeUtilidades
+	go
+
+
 ----------------------------------------------------------------
 --						Para Proceso Tabla Cotizacion						
 ----------------------------------------------------------------
