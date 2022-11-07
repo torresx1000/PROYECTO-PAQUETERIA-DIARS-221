@@ -688,7 +688,7 @@ go
 create procedure spIngresarPlanilla (
 @Ruc numeric, @RazSocial varchar(100), @Rubro varchar(50), @Direccion varchar(100),
 @IdTr int, @DniTr numeric, @nomTr varchar(100), @AppTr varchar(100), @Hijos int, @FechNacTr date, @DirTr varchar(100),
-@Cargo varchar(100), @Categoria varchar(100), @PerPago varchar(100), @Onp varchar(2), @Afp varchar(2), @Cuspp varchar(20), @ImportOtro int,
+@Cargo varchar(100), @Categoria varchar(100), @PerPago varchar(100), @Onp varchar(2), @Afp varchar(2), @Cuspp varchar(20), @ImportOtro numeric,
 @FechIngreso date, @FechCese date, @InitVac date, @FindVac date, @DiasVac int, @DiasLAb int, @HrTrab int, @HrExtr int, @DiasNoLAb int
 )
 as
@@ -711,7 +711,7 @@ go
 create procedure spModificarPlanilla(
 @IdPlanilla int, @Ruc numeric, @RazSocial varchar(100), @Rubro varchar(50), @Direccion varchar(100),
 @IdTr int, @DniTr numeric, @nomTr varchar(100), @AppTr varchar(100), @Hijos int, @FechNacTr date, @DirTr varchar(100),
-@Cargo varchar(100), @Categoria varchar(100), @PerPago varchar(100), @Onp varchar(2), @Afp varchar(2), @Cuspp varchar(20), @ImportOtro int,
+@Cargo varchar(100), @Categoria varchar(100), @PerPago varchar(100), @Onp varchar(2), @Afp varchar(2), @Cuspp varchar(20), @ImportOtro numeric,
 @FechIngreso date, @FechCese date, @InitVac date, @FindVac date, @DiasVac int, @DiasLAb int, @HrTrab int, @HrExtr int, @DiasNoLAb int
 )
 as 
