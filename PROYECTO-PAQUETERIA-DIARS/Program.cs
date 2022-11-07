@@ -22,14 +22,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmMenuSecretaria());
             //Application.Run(new FrmMenuJefeDeMantenimiento());
             //Application.Run(new FrmMenuAlmacenero());
-           Application.Run(new FrmPlanilla());
+            //Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
             //Application.Run(new FrmRuta());
             //Application.Run(new FrmReporteVehiculo());
             //Application.Run(new FrmReporteRuta());
             //Application.Run(new FrmReporteTrabajadores());
-            //Application.Run(new FrmDiagnostico());
+            Application.Run(new FrmDiagnostico());
             //Application.Run(new FrmListaConductores_Trabajadores());
             //Application.Run(new FrmProgramacionSalida());
             // Application.Run(new FrmReporteProgramacionSalida());

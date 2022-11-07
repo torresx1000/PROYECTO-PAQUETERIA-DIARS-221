@@ -82,6 +82,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
 
         }
+
+        private void FrmReporteVehiculo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
     

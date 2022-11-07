@@ -88,6 +88,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmListaConductores_Trabajadores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
