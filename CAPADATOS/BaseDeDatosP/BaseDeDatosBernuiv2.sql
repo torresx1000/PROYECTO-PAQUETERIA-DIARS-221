@@ -783,7 +783,7 @@ go
 ----------------------------------------------------------------
 
 --Tabla pago de utilidades 
-create table pagoDeUtilidades(
+create table PagoDeUtilidades(
 IdPagoUtilidades int not null primary key identity(1,1),
 IdPlanilla int,
 IdTrabajador int,
@@ -797,6 +797,64 @@ constraint Fk_IdPlanillaPU foreign key (IdPlanilla) references planilla(IdPlanil
 constraint Fk_IdTrabajdorPU foreign key(IdTrabajador) references Trabajadores(IdTrabajador)
 ) 
 
+select *from PagoDeUtilidades
+
+--procedimiento para Insertar Pago de utilidades 
+create procedure spInsertarPagoDeUtilidades(
+@IdPlanilla int,
+@IdTrabajador int,
+@TotalRemuneraciones float,
+@TotalDescuentos float,
+@TotalAportes float,
+@CtaAhorros int,
+@FechaPago date,
+@NetoAPagar float
+)as begin
+insert into PagoDeUtilidades(IdPlanilla,IdTrabajador,TotalRemuneraciones,TotalDescuentos, TotalAportes, CtaAhorros,FechaPago, NetoAPagar) values 
+(@IdPlanilla,@IdTrabajador,@TotalRemuneraciones,@TotalDescuentos,@TotalAportes,@CtaAhorros,@FechaPago,@NetoAPagar)
+end 
+go 
+
+--procedimiento para actualizar pago de utilidades
+create procedure spEditarPagoUtilidades(
+@IdPagoUtilidades int,
+@IdPlanilla int,
+@IdTrabajador int,
+@TotalRemuneraciones float,
+@TotalDescuentos float,
+@TotalAportes float,
+@CtaAhorros int,
+@FechaPago date,
+@NetoAPagar float
+)as begin update PagoDeUtilidades set
+IdPlanilla =@IdPlanilla,
+IdTrabajador=@IdTrabajador,
+TotalRemuneraciones =@TotalRemuneraciones,
+TotalDescuentos =@TotalDescuentos,
+TotalAportes =@TotalAportes,
+CtaAhorros =@CtaAhorros,
+FechaPago =@FechaPago,
+NetoAPagar =@NetoAPagar
+where IdPagoUtilidades =@IdPagoUtilidades
+end 
+go
+
+-- procedimiento para buscar pago Utilidades
+create procedure spBuscarPagoUtilidades
+@IdPagoUtilidades int
+ as  begin
+ select *from PagoDeUtilidades where IdPagoUtilidades like @IdPagoUtilidades;
+ end
+ --Procedimiento para eliminar un pago 
+ create procedure spEliminarPagoUtilidad
+@IdPagoUtilidades int
+as
+delete from PagoDeUtilidades where IdPagoUtilidades=@IdPagoUtilidades
+go
+
+----------------------------------------------------------------
+--						Para Proceso Tabla Cotizacion						
+----------------------------------------------------------------
 --TABLA COTIZACION
 Create table Cotizacion(
 IdCotizacion INT PRIMARY key identity(1,1), 
