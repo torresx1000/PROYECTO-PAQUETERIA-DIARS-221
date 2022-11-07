@@ -1,41 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 using CAPAENTIDAD;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
 namespace CAPADATOS
 {
-    public class DatDiagnostico: Conexion
+    public class DatCotizacion : Conexion
     {
-        private static readonly DatDiagnostico _instancia = new DatDiagnostico();
-        public static new DatDiagnostico Instancia
+        private static readonly DatCotizacion _instancia = new DatCotizacion();
+        public static new DatCotizacion Instancia
         {
             get
             {
-                return DatDiagnostico._instancia;
+                return DatCotizacion._instancia;
             }
         }
 
-
-        //para agregar diagnostico
-        public Boolean InsertaDiagnostico(EntDiagnostico Ped)
+        //para agregar Cotizacion
+        public Boolean InsertaCotizacion(EntCotizacion Ped)
         {
+
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDiagnostico", cn);
+                cmd = new SqlCommand("spInsertarCotizacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@OBSERVACIONES", Ped.Observaciones);
-                cmd.Parameters.AddWithValue("@FALLAS", Ped.Fallas);
-                cmd.Parameters.AddWithValue("@FECHA", Ped.fecha);
-                cmd.Parameters.AddWithValue("@IdVehiculo", Ped.IdVehiculo);
-                cmd.Parameters.AddWithValue("@IdConductor", Ped.IdConductor);
+                cmd.Parameters.AddWithValue("@Descripcion", Ped.Descripcion);
+                cmd.Parameters.AddWithValue("@precio", Ped.precio);
+                cmd.Parameters.AddWithValue("@IDPEDIDO", Ped.IDPEDIDO);
+
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -51,29 +50,29 @@ namespace CAPADATOS
             finally { cmd.Connection.Close(); }
             return inserta;
         }
-        //listar diagnostico
-        public List<EntDiagnostico> ListarDiagnostico()
+
+        //listar Cotizacion
+        public List<EntCotizacion> ListarCotizacion()
         {
             SqlCommand cmd = null;
-            List<EntDiagnostico> Lista = new List<EntDiagnostico>();
+            List<EntCotizacion> Lista = new List<EntCotizacion>();
 
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDiagnostico", cn);
+                cmd = new SqlCommand("spListarCotizacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    EntDiagnostico Ped = new EntDiagnostico();
-                    Ped.IdDiagnostico = Convert.ToInt32(dr["IdDiagnostico"]);
-                    Ped.Observaciones = dr["Observaciones"].ToString(); ;
-                    Ped.Fallas = dr["Fallas"].ToString();
-                    Ped.fecha = Convert.ToDateTime(dr["fecha"]);
-                    Ped.IdVehiculo = Convert.ToInt32(dr["IdVehiculo"]);
-                    Ped.IdConductor = Convert.ToInt32(dr["IdConductor"]);
+                    EntCotizacion Ped = new EntCotizacion();
+                    Ped.IdCotizacion = Convert.ToInt32(dr["IdCotizacion"]);
+                    Ped.Descripcion = dr["Descripcion"].ToString();
+                    Ped.precio = Convert.ToDouble(dr["precio"]);
+                    Ped.IDPEDIDO = Convert.ToInt32(dr["IDPEDIDO"]); ;
+                 
 
                     Lista.Add(Ped);
                 }
@@ -89,25 +88,20 @@ namespace CAPADATOS
             return Lista;
         }
 
-        //Modificar Diagnostico
-        public Boolean EditarDiagnostico(EntDiagnostico Ped)
+        //Modificar Cotizacion
+        public Boolean EditarCotizacion(EntCotizacion Ped)
         {
             SqlCommand cmd = null;
             Boolean Edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spModificarDiagnostico", cn);
+                cmd = new SqlCommand("spModificarCotizacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDdIAGNOSTICO", Ped.IdDiagnostico);
-                cmd.Parameters.AddWithValue("@Observaciones", Ped.Observaciones);
-                cmd.Parameters.AddWithValue("@Fallas", Ped.Fallas);
-                cmd.Parameters.AddWithValue("@fecha", Ped.fecha);
-                cmd.Parameters.AddWithValue("@IdVehiculo", Ped.IdVehiculo);
-                cmd.Parameters.AddWithValue("@IdConductor", Ped.IdConductor);
-
-
-
+                cmd.Parameters.AddWithValue("@IdCotizacion", Ped.IdCotizacion);
+                cmd.Parameters.AddWithValue("@Descripcion", Ped.Descripcion);
+                cmd.Parameters.AddWithValue("@precio", Ped.precio);
+                cmd.Parameters.AddWithValue("@IDPEDIDO", Ped.IDPEDIDO);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -124,16 +118,16 @@ namespace CAPADATOS
         }
 
         //para buscar 
-        public DataTable BuscarDiagnosticoId(int IdDiagnostico)
+        public DataTable BuscarCotizacion(int idCotizacion)
         {
             DataTable dt;
             SqlCommand cmd = null;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spBuscarDiagnostico", cn);
+                cmd = new SqlCommand("spBuscarCotizacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", IdDiagnostico);
+                cmd.Parameters.AddWithValue("@id", idCotizacion);
                 cn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -151,16 +145,16 @@ namespace CAPADATOS
             return dt;
         }
 
-        public Boolean Eliminar(EntDiagnostico Id)
+        public Boolean EliminarCotizacion(EntCotizacion Id)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEliminarDiagnostico ", cn);
+                cmd = new SqlCommand("spEliminarCotizacion ", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id.IdDiagnostico);
+                cmd.Parameters.AddWithValue("@Id", Id.IdCotizacion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -175,9 +169,5 @@ namespace CAPADATOS
             finally { cmd.Connection.Close(); }
             return delete;
         }
-       
     }
-
 }
-   
-   

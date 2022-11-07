@@ -30,122 +30,134 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCotizacion));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvCotizacion = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtDecripcion = new System.Windows.Forms.TextBox();
+            this.txtCodcot = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbIdPedido = new System.Windows.Forms.ComboBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCotizacion)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.LightYellow;
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBox3.Controls.Add(this.btnNuevo);
+            this.groupBox3.Controls.Add(this.btnEditar);
+            this.groupBox3.Controls.Add(this.btnEliminar);
+            this.groupBox3.Controls.Add(this.btnBuscar);
             this.groupBox3.Location = new System.Drawing.Point(377, 76);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(402, 103);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
-            // button1
+            // BtnActualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(129, 56);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 39);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "ACTUALIZAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnActualizar.BackColor = System.Drawing.Color.Aqua;
+            this.BtnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.Location = new System.Drawing.Point(187, 309);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(132, 39);
+            this.BtnActualizar.TabIndex = 54;
+            this.BtnActualizar.Text = "ACTUALIZAR";
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // button8
+            // btnAñadir
             // 
-            this.button8.BackColor = System.Drawing.Color.RosyBrown;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(0, 9);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(131, 39);
-            this.button8.TabIndex = 52;
-            this.button8.Text = "AÑADIR";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnAñadir.BackColor = System.Drawing.Color.Aqua;
+            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Location = new System.Drawing.Point(187, 309);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(131, 39);
+            this.btnAñadir.TabIndex = 52;
+            this.btnAñadir.Text = "AÑADIR";
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
-            // button6
+            // btnEliminar
             // 
-            this.button6.BackColor = System.Drawing.Color.RosyBrown;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(129, 9);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(132, 39);
-            this.button6.TabIndex = 53;
-            this.button6.Text = "ELIMINAR";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Aqua;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(136, 9);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(132, 39);
+            this.btnEliminar.TabIndex = 53;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // button7
+            // btnBuscar
             // 
-            this.button7.BackColor = System.Drawing.Color.RosyBrown;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(265, 9);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(132, 39);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "BUSCAR";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.Aqua;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(270, 9);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(132, 39);
+            this.btnBuscar.TabIndex = 55;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBox2.Controls.Add(this.DgvCotizacion);
             this.groupBox2.Location = new System.Drawing.Point(377, 185);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(402, 212);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
-            // dataGridView1
+            // DgvCotizacion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(369, 169);
-            this.dataGridView1.TabIndex = 0;
+            this.DgvCotizacion.AllowUserToAddRows = false;
+            this.DgvCotizacion.AllowUserToDeleteRows = false;
+            this.DgvCotizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCotizacion.Location = new System.Drawing.Point(15, 19);
+            this.DgvCotizacion.Name = "DgvCotizacion";
+            this.DgvCotizacion.ReadOnly = true;
+            this.DgvCotizacion.RowHeadersWidth = 51;
+            this.DgvCotizacion.Size = new System.Drawing.Size(369, 169);
+            this.DgvCotizacion.TabIndex = 0;
+            this.DgvCotizacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCotizacion_CellClick);
+            this.DgvCotizacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCotizacion_CellContentClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightYellow;
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.groupBox1.Controls.Add(this.BtnActualizar);
+            this.groupBox1.Controls.Add(this.btnAñadir);
+            this.groupBox1.Controls.Add(this.cbIdPedido);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtPrecio);
+            this.groupBox1.Controls.Add(this.txtDecripcion);
+            this.groupBox1.Controls.Add(this.txtCodcot);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -156,57 +168,29 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // button2
+            // txtPrecio
             // 
-            this.button2.Location = new System.Drawing.Point(240, 80);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 26);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Seleccionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtPrecio.Location = new System.Drawing.Point(85, 165);
+            this.txtPrecio.Multiline = true;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(87, 29);
+            this.txtPrecio.TabIndex = 1;
             // 
-            // pictureBox1
+            // txtDecripcion
             // 
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.png_clipart_money_bag_currency_symbol_finance_money_bag_sign_commerce_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 239);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 109);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.txtDecripcion.Location = new System.Drawing.Point(103, 118);
+            this.txtDecripcion.Multiline = true;
+            this.txtDecripcion.Name = "txtDecripcion";
+            this.txtDecripcion.Size = new System.Drawing.Size(198, 34);
+            this.txtDecripcion.TabIndex = 1;
             // 
-            // textBox4
+            // txtCodcot
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 165);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(87, 29);
-            this.textBox4.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(85, 118);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 34);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(99, 80);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 26);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(175, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 34);
-            this.textBox1.TabIndex = 1;
+            this.txtCodcot.Location = new System.Drawing.Point(175, 28);
+            this.txtCodcot.Multiline = true;
+            this.txtCodcot.Name = "txtCodcot";
+            this.txtCodcot.Size = new System.Drawing.Size(130, 26);
+            this.txtCodcot.TabIndex = 1;
             // 
             // label5
             // 
@@ -224,9 +208,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Descripcion:";
+            this.label4.Text = "DESCRIPCION";
             // 
             // label3
             // 
@@ -234,9 +218,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Id Paquete:";
+            this.label3.Text = "ID PEDIDO";
             // 
             // label2
             // 
@@ -252,7 +236,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 23);
+            this.label1.Location = new System.Drawing.Point(5, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 39);
             this.label1.TabIndex = 3;
@@ -264,20 +248,81 @@
             this.SalirVentana.Image = ((System.Drawing.Image)(resources.GetObject("SalirVentana.Image")));
             this.SalirVentana.ImageActive = null;
             this.SalirVentana.Location = new System.Drawing.Point(650, 11);
-            this.SalirVentana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SalirVentana.Margin = new System.Windows.Forms.Padding(2);
             this.SalirVentana.Name = "SalirVentana";
             this.SalirVentana.Size = new System.Drawing.Size(78, 49);
             this.SalirVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SalirVentana.TabIndex = 7;
             this.SalirVentana.TabStop = false;
             this.SalirVentana.Zoom = 10;
+            this.SalirVentana.Click += new System.EventHandler(this.SalirVentana_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.png_clipart_money_bag_currency_symbol_finance_money_bag_sign_commerce_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 239);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbIdPedido
+            // 
+            this.cbIdPedido.FormattingEnabled = true;
+            this.cbIdPedido.Items.AddRange(new object[] {
+            "<SELECCIONE>"});
+            this.cbIdPedido.Location = new System.Drawing.Point(103, 80);
+            this.cbIdPedido.Name = "cbIdPedido";
+            this.cbIdPedido.Size = new System.Drawing.Size(121, 21);
+            this.cbIdPedido.TabIndex = 5;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Aqua;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(129, 52);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(132, 39);
+            this.btnEditar.TabIndex = 56;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Aqua;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(0, 10);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(132, 39);
+            this.btnNuevo.TabIndex = 57;
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Aqua;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(667, 416);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 39);
+            this.btnLimpiar.TabIndex = 58;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FrmCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GreenYellow;
+            this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 457);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.SalirVentana);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -287,13 +332,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCotizacion";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmCotizacion_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCotizacion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,23 +349,25 @@
 
         private Bunifu.Framework.UI.BunifuImageButton SalirVentana;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvCotizacion;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtDecripcion;
+        private System.Windows.Forms.TextBox txtCodcot;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbIdPedido;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

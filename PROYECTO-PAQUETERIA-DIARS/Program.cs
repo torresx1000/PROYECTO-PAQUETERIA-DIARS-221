@@ -29,12 +29,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmReporteVehiculo());
             //Application.Run(new FrmReporteRuta());
             //Application.Run(new FrmReporteTrabajadores());
-            Application.Run(new FrmDiagnostico());
+            //Application.Run(new FrmDiagnostico());
             //Application.Run(new FrmListaConductores_Trabajadores());
             //Application.Run(new FrmProgramacionSalida());
             // Application.Run(new FrmReporteProgramacionSalida());
             //Application.Run(new FrmReportePlanilla());
             //Application.Run(new FrmPagoUtilidades());
+            Application.Run(new FrmCotizacion());
+            //Application.Run(new FmrRegistroCheckList());
         }
     }
 }

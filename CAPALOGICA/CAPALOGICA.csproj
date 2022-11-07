@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogCheckList.cs" />
+    <Compile Include="LogCotizacion.cs" />
     <Compile Include="LogDiagnostico.cs" />
     <Compile Include="LogPedido.cs" />
     <Compile Include="LogPlanilla.cs" />

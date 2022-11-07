@@ -797,4 +797,60 @@ constraint Fk_IdPlanillaPU foreign key (IdPlanilla) references planilla(IdPlanil
 constraint Fk_IdTrabajdorPU foreign key(IdTrabajador) references Trabajadores(IdTrabajador)
 ) 
 
+--TABLA COTIZACION
+Create table Cotizacion(
+IdCotizacion INT PRIMARY key identity(1,1), 
+Descripcion VARCHAR(250),
+precio float,
+IDPEDIDO INT not null,
+constraint Fk_IdPedido foreign key (IDPEDIDO) references Pedido(IDPEDIDO)
+);
+
+--INSERTAR COTIZACION
+create procedure spInsertarCotizacion( 
+@Descripcion VARCHAR(250),
+@precio float(20),
+@IDPEDIDO INT
+)
+as begin
+insert into Cotizacion(Descripcion,precio,IDPEDIDO) values 
+(@Descripcion,@precio,@IDPEDIDO)
+end 
+go
+--LISTAR COTIZACION
+create procedure spListarCotizacion
+as
+select IdCotizacion,IDPEDIDO, Descripcion,precio 
+	from Cotizacion
+	go
+
+--MODIFICAR COTIZACION
+create procedure spModificarCotizacion(
+@IdCotizacion int,
+@Descripcion VARCHAR(250),
+@precio float,
+@IDPEDIDO int
+)
+as begin update Cotizacion set
+Descripcion=@Descripcion,
+precio=@precio,
+IDPEDIDO=@IDPEDIDO
+where IdCotizacion=@IdCotizacion
+end 
+go
+
+
+--BUSCAR COTIZACION
+ create procedure spBuscarCotizacion
+ @id int
+ as  begin
+ select *from Cotizacion where IdCotizacion like @id;
+ end
+ --ELIMINAR COTIZACION
+create procedure spEliminarCotizacion
+@Id int
+as
+delete from Cotizacion where IdCotizacion=@Id
+go
+
 

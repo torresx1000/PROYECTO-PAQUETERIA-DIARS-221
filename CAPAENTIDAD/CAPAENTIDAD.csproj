@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntCheckList.cs" />
+    <Compile Include="EntCotizacion.cs" />
     <Compile Include="EntDiagnostico.cs" />
     <Compile Include="EntPedido.cs" />
     <Compile Include="EntPlanilla.cs" />
