@@ -16,5 +16,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
         }
+
+        private void txtpreciosviaticos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

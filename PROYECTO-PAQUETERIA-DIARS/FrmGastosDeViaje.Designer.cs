@@ -205,6 +205,7 @@
             this.txtpreciosviaticos.Name = "txtpreciosviaticos";
             this.txtpreciosviaticos.Size = new System.Drawing.Size(100, 20);
             this.txtpreciosviaticos.TabIndex = 11;
+            this.txtpreciosviaticos.TextChanged += new System.EventHandler(this.txtpreciosviaticos_TextChanged);
             // 
             // label5
             // 

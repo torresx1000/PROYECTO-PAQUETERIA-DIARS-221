@@ -45,6 +45,8 @@
     <Compile Include="EntCheckList.cs" />
     <Compile Include="EntCotizacion.cs" />
     <Compile Include="EntDiagnostico.cs" />
+    <Compile Include="EntFichaDeEstadoVehiculo.cs" />
+    <Compile Include="EntGastosDeViaje.cs" />
     <Compile Include="EntPedido.cs" />
     <Compile Include="EntPlanilla.cs" />
     <Compile Include="EntProgramacionSalida.cs" />
