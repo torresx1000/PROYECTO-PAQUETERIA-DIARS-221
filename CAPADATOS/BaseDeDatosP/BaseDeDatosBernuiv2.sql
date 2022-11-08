@@ -1,5 +1,5 @@
-create database PAQUETERIADIARS;
-use PAQUETERIADIARS;
+create database BDPROYECTODIARS;
+use BDPROYECTODIARS;
 
 ------------------------------------------------------------------
 --	PARA TRABAJADORES											 -
@@ -349,7 +349,7 @@ PuntoPartida varchar(30),
 PuntoLlegada varchar(30),
 Observaciones varchar(100),
 EstadoRuta bit
-)
+);
 
 select *from Ruta
 delete Ruta where IdRuta='1'--solo prueba xd
@@ -429,7 +429,7 @@ IdVehiculo int,
 constraint Fk_IdRutaPS foreign key(IdRuta)references Ruta(IdRuta),
 constraint Fk_IdConductorPS foreign key(IdConductor)references Trabajadores(IdTrabajador),
 constraint Fk_IdVehiculoPS foreign key(IdVehiculo)references Vehiculo(IdVehiculo)
-)
+);
 
 select *from ProgramacionSalida
 --Procedimiento para Insertar programacion de salida
@@ -562,7 +562,8 @@ go
  @id int
  as  begin
  select *from DIAGNOSTICO where IDdIAGNOSTICO like @id;
- end
+ end;
+ go
 
 
  --Eliminar 
@@ -685,7 +686,6 @@ DiasLAb int,
 HrTrab int,
 HrExtr int,
 DiasNoLAb int,
-
 );
 
 select * from planilla;
@@ -761,7 +761,7 @@ where idPlanilla =  @IdPlanilla
 end
 go
 
-select * from Planilla
+
 --para buscar planilla
 create procedure spBuscarPLanilla(
 @IdPlanilla int
@@ -812,7 +812,7 @@ create procedure spInsertarPagoDeUtilidades(
 )as begin
 insert into PagoDeUtilidades(IdPlanilla,IdTrabajador,TotalRemuneraciones,TotalDescuentos, TotalAportes, CtaAhorros,FechaPago, NetoAPagar) values 
 (@IdPlanilla,@IdTrabajador,@TotalRemuneraciones,@TotalDescuentos,@TotalAportes,@CtaAhorros,@FechaPago,@NetoAPagar)
-end 
+end ;
 go 
 
 --procedimiento para actualizar pago de utilidades
@@ -845,6 +845,7 @@ create procedure spBuscarPagoUtilidades
  as  begin
  select *from PagoDeUtilidades where IdPagoUtilidades like @IdPagoUtilidades;
  end
+
  --Procedimiento para eliminar un pago 
  create procedure spEliminarPagoUtilidad
 @IdPagoUtilidades int
@@ -860,6 +861,143 @@ select IdPagoUtilidades, IdPlanilla, IdTrabajador ,TotalRemuneraciones ,TotalDes
 	go
 
 
+	 -----------------------------------------------------------------------------------------------------------------
+-- Para Mantenedor PEDIDO
+------------------------------------------------------------------------------------------------------------------
+--Tabla PEDIDO
+CREATE TABLE PEDIDO(
+IDPEDIDO int not null primary key identity(1,1), 
+DNIR INT NOT NULL,
+CORREOR VARCHAR (30),
+TELEFONOR INT,
+DIRECCIONR VARCHAR(60),
+NOMBRER VARCHAR(100),
+OBSERVACIONESR VARCHAR(200),
+CONTACTOR INT,
+DISTRITOR VARCHAR(50),
+PROVINCIAR VARCHAR(50),
+DEPARTAMENTOR VARCHAR(50),
+
+DNID INT NOT NULL,
+CORREOD VARCHAR (30),
+TELEFONOD INT,
+DIRECCIOND VARCHAR(60),
+NOMBRED VARCHAR(100),
+OBSERVACIONESD VARCHAR(200),
+CONTACTOD INT,
+DISTRITOD VARCHAR(50),
+PROVINCIAD VARCHAR(50),
+DEPARTAMENTOD VARCHAR(50)
+);
+GO
+          --procedimiento almacenado para insertar un nuevo PAQUETE/PEDIDO
+CREATE PROCEDURE spinsertarPedido(
+@DNIR INT ,
+@CORREOR VARCHAR (30),
+@TELEFONOR INT,
+@DIRECCIONR VARCHAR(60),
+@NOMBRER VARCHAR(100),
+@OBSERVACIONESR VARCHAR(200),
+@CONTACTOR INT,
+@DISTRITOR VARCHAR(50),
+@PROVINCIAR VARCHAR(50),
+@DEPARTAMENTOR VARCHAR(50),
+@DNID INT,
+@CORREOD VARCHAR (30),
+@TELEFONOD INT,
+@DIRECCIOND VARCHAR(60),
+@NOMBRED VARCHAR(100),
+@OBSERVACIONESD VARCHAR(200),
+@CONTACTOD INT,
+@DISTRITOD VARCHAR(50),
+@PROVINCIAD VARCHAR(50),
+@DEPARTAMENTOD VARCHAR(50)
+)
+as 
+begin
+insert into PEDIDO(DNIR,CORREOR,TELEFONOR,DIRECCIONR,NOMBRER,OBSERVACIONESR,CONTACTOR,DISTRITOR,PROVINCIAR,DEPARTAMENTOR,DNID,CORREOD,TELEFONOD,DIRECCIOND,NOMBRED,OBSERVACIONESD,CONTACTOD,DISTRITOD,PROVINCIAD,DEPARTAMENTOD) 
+	values(@DNIR,@CORREOR,@TELEFONOR,@DIRECCIONR,@NOMBRER,@OBSERVACIONESR,@CONTACTOR,@DISTRITOR,@PROVINCIAR,@DEPARTAMENTOR,@DNID,@CORREOD,@TELEFONOD,@DIRECCIOND,@NOMBRED,@OBSERVACIONESD,@CONTACTOD,@DISTRITOD,@PROVINCIAD,@DEPARTAMENTOD)
+end
+GO
+
+-- buscar pedido
+CREATE PROCEDURE  spBuscarPedido(
+	@IdPedido int 
+)
+as begin
+select * from  Pedido where IDPEDIDO =@IdPedido
+end
+GO
+
+-- Listar  pedido
+CREATE PROCEDURE  spListarPedido
+	
+as begin
+select * from  Pedido 
+end
+GO
+-- actualizar Pedido
+create procedure spModificarPedido(
+@DNIR INT ,
+@CORREOR VARCHAR (30),
+@TELEFONOR INT,
+@DIRECCIONR VARCHAR(60),
+@NOMBRER VARCHAR(100),
+@OBSERVACIONESR VARCHAR(200),
+@CONTACTOR INT,
+@DISTRITOR VARCHAR(50),
+@PROVINCIAR VARCHAR(50),
+@DEPARTAMENTOR VARCHAR(50),
+@DNID INT,
+@CORREOD VARCHAR (30),
+@TELEFONOD INT,
+@DIRECCIOND VARCHAR(60),
+@NOMBRED VARCHAR(100),
+@OBSERVACIONESD VARCHAR(200),
+@CONTACTOD INT,
+@DISTRITOD VARCHAR(50),
+@PROVINCIAD VARCHAR(50),
+@DEPARTAMENTOD VARCHAR(50)
+
+)
+as 
+begin
+update Pedido  set 
+				DNIR = @DNIR,
+				CORREOR = @CORREOR,
+				TELEFONOR = @TELEFONOR,
+				DIRECCIONR = @DIRECCIONR,
+				NOMBRER = @NOMBRER,
+				OBSERVACIONESR = @OBSERVACIONESR,
+				CONTACTOR = @CONTACTOR,
+				DISTRITOR = @DISTRITOR,
+				PROVINCIAR = @PROVINCIAR,
+				DEPARTAMENTOR = DEPARTAMENTOR,
+
+				DNID = @DNID,
+				CORREOD = @CORREOD,
+				TELEFONOD = @TELEFONOD,
+				DIRECCIOND = @DIRECCIOND,
+				NOMBRED = @NOMBRED,
+				OBSERVACIONESD = @OBSERVACIONESD,
+				CONTACTOD = @CONTACTOD,
+				DISTRITOD = @DISTRITOD,
+				PROVINCIAD = @PROVINCIAD,
+				DEPARTAMENTOD = DEPARTAMENTOD
+				where IDPEDIDO =IDPEDIDO
+end
+GO
+--eliminar Pedido
+create procedure spEliminarPedido(
+@IdPedido int
+
+)
+as 
+begin
+delete PEDIDO where IDPEDIDO =@IdPedido
+end
+GO 
+
 ----------------------------------------------------------------
 --						Para Proceso Tabla Cotizacion						
 ----------------------------------------------------------------
@@ -872,6 +1010,7 @@ IDPEDIDO INT not null,
 constraint Fk_IdPedido foreign key (IDPEDIDO) references Pedido(IDPEDIDO)
 );
 
+SELECT * FROM Cotizacion
 --INSERTAR COTIZACION
 create procedure spInsertarCotizacion( 
 @Descripcion VARCHAR(250),
@@ -881,7 +1020,7 @@ create procedure spInsertarCotizacion(
 as begin
 insert into Cotizacion(Descripcion,precio,IDPEDIDO) values 
 (@Descripcion,@precio,@IDPEDIDO)
-end 
+end ;
 go
 --LISTAR COTIZACION
 create procedure spListarCotizacion
@@ -986,7 +1125,7 @@ go
  as  begin
  select *from FichaEstadoVehiculo where IdEstadoVehiculo like @IdEstadoVehiculo;
  end
-
+ go
  --Eliminar ficha vehiuclo
 create procedure spEliminarFichaEstadoVehiculo
 @IdEstadoVehiculo int
@@ -1071,3 +1210,4 @@ go
 as
 delete from GastosViaje where IdGastosViaje=@IdGastosViaje
 go
+

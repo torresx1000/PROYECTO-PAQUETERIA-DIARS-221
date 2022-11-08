@@ -41,6 +41,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();
+                    
                     if (dt.Rows[0][1].ToString() == "Gerente")
                     {
                         FrmMenuGerente formMenuGerente = new FrmMenuGerente(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
@@ -89,6 +90,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     textUsuario.Clear();
                     textPassword.Clear();
                 }
+               
             }
             catch (Exception ex)
             {
