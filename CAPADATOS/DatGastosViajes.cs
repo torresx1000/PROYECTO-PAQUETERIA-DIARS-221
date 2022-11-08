@@ -127,6 +127,60 @@ namespace CAPADATOS
             finally { cmd.Connection.Close(); }
             return Edita;
         }
-       
+
+        //para buscar 
+        public DataTable BuscarGastosdeViaje(int IdGastos)
+        {
+            DataTable dt;
+            SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscarGastosViaje", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdGastosViaje", IdGastos);
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                da.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return dt;
+        }
+
+        //Eliminar GastosdeViaje
+        public Boolean Eliminar(EntGastosDeViaje Id)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEliminarGastosViaje ", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IdGastosViaje", Id.IdGastosdeViaje);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
+
     }
 }

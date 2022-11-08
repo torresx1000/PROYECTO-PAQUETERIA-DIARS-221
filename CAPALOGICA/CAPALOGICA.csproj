@@ -45,6 +45,8 @@
     <Compile Include="LogCheckList.cs" />
     <Compile Include="LogCotizacion.cs" />
     <Compile Include="LogDiagnostico.cs" />
+    <Compile Include="LogFichaDeEstadoVehiculo.cs" />
+    <Compile Include="LogGastosDeViaje.cs" />
     <Compile Include="LogPagoUtilidades.cs" />
     <Compile Include="LogPedido.cs" />
     <Compile Include="LogPlanilla.cs" />

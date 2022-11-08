@@ -124,16 +124,16 @@ namespace CAPADATOS
         }
 
         //para buscar 
-        public DataTable BuscarGastosdeViaje(int IdGastos)
+        public DataTable BuscarDiagnosticoId(int IdDiagnostico)
         {
             DataTable dt;
             SqlCommand cmd = null;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spBuscarGastosViaje", cn);
+                cmd = new SqlCommand("spBuscarDiagnostico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdGastosViaje", IdGastos);
+                cmd.Parameters.AddWithValue("@id", IdDiagnostico);
                 cn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -151,17 +151,16 @@ namespace CAPADATOS
             return dt;
         }
 
-        //Eliminar GastosdeViaje
-        public Boolean Eliminar(EntGastosDeViaje Id)
+        public Boolean Eliminar(EntDiagnostico Id)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEliminarGastosViaje ", cn);
+                cmd = new SqlCommand("spEliminarDiagnostico ", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdGastosViaje", Id.IdGastosdeViaje);
+                cmd.Parameters.AddWithValue("@Id", Id.IdDiagnostico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
