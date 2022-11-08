@@ -1008,7 +1008,8 @@ preciosotros float,
 constraint Fk_IdProgramacionSalida foreign key(IdProgramacionSalida) references ProgramacionSalida(IdProgramacionSalida)
 )
 
---Create procedure spInsertarGastosViaje( 
+--Insertar GastosDeViaje
+Create procedure spInsertarGastosViaje( 
 @IdProgramaciondesalida int,
 @Fecha date,
 @Viaticos varchar(200),
@@ -1064,3 +1065,10 @@ go
  select *from GastosViaje where IdGastosViaje like @IdGastosViaje;
  end
 
+
+ --Eliminar Gastos de Viaje
+ create procedure spEliminarGastosViaje
+@IdGastosViaje int
+as
+delete from GastosViaje where IdGastosViaje=@IdGastosViaje
+go

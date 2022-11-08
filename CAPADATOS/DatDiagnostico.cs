@@ -124,16 +124,16 @@ namespace CAPADATOS
         }
 
         //para buscar 
-        public DataTable BuscarDiagnosticoId(int IdDiagnostico)
+        public DataTable BuscarGastosdeViaje(int IdGastos)
         {
             DataTable dt;
             SqlCommand cmd = null;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spBuscarDiagnostico", cn);
+                cmd = new SqlCommand("spBuscarGastosViaje", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", IdDiagnostico);
+                cmd.Parameters.AddWithValue("@IdGastosViaje", IdGastos);
                 cn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -151,16 +151,17 @@ namespace CAPADATOS
             return dt;
         }
 
-        public Boolean Eliminar(EntDiagnostico Id)
+        //Eliminar GastosdeViaje
+        public Boolean Eliminar(EntGastosDeViaje Id)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEliminarDiagnostico ", cn);
+                cmd = new SqlCommand("spEliminarGastosViaje ", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Id", Id.IdDiagnostico);
+                cmd.Parameters.AddWithValue("@IdGastosViaje", Id.IdGastosdeViaje);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -175,7 +176,6 @@ namespace CAPADATOS
             finally { cmd.Connection.Close(); }
             return delete;
         }
-       
     }
 
 }

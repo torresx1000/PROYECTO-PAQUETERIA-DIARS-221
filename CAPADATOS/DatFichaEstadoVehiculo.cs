@@ -154,6 +154,7 @@ namespace CAPADATOS
             return dt;
         }
 
+        //Eliminar GastosdeViaje
         public Boolean Eliminar(EntFichaDeEstadoVehiculo Id)
         {
             SqlCommand cmd = null;
