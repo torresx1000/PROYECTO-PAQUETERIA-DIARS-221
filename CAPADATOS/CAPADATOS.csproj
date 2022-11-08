@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="BaseDeDatosP\17f38704a3fa077564df7df15cddd3ac.jpeg" />
     <Content Include="BaseDeDatosP\BaseDeDatos.sql" />
     <Content Include="BaseDeDatosP\BaseDeDatosBernuiv2.sql" />
   </ItemGroup>
