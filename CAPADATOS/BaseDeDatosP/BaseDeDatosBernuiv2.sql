@@ -919,4 +919,148 @@ as
 delete from Cotizacion where IdCotizacion=@Id
 go
 
+--TABLA DE FICHA ESTADO VEHICULAR 
+create table FichaEstadoVehiculo(
+IdEstadoVehiculo int not null primary key identity(1,1),
+IdConductor int,
+IdVehiculo int, 
+Fecha date,
+SistemaElectrico varchar(500),
+SistemeMecanico varchar(500),
+LetoneriayPintura varchar(500),
+Otros varchar(500),
+constraint Fk_IdConductorFE foreign key(IdConductor) references Trabajadores(IdTrabajador),
+constraint Fk_IdVehiculoFE foreign key(IdVehiculo) references Vehiculo(IdVehiculo) 
+)
+
+--Procedimiento para insertar ficha estado vehiculo
+create procedure spInsertarFichaEstadoVehiculo( 
+@IdConductor int,
+@IdVehiculo int, 
+@Fecha date,
+@SistemaElectrico varchar(500),
+@SistemeMecanico varchar(500),
+@LetoneriayPintura varchar(500),
+@Otros varchar(500
+)as begin
+insert into FichaEstadoVehiculo(IdConductor,IdVehiculo,Fecha, SistemaElectrico, SistemeMecanico, LetoneriayPintura, Otros ) values 
+(@IdConductor,@IdVehiculo,@Fecha,@SistemaElectrico, @SistemeMecanico, @LetoneriayPintura, @Otros)
+end 
+go
+
+
+--procedimiento para listar Ficha 
+create procedure spListarFichaEstado
+as
+select IdEstadoVehiculo,IdConductor,IdVehiculo, Fecha,SistemaElectrico ,SistemeMecanico ,LetoneriayPintura ,Otros 
+	from FichaEstadoVehiculo
+	go
+	
+	
+--Editar ficha estado
+create procedure spModificarFichaEstadoVehiculo(
+@IdEstadoVehiculo int,
+@IdConductor int,
+@IdVehiculo int, 
+@Fecha date,
+@SistemaElectrico varchar(500),
+@SistemeMecanico varchar(500),
+@LetoneriayPintura varchar(500),
+@Otros varchar(500
+)
+as begin update FichaEstadoVehiculo set
+IdConductor=@IdConductor,
+IdVehiculo=@IdVehiculo, 
+Fecha=@Fecha,
+SistemaElectrico=@SistemaElectrico,
+SistemeMecanico=@SistemeMecanico,
+LetoneriayPintura=@LetoneriayPintura,
+Otros=@Otros
+where IdEstadoVehiculo=@IdConductor
+end 
+go
+
+--Buscar ficha vehiculo
+ create procedure spBuscarFichaEstado
+ @IdEstadoVehiculo int
+ as  begin
+ select *from FichaEstadoVehiculo where IdEstadoVehiculo like @IdEstadoVehiculo;
+ end
+
+ --Eliminar ficha vehiuclo
+create procedure spEliminarFichaEstadoVehiculo
+@IdEstadoVehiculo int
+as
+delete from FichaEstadoVehiculo where IdEstadoVehiculo=@IdEstadoVehiculo
+go
+
+--Tabla gastos de viaje
+create table GastosViaje(
+IdGastosViaje int not null primary key identity(1,1),
+IdProgramaciondesalida int,
+Fecha date,
+Viaticos varchar(200),
+preciosviaticos float,
+Combustible varchar(200),
+precioscombustible float,
+Otros varchar(200),
+preciosotros float,
+constraint Fk_IdProgramacionSalida foreign key(IdProgramacionSalida) references ProgramacionSalida(IdProgramacionSalida)
+)
+
+--Create procedure spInsertarGastosViaje( 
+@IdProgramaciondesalida int,
+@Fecha date,
+@Viaticos varchar(200),
+@preciosviaticos float,
+@Combustible varchar(200),
+@precioscombustible float,
+@Otros varchar(200),
+@preciosotros float
+)as begin
+insert into GastosViaje(IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros ) values 
+(@IdProgramaciondesalida,@Fecha,@Viaticos,@preciosviaticos, @Combustible, @precioscombustible, @Otros, @precioscombustible)
+end 
+go
+
+--Procedimiento para listar gastos de viaje 
+create procedure spListarGastosViaje
+as
+select IdGastosViaje, IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros 
+	from GastosViaje
+	go
+
+
+--Editar gastos viaje
+create procedure spModificarGastosViaje(
+@IdGastosViaje int,
+@IdProgramaciondesalida int,
+@Fecha date,
+@Viaticos varchar(200),
+@preciosviaticos float,
+@Combustible varchar(200),
+@precioscombustible float,
+@Otros varchar(200),
+@preciosotros float
+)
+as begin update GastosViaje set
+IdGastosViaje=@IdGastosViaje,
+IdProgramaciondesalida=@IdProgramaciondesalida,
+Fecha=@Fecha,
+Viaticos=@Viaticos,
+preciosviaticos=@preciosviaticos,
+Combustible=@Combustible,
+precioscombustible=@precioscombustible,
+Otros=@Otros,
+preciosotros=@preciosotros
+where IdGastosViaje=@IdGastosViaje
+end 
+go
+
+--Buscar gastos viaje 
+ create procedure spBuscarGastosViaje
+ @IdGastosViaje int
+ as  begin
+ select *from GastosViaje where IdGastosViaje like @IdGastosViaje;
+ end
 
