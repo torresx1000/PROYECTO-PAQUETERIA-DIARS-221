@@ -941,7 +941,7 @@ create procedure spInsertarFichaEstadoVehiculo(
 @SistemaElectrico varchar(500),
 @SistemeMecanico varchar(500),
 @LetoneriayPintura varchar(500),
-@Otros varchar(500
+@Otros varchar(500)
 )as begin
 insert into FichaEstadoVehiculo(IdConductor,IdVehiculo,Fecha, SistemaElectrico, SistemeMecanico, LetoneriayPintura, Otros ) values 
 (@IdConductor,@IdVehiculo,@Fecha,@SistemaElectrico, @SistemeMecanico, @LetoneriayPintura, @Otros)
@@ -966,7 +966,7 @@ create procedure spModificarFichaEstadoVehiculo(
 @SistemaElectrico varchar(500),
 @SistemeMecanico varchar(500),
 @LetoneriayPintura varchar(500),
-@Otros varchar(500
+@Otros varchar(500)
 )
 as begin update FichaEstadoVehiculo set
 IdConductor=@IdConductor,
@@ -1005,7 +1005,7 @@ Combustible varchar(200),
 precioscombustible float,
 Otros varchar(200),
 preciosotros float,
-constraint Fk_IdProgramacionSalida foreign key(IdProgramacionSalida) references ProgramacionSalida(IdProgramacionSalida)
+constraint Fk_IdProgramacionSalida foreign key(IdProgramaciondesalida) references ProgramacionSalida(IdProgramacionSalida)
 )
 
 --Insertar GastosDeViaje
@@ -1045,7 +1045,6 @@ create procedure spModificarGastosViaje(
 @preciosotros float
 )
 as begin update GastosViaje set
-IdGastosViaje=@IdGastosViaje,
 IdProgramaciondesalida=@IdProgramaciondesalida,
 Fecha=@Fecha,
 Viaticos=@Viaticos,
