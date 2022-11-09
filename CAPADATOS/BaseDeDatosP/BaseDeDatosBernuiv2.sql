@@ -500,7 +500,7 @@ create procedure spEliminarProgramacionSalida
 @IdProgramacionSalida int
 as
 delete ProgramacionSalida where IdProgramacionSalida=@IdProgramacionSalida
-end 
+go
 
 
 --Tabla Diagnostico

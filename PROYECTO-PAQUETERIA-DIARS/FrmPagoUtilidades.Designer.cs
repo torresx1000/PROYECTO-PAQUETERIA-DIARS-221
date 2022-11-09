@@ -342,10 +342,10 @@
             // 
             this.txttotalDescuentos.BorderColor = System.Drawing.Color.SeaGreen;
             this.txttotalDescuentos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttotalDescuentos.Location = new System.Drawing.Point(34, 27);
+            this.txttotalDescuentos.Location = new System.Drawing.Point(39, 29);
             this.txttotalDescuentos.Multiline = true;
             this.txttotalDescuentos.Name = "txttotalDescuentos";
-            this.txttotalDescuentos.Size = new System.Drawing.Size(319, 35);
+            this.txttotalDescuentos.Size = new System.Drawing.Size(289, 27);
             this.txttotalDescuentos.TabIndex = 39;
             this.txttotalDescuentos.Text = "0";
             // 
