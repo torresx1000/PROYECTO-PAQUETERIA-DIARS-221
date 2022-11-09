@@ -165,6 +165,7 @@
             this.txtAdicionalR.Name = "txtAdicionalR";
             this.txtAdicionalR.Size = new System.Drawing.Size(179, 28);
             this.txtAdicionalR.TabIndex = 40;
+            this.txtAdicionalR.Text = "0";
             // 
             // bunifuCustomLabel5
             // 
@@ -340,12 +341,13 @@
             // txttotalDescuentos
             // 
             this.txttotalDescuentos.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txttotalDescuentos.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalDescuentos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalDescuentos.Location = new System.Drawing.Point(34, 27);
             this.txttotalDescuentos.Multiline = true;
             this.txttotalDescuentos.Name = "txttotalDescuentos";
-            this.txttotalDescuentos.Size = new System.Drawing.Size(204, 28);
+            this.txttotalDescuentos.Size = new System.Drawing.Size(319, 35);
             this.txttotalDescuentos.TabIndex = 39;
+            this.txttotalDescuentos.Text = "0";
             // 
             // bunifuCustomLabel6
             // 
@@ -567,6 +569,7 @@
             this.txtAportesTotal.Name = "txtAportesTotal";
             this.txtAportesTotal.Size = new System.Drawing.Size(185, 22);
             this.txtAportesTotal.TabIndex = 1;
+            this.txtAportesTotal.Text = "0";
             // 
             // bunifuCustomLabel20
             // 
