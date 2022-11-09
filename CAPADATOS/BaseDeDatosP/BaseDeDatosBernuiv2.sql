@@ -1144,9 +1144,10 @@ Combustible varchar(200),
 precioscombustible float,
 Otros varchar(200),
 preciosotros float,
+Total float,
 constraint Fk_IdProgramacionSalida foreign key(IdProgramaciondesalida) references ProgramacionSalida(IdProgramacionSalida)
 )
-
+ 
 --Insertar GastosDeViaje
 Create procedure spInsertarGastosViaje( 
 @IdProgramaciondesalida int,
@@ -1156,17 +1157,18 @@ Create procedure spInsertarGastosViaje(
 @Combustible varchar(200),
 @precioscombustible float,
 @Otros varchar(200),
-@preciosotros float
+@preciosotros float,
+@Total float
 )as begin
-insert into GastosViaje(IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros ) values 
-(@IdProgramaciondesalida,@Fecha,@Viaticos,@preciosviaticos, @Combustible, @precioscombustible, @Otros, @precioscombustible)
+insert into GastosViaje(IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros,Total ) values 
+(@IdProgramaciondesalida,@Fecha,@Viaticos,@preciosviaticos, @Combustible, @precioscombustible, @Otros, @precioscombustible,@Total)
 end 
 go
 
 --Procedimiento para listar gastos de viaje 
 create procedure spListarGastosViaje
 as
-select IdGastosViaje, IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros 
+select IdGastosViaje, IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros,Total 
 	from GastosViaje
 	go
 
@@ -1181,7 +1183,8 @@ create procedure spModificarGastosViaje(
 @Combustible varchar(200),
 @precioscombustible float,
 @Otros varchar(200),
-@preciosotros float
+@preciosotros float,
+@Total float
 )
 as begin update GastosViaje set
 IdProgramaciondesalida=@IdProgramaciondesalida,
@@ -1191,7 +1194,8 @@ preciosviaticos=@preciosviaticos,
 Combustible=@Combustible,
 precioscombustible=@precioscombustible,
 Otros=@Otros,
-preciosotros=@preciosotros
+preciosotros=@preciosotros,
+Total=@Total
 where IdGastosViaje=@IdGastosViaje
 end 
 go

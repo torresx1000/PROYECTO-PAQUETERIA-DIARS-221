@@ -17,5 +17,6 @@ namespace CAPAENTIDAD
         public Double precioscombustible  { get; set; }
         public string Otros               { get; set; }
         public Double preciosotros        { get; set; }
+        public Double Total { get; set; }
     }
 }

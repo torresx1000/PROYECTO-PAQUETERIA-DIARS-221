@@ -123,6 +123,17 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_484375014_stock_illustration_allowance_of_weightage_for_international_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_484375014-stock-illustration-allowance-of-weightage-for-internation" +
+                        "al-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diavehiculo {
             get {
                 object obj = ResourceManager.GetObject("diavehiculo", resourceCulture);

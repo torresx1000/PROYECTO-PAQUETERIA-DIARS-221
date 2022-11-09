@@ -420,5 +420,8 @@
   <ItemGroup>
     <None Include="Resources\2481723.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,6 +36,7 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@precioscombustible", Fdev.precioscombustible);
                 cmd.Parameters.AddWithValue("@Otros", Fdev.Otros);
                 cmd.Parameters.AddWithValue("@preciosotros", Fdev.preciosotros);
+                cmd.Parameters.AddWithValue("@Total", Fdev.Total);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -60,7 +61,7 @@ namespace CAPADATOS
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarGastosViaje", cn);
+                cmd = new SqlCommand("spListarGastosViaje", cn); 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
 
@@ -77,7 +78,7 @@ namespace CAPADATOS
                     Fdev.precioscombustible = Convert.ToDouble(dr["precioscombustible"]);
                     Fdev.Otros = dr["Otros"].ToString();
                     Fdev.preciosotros = Convert.ToDouble(dr["preciosotros"]);
-
+                    Fdev.Total= Convert.ToDouble(dr["Total"]);
                     Lista.Add(Fdev);
                 }
             }
@@ -110,6 +111,7 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@precioscombustible", Fdev.precioscombustible);
                 cmd.Parameters.AddWithValue("@Otros", Fdev.Otros);
                 cmd.Parameters.AddWithValue("@preciosotros", Fdev.preciosotros);
+                cmd.Parameters.AddWithValue("@Total", Fdev.Total);
 
 
 
