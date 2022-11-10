@@ -776,7 +776,6 @@
             this.Controls.Add(this.SalirVentana);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRemitente_Destinatario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).EndInit();
             this.gbRemitente.ResumeLayout(false);
             this.gbRemitente.PerformLayout();

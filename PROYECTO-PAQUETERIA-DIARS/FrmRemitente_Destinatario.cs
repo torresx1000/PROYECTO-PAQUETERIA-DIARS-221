@@ -61,23 +61,27 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 EntPedido c = new EntPedido();
 
                 c.DniR = Convert.ToInt32(txtDniR.Text.Trim());
+                c.NombreR = txtNombresR.Text.Trim();
                 c.CorreoR = txtCorreoR.Text.Trim();
                 c.TelefonoR = int.Parse(txtTelefonoR.Text.Trim());
                 c.DireccionR = txtDireccionR.Text.Trim();
-                c.NombreR = txtNombresR.Text.Trim();
                 c.DistritoR = txtDistritoR.Text.Trim();
                 c.ProvinciaR = txtProvinciaR.Text.Trim();
                 c.DepartamentoR = txtDepartamentoR.Text.Trim();
 
                 c.DniD = Convert.ToInt32(txtDniD.Text.Trim());
+                c.NombreD = txtNombresD.Text.Trim();
                 c.CorreoD = txtCorreoD.Text.Trim();
                 c.TelefonoD = Convert.ToInt32(txtTelefonoD.Text.Trim());
                 c.DireccionD = txtDireccionD.Text.Trim();
-                c.NombreD = txtNombresD.Text.Trim();
                 c.DistritoD = txtDistritoD.Text.Trim();
                 c.ProvinciaD = txtProvinciaD.Text.Trim();
                 c.DepartamentoD = txtDepartamentoD.Text.Trim();
 
+                c.CodigoPaquete = Convert.ToInt32(txtCodigoPaquete.Text.Trim());
+                c.CantidadPaquete = Convert.ToInt32(txtCantidadPaquete.Text.Trim());
+                c.CategoriaPedido = cbCategoriaPaquete.Text.Trim();
+                c.DescripcionPedido = txtDescripcionPaquete.Text.Trim();
               
                 LogPedido.Instancia.InsertarPedido(c);
             }
@@ -120,10 +124,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
                 txtIdPedido.Text = Convert.ToString(Ent.IdPedido);
                 txtDniR.Text = Convert.ToString(Ent.DniR);
+                txtNombresR.Text = Ent.NombreR.ToString();
                 txtCorreoR.Text = Convert.ToString(Ent.CorreoR);
                 txtTelefonoR.Text = Convert.ToString(Ent.TelefonoR);
                 txtDireccionR.Text = Ent.DireccionR.ToString();
-                txtNombresR.Text = Ent.NombreR.ToString();
                 txtDistritoR.Text = Ent.DistritoR.ToString();
                 txtProvinciaR.Text = Ent.ProvinciaR.ToString();
                 txtDepartamentoR.Text = Ent.DepartamentoR.ToString();
@@ -136,7 +140,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 txtDistritoD.Text = Ent.DistritoD.ToString();
                 txtProvinciaD.Text = Ent.ProvinciaD.ToString();
                 txtDepartamentoD.Text = Ent.DepartamentoD.ToString();
-                }
+
+                txtCodigoPaquete.Text = Convert.ToString(Ent.CodigoPaquete);
+                txtCantidadPaquete.Text = Convert.ToString(Ent.CantidadPaquete);
+                cbCategoriaPaquete.Text = Ent.CategoriaPedido.ToString();
+                txtDescripcionPaquete.Text = Ent.DescripcionPedido.ToString();
+            }
             else
             {
                 MessageBox.Show("El Trabajdor no existe or esta inhabilitado, verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -158,29 +167,29 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow  filaActual = dataGridView1.Rows[e.RowIndex]; //
-            txtIdPedido.Text =            filaActual.Cells[0].Value.ToString();
-            txtDniR.Text =                filaActual.Cells[1].Value.ToString();
-            txtCorreoR.Text =             filaActual.Cells[2].Value.ToString();
-            txtTelefonoR.Text =           filaActual.Cells[3].Value.ToString();
-            txtDireccionR.Text =          filaActual.Cells[4].Value.ToString();
-            txtNombresR.Text =            filaActual.Cells[5].Value.ToString();
-            txtDistritoR.Text =           filaActual.Cells[8].Value.ToString();
-            txtProvinciaR.Text =          filaActual.Cells[9].Value.ToString();
-            txtDepartamentoR.Text =       filaActual.Cells[10].Value.ToString();
-            txtDniD.Text = filaActual.Cells[11].Value.ToString();
+            DataGridViewRow  filaActual = dataGridView1.Rows[e.RowIndex]; 
+            txtIdPedido.Text = filaActual.Cells[0].Value.ToString();
+            txtResponsable.Text = filaActual.Cells[1].Value.ToString();
+            txtDniR.Text =  filaActual.Cells[2].Value.ToString();
+            txtNombresR.Text = filaActual.Cells[3].Value.ToString();
+            txtCorreoR.Text =  filaActual.Cells[4].Value.ToString();
+            txtTelefonoR.Text =  filaActual.Cells[5].Value.ToString();
+            txtDireccionR.Text = filaActual.Cells[6].Value.ToString();
+            txtDistritoR.Text = filaActual.Cells[7].Value.ToString();
+            txtProvinciaR.Text =  filaActual.Cells[8].Value.ToString();
+            txtDepartamentoR.Text =  filaActual.Cells[9].Value.ToString();
+            txtDniD.Text = filaActual.Cells[10].Value.ToString();
+            txtNombresD.Text = filaActual.Cells[11].Value.ToString();
             txtCorreoD.Text = filaActual.Cells[12].Value.ToString();
             txtTelefonoD.Text = filaActual.Cells[13].Value.ToString();
             txtDireccionD.Text = filaActual.Cells[14].Value.ToString();
-            txtNombresD.Text = filaActual.Cells[15].Value.ToString();
-            txtDistritoD.Text = filaActual.Cells[18].Value.ToString();
-            txtProvinciaD.Text = filaActual.Cells[19].Value.ToString();
-            txtDepartamentoD.Text = filaActual.Cells[20].Value.ToString();
-
-
-
-
-
+            txtDistritoD.Text = filaActual.Cells[15].Value.ToString();
+            txtProvinciaD.Text = filaActual.Cells[16].Value.ToString();
+            txtDepartamentoD.Text = filaActual.Cells[17].Value.ToString();
+            txtCodigoPaquete.Text = filaActual.Cells[18].Value.ToString();
+            txtCantidadPaquete.Text = filaActual.Cells[19].Value.ToString();
+            cbCategoriaPaquete.Text = filaActual.Cells[20].Value.ToString();
+            txtDescripcionPaquete.Text = filaActual.Cells[21].Value.ToString();
         }
 
     private void SalirVentana_Click(object sender, EventArgs e)
