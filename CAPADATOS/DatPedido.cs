@@ -32,26 +32,26 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spinsertarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@IdTrabajador", Ped.Id_Trabajador);
-                cmd.Parameters.AddWithValue("@DniR", Ped.DniR);
-                cmd.Parameters.AddWithValue("@CorreoR", Ped.CorreoR);
-                cmd.Parameters.AddWithValue("@TelefonoR", Ped.TelefonoR);
-                cmd.Parameters.AddWithValue("@DireccionR", Ped.DireccionR);
-                cmd.Parameters.AddWithValue("@NombreR", Ped.NombreR);
-                cmd.Parameters.AddWithValue("@ObservacionesR", Ped.ObservacionesR);
-                cmd.Parameters.AddWithValue("@ContactoR", Ped.ContactoR);
-                cmd.Parameters.AddWithValue("@DistritoR", Ped.DistritoR);
-                cmd.Parameters.AddWithValue("@ProvinciaR", Ped.ProvinciaR);
-                cmd.Parameters.AddWithValue("@DepartamentoR", Ped.DepartamentoR);
-                cmd.Parameters.AddWithValue("@DniD", Ped.DniD);
-                cmd.Parameters.AddWithValue("@CorreoD", Ped.CorreoD);
-                cmd.Parameters.AddWithValue("@TelefonoD", Ped.TelefonoD);
-                cmd.Parameters.AddWithValue("@DireccionD", Ped.DireccionD);
-                cmd.Parameters.AddWithValue("@NombreD", Ped.NombreD);
-                cmd.Parameters.AddWithValue("@ObservacionesD", Ped.ObservacionesD);
-                cmd.Parameters.AddWithValue("@ContactoD", Ped.ContactoD);
-                cmd.Parameters.AddWithValue("@DistritoD", Ped.DistritoD);
-                cmd.Parameters.AddWithValue("@ProvinciaD", Ped.ProvinciaD);
-                cmd.Parameters.AddWithValue("@DepartamentoD", Ped.DepartamentoD);
+                cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
+                cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
+                cmd.Parameters.AddWithValue("@CORREOR", Ped.CorreoR);
+                cmd.Parameters.AddWithValue("@TELEFONOR", Ped.TelefonoR);
+                cmd.Parameters.AddWithValue("@DIRECCIONR", Ped.DireccionR);
+                cmd.Parameters.AddWithValue("@DISTRITOR", Ped.DistritoR);
+                cmd.Parameters.AddWithValue("@PROVINCIAR", Ped.ProvinciaR);
+                cmd.Parameters.AddWithValue("@DEPARTAMENTOR", Ped.DepartamentoR);
+                cmd.Parameters.AddWithValue("@DNID", Ped.DniD);
+                cmd.Parameters.AddWithValue("@NOMBRED", Ped.NombreD);
+                cmd.Parameters.AddWithValue("@CORREOD", Ped.CorreoD);
+                cmd.Parameters.AddWithValue("@TELEFONOD", Ped.TelefonoD);
+                cmd.Parameters.AddWithValue("@DIRECCIOND", Ped.DireccionD);
+                cmd.Parameters.AddWithValue("@DISTRITOD", Ped.DistritoD);
+                cmd.Parameters.AddWithValue("@PROVINCIAD", Ped.ProvinciaD);
+                cmd.Parameters.AddWithValue("@DEPARTAMENTOD", Ped.DepartamentoD);
+                cmd.Parameters.AddWithValue("@CODIGOPEDIDO", Ped.CodigoPaquete);
+                cmd.Parameters.AddWithValue("@CANTIDADPAQUETE", Ped.CantidadPaquete);
+                cmd.Parameters.AddWithValue("@CATEGORIAPAQUETE", Ped.CategoriaPedido);
+                cmd.Parameters.AddWithValue("@DESCRIPCIONPAQUETE", Ped.DescripcionPedido);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -85,26 +85,27 @@ namespace CAPADATOS
                     EntPedido Ped = new EntPedido();
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
+                    Ped.NombreR = dr["NombreR"].ToString();
                     Ped.CorreoR = dr["CorreoR"].ToString(); ;
                     Ped.TelefonoR = Convert.ToInt32(dr["TelefonoR"]);
                     Ped.DireccionR = dr["DireccionR"].ToString();
-                    Ped.NombreR = dr["NombreR"].ToString();
-                    Ped.ObservacionesR = dr["ObservacionesR"].ToString();
-                    Ped.ContactoR = Convert.ToInt32(dr["ContactoR"]);
                     Ped.DistritoR = dr["DistritoR"].ToString();
                     Ped.ProvinciaR = dr["ProvinciaR"].ToString();
                     Ped.DepartamentoR = dr["DepartamentoR"].ToString();
 
                     Ped.DniD = Convert.ToInt32(dr["DniD"]);
+                    Ped.NombreD = dr["NombreD"].ToString();
                     Ped.CorreoD = dr["CorreoD"].ToString(); ;
                     Ped.TelefonoD = Convert.ToInt32(dr["TelefonoD"]);
                     Ped.DireccionD = dr["DireccionD"].ToString();
-                    Ped.NombreD = dr["NombreD"].ToString();
-                    Ped.ObservacionesD = dr["ObservacionesD"].ToString();
-                    Ped.ContactoD = Convert.ToInt32(dr["ContactoD"]);
                     Ped.DistritoD = dr["DistritoD"].ToString();
                     Ped.ProvinciaD = dr["ProvinciaD"].ToString();
                     Ped.DepartamentoD = dr["DepartamentoD"].ToString();
+
+                    Ped.CodigoPaquete= Convert.ToInt32(dr["CODIGOPEDIDO"]);
+                    Ped.CantidadPaquete= Convert.ToInt32(dr["CANTIDADPAQUETE"]);
+                    Ped.CategoriaPedido = dr["CATEGORIAPAQUETE"].ToString();
+                    Ped.DescripcionPedido= dr["DESCRIPCIONPAQUETE"].ToString();
                     Lista.Add(Ped);
                 }
             }
@@ -129,28 +130,27 @@ namespace CAPADATOS
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spModificarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdPedido", Ped.IdPedido);
-                cmd.Parameters.AddWithValue("@DniR", Ped.DniR);
-                cmd.Parameters.AddWithValue("@CorreoR", Ped.CorreoR);
-                cmd.Parameters.AddWithValue("@TelefonoR", Ped.TelefonoR);
-                cmd.Parameters.AddWithValue("@DireccionR", Ped.DireccionR);
-                cmd.Parameters.AddWithValue("@NombreR", Ped.NombreR);
-                cmd.Parameters.AddWithValue("@ObservacionesR", Ped.ObservacionesR);
-                cmd.Parameters.AddWithValue("@ContactoR", Ped.ContactoR);
-                cmd.Parameters.AddWithValue("@DistritoR", Ped.DistritoR);
-                cmd.Parameters.AddWithValue("@ProvinciaR", Ped.ProvinciaR);
-                cmd.Parameters.AddWithValue("@DepartamentoR", Ped.DepartamentoR);
-                
-                cmd.Parameters.AddWithValue("@DniD", Ped.DniD);
-                cmd.Parameters.AddWithValue("@CorreoD", Ped.CorreoD);
-                cmd.Parameters.AddWithValue("@TelefonoD", Ped.TelefonoD);
-                cmd.Parameters.AddWithValue("@DireccionD", Ped.DireccionD);
-                cmd.Parameters.AddWithValue("@NombreD", Ped.NombreD);
-                cmd.Parameters.AddWithValue("@ObservacionesD", Ped.ObservacionesD);
-                cmd.Parameters.AddWithValue("@ContactoD", Ped.ContactoD);
-                cmd.Parameters.AddWithValue("@DistritoD", Ped.DistritoD);
-                cmd.Parameters.AddWithValue("@ProvinciaD", Ped.ProvinciaD);
-                cmd.Parameters.AddWithValue("@DepartamentoD", Ped.DepartamentoD);
+                cmd.Parameters.AddWithValue("IdPedido", Ped.IdPedido);
+                cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
+                cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
+                cmd.Parameters.AddWithValue("@CORREOR", Ped.CorreoR);
+                cmd.Parameters.AddWithValue("@TELEFONOR", Ped.TelefonoR);
+                cmd.Parameters.AddWithValue("@DIRECCIONR", Ped.DireccionR);
+                cmd.Parameters.AddWithValue("@DISTRITOR", Ped.DistritoR);
+                cmd.Parameters.AddWithValue("@PROVINCIAR", Ped.ProvinciaR);
+                cmd.Parameters.AddWithValue("@DEPARTAMENTOR", Ped.DepartamentoR);
+                cmd.Parameters.AddWithValue("@DNID", Ped.DniD);
+                cmd.Parameters.AddWithValue("@NOMBRED", Ped.NombreD);
+                cmd.Parameters.AddWithValue("@CORREOD", Ped.CorreoD);
+                cmd.Parameters.AddWithValue("@TELEFONOD", Ped.TelefonoD);
+                cmd.Parameters.AddWithValue("@DIRECCIOND", Ped.DireccionD);
+                cmd.Parameters.AddWithValue("@DISTRITOD", Ped.DistritoD);
+                cmd.Parameters.AddWithValue("@PROVINCIAD", Ped.ProvinciaD);
+                cmd.Parameters.AddWithValue("@DEPARTAMENTOD", Ped.DepartamentoD);
+                cmd.Parameters.AddWithValue("@CODIGOPEDIDO", Ped.CodigoPaquete);
+                cmd.Parameters.AddWithValue("@CANTIDADPAQUETE", Ped.CantidadPaquete);
+                cmd.Parameters.AddWithValue("@CATEGORIAPAQUETE", Ped.CategoriaPedido);
+                cmd.Parameters.AddWithValue("@DESCRIPCIONPAQUETE", Ped.DescripcionPedido);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -184,26 +184,27 @@ namespace CAPADATOS
                 {
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
+                    Ped.NombreR = dr["NombreR"].ToString();
                     Ped.CorreoR = dr["CorreoR"].ToString(); ;
                     Ped.TelefonoR = Convert.ToInt32(dr["TelefonoR"]);
                     Ped.DireccionR = dr["DireccionR"].ToString();
-                    Ped.NombreR = dr["NombreR"].ToString();
-                    Ped.ObservacionesR = dr["ObservacionesR"].ToString();
-                    Ped.ContactoR = Convert.ToInt32(dr["ContactoR"]);
                     Ped.DistritoR = dr["DistritoR"].ToString();
                     Ped.ProvinciaR = dr["ProvinciaR"].ToString();
                     Ped.DepartamentoR = dr["DepartamentoR"].ToString();
-       
+
                     Ped.DniD = Convert.ToInt32(dr["DniD"]);
+                    Ped.NombreD = dr["NombreD"].ToString();
                     Ped.CorreoD = dr["CorreoD"].ToString(); ;
                     Ped.TelefonoD = Convert.ToInt32(dr["TelefonoD"]);
                     Ped.DireccionD = dr["DireccionD"].ToString();
-                    Ped.NombreD = dr["NombreD"].ToString();
-                    Ped.ObservacionesD = dr["ObservacionesD"].ToString();
-                    Ped.ContactoD = Convert.ToInt32(dr["ContactoD"]);
                     Ped.DistritoD = dr["DistritoD"].ToString();
                     Ped.ProvinciaD = dr["ProvinciaD"].ToString();
                     Ped.DepartamentoD = dr["DepartamentoD"].ToString();
+
+                    Ped.CodigoPaquete = Convert.ToInt32(dr["CODIGOPEDIDO"]);
+                    Ped.CantidadPaquete = Convert.ToInt32(dr["CANTIDADPAQUETE"]);
+                    Ped.CategoriaPedido = dr["CATEGORIAPAQUETE"].ToString();
+                    Ped.DescripcionPedido = dr["DESCRIPCIONPAQUETE"].ToString();
                 }
 
             }

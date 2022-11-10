@@ -36,22 +36,18 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtTelefonoR.Text = ("");
             txtDireccionR.Text = ("");
             txtNombresR.Text = ("");
-            txtObservacionesR.Text = ("");
             txtDistritoR.Text = ("");
             txtProvinciaR.Text = ("");
             txtDepartamentoR.Text = ("");
-            txtContactoR.Text = ("");
 
             txtDniD.Text = ("");
             txtCorreoD.Text = ("");
             txtTelefonoD.Text = ("");
             txtDireccionD.Text = ("");
             txtNombresD.Text = ("");
-            txtObservacionesD.Text = ("");
             txtDistritoD.Text = ("");
             txtProvinciaD.Text = ("");
             txtDepartamentoR.Text = ("");
-            txtContactoR.Text = ("");
         }
         public void ListarPedido()
         {
@@ -69,8 +65,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 c.TelefonoR = int.Parse(txtTelefonoR.Text.Trim());
                 c.DireccionR = txtDireccionR.Text.Trim();
                 c.NombreR = txtNombresR.Text.Trim();
-                c.ObservacionesR = txtObservacionesR.Text.Trim();
-                c.ContactoR = int.Parse(txtContactoR.Text.Trim());
                 c.DistritoR = txtDistritoR.Text.Trim();
                 c.ProvinciaR = txtProvinciaR.Text.Trim();
                 c.DepartamentoR = txtDepartamentoR.Text.Trim();
@@ -80,8 +74,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 c.TelefonoD = Convert.ToInt32(txtTelefonoD.Text.Trim());
                 c.DireccionD = txtDireccionD.Text.Trim();
                 c.NombreD = txtNombresD.Text.Trim();
-                c.ObservacionesD = txtObservacionesD.Text.Trim();
-                c.ContactoD = Convert.ToInt32(txtContactoD.Text.Trim());
                 c.DistritoD = txtDistritoD.Text.Trim();
                 c.ProvinciaD = txtProvinciaD.Text.Trim();
                 c.DepartamentoD = txtDepartamentoD.Text.Trim();
@@ -132,8 +124,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 txtTelefonoR.Text = Convert.ToString(Ent.TelefonoR);
                 txtDireccionR.Text = Ent.DireccionR.ToString();
                 txtNombresR.Text = Ent.NombreR.ToString();
-                txtObservacionesR.Text = Ent.ObservacionesR.ToString();
-                txtContactoR.Text = Convert.ToString(Ent.ContactoR);
                 txtDistritoR.Text = Ent.DistritoR.ToString();
                 txtProvinciaR.Text = Ent.ProvinciaR.ToString();
                 txtDepartamentoR.Text = Ent.DepartamentoR.ToString();
@@ -143,8 +133,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 txtTelefonoD.Text = Convert.ToString(Ent.TelefonoD);
                 txtDireccionD.Text = Ent.DireccionD.ToString();
                 txtNombresD.Text = Ent.NombreD.ToString();
-                txtObservacionesD.Text = Ent.ObservacionesD.ToString();
-                txtContactoD.Text = Convert.ToString(Ent.ContactoD);
                 txtDistritoD.Text = Ent.DistritoD.ToString();
                 txtProvinciaD.Text = Ent.ProvinciaD.ToString();
                 txtDepartamentoD.Text = Ent.DepartamentoD.ToString();
@@ -177,8 +165,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtTelefonoR.Text =           filaActual.Cells[3].Value.ToString();
             txtDireccionR.Text =          filaActual.Cells[4].Value.ToString();
             txtNombresR.Text =            filaActual.Cells[5].Value.ToString();
-            txtObservacionesR.Text =      filaActual.Cells[6].Value.ToString();
-            txtContactoR.Text =           filaActual.Cells[7].Value.ToString();
             txtDistritoR.Text =           filaActual.Cells[8].Value.ToString();
             txtProvinciaR.Text =          filaActual.Cells[9].Value.ToString();
             txtDepartamentoR.Text =       filaActual.Cells[10].Value.ToString();
@@ -187,8 +173,6 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtTelefonoD.Text = filaActual.Cells[13].Value.ToString();
             txtDireccionD.Text = filaActual.Cells[14].Value.ToString();
             txtNombresD.Text = filaActual.Cells[15].Value.ToString();
-            txtObservacionesD.Text = filaActual.Cells[16].Value.ToString();
-            txtContactoD.Text = filaActual.Cells[17].Value.ToString();
             txtDistritoD.Text = filaActual.Cells[18].Value.ToString();
             txtProvinciaD.Text = filaActual.Cells[19].Value.ToString();
             txtDepartamentoD.Text = filaActual.Cells[20].Value.ToString();

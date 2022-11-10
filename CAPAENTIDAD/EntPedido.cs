@@ -8,6 +8,7 @@ namespace CAPAENTIDAD
 {
     public class EntPedido
     {
+        public int IdPedido { get; set; }
         public string  Encargado { get; set; }
         public int DniR { get; set; }
         public string NombreR { get; set; }
@@ -29,8 +30,8 @@ namespace CAPAENTIDAD
 
         public int CodigoPaquete { get; set; }
         public int CantidadPaquete { get; set; }
-        public string Categoria { get; set; }
-        public string Descripcion { get; set; }
+        public string CategoriaPedido { get; set; }
+        public string DescripcionPedido { get; set; }
 
     }
 }
