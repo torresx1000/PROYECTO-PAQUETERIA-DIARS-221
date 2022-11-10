@@ -27,6 +27,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             LimpiarVariables();
             gbRemitente.Enabled = false;
             gbDestinatario.Enabled = false;
+            GenerarAleatorio();
         }
         public void LimpiarVariables()
         {
@@ -48,6 +49,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtDistritoD.Text = ("");
             txtProvinciaD.Text = ("");
             txtDepartamentoR.Text = ("");
+        }
+        public void GenerarAleatorio() { 
+
+        Random alea= new Random();
+        txtCodigoPaquete.Text=alea.Next().ToString();
         }
         public void ListarPedido()
         {
@@ -102,6 +108,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarVariables();
+            GenerarAleatorio();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
