@@ -126,7 +126,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         }
 
-        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text= DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
     }
 
       
