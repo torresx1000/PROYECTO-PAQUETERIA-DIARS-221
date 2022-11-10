@@ -9,7 +9,7 @@ namespace CAPAENTIDAD
     public class EntPedido
     {
         public int IdPedido { get; set; }
-        public string  Encargado { get; set; }
+        public string  Responsable { get; set; }
         public int DniR { get; set; }
         public string NombreR { get; set; }
         public string CorreoR { get; set; } 

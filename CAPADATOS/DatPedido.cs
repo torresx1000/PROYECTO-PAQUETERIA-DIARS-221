@@ -32,6 +32,7 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spinsertarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@IdTrabajador", Ped.Id_Trabajador);
+                cmd.Parameters.AddWithValue("@ENCARGADO", Ped.Responsable);
                 cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
                 cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
                 cmd.Parameters.AddWithValue("@CORREOR", Ped.CorreoR);
@@ -83,7 +84,9 @@ namespace CAPADATOS
                 while (dr.Read())
                 {
                     EntPedido Ped = new EntPedido();
+
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
+                    Ped.Responsable = dr["ENCARGADO"].ToString();
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
                     Ped.NombreR = dr["NombreR"].ToString();
                     Ped.CorreoR = dr["CorreoR"].ToString(); ;
@@ -131,6 +134,7 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spModificarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("IdPedido", Ped.IdPedido);
+                cmd.Parameters.AddWithValue("@ENCARGADO", Ped.Responsable);
                 cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
                 cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
                 cmd.Parameters.AddWithValue("@CORREOR", Ped.CorreoR);
@@ -183,6 +187,7 @@ namespace CAPADATOS
                 while (dr.Read())
                 {
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
+                    Ped.Responsable = dr["ENCARGADO"].ToString();
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
                     Ped.NombreR = dr["NombreR"].ToString();
                     Ped.CorreoR = dr["CorreoR"].ToString(); ;

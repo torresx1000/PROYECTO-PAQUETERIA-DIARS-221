@@ -59,7 +59,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             try
             {
                 EntPedido c = new EntPedido();
-
+                c.Responsable = txtResponsable.Text.Trim();
                 c.DniR = Convert.ToInt32(txtDniR.Text.Trim());
                 c.NombreR = txtNombresR.Text.Trim();
                 c.CorreoR = txtCorreoR.Text.Trim();
@@ -112,6 +112,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnRegistrar.Visible = true;
             btnActualizar.Enabled = false;
             btnInabilitar.Enabled = false;
+            txtResponsable.Enabled = true;
          
         }
 
