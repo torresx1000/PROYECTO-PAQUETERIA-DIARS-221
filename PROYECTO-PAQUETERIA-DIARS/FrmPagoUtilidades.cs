@@ -29,6 +29,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             FrmReporteTrabajadores frmReporteTrabajadores=new FrmReporteTrabajadores();
             frmReporteTrabajadores.ShowDialog();
             txtTrabajador.Text = FrmReporteTrabajadores.nombre;
+         
         }
 
         public void SumarNetoPago() {

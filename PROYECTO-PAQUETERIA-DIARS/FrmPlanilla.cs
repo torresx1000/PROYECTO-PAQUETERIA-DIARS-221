@@ -108,7 +108,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnBuscarDni_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (txtDniTr.Text.Length == 8)
                 {
@@ -127,7 +127,15 @@ namespace PROYECTO_PAQUETERIA_DIARS
             catch (Exception)
             {
                 MessageBox.Show("Ingrese un número de documento válido (Exception).", "Documento inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
+            FrmReporteTrabajadores frmReporteTrabajadores = new FrmReporteTrabajadores();
+            frmReporteTrabajadores.ShowDialog();
+            txtnomTr.Text = FrmReporteTrabajadores.nombre;
+            txtIdTr.Text = FrmReporteTrabajadores.id;
+            txtFechNacTr.Text = FrmReporteTrabajadores.fechanac;
+            txtAppTr.Text = FrmReporteTrabajadores.apellidopat + FrmReporteTrabajadores.apellidomat;
+            txtDirTr.Text = FrmReporteTrabajadores.direccion;
+            txtDniTr.Text = FrmReporteTrabajadores.dni;
         }
 
         private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)

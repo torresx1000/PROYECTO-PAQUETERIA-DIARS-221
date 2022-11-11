@@ -121,12 +121,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(600, 19);
+            this.label1.Location = new System.Drawing.Point(591, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 29);
+            this.label1.Size = new System.Drawing.Size(312, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Boleta de Pago - Planilla";
+            this.label1.Text = "REGISTRO DE PLANILLA";
             // 
             // bunifuElipse1
             // 
@@ -361,10 +361,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Red;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Red;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Red;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(27, 51);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(12, 51);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1181, 736);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1196, 736);
             this.bunifuGradientPanel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -799,7 +799,7 @@
             // txtIdTr
             // 
             this.txtIdTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIdTr.Location = new System.Drawing.Point(47, 19);
+            this.txtIdTr.Location = new System.Drawing.Point(289, 22);
             this.txtIdTr.Multiline = true;
             this.txtIdTr.Name = "txtIdTr";
             this.txtIdTr.Size = new System.Drawing.Size(58, 21);
@@ -808,7 +808,7 @@
             // txtApellidos
             // 
             this.txtApellidos.AutoSize = true;
-            this.txtApellidos.Location = new System.Drawing.Point(570, 24);
+            this.txtApellidos.Location = new System.Drawing.Point(801, 23);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(93, 16);
             this.txtApellidos.TabIndex = 17;
@@ -817,25 +817,25 @@
             // txtAppTr
             // 
             this.txtAppTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtAppTr.Location = new System.Drawing.Point(668, 16);
+            this.txtAppTr.Location = new System.Drawing.Point(900, 19);
             this.txtAppTr.Multiline = true;
             this.txtAppTr.Name = "txtAppTr";
-            this.txtAppTr.Size = new System.Drawing.Size(318, 23);
+            this.txtAppTr.Size = new System.Drawing.Size(243, 23);
             this.txtAppTr.TabIndex = 16;
             // 
             // txtDirTr
             // 
             this.txtDirTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtDirTr.Location = new System.Drawing.Point(455, 49);
+            this.txtDirTr.Location = new System.Drawing.Point(743, 61);
             this.txtDirTr.Multiline = true;
             this.txtDirTr.Name = "txtDirTr";
-            this.txtDirTr.Size = new System.Drawing.Size(437, 23);
+            this.txtDirTr.Size = new System.Drawing.Size(400, 23);
             this.txtDirTr.TabIndex = 15;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(347, 56);
+            this.label11.Location = new System.Drawing.Point(644, 64);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 16);
             this.label11.TabIndex = 14;
@@ -853,7 +853,7 @@
             "6",
             "7",
             "8"});
-            this.cboHijos.Location = new System.Drawing.Point(1052, 16);
+            this.cboHijos.Location = new System.Drawing.Point(289, 56);
             this.cboHijos.Name = "cboHijos";
             this.cboHijos.Size = new System.Drawing.Size(50, 24);
             this.cboHijos.TabIndex = 13;
@@ -861,7 +861,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(989, 21);
+            this.label10.Location = new System.Drawing.Point(219, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 12;
@@ -869,7 +869,7 @@
             // 
             // txtFechNacTr
             // 
-            this.txtFechNacTr.Location = new System.Drawing.Point(111, 56);
+            this.txtFechNacTr.Location = new System.Drawing.Point(441, 59);
             this.txtFechNacTr.Name = "txtFechNacTr";
             this.txtFechNacTr.Size = new System.Drawing.Size(197, 22);
             this.txtFechNacTr.TabIndex = 11;
@@ -877,7 +877,7 @@
             // txtnomTr
             // 
             this.txtnomTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtnomTr.Location = new System.Drawing.Point(405, 17);
+            this.txtnomTr.Location = new System.Drawing.Point(637, 22);
             this.txtnomTr.Multiline = true;
             this.txtnomTr.Name = "txtnomTr";
             this.txtnomTr.Size = new System.Drawing.Size(163, 23);
@@ -886,7 +886,7 @@
             // txtDniTr
             // 
             this.txtDniTr.BorderColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtDniTr.Location = new System.Drawing.Point(139, 19);
+            this.txtDniTr.Location = new System.Drawing.Point(413, 20);
             this.txtDniTr.Multiline = true;
             this.txtDniTr.Name = "txtDniTr";
             this.txtDniTr.Size = new System.Drawing.Size(126, 23);
@@ -894,18 +894,18 @@
             // 
             // btnBuscarDni
             // 
-            this.btnBuscarDni.Location = new System.Drawing.Point(270, 17);
+            this.btnBuscarDni.Location = new System.Drawing.Point(19, 26);
             this.btnBuscarDni.Name = "btnBuscarDni";
-            this.btnBuscarDni.Size = new System.Drawing.Size(42, 26);
+            this.btnBuscarDni.Size = new System.Drawing.Size(176, 42);
             this.btnBuscarDni.TabIndex = 8;
-            this.btnBuscarDni.Text = "IR";
+            this.btnBuscarDni.Text = "Seleccionar Trabajador";
             this.btnBuscarDni.UseVisualStyleBackColor = true;
             this.btnBuscarDni.Click += new System.EventHandler(this.btnBuscarDni_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 23);
+            this.label6.Location = new System.Drawing.Point(370, 26);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 16);
             this.label6.TabIndex = 7;
@@ -915,7 +915,7 @@
             // txtNombres
             // 
             this.txtNombres.AutoSize = true;
-            this.txtNombres.Location = new System.Drawing.Point(320, 23);
+            this.txtNombres.Location = new System.Drawing.Point(545, 22);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(86, 16);
             this.txtNombres.TabIndex = 6;
@@ -924,7 +924,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 61);
+            this.label8.Location = new System.Drawing.Point(345, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 16);
             this.label8.TabIndex = 5;
@@ -933,7 +933,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 26);
+            this.label9.Location = new System.Drawing.Point(235, 22);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 16);
             this.label9.TabIndex = 4;

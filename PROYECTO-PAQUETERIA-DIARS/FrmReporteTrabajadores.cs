@@ -15,6 +15,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmReporteTrabajadores : Form
     {
+        public static string dni;
+        public static string direccion;
+        public static string fechanac;
+        public static string apellidopat;
+        public static string apellidomat;
         public static string nombre;
         public static string id;
         public FrmReporteTrabajadores()
@@ -71,6 +76,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             nombre = dgvTrabajadores.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
             id = dgvTrabajadores.Rows[e.RowIndex].Cells["Id_Trabajador"].Value.ToString();
+            apellidopat= dgvTrabajadores.Rows[e.RowIndex].Cells["ApPaterno"].Value.ToString();
+            apellidomat= dgvTrabajadores.Rows[e.RowIndex].Cells["ApMaterno"].Value.ToString();
+            fechanac= dgvTrabajadores.Rows[e.RowIndex].Cells["FechaNac"].Value.ToString();
+            direccion= dgvTrabajadores.Rows[e.RowIndex].Cells["Direccion"].Value.ToString();
+            dni= dgvTrabajadores.Rows[e.RowIndex].Cells["Dni"].Value.ToString();
         }
     }
 }
