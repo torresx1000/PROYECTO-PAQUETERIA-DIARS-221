@@ -876,6 +876,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(247)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1185, 635);
             this.Controls.Add(this.SeleccionarPla);
             this.Controls.Add(this.txtPlanilla);
@@ -901,6 +902,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "FrmPagoUtilidades";
             this.Text = "Trabajador:";
+            this.Load += new System.EventHandler(this.FrmPagoUtilidades_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.bunifuGradientPanel5.ResumeLayout(false);

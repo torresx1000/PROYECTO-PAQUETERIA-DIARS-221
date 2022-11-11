@@ -262,5 +262,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             string id = dataGridView1.Rows[e.RowIndex].Cells["IdPagoUtilidades"].Value.ToString();
             txtpagoutilidades.Text = id;
         }
+
+        private void FrmPagoUtilidades_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
