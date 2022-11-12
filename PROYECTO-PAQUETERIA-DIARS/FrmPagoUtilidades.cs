@@ -176,6 +176,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
 
             LogPagoUtilidades.Instancia.InsertaPagoUtilidades(paut);
+            ListarPagoUtilidades();
         }
 
         public void ListarPagoUtilidades() {

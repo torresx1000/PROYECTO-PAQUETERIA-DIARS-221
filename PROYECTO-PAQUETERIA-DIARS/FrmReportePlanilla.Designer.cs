@@ -68,6 +68,7 @@
             this.dgvPlanilla.RowHeadersWidth = 51;
             this.dgvPlanilla.Size = new System.Drawing.Size(979, 473);
             this.dgvPlanilla.TabIndex = 15;
+            this.dgvPlanilla.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanilla_CellClick);
             // 
             // label2
             // 

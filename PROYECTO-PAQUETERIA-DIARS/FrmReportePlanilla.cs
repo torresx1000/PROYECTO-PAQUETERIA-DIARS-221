@@ -42,5 +42,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             this.Close();
         }
+
+        private void dgvPlanilla_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id=dgvPlanilla.Rows[e.RowIndex].Cells["IdPlanilla"].Value.ToString();
+        }
     }
 }
