@@ -181,7 +181,7 @@ namespace CAPALOGICA
                 DOCINFOA di = new DOCINFOA();
                 bool bSuccess = false; // Assume failure unless you specifically succeed.
 
-                di.pDocName = "My C#.NET RAW Document";
+                di.pDocName = "Reporte Gastos Viaje";
                 di.pDataType = "RAW";
                 // di.pOutputFile = @"C:\Users\Roland\Documents\Visual Studio 2015\Projects\pjtVentas\Ventas";
 
