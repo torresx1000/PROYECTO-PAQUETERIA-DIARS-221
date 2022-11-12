@@ -176,9 +176,55 @@ namespace PROYECTO_PAQUETERIA_DIARS
             paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
 
             LogPagoUtilidades.Instancia.InsertaPagoUtilidades(paut);
+            comprobantePago();
             ListarPagoUtilidades();
         }
+        private void comprobantePago()
+        {
+            string fecha = DateTime.Now.ToLongDateString();
+            clsFactura.CreaTicket Ticket1 = new clsFactura.CreaTicket();
 
+            Ticket1.TextoCentro("EMPRESA DE TRASPORTES TORRES "); //imprime una linea de descripcion
+            Ticket1.TextoCentro("**********************************");
+
+            Ticket1.TextoIzquierda("");
+
+            Ticket1.TextoCentro("Comprobate Pago"); //imprime una linea de descripcion
+            Ticket1.TextoCentro("**********************************");
+
+            Ticket1.TextoIzquierda("Fecha: " + fecha);
+            Ticket1.TextoIzquierda("");
+
+            Ticket1.TextoIzquierda("Codigo Planilla : " + txtPlanilla.Text);
+            Ticket1.TextoIzquierda("");
+
+            Ticket1.TextoIzquierda("Trabajador : " + txtTrabajador.Text);
+            Ticket1.TextoIzquierda("");
+
+            Ticket1.TextoIzquierda("Numero Cuenta : " + txtCuentaAhorro.Text);
+            Ticket1.TextoIzquierda("");
+
+            clsFactura.CreaTicket.LineasGuion();
+            Ticket1.TextoIzquierda("|Total Remuneraciones:  |  S/ " + txtAdicionalR.Text);
+            Ticket1.TextoIzquierda("");
+            Ticket1.TextoIzquierda("|Total Descuentos:      |  S/ " + txttotalDescuentos.Text);
+            Ticket1.TextoIzquierda("");
+            Ticket1.TextoIzquierda("|Total Aportes:         |  S/ " + txtAportesTotal.Text);
+            clsFactura.CreaTicket.LineasGuion();
+            Ticket1.TextoIzquierda("|Pago Neto:             |  S/ " + txtNetoPago.Text);
+            clsFactura.CreaTicket.LineasGuion();
+            // Ticket1.LineasTotales(); // imprime linea 
+
+            Ticket1.TextoIzquierda(" ");
+
+            Ticket1.TextoIzquierda(" ");
+            string impresora = "Microsoft XPS Document Writer";
+            Ticket1.ImprimirTiket(impresora);
+
+            MessageBox.Show("REGISTRADO");
+
+
+        }
         public void ListarPagoUtilidades() {
             dataGridView1.DataSource = LogPagoUtilidades.Instancia.ListarPagoUtilidades();
         }
