@@ -753,3 +753,64 @@ select  IdPlanilla,Ruc,RazSocial,Rubro,Direccion,
  where idPlanilla = @IdPlanilla
 end
 go
+
+--CREACION DE LA TABLA LOTE 
+CREATE TABLE LOTE(
+IdLote int not null primary key identity(1,1),
+Nombres varchar(50),
+Producto varchar(50),
+Fecha date
+)
+
+--CREAR PROCEDIMIENTO LISTARLOTE
+create procedure spListarLote
+as
+select IdLote,Nombres,Producto,Fecha
+	from LOTE 
+	go
+
+--CREAR PROCEDIMIENTO INSERTAR LOTE
+create procedure spInsertarLote(
+@Nombres varchar(50),
+@Producto varchar(50),
+@Fecha date)
+as begin
+insert into LOTE(Nombres,Producto,Fecha) values 
+(@Nombres,@Producto,@Fecha)
+end 
+go
+
+--CREAR PROCEDIMIENTO MODIFICAR LOTE
+create procedure spModificarLote(
+@IdLote int,
+@Nombres varchar(50),
+@Producto varchar(50),
+@Fecha date
+)as begin update LOTE set 
+ Nombres=@Nombres,
+ Producto=@Producto,
+ Fecha=@Fecha 
+ where IdLote=@IdLote
+ end
+ go
+
+--CREAR PROCEDIMIENTO ELIMINAR LOTE
+CREATE PROCEDURE spEliminarLote(
+@IdLote INT
+)
+AS
+BEGIN
+delete LOTE
+	WHERE IdLote =@IdLote
+END
+GO
+
+--CREAR PROCEDIMIENTO PARA BUSCAR LOTE
+CREATE PROCEDURE  spBuscarLote(
+	@IdLote int 
+)
+as begin
+select * from  LOTE where IdLote = @IdLote
+end
+GO
+

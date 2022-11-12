@@ -48,6 +48,7 @@
     <Compile Include="LogDiagnostico.cs" />
     <Compile Include="LogFichaDeEstadoVehiculo.cs" />
     <Compile Include="LogGastosDeViaje.cs" />
+    <Compile Include="LogLote.cs" />
     <Compile Include="LogPagoUtilidades.cs" />
     <Compile Include="LogPedido.cs" />
     <Compile Include="LogPlanilla.cs" />

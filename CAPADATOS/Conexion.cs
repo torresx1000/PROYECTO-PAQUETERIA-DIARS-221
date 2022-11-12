@@ -26,9 +26,15 @@ namespace CAPADATOS
             //OSNI
             //cn.ConnectionString = "Data Source=DESKTOP-RL2KS61\\SQLEXPRESS; Initial Catalog = BDPROYECTODIARS; Integrated Security=true";
             //Cleiner
+<<<<<<< HEAD
             cn.ConnectionString = "Data Source=DESKTOP-R0RTQRL; Initial Catalog = PAQUETERIADIARS; Integrated Security=true"; //cadena dos
 
 
+=======
+            //cn.ConnectionString = "Data Source=DESKTOP-R0RTQRL; Initial Catalog = PAQUETERIADIARS; Integrated Security=true"; //cadena dos
+            //Yeyson
+            cn.ConnectionString = "Data Source=DESKTOP-A1OPPUQ\\SQLEXPRESS; Initial Catalog = BDPROYECTODIARS; Integrated Security=true"; //cadena uno            
+>>>>>>> ....
             return cn;
         }
     }
