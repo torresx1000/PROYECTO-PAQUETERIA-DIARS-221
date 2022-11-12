@@ -423,5 +423,17 @@
   <ItemGroup>
     <None Include="Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\554795.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1304219430-170667a-removebg-preview %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

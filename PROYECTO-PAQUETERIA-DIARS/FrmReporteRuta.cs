@@ -67,5 +67,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             IdRuta = dgvRutas.Rows[e.RowIndex].Cells["IdRuta"].Value.ToString();
         }
+
+        private void FrmReporteRuta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

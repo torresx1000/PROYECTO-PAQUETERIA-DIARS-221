@@ -103,6 +103,16 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _554795 {
+            get {
+                object obj = ResourceManager.GetObject("554795", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _75863 {
             get {
                 object obj = ResourceManager.GetObject("75863", resourceCulture);
@@ -164,9 +174,30 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconos_de_calendario_y_reloj_icono_aislado_ilustración_vectorial_194001239_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-remove" +
+                        "bg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images_removebg_preview__3_ {
             get {
                 object obj = ResourceManager.GetObject("images-removebg-preview (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1304219430_170667a_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1304219430-170667a-removebg-preview (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -178,6 +209,17 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-pr" +
                         "eview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_technology_roadmap_business_road_map_internet_element_angle_text_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-remo" +
+                        "vebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

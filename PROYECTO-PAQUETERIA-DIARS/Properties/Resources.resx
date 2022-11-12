@@ -118,40 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="9996526ae3c3dd2b4e6ad6eb78e7e03b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9996526ae3c3dd2b4e6ad6eb78e7e03b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo-formulario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo-formulario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="download-removebg-preview (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-removebg-preview (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diavehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diavehiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3830ceea01445409feb858e8c601e79d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3830ceea01445409feb858e8c601e79d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5040050" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5040050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3830ceea01445409feb858e8c601e79d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3830ceea01445409feb858e8c601e79d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="554795" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\554795.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5040050" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5040050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo-formulario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo-formulario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diavehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diavehiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9996526ae3c3dd2b4e6ad6eb78e7e03b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9996526ae3c3dd2b4e6ad6eb78e7e03b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1304219430-170667a-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1304219430-170667a-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
