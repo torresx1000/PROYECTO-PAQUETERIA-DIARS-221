@@ -54,11 +54,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvdatosgastosdeviaje = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNUEVO = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.btnregistrar = new System.Windows.Forms.Button();
             this.btnquitar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnNUEVO = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdatosgastosdeviaje)).BeginInit();
@@ -346,6 +346,18 @@
             this.panel1.Size = new System.Drawing.Size(172, 297);
             this.panel1.TabIndex = 2;
             // 
+            // btnNUEVO
+            // 
+            this.btnNUEVO.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnNUEVO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNUEVO.Location = new System.Drawing.Point(15, 68);
+            this.btnNUEVO.Name = "btnNUEVO";
+            this.btnNUEVO.Size = new System.Drawing.Size(131, 42);
+            this.btnNUEVO.TabIndex = 8;
+            this.btnNUEVO.Text = "NUEVO";
+            this.btnNUEVO.UseVisualStyleBackColor = false;
+            this.btnNUEVO.Click += new System.EventHandler(this.btnNUEVO_Click);
+            // 
             // btnlimpiar
             // 
             this.btnlimpiar.BackColor = System.Drawing.Color.MediumTurquoise;
@@ -394,18 +406,6 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
-            // btnNUEVO
-            // 
-            this.btnNUEVO.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnNUEVO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNUEVO.Location = new System.Drawing.Point(15, 68);
-            this.btnNUEVO.Name = "btnNUEVO";
-            this.btnNUEVO.Size = new System.Drawing.Size(131, 42);
-            this.btnNUEVO.TabIndex = 8;
-            this.btnNUEVO.Text = "NUEVO";
-            this.btnNUEVO.UseVisualStyleBackColor = false;
-            this.btnNUEVO.Click += new System.EventHandler(this.btnNUEVO_Click);
-            // 
             // FrmGastosDeViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +415,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvdatosgastosdeviaje);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGastosDeViaje";
             this.Text = "GASTOS DE VIAJE";
             this.groupBox1.ResumeLayout(false);

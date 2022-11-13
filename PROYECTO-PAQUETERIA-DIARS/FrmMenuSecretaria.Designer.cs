@@ -42,23 +42,25 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(240)))), ((int)(((byte)(34)))));
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnConfigLogin);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnManProgramSalida);
             this.panel1.Controls.Add(this.btnManPedido);
-            this.panel1.Location = new System.Drawing.Point(-1, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 898);
+            this.panel1.Size = new System.Drawing.Size(218, 557);
             this.panel1.TabIndex = 1;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(149, 798);
+            this.btnSalir.Location = new System.Drawing.Point(112, 648);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(122, 39);
+            this.btnSalir.Size = new System.Drawing.Size(92, 32);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // btnConfigLogin
             // 
             this.btnConfigLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfigLogin.Location = new System.Drawing.Point(23, 250);
+            this.btnConfigLogin.Location = new System.Drawing.Point(17, 203);
+            this.btnConfigLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfigLogin.Name = "btnConfigLogin";
-            this.btnConfigLogin.Size = new System.Drawing.Size(248, 52);
+            this.btnConfigLogin.Size = new System.Drawing.Size(186, 42);
             this.btnConfigLogin.TabIndex = 1;
             this.btnConfigLogin.Text = "CONFIGURAR LOGIN";
             this.btnConfigLogin.UseVisualStyleBackColor = true;
@@ -77,17 +80,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(11, 13);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 241);
+            this.panel2.Size = new System.Drawing.Size(192, 178);
             this.panel2.TabIndex = 1;
             // 
             // btnManProgramSalida
             // 
             this.btnManProgramSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManProgramSalida.Location = new System.Drawing.Point(23, 403);
+            this.btnManProgramSalida.Location = new System.Drawing.Point(17, 342);
+            this.btnManProgramSalida.Margin = new System.Windows.Forms.Padding(2);
             this.btnManProgramSalida.Name = "btnManProgramSalida";
-            this.btnManProgramSalida.Size = new System.Drawing.Size(248, 52);
+            this.btnManProgramSalida.Size = new System.Drawing.Size(186, 42);
             this.btnManProgramSalida.TabIndex = 3;
             this.btnManProgramSalida.Text = "MANTENEDOR PROGRAMACION SALIDA";
             this.btnManProgramSalida.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // btnManPedido
             // 
             this.btnManPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManPedido.Location = new System.Drawing.Point(23, 324);
+            this.btnManPedido.Location = new System.Drawing.Point(17, 263);
+            this.btnManPedido.Margin = new System.Windows.Forms.Padding(2);
             this.btnManPedido.Name = "btnManPedido";
-            this.btnManPedido.Size = new System.Drawing.Size(248, 52);
+            this.btnManPedido.Size = new System.Drawing.Size(186, 42);
             this.btnManPedido.TabIndex = 2;
             this.btnManPedido.Text = "MANTENEDOR PEDIDO";
             this.btnManPedido.UseVisualStyleBackColor = true;
@@ -109,21 +115,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelContenedor.Location = new System.Drawing.Point(295, 3);
+            this.panelContenedor.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._52811f98_ea96_44fe_a496_f6e59a7e8c6d1;
+            this.panelContenedor.Location = new System.Drawing.Point(222, 66);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(962, 898);
+            this.panelContenedor.Size = new System.Drawing.Size(713, 555);
             this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // FrmMenuSecretaria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 913);
+            this.ClientSize = new System.Drawing.Size(946, 632);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuSecretaria";
             this.Text = "FormMenuSecretaria";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMenuSecretaria_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

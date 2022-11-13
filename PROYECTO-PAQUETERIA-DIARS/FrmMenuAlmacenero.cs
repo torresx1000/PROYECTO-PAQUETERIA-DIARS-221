@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
-    public partial class FrmMenuAlmacenero : Form
+    public partial class FrmMenuAlmacenero : MaterialSkin.Controls.MaterialForm
     {
         public FrmMenuAlmacenero()
         {

@@ -51,6 +51,9 @@
     <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
       <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -434,6 +437,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-1304219430-170667a-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-de-lista-mantenimiento-comprobación-coches-vector-195510702-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trasportes torres ima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trasportes torres ima1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-11-12 at 5.59.25 PM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM %282%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM %282%292.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2022-11-12 185602.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5942b881-ae8b-426a-b707-772d10f7a15c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5942b881-ae8b-426a-b707-772d10f7a15c %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

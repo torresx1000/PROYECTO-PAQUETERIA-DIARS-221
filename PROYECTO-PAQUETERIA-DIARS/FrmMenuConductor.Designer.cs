@@ -28,111 +28,180 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegistrarChecklist = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnConfigLogin = new System.Windows.Forms.Button();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.bgtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnEstado = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCheck = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnGastos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnRegistrarGastosDeViaje = new System.Windows.Forms.Button();
-            this.btnRegistrarFichaDeEstadoVehicular = new System.Windows.Forms.Button();
+            this.PanelConductor = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(240)))), ((int)(((byte)(34)))));
-            this.panel1.Controls.Add(this.btnRegistrarChecklist);
-            this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnConfigLogin);
+            this.panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel1.Controls.Add(this.materialRaisedButton1);
+            this.panel1.Controls.Add(this.bgtnSalir);
+            this.panel1.Controls.Add(this.btnEstado);
+            this.panel1.Controls.Add(this.btnCheck);
+            this.panel1.Controls.Add(this.btnGastos);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnRegistrarGastosDeViaje);
-            this.panel1.Controls.Add(this.btnRegistrarFichaDeEstadoVehicular);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 636);
+            this.panel1.Size = new System.Drawing.Size(218, 520);
             this.panel1.TabIndex = 2;
             // 
-            // btnRegistrarChecklist
+            // materialRaisedButton1
             // 
-            this.btnRegistrarChecklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarChecklist.Location = new System.Drawing.Point(23, 482);
-            this.btnRegistrarChecklist.Name = "btnRegistrarChecklist";
-            this.btnRegistrarChecklist.Size = new System.Drawing.Size(248, 52);
-            this.btnRegistrarChecklist.TabIndex = 4;
-            this.btnRegistrarChecklist.Text = "REGISTRAR CHECKLIST";
-            this.btnRegistrarChecklist.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(17, 201);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(186, 53);
+            this.materialRaisedButton1.TabIndex = 0;
+            this.materialRaisedButton1.Text = "CONFIGURAR LOGIN";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
             // 
-            // btnSalir
+            // bgtnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(149, 586);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(122, 39);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.bgtnSalir.Depth = 0;
+            this.bgtnSalir.Location = new System.Drawing.Point(111, 488);
+            this.bgtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bgtnSalir.Name = "bgtnSalir";
+            this.bgtnSalir.Primary = true;
+            this.bgtnSalir.Size = new System.Drawing.Size(92, 29);
+            this.bgtnSalir.TabIndex = 0;
+            this.bgtnSalir.Text = "SALIR";
+            this.bgtnSalir.UseVisualStyleBackColor = true;
+            this.bgtnSalir.Click += new System.EventHandler(this.bgtnSalir_Click);
             // 
-            // btnConfigLogin
+            // btnEstado
             // 
-            this.btnConfigLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfigLogin.Location = new System.Drawing.Point(23, 250);
-            this.btnConfigLogin.Name = "btnConfigLogin";
-            this.btnConfigLogin.Size = new System.Drawing.Size(248, 52);
-            this.btnConfigLogin.TabIndex = 1;
-            this.btnConfigLogin.Text = "CONFIGURAR LOGIN";
-            this.btnConfigLogin.UseVisualStyleBackColor = true;
+            this.btnEstado.Depth = 0;
+            this.btnEstado.Location = new System.Drawing.Point(17, 277);
+            this.btnEstado.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEstado.Name = "btnEstado";
+            this.btnEstado.Primary = true;
+            this.btnEstado.Size = new System.Drawing.Size(186, 53);
+            this.btnEstado.TabIndex = 0;
+            this.btnEstado.Text = "REGISTRAR FICHA DE ESTADO VEHICULAR";
+            this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.Click += new System.EventHandler(this.materialRaisedButton1_Click_2);
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Depth = 0;
+            this.btnCheck.Location = new System.Drawing.Point(17, 426);
+            this.btnCheck.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Primary = true;
+            this.btnCheck.Size = new System.Drawing.Size(186, 43);
+            this.btnCheck.TabIndex = 0;
+            this.btnCheck.Text = "REGISTRAR CHECKLIST";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.materialRaisedButton1_Click_1);
+            // 
+            // btnGastos
+            // 
+            this.btnGastos.Depth = 0;
+            this.btnGastos.Location = new System.Drawing.Point(17, 346);
+            this.btnGastos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGastos.Name = "btnGastos";
+            this.btnGastos.Primary = true;
+            this.btnGastos.Size = new System.Drawing.Size(186, 57);
+            this.btnGastos.TabIndex = 0;
+            this.btnGastos.Text = "REGISTRO DE GASTOS DE VIAJE";
+            this.btnGastos.UseVisualStyleBackColor = true;
+            this.btnGastos.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(12, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 241);
+            this.panel2.Size = new System.Drawing.Size(193, 171);
             this.panel2.TabIndex = 1;
             // 
-            // btnRegistrarGastosDeViaje
+            // PanelConductor
             // 
-            this.btnRegistrarGastosDeViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarGastosDeViaje.Location = new System.Drawing.Point(23, 403);
-            this.btnRegistrarGastosDeViaje.Name = "btnRegistrarGastosDeViaje";
-            this.btnRegistrarGastosDeViaje.Size = new System.Drawing.Size(248, 52);
-            this.btnRegistrarGastosDeViaje.TabIndex = 3;
-            this.btnRegistrarGastosDeViaje.Text = "REGISTRAR GASTOS DE VIAJE";
-            this.btnRegistrarGastosDeViaje.UseVisualStyleBackColor = true;
+            this.PanelConductor.AutoSize = true;
+            this.PanelConductor.BackColor = System.Drawing.Color.Gray;
+            this.PanelConductor.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
+            this.PanelConductor.Location = new System.Drawing.Point(222, 64);
+            this.PanelConductor.Name = "PanelConductor";
+            this.PanelConductor.Size = new System.Drawing.Size(745, 520);
+            this.PanelConductor.TabIndex = 3;
             // 
-            // btnRegistrarFichaDeEstadoVehicular
+            // timer1
             // 
-            this.btnRegistrarFichaDeEstadoVehicular.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarFichaDeEstadoVehicular.Location = new System.Drawing.Point(23, 324);
-            this.btnRegistrarFichaDeEstadoVehicular.Name = "btnRegistrarFichaDeEstadoVehicular";
-            this.btnRegistrarFichaDeEstadoVehicular.Size = new System.Drawing.Size(248, 52);
-            this.btnRegistrarFichaDeEstadoVehicular.TabIndex = 2;
-            this.btnRegistrarFichaDeEstadoVehicular.Text = "REGISTRAR FICHA DE ESTADO VEHICULAR";
-            this.btnRegistrarFichaDeEstadoVehicular.UseVisualStyleBackColor = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(886, 42);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(59, 19);
+            this.lblFecha.TabIndex = 6;
+            this.lblFecha.Text = "FECHA";
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(914, 26);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(46, 16);
+            this.lblHora.TabIndex = 5;
+            this.lblHora.Text = "HORA";
             // 
             // FrmMenuConductor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 640);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(972, 591);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.PanelConductor);
+            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuConductor";
-            this.Text = "FrmMenuConductor";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "MENU DE CONDUCTOR";
+            this.Load += new System.EventHandler(this.FrmMenuConductor_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRegistrarChecklist;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnConfigLogin;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnRegistrarGastosDeViaje;
-        private System.Windows.Forms.Button btnRegistrarFichaDeEstadoVehicular;
+        private System.Windows.Forms.Panel PanelConductor;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGastos;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCheck;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEstado;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton bgtnSalir;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
     }
 }

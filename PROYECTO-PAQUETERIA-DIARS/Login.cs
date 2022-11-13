@@ -136,6 +136,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             timer1.Enabled = true;
         }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
       

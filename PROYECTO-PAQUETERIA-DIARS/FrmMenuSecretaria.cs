@@ -10,7 +10,8 @@ using System.Windows.Forms;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
-    public partial class FrmMenuSecretaria : Form
+    public partial class FrmMenuSecretaria : MaterialSkin.Controls.MaterialForm
+
     {
         public FrmMenuSecretaria()
         {
@@ -37,6 +38,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnManPedido_Click(object sender, EventArgs e)
         {
             AbrirFrmInPanel(new FrmRemitente_Destinatario());
+        }
+
+        private void FrmMenuSecretaria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

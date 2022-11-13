@@ -391,11 +391,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(830, 609);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCheckLista);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FmrRegistroCheckList";
             this.Text = "FmrRegistroCheckList";
             this.groupBox1.ResumeLayout(false);

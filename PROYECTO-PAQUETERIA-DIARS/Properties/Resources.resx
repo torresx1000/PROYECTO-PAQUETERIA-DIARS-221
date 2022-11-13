@@ -118,32 +118,50 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="download-removebg-preview (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-removebg-preview (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhatsApp Image 2022-11-12 at 5.59.40 PM (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9996526ae3c3dd2b4e6ad6eb78e7e03b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9996526ae3c3dd2b4e6ad6eb78e7e03b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trasportes torres ima1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trasportes torres ima1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-de-lista-mantenimiento-comprobación-coches-vector-195510702-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-de-lista-mantenimiento-comprobación-coches-vector-195510702-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="images-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3830ceea01445409feb858e8c601e79d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3830ceea01445409feb858e8c601e79d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="080eb9d6-5405-4974-b7b1-bcd83c5ab64c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="554795" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\554795.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="istockphoto-1304219430-170667a-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1304219430-170667a-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5040050" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5040050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images-removebg-preview (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images-removebg-preview (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="080eb9d6-5405-4974-b7b1-bcd83c5ab64c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo-formulario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-formulario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,19 +169,49 @@
   <data name="diavehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diavehiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="554795" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\554795.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="9996526ae3c3dd2b4e6ad6eb78e7e03b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9996526ae3c3dd2b4e6ad6eb78e7e03b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhatsApp Image 2022-11-12 at 5.591" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2)1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-clipart-technology-roadmap-business-road-map-internet-element-angle-text-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="istockphoto-1304219430-170667a-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1304219430-170667a-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3830ceea01445409feb858e8c601e79d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3830ceea01445409feb858e8c601e79d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2022-11-12 at 5.592" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2)2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5942b881-ae8b-426a-b707-772d10f7a15c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5942b881-ae8b-426a-b707-772d10f7a15c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2022-11-12 at 5.59.25 PM (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.25 PM (1).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2022-11-12 185602" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2022-11-12 185602.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5040050" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5040050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trasportes torres ima" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trasportes torres ima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-removebg-preview (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-removebg-preview (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5942b881-ae8b-426a-b707-772d10f7a15c (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5942b881-ae8b-426a-b707-772d10f7a15c (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
