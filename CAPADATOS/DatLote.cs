@@ -148,10 +148,7 @@ namespace CAPADATOS
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEliminarLote", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdLote", Lot.IdLote);
-                cmd.Parameters.AddWithValue("@Nombres", Lot.Nombres);
-                cmd.Parameters.AddWithValue("@Producto", Lot.Producto);
-                cmd.Parameters.AddWithValue("@Fecha", Lot.Fecha);                
+                cmd.Parameters.AddWithValue("@IdLote", Lot.IdLote);                            
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

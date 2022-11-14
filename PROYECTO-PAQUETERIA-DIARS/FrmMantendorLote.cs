@@ -19,8 +19,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmMantendorLote()
         {
             InitializeComponent();
-            gbDatosDelLote.Enabled = false;
-            txtIdLote.Enabled = false;
+            gbDatosDelLote.Enabled = true;
+            txtIdLote.Enabled = true;
             ListarLote();
         }
 
@@ -83,8 +83,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             try
             {
                 EntLote lo = new EntLote();
-                //int IdLote = int.Parse(txtIdLote.Text.Trim());
-                lo.IdLote= int.Parse(txtIdLote.Text.Trim());
+                //int IdLote = int.Parse(txtIdLote.Text.Trim());                
+                lo.IdLote = Convert.ToInt32(txtIdLote.Text.Trim());
                 LogLote.Instancia.EliminarLote(lo);
 
             }
@@ -129,6 +129,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtNombres.Text = filaActual.Cells[1].Value.ToString();
             txtProducto.Text = filaActual.Cells[2].Value.ToString();
             dtPickerFecha.Text = filaActual.Cells[3].Value.ToString();           
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*private void btnBuscar_Click(object sender, EventArgs e)
