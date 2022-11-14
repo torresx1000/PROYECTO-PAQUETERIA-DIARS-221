@@ -37,8 +37,8 @@ namespace CAPADATOS
                 {
                     EntLote Lot = new EntLote(); //objetoLote
                     Lot.IdLote = Convert.ToInt32(dr["IdLote"]);
-                    Lot.Nombres = dr["Nombres"].ToString();
-                    Lot.Producto = dr["Producto"].ToString();
+                    Lot.Identificador = dr["Identificador"].ToString();
+                    Lot.EstadoLote =Convert.ToBoolean(dr["EstadoLote"]);
                     Lot.Fecha = Convert.ToDateTime(dr["Fecha"]);                    
                     Lista.Add(Lot);
                 }
@@ -62,8 +62,8 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spInsertarLote", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@IdLote", Lot.IdLote);
-                cmd.Parameters.AddWithValue("@Nombres", Lot.Nombres);
-                cmd.Parameters.AddWithValue("@Producto", Lot.Producto);
+                cmd.Parameters.AddWithValue("@Identificador", Lot.Identificador);
+                cmd.Parameters.AddWithValue("@EstadoLote", Lot.EstadoLote);
                 cmd.Parameters.AddWithValue("@Fecha", Lot.Fecha);                    
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -91,8 +91,8 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spModificarLote", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdLote", Lot.IdLote);
-                cmd.Parameters.AddWithValue("@Nombres", Lot.Nombres);
-                cmd.Parameters.AddWithValue("@Producto", Lot.Producto);
+                cmd.Parameters.AddWithValue("@Identificador", Lot.Identificador);
+                cmd.Parameters.AddWithValue("@EstadoLote", Lot.EstadoLote);
                 cmd.Parameters.AddWithValue("@Fecha", Lot.Fecha);                        
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -110,10 +110,10 @@ namespace CAPADATOS
         }
 
         //Buscar Lote por Codigo      
-        public EntLote BuscarLoteCodigo(int IdLote)
+        public DataTable BuscarLoteCodigo(int IdLote)
         {
+            DataTable dt;
             SqlCommand cmd = null;
-            EntLote Lot = new EntLote();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
@@ -121,21 +121,20 @@ namespace CAPADATOS
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IdLote", IdLote);
                 cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {                    
-                    Lot.IdLote = Convert.ToInt32(dr["IdLote"]);
-                    Lot.Nombres = dr["Nombres"].ToString();
-                    Lot.Producto = dr["Producto"].ToString();
-                    Lot.Fecha = Convert.ToDateTime(dr["Fecha"]);                    
-                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                da.Dispose();
             }
             catch (Exception e)
             {
                 throw e;
             }
-            finally { cmd.Connection.Close(); }
-            return Lot;
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return dt;
         }
 
         //Eliminar Lote

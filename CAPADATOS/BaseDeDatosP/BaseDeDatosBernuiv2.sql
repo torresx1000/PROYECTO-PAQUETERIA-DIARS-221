@@ -1220,3 +1220,63 @@ as
 delete from GastosViaje where IdGastosViaje=@IdGastosViaje
 go
 
+--CREACION DE LA TABLA LOTE 
+CREATE TABLE LOTE(
+IdLote int not null primary key identity(1,1),
+Identificador varchar(50),
+EstadoLote bit,
+Fecha date
+)
+
+--CREAR PROCEDIMIENTO LISTARLOTE
+create procedure spListarLote
+as
+select IdLote,Identificador,EstadoLote,Fecha
+	from LOTE 
+	go
+
+--CREAR PROCEDIMIENTO INSERTAR LOTE
+create procedure spInsertarLote(
+@Identificador varchar(50),
+@EstadoLote bit,
+@Fecha date
+)
+as begin
+insert into LOTE(Identificador,EstadoLote,Fecha) values 
+(@Identificador,@EstadoLote,@Fecha)
+end 
+go
+
+--CREAR PROCEDIMIENTO MODIFICAR LOTE
+create procedure spModificarLote(
+@IdLote int,
+@Identificador varchar(50),
+@EstadoLote bit,
+@Fecha date
+)as begin update LOTE set 
+ Identificador=@Identificador,
+ EstadoLote=@EstadoLote,
+ Fecha=@Fecha 
+ where IdLote=@IdLote
+ end
+ go
+
+--CREAR PROCEDIMIENTO ELIMINAR LOTE
+CREATE PROCEDURE spEliminarLote(
+@IdLote int
+)
+AS
+BEGIN
+delete LOTE
+	WHERE IdLote =@IdLote
+END
+GO
+
+--CREAR PROCEDIMIENTO PARA BUSCAR LOTE
+CREATE PROCEDURE  spBuscarLote(
+	@IdLote int 
+)
+as begin
+select * from  LOTE where IdLote = @IdLote
+end
+GO

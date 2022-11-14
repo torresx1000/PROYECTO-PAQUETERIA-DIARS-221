@@ -20,15 +20,17 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
             gbDatosDelLote.Enabled = true;
-            txtIdLote.Enabled = true;
             ListarLote();
+            btnAgregar.Enabled=false;
+            btnModificar.Enabled=false;
+            btnEliminar.Enabled=false;
         }
 
         public void LimpiarVariables()
         {
             txtIdLote.Text = ("");
             txtNombres.Text = ("");
-            txtProducto.Text = ("");
+            cbestado.Checked = false;
             dtPickerFecha.Text = ("");                      
         }
 
@@ -44,8 +46,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             try
             {
                 EntLote lo = new EntLote();               
-                lo.Nombres = txtNombres.Text.Trim();
-                lo.Producto = txtProducto.Text.Trim();
+                lo.Identificador = txtNombres.Text.Trim();
+                lo.EstadoLote = cbestado.Checked;
                 lo.Fecha = dtPickerFecha.Value;
                 LogLote.Instancia.InsertarLote(lo);
             }
@@ -54,16 +56,18 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            gbDatosDelLote.Enabled = false;
             ListarLote();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            gbDatosDelLote.Enabled = true;
-            btnAgregar.Visible = true;
-            LimpiarVariables();
-            btnModificar.Visible = false;
+            btnAgregar.Enabled = true;
+            txtIdLote.Enabled= false;
+            btnBuscar.Enabled = false;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -73,9 +77,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnEdita_Click(object sender, EventArgs e)
         {
-            gbDatosDelLote.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -93,8 +95,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            gbDatosDelLote.Enabled = false;
             ListarLote();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -103,9 +108,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
                 EntLote lo = new EntLote();
                 lo.IdLote = int.Parse(txtIdLote.Text.Trim());
-                lo.Nombres = txtNombres.Text.Trim();
-                lo.Producto = txtProducto.Text.Trim();
-                lo.Fecha = dtPickerFecha.Value;               
+                lo.Identificador = txtNombres.Text.Trim();
+                lo.EstadoLote = cbestado.Checked;
+                lo.Fecha = dtPickerFecha.Value;
                 LogLote.Instancia.EditarLote(lo);
             }
             catch (Exception ex)
@@ -113,13 +118,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            gbDatosDelLote.Enabled = false;
             ListarLote();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void dgvLote_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -127,51 +135,48 @@ namespace PROYECTO_PAQUETERIA_DIARS
             DataGridViewRow filaActual = dgvLote.Rows[e.RowIndex]; //
             txtIdLote.Text = filaActual.Cells[0].Value.ToString();
             txtNombres.Text = filaActual.Cells[1].Value.ToString();
-            txtProducto.Text = filaActual.Cells[2].Value.ToString();
+            string est = filaActual.Cells[2].Value.ToString();//para tomar el dato de la tabla ya que asi nomas no se deja xd
+            cbestado.Checked = Convert.ToBoolean(est);
             dtPickerFecha.Text = filaActual.Cells[3].Value.ToString();           
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        /*private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            txtIdLote.Focus();
-            int idlote = Convert.ToInt32(txtIdLote.Text.Trim());
-            EntLote lo = LogLote.Instancia.BuscarLoteCodigo(idlote);
-            if (lo != null && (lo.IdLote = true))
+            if (txtIdLote.Text != "")
             {
-                txtIdTrabajador.Text = Convert.ToString(Tra.Id_Trabajador);
-                txtDni.Text = Convert.ToString(Tra.Dni);
-                txtNombres.Text = Tra.Nombres.ToString();
-                txtApellidoPaterno.Text = Tra.ApPaterno.ToString();
-                txtApellidoMaterno.Text = Tra.ApMaterno.ToString();
-                dtFechaNacimiento.Value = Convert.ToDateTime(Tra.FechaNac);
-                txtSexo.Text = Tra.Sexo.ToString();
-                cmbxEstadoCivil.Text = Tra.EstCivil.ToString();
-                txtUbigeo.Text = Tra.Ubigeo.ToString();
-                txtDireccion.Text = Tra.Direccion.ToString();
-                txtDistrito.Text = Tra.Distrito.ToString();
-                txtProvincia.Text = Tra.Provincia.ToString();
-                txtDepartamento.Text = Tra.Departamento.ToString();
-                dtFechaContrato.Value = Convert.ToDateTime(Tra.FechaContrato);
-                txtUsuario.Text = Tra.Usuario.ToString();
-                txtClave.Text = Tra.Password.ToString();
-                txtCargo.Text = Tra.Cargo.ToString();
-                cbEstadoTrabajador.Checked = Convert.ToBoolean(Tra.EstadoTrabajador);
-                System.IO.MemoryStream ms = new System.IO.MemoryStream(Tra.PerfilTrabajador);//para convertir a imagen
-                pbPerfilTrabajador.Image = System.Drawing.Bitmap.FromStream(ms);
+                txtIdLote.Focus();
+                EntLote D = new EntLote();
+
+                D.IdLote = Convert.ToInt32(txtIdLote.Text.Trim());
+
+                DataTable dt = new DataTable();
+
+                dt = LogLote.Instancia.BuscarLoteCodigo(D.IdLote);
+                if (txtIdLote.Text != "")
+                {
+                    dgvLote.DataSource = dt;
+                }
+                else
+                {
+
+                    dgvLote.DataSource = LogLote.Instancia. ListarLote();
+                }
+
             }
             else
             {
-                MessageBox.Show("El Trabajdor no existe , verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ListarLote();
+
             }
             btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            btnBuscar.Enabled = true;
-            btnAgregar.Enabled = false;
-        }*/
+            btnEliminar.Enabled = true; 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

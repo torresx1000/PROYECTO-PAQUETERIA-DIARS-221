@@ -19,14 +19,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new Login());
             Application.Run(new FrmMantendorLote());
             //Application.Run(new FrmRemitente_Destinatario());
-            Application.Run(new FrmMenuGerente("Piter","PAKER"));
-            Application.Run(new FrmMenuSecretaria());
+            //Application.Run(new FrmMenuGerente("Piter","PAKER"));
+            //Application.Run(new FrmMenuSecretaria());
             //Application.Run(new FrmMenuJefeDeMantenimiento());
-            Application.Run(new FrmMenuAlmacenero());
-            Application.Run(new FrmMenuContador());
+           // Application.Run(new FrmMenuAlmacenero());
+           // Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuJefeDeOperaciones());
             //Application.Run(new FrmMenuCajero());
-            Application.Run(new FrmMenuConductor());
+            //Application.Run(new FrmMenuConductor());
             //Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
@@ -38,7 +38,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmReporteTrabajadores());
             //Application.Run(new FrmReportePlanilla());
             //Application.Run(new FrmDiagnostico());
-            Application.Run(new FrmDiagnostico());
+            //Application.Run(new FrmDiagnostico());
             //Application.Run(new FrmListaConductores_Trabajadores());
             //Application.Run(new FrmProgramacionSalida());
             //Application.Run(new FrmReporteProgramacionSalida());

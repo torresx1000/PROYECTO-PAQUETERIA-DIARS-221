@@ -10,8 +10,8 @@ namespace CAPAENTIDAD
     public class EntLote
     {
         public int IdLote { get; set; }
-        public string Nombres { get; set; }
-        public string Producto { get; set; }
+        public string Identificador { get; set; }
+        public Boolean EstadoLote { get; set; }
         public DateTime Fecha { get; set; }
       
     }

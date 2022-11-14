@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CAPAENTIDAD;
 using CAPADATOS;
+using System.Data;
 
 namespace CAPALOGICA
 {
@@ -36,7 +37,7 @@ namespace CAPALOGICA
         {
             DatLote.Instancia.EditarLote(Lot);
         }
-        public EntLote BuscarLoteCodigo(int IdLote)
+        public DataTable BuscarLoteCodigo(int IdLote)
         {
             return DatLote.Instancia.BuscarLoteCodigo(IdLote);
         }
