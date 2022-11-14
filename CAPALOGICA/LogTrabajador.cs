@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CAPADATOS;
-using CAPAENTIDAD;
 using System.Data;
 
 namespace CAPALOGICA

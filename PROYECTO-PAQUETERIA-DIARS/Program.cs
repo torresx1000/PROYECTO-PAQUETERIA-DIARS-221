@@ -37,6 +37,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmReporteTrabajadores());
             //Application.Run(new FrmReportePlanilla());
             //Application.Run(new FrmDiagnostico());
+            //Application.Run(new FrmDiagnostico());
             //Application.Run(new FrmListaConductores_Trabajadores());
             //Application.Run(new FrmProgramacionSalida());
             //Application.Run(new FrmReporteProgramacionSalida());

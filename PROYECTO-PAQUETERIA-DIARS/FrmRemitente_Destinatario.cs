@@ -255,5 +255,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
 
         }
+
+        private void btnSeleccionarLote_Click(object sender, EventArgs e)
+        {
+            FrmReporteLote FrmReporteLote = new FrmReporteLote();
+            FrmReporteLote.ShowDialog();
+            txtLote.Text = FrmReporteLote.IdLote;
+        }
     }
 }
