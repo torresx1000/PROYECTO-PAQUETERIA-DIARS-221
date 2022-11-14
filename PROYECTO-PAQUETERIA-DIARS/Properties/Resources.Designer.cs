@@ -244,6 +244,16 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_removebg_preview__8_1 {
+            get {
+                object obj = ResourceManager.GetObject("download-removebg-preview (8)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_formulario {
             get {
                 object obj = ResourceManager.GetObject("fondo-formulario", resourceCulture);
@@ -299,6 +309,17 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         internal static System.Drawing.Bitmap istockphoto_1304219430_170667a_removebg_preview__1_ {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1304219430-170667a-removebg-preview (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_computer_icons_mask_anonymous_anonymous_mask_face_people_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-computer-icons-mask-anonymous-anonymous-mask-face-people-removebg-pre" +
+                        "view", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

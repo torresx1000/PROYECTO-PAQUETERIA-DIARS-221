@@ -17,7 +17,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmMenuConductor()
         {
             InitializeComponent();
-            formulario();
+            
         }
         private void formulario()
         {

@@ -124,6 +124,9 @@
   <data name="68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="png-clipart-computer-icons-mask-anonymous-anonymous-mask-face-people-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-computer-icons-mask-anonymous-anonymous-mask-face-people-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="9996526ae3c3dd2b4e6ad6eb78e7e03b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9996526ae3c3dd2b4e6ad6eb78e7e03b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,6 +175,9 @@
   <data name="554795" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\554795.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5942b881-ae8b-426a-b707-772d10f7a15c (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5942b881-ae8b-426a-b707-772d10f7a15c (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WhatsApp Image 2022-11-12 at 5.591" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2)1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +217,7 @@
   <data name="download-removebg-preview (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-removebg-preview (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5942b881-ae8b-426a-b707-772d10f7a15c (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5942b881-ae8b-426a-b707-772d10f7a15c (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download-removebg-preview (8)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-removebg-preview (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
