@@ -31,7 +31,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void FormMenuGerente_Load(object sender, EventArgs e)
         {
-          
+            timer1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,6 +91,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void materialRaisedButton3_Click(object sender, EventArgs e)
         {
             Close();    
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

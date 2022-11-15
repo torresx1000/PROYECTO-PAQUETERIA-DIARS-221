@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -38,8 +39,14 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,7 +70,7 @@
             // 
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Location = new System.Drawing.Point(171, 640);
-            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -77,7 +84,7 @@
             // 
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Location = new System.Drawing.Point(25, 551);
-            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -91,7 +98,7 @@
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Location = new System.Drawing.Point(25, 457);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -105,7 +112,7 @@
             // 
             this.btnAtrabajadores.Depth = 0;
             this.btnAtrabajadores.Location = new System.Drawing.Point(25, 364);
-            this.btnAtrabajadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtrabajadores.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtrabajadores.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAtrabajadores.Name = "btnAtrabajadores";
             this.btnAtrabajadores.Primary = true;
@@ -119,7 +126,7 @@
             // 
             this.btnAdminLogin.Depth = 0;
             this.btnAdminLogin.Location = new System.Drawing.Point(24, 250);
-            this.btnAdminLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdminLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdminLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdminLogin.Name = "btnAdminLogin";
             this.btnAdminLogin.Primary = true;
@@ -165,7 +172,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelContenedor.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.WhatsApp_Image_2022_11_12_at_5_59_25_PM__1_;
+            this.panelContenedor.Controls.Add(this.pictureBox1);
             this.panelContenedor.Location = new System.Drawing.Point(303, 85);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
@@ -173,11 +180,58 @@
             this.panelContenedor.TabIndex = 1;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.WhatsApp_Image_2022_11_12_at_5_59_25_PM__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(938, 673);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblFecha.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(1078, 49);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(72, 24);
+            this.lblFecha.TabIndex = 8;
+            this.lblFecha.Text = "FECHA";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(1116, 29);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(58, 20);
+            this.lblHora.TabIndex = 7;
+            this.lblHora.Text = "HORA";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmMenuGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 778);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -188,7 +242,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,5 +261,9 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
