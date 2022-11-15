@@ -61,7 +61,9 @@
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -234,6 +236,12 @@
     <Compile Include="FrmRemitente_Destinatario.Designer.cs">
       <DependentUpon>FrmRemitente_Destinatario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteDiagnostico.Designer.cs">
+      <DependentUpon>FrmReporteDiagnostico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteLote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRemitente_Destinatario.resx">
       <DependentUpon>FrmRemitente_Destinatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteDiagnostico.resx">
+      <DependentUpon>FrmReporteDiagnostico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteLote.resx">
       <DependentUpon>FrmReporteLote.cs</DependentUpon>

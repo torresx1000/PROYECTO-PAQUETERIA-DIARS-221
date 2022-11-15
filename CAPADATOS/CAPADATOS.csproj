@@ -84,6 +84,7 @@
     <Compile Include="DatDiagnostico.cs" />
     <Compile Include="DatFichaEstadoVehiculo.cs" />
     <Compile Include="DatGastosViajes.cs" />
+    <Compile Include="DatListaRespuestos.cs" />
     <Compile Include="DatLote.cs" />
     <Compile Include="DatPagoUtilidades.cs" />
     <Compile Include="DatPedido.cs" />

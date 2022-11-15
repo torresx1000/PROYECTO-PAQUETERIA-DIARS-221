@@ -1280,3 +1280,66 @@ as begin
 select * from  LOTE where IdLote = @IdLote
 end
 GO
+
+
+--Tabla para lista de repuestos
+create table ListaRepuestos(
+Codigo int not null primary key identity(1,1),
+IdDiagnostico int,
+Fecha date,
+DescripcionRepuestos varchar(500),
+constraint Fk_IdDiagnostico foreign key (IdDiagnostico) references DIAGNOSTICO (IDdIAGNOSTICO)
+)
+
+--CREAR PROCEDIMIENTO LISTAR REPUESTOS
+create procedure spListarListaRepuestos
+as
+select Codigo,IdDiagnostico,Fecha,DescripcionRepuestos
+	from ListaRepuestos 
+	go
+
+--CREAR PROCEDIMIENTO INSERTAR LISTA REPUESTOS
+create procedure spInsertarListaRepuestos(
+@IdDiagnostico int,
+@Fecha date,
+@DescripcionRepuestos varchar(500)
+)
+as begin
+insert into ListaRepuestos(IdDiagnostico,Fecha,DescripcionRepuestos) values 
+(@IdDiagnostico,@Fecha,@DescripcionRepuestos)
+end 
+go
+
+--CREAR PROCEDIMIENTO MODIFICAR LISTA REPUESTOS
+create procedure spModificarListaRepuestos(
+@Codigo int,
+@IdDiagnostico int,
+@Fecha date,
+@DescripcionRepuestos varchar(500)
+)as begin update ListaRepuestos set 
+ IdDiagnostico=@IdDiagnostico,
+ Fecha=@Fecha,
+ DescripcionRepuestos=@DescripcionRepuestos 
+ where Codigo=@Codigo
+ end
+ go
+
+--CREAR PROCEDIMIENTO ELIMINAR Lista Repuestos
+CREATE PROCEDURE spEliminarListaRepuestos(
+@Codigo int
+)
+AS
+BEGIN
+delete ListaRepuestos
+	WHERE Codigo =@Codigo
+END
+GO
+
+--CREAR PROCEDIMIENTO PARA BUSCAR Lista de repuestos
+CREATE PROCEDURE  spBuscarListaRepuestoa(
+	@Codigo int 
+)
+as begin
+select * from  ListaRepuestos where Codigo =@Codigo
+end
+GO
