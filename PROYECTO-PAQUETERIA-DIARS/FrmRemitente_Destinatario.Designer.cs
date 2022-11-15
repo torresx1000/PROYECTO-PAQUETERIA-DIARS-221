@@ -94,6 +94,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtIdResp = new System.Windows.Forms.TextBox();
             this.gbRemitente.SuspendLayout();
             this.gbDestinatario.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -808,10 +810,10 @@
             // txtResponsable
             // 
             this.txtResponsable.Enabled = false;
-            this.txtResponsable.Location = new System.Drawing.Point(133, 25);
+            this.txtResponsable.Location = new System.Drawing.Point(170, 25);
             this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
             this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(240, 22);
+            this.txtResponsable.Size = new System.Drawing.Size(96, 22);
             this.txtResponsable.TabIndex = 15;
             // 
             // label26
@@ -848,6 +850,25 @@
             this.SalirVentana.Zoom = 10;
             this.SalirVentana.Click += new System.EventHandler(this.SalirVentana_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(273, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 31);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Seleccionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtIdResp
+            // 
+            this.txtIdResp.Enabled = false;
+            this.txtIdResp.Location = new System.Drawing.Point(138, 25);
+            this.txtIdResp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdResp.Name = "txtIdResp";
+            this.txtIdResp.Size = new System.Drawing.Size(24, 22);
+            this.txtIdResp.TabIndex = 19;
+            // 
             // FrmRemitente_Destinatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -855,6 +876,8 @@
             this.BackColor = System.Drawing.Color.YellowGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1297, 667);
+            this.Controls.Add(this.txtIdResp);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdPedido);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.txtResponsable);
@@ -950,5 +973,7 @@
         private System.Windows.Forms.Button btnSeleccionarLote;
         private System.Windows.Forms.TextBox txtLote;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtIdResp;
     }
 }

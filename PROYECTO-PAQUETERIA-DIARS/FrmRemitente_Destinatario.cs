@@ -65,6 +65,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             try
             {
                 EntPedido c = new EntPedido();
+                c.IdEncargado=Convert.ToInt32(FrmReporteSecretaria.id);
                 c.Responsable = txtResponsable.Text.Trim();
                 c.DniR = Convert.ToInt32(txtDniR.Text.Trim());
                 c.NombreR = txtNombresR.Text.Trim();
@@ -88,7 +89,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 c.CantidadPaquete = Convert.ToInt32(txtCantidadPaquete.Text.Trim());
                 c.CategoriaPedido = cbCategoriaPaquete.Text.Trim();
                 c.DescripcionPedido = txtDescripcionPaquete.Text.Trim();
-              
+                c.IdLote = Convert.ToInt32(txtLote.Text.Trim());
+
                 LogPedido.Instancia.InsertarPedido(c);
             }
             catch (Exception ex)
@@ -131,6 +133,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             if (Ent != null)
             {
                 txtIdPedido.Text = Convert.ToString(Ent.IdPedido);
+                txtIdResp.Text = Convert.ToString(Ent.IdEncargado);
+                txtResponsable.Text = Ent.Responsable.ToString();
                 txtDniR.Text = Convert.ToString(Ent.DniR);
                 txtNombresR.Text = Ent.NombreR.ToString();
                 txtCorreoR.Text = Convert.ToString(Ent.CorreoR);
@@ -153,6 +157,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 txtCantidadPaquete.Text = Convert.ToString(Ent.CantidadPaquete);
                 cbCategoriaPaquete.Text = Ent.CategoriaPedido.ToString();
                 txtDescripcionPaquete.Text = Ent.DescripcionPedido.ToString();
+                txtLote.Text = Convert.ToString(Ent.IdLote);
             }
             else
             {
@@ -160,12 +165,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             gbRemitente.Enabled = true;
             gbDestinatario.Enabled = true;
-            LimpiarVariables();
             btnRegistrar.Visible = false;
             btnActualizar.Enabled = true;
             btnInabilitar.Enabled = true;
             btnBuscar.Enabled = true;
-            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -177,27 +181,31 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             DataGridViewRow  filaActual = dataGridView1.Rows[e.RowIndex]; 
             txtIdPedido.Text = filaActual.Cells[0].Value.ToString();
-            txtResponsable.Text = filaActual.Cells[1].Value.ToString();
-            txtDniR.Text =  filaActual.Cells[2].Value.ToString();
-            txtNombresR.Text = filaActual.Cells[3].Value.ToString();
-            txtCorreoR.Text =  filaActual.Cells[4].Value.ToString();
-            txtTelefonoR.Text =  filaActual.Cells[5].Value.ToString();
-            txtDireccionR.Text = filaActual.Cells[6].Value.ToString();
-            txtDistritoR.Text = filaActual.Cells[7].Value.ToString();
-            txtProvinciaR.Text =  filaActual.Cells[8].Value.ToString();
-            txtDepartamentoR.Text =  filaActual.Cells[9].Value.ToString();
-            txtDniD.Text = filaActual.Cells[10].Value.ToString();
-            txtNombresD.Text = filaActual.Cells[11].Value.ToString();
-            txtCorreoD.Text = filaActual.Cells[12].Value.ToString();
-            txtTelefonoD.Text = filaActual.Cells[13].Value.ToString();
-            txtDireccionD.Text = filaActual.Cells[14].Value.ToString();
-            txtDistritoD.Text = filaActual.Cells[15].Value.ToString();
-            txtProvinciaD.Text = filaActual.Cells[16].Value.ToString();
-            txtDepartamentoD.Text = filaActual.Cells[17].Value.ToString();
-            txtCodigoPaquete.Text = filaActual.Cells[18].Value.ToString();
-            txtCantidadPaquete.Text = filaActual.Cells[19].Value.ToString();
-            cbCategoriaPaquete.Text = filaActual.Cells[20].Value.ToString();
-            txtDescripcionPaquete.Text = filaActual.Cells[21].Value.ToString();
+            txtIdResp.Text= filaActual.Cells[1].Value.ToString();
+            txtResponsable.Text = filaActual.Cells[2].Value.ToString();
+            txtDniR.Text =  filaActual.Cells[3].Value.ToString();
+            txtNombresR.Text = filaActual.Cells[4].Value.ToString();
+            txtCorreoR.Text =  filaActual.Cells[5].Value.ToString();
+            txtTelefonoR.Text =  filaActual.Cells[6].Value.ToString();
+            txtDireccionR.Text = filaActual.Cells[7].Value.ToString();
+            txtDistritoR.Text = filaActual.Cells[8].Value.ToString();
+            txtProvinciaR.Text =  filaActual.Cells[9].Value.ToString();
+            txtDepartamentoR.Text =  filaActual.Cells[10].Value.ToString();
+
+            txtDniD.Text = filaActual.Cells[11].Value.ToString();
+            txtNombresD.Text = filaActual.Cells[12].Value.ToString();
+            txtCorreoD.Text = filaActual.Cells[13].Value.ToString();
+            txtTelefonoD.Text = filaActual.Cells[14].Value.ToString();
+            txtDireccionD.Text = filaActual.Cells[15].Value.ToString();
+            txtDistritoD.Text = filaActual.Cells[16].Value.ToString();
+            txtProvinciaD.Text = filaActual.Cells[17].Value.ToString();
+            txtDepartamentoD.Text = filaActual.Cells[18].Value.ToString();
+
+            txtCodigoPaquete.Text = filaActual.Cells[19].Value.ToString();
+            txtCantidadPaquete.Text = filaActual.Cells[20].Value.ToString();
+            cbCategoriaPaquete.Text = filaActual.Cells[21].Value.ToString();
+            txtDescripcionPaquete.Text = filaActual.Cells[22].Value.ToString();
+            txtLote.Text = filaActual.Cells[23].Value.ToString();
         }
 
     private void SalirVentana_Click(object sender, EventArgs e)
@@ -261,6 +269,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             FrmReporteLote FrmReporteLote = new FrmReporteLote();
             FrmReporteLote.ShowDialog();
             txtLote.Text = FrmReporteLote.IdLote;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FrmReporteSecretaria frmReporteSecretaria = new FrmReporteSecretaria();
+            frmReporteSecretaria.ShowDialog();
+            txtResponsable.Text = FrmReporteSecretaria.nombre;
+            txtIdResp.Text = FrmReporteSecretaria.id;
         }
     }
 }

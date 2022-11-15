@@ -32,6 +32,7 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spinsertarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@IdTrabajador", Ped.Id_Trabajador);
+                cmd.Parameters.AddWithValue("@IDENCARGADO", Ped.IdEncargado);
                 cmd.Parameters.AddWithValue("@ENCARGADO", Ped.Responsable);
                 cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
                 cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
@@ -53,6 +54,7 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@CANTIDADPAQUETE", Ped.CantidadPaquete);
                 cmd.Parameters.AddWithValue("@CATEGORIAPAQUETE", Ped.CategoriaPedido);
                 cmd.Parameters.AddWithValue("@DESCRIPCIONPAQUETE", Ped.DescripcionPedido);
+                cmd.Parameters.AddWithValue("@IdLote", Ped.IdLote);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -86,6 +88,7 @@ namespace CAPADATOS
                     EntPedido Ped = new EntPedido();
 
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
+                    Ped.IdEncargado = Convert.ToInt32(dr["IdEncargado"]);
                     Ped.Responsable = dr["ENCARGADO"].ToString();
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
                     Ped.NombreR = dr["NombreR"].ToString();
@@ -109,6 +112,7 @@ namespace CAPADATOS
                     Ped.CantidadPaquete= Convert.ToInt32(dr["CANTIDADPAQUETE"]);
                     Ped.CategoriaPedido = dr["CATEGORIAPAQUETE"].ToString();
                     Ped.DescripcionPedido= dr["DESCRIPCIONPAQUETE"].ToString();
+                    Ped.IdLote = Convert.ToInt32(dr["IdLote"]);
                     Lista.Add(Ped);
                 }
             }
@@ -134,6 +138,7 @@ namespace CAPADATOS
                 cmd = new SqlCommand("spModificarPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("IdPedido", Ped.IdPedido);
+                cmd.Parameters.AddWithValue("@@IDENCARGADO", Ped.IdEncargado);
                 cmd.Parameters.AddWithValue("@ENCARGADO", Ped.Responsable);
                 cmd.Parameters.AddWithValue("@DNIR", Ped.DniR);
                 cmd.Parameters.AddWithValue("@NOMBRER", Ped.NombreR);
@@ -155,7 +160,7 @@ namespace CAPADATOS
                 cmd.Parameters.AddWithValue("@CANTIDADPAQUETE", Ped.CantidadPaquete);
                 cmd.Parameters.AddWithValue("@CATEGORIAPAQUETE", Ped.CategoriaPedido);
                 cmd.Parameters.AddWithValue("@DESCRIPCIONPAQUETE", Ped.DescripcionPedido);
-
+                cmd.Parameters.AddWithValue("@IdLote", Ped.IdLote);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -187,6 +192,7 @@ namespace CAPADATOS
                 while (dr.Read())
                 {
                     Ped.IdPedido = Convert.ToInt32(dr["IdPedido"]);
+                    Ped.IdPedido = Convert.ToInt32(dr["IdEncargado"]);
                     Ped.Responsable = dr["ENCARGADO"].ToString();
                     Ped.DniR = Convert.ToInt32(dr["DniR"]);
                     Ped.NombreR = dr["NombreR"].ToString();
@@ -210,6 +216,7 @@ namespace CAPADATOS
                     Ped.CantidadPaquete = Convert.ToInt32(dr["CANTIDADPAQUETE"]);
                     Ped.CategoriaPedido = dr["CATEGORIAPAQUETE"].ToString();
                     Ped.DescripcionPedido = dr["DESCRIPCIONPAQUETE"].ToString();
+                    Ped.IdLote = Convert.ToInt32(dr["IdLte"]);
                 }
 
             }
