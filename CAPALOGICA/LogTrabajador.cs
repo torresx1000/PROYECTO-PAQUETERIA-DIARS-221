@@ -38,6 +38,10 @@ namespace CAPALOGICA
         {
             return DatTrabajador.Instancia.ListarConductor();
         }
+        public List<EntTrabajador> ListarSecretaria()
+        {
+            return DatTrabajador.Instancia.ListarScretaria();
+        }
         public Boolean EditarTrabajador(EntTrabajador Tra)
         {
             return DatTrabajador.Instancia.EditarTrabajador(Tra);

@@ -148,6 +148,13 @@ as
 select IdTrabajador, Dni,Nombres,ApPaterno,ApMaterno,FechaNac,Sexo,EstCivil,Ubigeo,Direccion, Distrito, Provincia, Departamento, FechaContrato, Usuario,Password,Cargo,EstadoTrabajador,PerfilTrabajador 
 	from Trabajadores where EstadoTrabajador='1' and Cargo='Conductor';
 	go
+
+ --Lista solo Secretarias
+create procedure spListarTrabajadorSecretarias
+as
+select IdTrabajador, Dni,Nombres,ApPaterno,ApMaterno,FechaNac,Sexo,EstCivil,Ubigeo,Direccion, Distrito, Provincia, Departamento, FechaContrato, Usuario,Password,Cargo,EstadoTrabajador,PerfilTrabajador 
+	from Trabajadores where EstadoTrabajador='1' and Cargo='Secretaria';
+	go
   -----------------------------------------------------------------------------------------------------------------
 -- Para Mantenedor Vehiculo
 ------------------------------------------------------------------------------------------------------------------

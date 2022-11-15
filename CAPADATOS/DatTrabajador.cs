@@ -293,5 +293,54 @@ namespace CAPADATOS
             }
             return Lista;
         }
+
+        public List<EntTrabajador> ListarScretaria()
+        {
+            SqlCommand cmd = null;
+            List<EntTrabajador> Lista = new List<EntTrabajador>();
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spListarTrabajadorSecretarias", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    EntTrabajador Tra = new EntTrabajador();
+                    Tra.Id_Trabajador = Convert.ToInt32(dr["IdTrabajador"]);
+                    Tra.Dni = Convert.ToInt32(dr["Dni"]);
+                    Tra.Nombres = dr["Nombres"].ToString(); ;
+                    Tra.ApPaterno = dr["ApPaterno"].ToString();
+                    Tra.ApMaterno = dr["ApMaterno"].ToString();
+                    Tra.FechaNac = Convert.ToDateTime(dr["FechaNac"]);
+                    Tra.Sexo = dr["Sexo"].ToString();
+                    Tra.EstCivil = dr["EstCivil"].ToString();
+                    Tra.Ubigeo = Convert.ToInt32(dr["Ubigeo"]);
+                    Tra.Direccion = dr["Direccion"].ToString();
+                    Tra.Distrito = dr["Distrito"].ToString();
+                    Tra.Provincia = dr["Provincia"].ToString();
+                    Tra.Departamento = dr["Departamento"].ToString(); ;
+                    Tra.FechaContrato = Convert.ToDateTime(dr["FechaContrato"]);
+                    Tra.Usuario = dr["Usuario"].ToString();
+                    Tra.Password = dr["Password"].ToString();
+                    Tra.Cargo = dr["Cargo"].ToString();
+                    Tra.EstadoTrabajador = Convert.ToBoolean(dr["EstadoTrabajador"]);
+                    Tra.PerfilTrabajador = (byte[])dr["PerfilTrabajador"];
+                    Lista.Add(Tra);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return Lista;
+        }
     }
 }

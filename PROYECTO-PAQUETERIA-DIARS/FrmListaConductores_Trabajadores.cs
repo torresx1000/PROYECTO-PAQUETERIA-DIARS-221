@@ -49,7 +49,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 else
                 {
 
-                    dgvConductores.DataSource = LogRuta.Instancia.ListarRuta();
+                    dgvConductores.DataSource = LogTrabajador.Instancia.ListarConductor();
                 }
             }
         }
