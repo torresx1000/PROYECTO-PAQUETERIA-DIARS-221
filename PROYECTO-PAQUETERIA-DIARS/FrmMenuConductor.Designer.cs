@@ -37,10 +37,10 @@
             this.btnGastos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelConductor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.PanelConductor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +67,7 @@
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Location = new System.Drawing.Point(23, 247);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -80,7 +80,7 @@
             // 
             this.bgtnSalir.Depth = 0;
             this.bgtnSalir.Location = new System.Drawing.Point(148, 601);
-            this.bgtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bgtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.bgtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.bgtnSalir.Name = "bgtnSalir";
             this.bgtnSalir.Primary = true;
@@ -94,7 +94,7 @@
             // 
             this.btnEstado.Depth = 0;
             this.btnEstado.Location = new System.Drawing.Point(23, 341);
-            this.btnEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstado.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Primary = true;
@@ -108,7 +108,7 @@
             // 
             this.btnCheck.Depth = 0;
             this.btnCheck.Location = new System.Drawing.Point(23, 524);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheck.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Primary = true;
@@ -122,7 +122,7 @@
             // 
             this.btnGastos.Depth = 0;
             this.btnGastos.Location = new System.Drawing.Point(23, 426);
-            this.btnGastos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGastos.Margin = new System.Windows.Forms.Padding(4);
             this.btnGastos.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGastos.Name = "btnGastos";
             this.btnGastos.Primary = true;
@@ -150,10 +150,23 @@
             this.PanelConductor.BackColor = System.Drawing.Color.Gray;
             this.PanelConductor.Controls.Add(this.pictureBox1);
             this.PanelConductor.Location = new System.Drawing.Point(296, 80);
-            this.PanelConductor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelConductor.Margin = new System.Windows.Forms.Padding(4);
             this.PanelConductor.Name = "PanelConductor";
             this.PanelConductor.Size = new System.Drawing.Size(993, 639);
             this.PanelConductor.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(988, 640);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -186,20 +199,6 @@
             this.lblHora.Size = new System.Drawing.Size(58, 20);
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._68d89367_ca5a_4c2b_aa1d_eb09a02e9e1e;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(988, 640);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmMenuConductor
             // 

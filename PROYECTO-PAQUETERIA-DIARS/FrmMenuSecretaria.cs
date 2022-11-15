@@ -49,5 +49,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
 
         }
+
+        private void btnManProgramSalida_Click(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FrmProgramacionSalida());
+        }
     }
 }

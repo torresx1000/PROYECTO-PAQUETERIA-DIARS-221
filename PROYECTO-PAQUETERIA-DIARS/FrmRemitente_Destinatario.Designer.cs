@@ -77,6 +77,9 @@
             this.btnInabilitar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeleccionarLote = new System.Windows.Forms.Button();
+            this.txtLote = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtDescripcionPaquete = new System.Windows.Forms.TextBox();
             this.cbCategoriaPaquete = new System.Windows.Forms.ComboBox();
             this.txtCantidadPaquete = new System.Windows.Forms.TextBox();
@@ -90,9 +93,6 @@
             this.txtResponsable = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtLote = new System.Windows.Forms.TextBox();
-            this.btnSeleccionarLote = new System.Windows.Forms.Button();
             this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
             this.gbRemitente.SuspendLayout();
             this.gbDestinatario.SuspendLayout();
@@ -124,9 +124,9 @@
             this.gbRemitente.Controls.Add(this.label4);
             this.gbRemitente.Controls.Add(this.txtCorreoR);
             this.gbRemitente.Location = new System.Drawing.Point(13, 71);
-            this.gbRemitente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRemitente.Margin = new System.Windows.Forms.Padding(4);
             this.gbRemitente.Name = "gbRemitente";
-            this.gbRemitente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRemitente.Padding = new System.Windows.Forms.Padding(4);
             this.gbRemitente.Size = new System.Drawing.Size(635, 262);
             this.gbRemitente.TabIndex = 9;
             this.gbRemitente.TabStop = false;
@@ -178,7 +178,7 @@
             // txtDepartamentoR
             // 
             this.txtDepartamentoR.Location = new System.Drawing.Point(143, 219);
-            this.txtDepartamentoR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDepartamentoR.Margin = new System.Windows.Forms.Padding(4);
             this.txtDepartamentoR.Multiline = true;
             this.txtDepartamentoR.Name = "txtDepartamentoR";
             this.txtDepartamentoR.Size = new System.Drawing.Size(467, 18);
@@ -198,7 +198,7 @@
             // txtProvinciaR
             // 
             this.txtProvinciaR.Location = new System.Drawing.Point(107, 183);
-            this.txtProvinciaR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProvinciaR.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvinciaR.Multiline = true;
             this.txtProvinciaR.Name = "txtProvinciaR";
             this.txtProvinciaR.Size = new System.Drawing.Size(503, 24);
@@ -218,7 +218,7 @@
             // txtDistritoR
             // 
             this.txtDistritoR.Location = new System.Drawing.Point(89, 154);
-            this.txtDistritoR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDistritoR.Margin = new System.Windows.Forms.Padding(4);
             this.txtDistritoR.Multiline = true;
             this.txtDistritoR.Name = "txtDistritoR";
             this.txtDistritoR.Size = new System.Drawing.Size(520, 21);
@@ -228,7 +228,7 @@
             // 
             this.btnBuscarR.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarR.Location = new System.Drawing.Point(436, 22);
-            this.btnBuscarR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarR.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarR.Name = "btnBuscarR";
             this.btnBuscarR.Size = new System.Drawing.Size(100, 26);
             this.btnBuscarR.TabIndex = 2;
@@ -261,7 +261,7 @@
             // txtDireccionR
             // 
             this.txtDireccionR.Location = new System.Drawing.Point(353, 112);
-            this.txtDireccionR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccionR.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccionR.Multiline = true;
             this.txtDireccionR.Name = "txtDireccionR";
             this.txtDireccionR.Size = new System.Drawing.Size(256, 30);
@@ -270,7 +270,7 @@
             // txtDniR
             // 
             this.txtDniR.Location = new System.Drawing.Point(97, 26);
-            this.txtDniR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDniR.Margin = new System.Windows.Forms.Padding(4);
             this.txtDniR.Multiline = true;
             this.txtDniR.Name = "txtDniR";
             this.txtDniR.Size = new System.Drawing.Size(303, 21);
@@ -279,7 +279,7 @@
             // txtNombresR
             // 
             this.txtNombresR.Location = new System.Drawing.Point(151, 55);
-            this.txtNombresR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombresR.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombresR.Multiline = true;
             this.txtNombresR.Name = "txtNombresR";
             this.txtNombresR.Size = new System.Drawing.Size(459, 22);
@@ -288,7 +288,7 @@
             // txtTelefonoR
             // 
             this.txtTelefonoR.Location = new System.Drawing.Point(185, 112);
-            this.txtTelefonoR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoR.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonoR.Multiline = true;
             this.txtTelefonoR.Name = "txtTelefonoR";
             this.txtTelefonoR.Size = new System.Drawing.Size(159, 30);
@@ -308,7 +308,7 @@
             // txtCorreoR
             // 
             this.txtCorreoR.Location = new System.Drawing.Point(9, 112);
-            this.txtCorreoR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreoR.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoR.Multiline = true;
             this.txtCorreoR.Name = "txtCorreoR";
             this.txtCorreoR.Size = new System.Drawing.Size(167, 30);
@@ -316,8 +316,7 @@
             // 
             // gbDestinatario
             // 
-            this.gbDestinatario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDestinatario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDestinatario.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.gbDestinatario.Controls.Add(this.label13);
             this.gbDestinatario.Controls.Add(this.label14);
@@ -338,9 +337,9 @@
             this.gbDestinatario.Controls.Add(this.label21);
             this.gbDestinatario.Controls.Add(this.txtCorreoD);
             this.gbDestinatario.Location = new System.Drawing.Point(655, 71);
-            this.gbDestinatario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDestinatario.Margin = new System.Windows.Forms.Padding(4);
             this.gbDestinatario.Name = "gbDestinatario";
-            this.gbDestinatario.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDestinatario.Padding = new System.Windows.Forms.Padding(4);
             this.gbDestinatario.Size = new System.Drawing.Size(629, 262);
             this.gbDestinatario.TabIndex = 9;
             this.gbDestinatario.TabStop = false;
@@ -403,7 +402,7 @@
             // txtDepartamentoD
             // 
             this.txtDepartamentoD.Location = new System.Drawing.Point(141, 215);
-            this.txtDepartamentoD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDepartamentoD.Margin = new System.Windows.Forms.Padding(4);
             this.txtDepartamentoD.Multiline = true;
             this.txtDepartamentoD.Name = "txtDepartamentoD";
             this.txtDepartamentoD.Size = new System.Drawing.Size(467, 21);
@@ -423,7 +422,7 @@
             // txtProvinciaD
             // 
             this.txtProvinciaD.Location = new System.Drawing.Point(100, 183);
-            this.txtProvinciaD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProvinciaD.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvinciaD.Multiline = true;
             this.txtProvinciaD.Name = "txtProvinciaD";
             this.txtProvinciaD.Size = new System.Drawing.Size(508, 24);
@@ -432,7 +431,7 @@
             // txtDistritoD
             // 
             this.txtDistritoD.Location = new System.Drawing.Point(100, 154);
-            this.txtDistritoD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDistritoD.Margin = new System.Windows.Forms.Padding(4);
             this.txtDistritoD.Multiline = true;
             this.txtDistritoD.Name = "txtDistritoD";
             this.txtDistritoD.Size = new System.Drawing.Size(508, 21);
@@ -453,7 +452,7 @@
             // 
             this.btnBuscarD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarD.Location = new System.Drawing.Point(428, 31);
-            this.btnBuscarD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarD.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarD.Name = "btnBuscarD";
             this.btnBuscarD.Size = new System.Drawing.Size(100, 26);
             this.btnBuscarD.TabIndex = 7;
@@ -464,7 +463,7 @@
             // txtDireccionD
             // 
             this.txtDireccionD.Location = new System.Drawing.Point(359, 112);
-            this.txtDireccionD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccionD.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccionD.Multiline = true;
             this.txtDireccionD.Name = "txtDireccionD";
             this.txtDireccionD.Size = new System.Drawing.Size(249, 30);
@@ -484,7 +483,7 @@
             // txtNombresD
             // 
             this.txtNombresD.Location = new System.Drawing.Point(159, 60);
-            this.txtNombresD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombresD.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombresD.Multiline = true;
             this.txtNombresD.Name = "txtNombresD";
             this.txtNombresD.Size = new System.Drawing.Size(449, 22);
@@ -493,7 +492,7 @@
             // txtDniD
             // 
             this.txtDniD.Location = new System.Drawing.Point(91, 30);
-            this.txtDniD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDniD.Margin = new System.Windows.Forms.Padding(4);
             this.txtDniD.Multiline = true;
             this.txtDniD.Name = "txtDniD";
             this.txtDniD.Size = new System.Drawing.Size(303, 21);
@@ -502,7 +501,7 @@
             // txtTelefonoD
             // 
             this.txtTelefonoD.Location = new System.Drawing.Point(191, 112);
-            this.txtTelefonoD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoD.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonoD.Multiline = true;
             this.txtTelefonoD.Name = "txtTelefonoD";
             this.txtTelefonoD.Size = new System.Drawing.Size(159, 30);
@@ -522,7 +521,7 @@
             // txtCorreoD
             // 
             this.txtCorreoD.Location = new System.Drawing.Point(16, 112);
-            this.txtCorreoD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreoD.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreoD.Multiline = true;
             this.txtCorreoD.Name = "txtCorreoD";
             this.txtCorreoD.Size = new System.Drawing.Size(165, 30);
@@ -552,9 +551,9 @@
             this.groupBox7.Controls.Add(this.btnNuevo);
             this.groupBox7.Controls.Add(this.btnInabilitar);
             this.groupBox7.Location = new System.Drawing.Point(13, 437);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(1271, 73);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
@@ -647,11 +646,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 517);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -661,6 +661,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btnSeleccionarLote);
             this.panel1.Controls.Add(this.txtLote);
@@ -675,15 +677,41 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(13, 341);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1271, 89);
             this.panel1.TabIndex = 13;
             // 
+            // btnSeleccionarLote
+            // 
+            this.btnSeleccionarLote.Location = new System.Drawing.Point(1144, 32);
+            this.btnSeleccionarLote.Name = "btnSeleccionarLote";
+            this.btnSeleccionarLote.Size = new System.Drawing.Size(106, 31);
+            this.btnSeleccionarLote.TabIndex = 13;
+            this.btnSeleccionarLote.Text = "Seleccionar";
+            this.btnSeleccionarLote.UseVisualStyleBackColor = true;
+            this.btnSeleccionarLote.Click += new System.EventHandler(this.btnSeleccionarLote_Click);
+            // 
+            // txtLote
+            // 
+            this.txtLote.Location = new System.Drawing.Point(1061, 36);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(61, 22);
+            this.txtLote.TabIndex = 12;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(1017, 38);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 16);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Lote:";
+            // 
             // txtDescripcionPaquete
             // 
             this.txtDescripcionPaquete.Location = new System.Drawing.Point(587, 33);
-            this.txtDescripcionPaquete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionPaquete.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionPaquete.Name = "txtDescripcionPaquete";
             this.txtDescripcionPaquete.Size = new System.Drawing.Size(423, 22);
             this.txtDescripcionPaquete.TabIndex = 10;
@@ -695,7 +723,7 @@
             "Fragil",
             "No Fragil"});
             this.cbCategoriaPaquete.Location = new System.Drawing.Point(353, 32);
-            this.cbCategoriaPaquete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCategoriaPaquete.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategoriaPaquete.Name = "cbCategoriaPaquete";
             this.cbCategoriaPaquete.Size = new System.Drawing.Size(136, 24);
             this.cbCategoriaPaquete.TabIndex = 9;
@@ -703,7 +731,7 @@
             // txtCantidadPaquete
             // 
             this.txtCantidadPaquete.Location = new System.Drawing.Point(226, 32);
-            this.txtCantidadPaquete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidadPaquete.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidadPaquete.Name = "txtCantidadPaquete";
             this.txtCantidadPaquete.Size = new System.Drawing.Size(48, 22);
             this.txtCantidadPaquete.TabIndex = 8;
@@ -711,7 +739,7 @@
             // txtCodigoPaquete
             // 
             this.txtCodigoPaquete.Location = new System.Drawing.Point(97, 32);
-            this.txtCodigoPaquete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoPaquete.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoPaquete.Name = "txtCodigoPaquete";
             this.txtCodigoPaquete.Size = new System.Drawing.Size(49, 22);
             this.txtCodigoPaquete.TabIndex = 7;
@@ -781,7 +809,7 @@
             // 
             this.txtResponsable.Enabled = false;
             this.txtResponsable.Location = new System.Drawing.Point(133, 25);
-            this.txtResponsable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResponsable.Margin = new System.Windows.Forms.Padding(4);
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.Size = new System.Drawing.Size(240, 22);
             this.txtResponsable.TabIndex = 15;
@@ -799,36 +827,10 @@
             // txtIdPedido
             // 
             this.txtIdPedido.Location = new System.Drawing.Point(472, 25);
-            this.txtIdPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdPedido.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdPedido.Name = "txtIdPedido";
             this.txtIdPedido.Size = new System.Drawing.Size(76, 22);
             this.txtIdPedido.TabIndex = 17;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1017, 38);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 16);
-            this.label27.TabIndex = 11;
-            this.label27.Text = "Lote:";
-            // 
-            // txtLote
-            // 
-            this.txtLote.Location = new System.Drawing.Point(1061, 36);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(61, 22);
-            this.txtLote.TabIndex = 12;
-            // 
-            // btnSeleccionarLote
-            // 
-            this.btnSeleccionarLote.Location = new System.Drawing.Point(1144, 32);
-            this.btnSeleccionarLote.Name = "btnSeleccionarLote";
-            this.btnSeleccionarLote.Size = new System.Drawing.Size(106, 31);
-            this.btnSeleccionarLote.TabIndex = 13;
-            this.btnSeleccionarLote.Text = "Seleccionar";
-            this.btnSeleccionarLote.UseVisualStyleBackColor = true;
-            this.btnSeleccionarLote.Click += new System.EventHandler(this.btnSeleccionarLote_Click);
             // 
             // SalirVentana
             // 
@@ -865,7 +867,7 @@
             this.Controls.Add(this.gbRemitente);
             this.Controls.Add(this.SalirVentana);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRemitente_Destinatario";
             this.gbRemitente.ResumeLayout(false);
             this.gbRemitente.PerformLayout();

@@ -19,13 +19,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
            
             //Application.Run(new FrmRemitente_Destinatario());
             //Application.Run(new FrmMenuGerente("ADMINISTRADOR","SISTEMAS"));
-            //Application.Run(new FrmMenuSecretaria());
+            Application.Run(new FrmMenuSecretaria());
             //Application.Run(new FrmMenuJefeDeMantenimiento());
             //Application.Run(new FrmMenuAlmacenero());
             //Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuJefeDeOperaciones());
             //Application.Run(new FrmMenuCajero());
-            Application.Run(new FrmMenuConductor());
+            //Application.Run(new FrmMenuConductor());
             //Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
