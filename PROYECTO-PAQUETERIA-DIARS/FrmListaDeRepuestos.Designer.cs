@@ -36,10 +36,9 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtdescripcion = new System.Windows.Forms.TextBox();
-            this.txtnombrederespuestos = new System.Windows.Forms.TextBox();
-            this.txtcantidad = new System.Windows.Forms.TextBox();
-            this.txtcodigorepuesto = new System.Windows.Forms.TextBox();
+            this.txtdescripcionrespuestos = new System.Windows.Forms.TextBox();
+            this.txtdiagnostico = new System.Windows.Forms.TextBox();
+            this.txtcodigolista = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnseleccionardiagnostico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistarespuestos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -82,7 +83,7 @@
             this.btnactualizar.BackColor = System.Drawing.Color.RosyBrown;
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar.Location = new System.Drawing.Point(144, 66);
-            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(132, 39);
             this.btnactualizar.TabIndex = 50;
@@ -94,7 +95,7 @@
             this.btnañadir.BackColor = System.Drawing.Color.RosyBrown;
             this.btnañadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnañadir.Location = new System.Drawing.Point(9, 23);
-            this.btnañadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnañadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnañadir.Name = "btnañadir";
             this.btnañadir.Size = new System.Drawing.Size(131, 39);
             this.btnañadir.TabIndex = 48;
@@ -106,7 +107,7 @@
             this.btneliminar.BackColor = System.Drawing.Color.RosyBrown;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Location = new System.Drawing.Point(144, 23);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(132, 39);
             this.btneliminar.TabIndex = 49;
@@ -118,7 +119,7 @@
             this.btnbuscar.BackColor = System.Drawing.Color.RosyBrown;
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.Location = new System.Drawing.Point(280, 23);
-            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(132, 39);
             this.btnbuscar.TabIndex = 51;
@@ -128,10 +129,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightGreen;
-            this.groupBox1.Controls.Add(this.txtdescripcion);
-            this.groupBox1.Controls.Add(this.txtnombrederespuestos);
-            this.groupBox1.Controls.Add(this.txtcantidad);
-            this.groupBox1.Controls.Add(this.txtcodigorepuesto);
+            this.groupBox1.Controls.Add(this.btnseleccionardiagnostico);
+            this.groupBox1.Controls.Add(this.dtFecha);
+            this.groupBox1.Controls.Add(this.txtdescripcionrespuestos);
+            this.groupBox1.Controls.Add(this.txtdiagnostico);
+            this.groupBox1.Controls.Add(this.txtcodigolista);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
@@ -143,42 +145,34 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // txtdescripcion
+            // txtdescripcionrespuestos
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(216, 158);
-            this.txtdescripcion.Multiline = true;
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(186, 84);
-            this.txtdescripcion.TabIndex = 1;
+            this.txtdescripcionrespuestos.Location = new System.Drawing.Point(216, 158);
+            this.txtdescripcionrespuestos.Multiline = true;
+            this.txtdescripcionrespuestos.Name = "txtdescripcionrespuestos";
+            this.txtdescripcionrespuestos.Size = new System.Drawing.Size(186, 125);
+            this.txtdescripcionrespuestos.TabIndex = 1;
             // 
-            // txtnombrederespuestos
+            // txtdiagnostico
             // 
-            this.txtnombrederespuestos.Location = new System.Drawing.Point(216, 107);
-            this.txtnombrederespuestos.Multiline = true;
-            this.txtnombrederespuestos.Name = "txtnombrederespuestos";
-            this.txtnombrederespuestos.Size = new System.Drawing.Size(186, 30);
-            this.txtnombrederespuestos.TabIndex = 1;
+            this.txtdiagnostico.Location = new System.Drawing.Point(216, 65);
+            this.txtdiagnostico.Multiline = true;
+            this.txtdiagnostico.Name = "txtdiagnostico";
+            this.txtdiagnostico.Size = new System.Drawing.Size(107, 30);
+            this.txtdiagnostico.TabIndex = 1;
             // 
-            // txtcantidad
+            // txtcodigolista
             // 
-            this.txtcantidad.Location = new System.Drawing.Point(216, 65);
-            this.txtcantidad.Multiline = true;
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.Size = new System.Drawing.Size(186, 30);
-            this.txtcantidad.TabIndex = 1;
-            // 
-            // txtcodigorepuesto
-            // 
-            this.txtcodigorepuesto.Location = new System.Drawing.Point(216, 20);
-            this.txtcodigorepuesto.Multiline = true;
-            this.txtcodigorepuesto.Name = "txtcodigorepuesto";
-            this.txtcodigorepuesto.Size = new System.Drawing.Size(186, 30);
-            this.txtcodigorepuesto.TabIndex = 1;
+            this.txtcodigolista.Location = new System.Drawing.Point(216, 20);
+            this.txtcodigolista.Multiline = true;
+            this.txtcodigolista.Name = "txtcodigolista";
+            this.txtcodigolista.Size = new System.Drawing.Size(186, 30);
+            this.txtcodigolista.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._75863;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 194);
+            this.pictureBox2.Location = new System.Drawing.Point(56, 187);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(140, 96);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,41 +183,42 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 123);
+            this.label4.Location = new System.Drawing.Point(89, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 13);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "NOMBRE DE REPUESTOS:";
+            this.label4.Text = "FECHA:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 159);
+            this.label5.Location = new System.Drawing.Point(36, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.Size = new System.Drawing.Size(174, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "DESCRIPCION:";
+            this.label5.Text = "DESCRIPCION REPUESTOS:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 80);
+            this.label3.Location = new System.Drawing.Point(63, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "CANTIDAD:";
+            this.label3.Text = "DIAGNOSTICO:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 36);
+            this.label2.Location = new System.Drawing.Point(43, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 13);
+            this.label2.Size = new System.Drawing.Size(127, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "CODIGO DE REPUESTO:";
+            this.label2.Text = "CODIGO DE LISTAS:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -244,6 +239,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // dtFecha
+            // 
+            this.dtFecha.Location = new System.Drawing.Point(202, 118);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtFecha.TabIndex = 2;
+            // 
+            // btnseleccionardiagnostico
+            // 
+            this.btnseleccionardiagnostico.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnseleccionardiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnseleccionardiagnostico.Location = new System.Drawing.Point(338, 65);
+            this.btnseleccionardiagnostico.Margin = new System.Windows.Forms.Padding(2);
+            this.btnseleccionardiagnostico.Name = "btnseleccionardiagnostico";
+            this.btnseleccionardiagnostico.Size = new System.Drawing.Size(104, 39);
+            this.btnseleccionardiagnostico.TabIndex = 52;
+            this.btnseleccionardiagnostico.Text = "SELECCIONAR";
+            this.btnseleccionardiagnostico.UseVisualStyleBackColor = false;
+            this.btnseleccionardiagnostico.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmListaDeRepuestos
             // 
@@ -280,10 +295,9 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtdescripcion;
-        private System.Windows.Forms.TextBox txtnombrederespuestos;
-        private System.Windows.Forms.TextBox txtcantidad;
-        private System.Windows.Forms.TextBox txtcodigorepuesto;
+        private System.Windows.Forms.TextBox txtdescripcionrespuestos;
+        private System.Windows.Forms.TextBox txtdiagnostico;
+        private System.Windows.Forms.TextBox txtcodigolista;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -291,5 +305,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dtFecha;
+        private System.Windows.Forms.Button btnseleccionardiagnostico;
     }
 }
