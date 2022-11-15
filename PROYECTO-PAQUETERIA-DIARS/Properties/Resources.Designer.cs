@@ -203,6 +203,26 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Black_Modern_Geometric_Gaming_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Black Modern Geometric Gaming Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Black_Modern_Geometric_Gaming_Logo1 {
+            get {
+                object obj = ResourceManager.GetObject("Black Modern Geometric Gaming Logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2022_11_12_185602 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2022-11-12 185602", resourceCulture);

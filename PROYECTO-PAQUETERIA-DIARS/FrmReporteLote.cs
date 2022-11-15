@@ -45,7 +45,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvLote_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdLote=dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString()
+            IdLote = dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString();
         }
 
         private void txtItem_TextChanged(object sender, EventArgs e)
