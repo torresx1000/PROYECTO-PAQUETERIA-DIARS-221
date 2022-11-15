@@ -1,4 +1,5 @@
-﻿using CAPAENTIDAD;
+﻿using CAPADATOS;
+using CAPAENTIDAD;
 using CAPALOGICA;
 using System;
 using System.Collections.Generic;
@@ -12,17 +13,17 @@ using System.Windows.Forms;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
-    public partial class FrmReporteLote : Form
+    public partial class FrmReporteDiagnostico : Form
     {
-        public static string IdLote;
-        public FrmReporteLote()
+        public static string IdDiagnostico;
+        public FrmReporteDiagnostico()
         {
             InitializeComponent();
-            ListarLote();
+            ListarDiagnostico();
         }
-        public void ListarLote()
+        public void ListarDiagnostico()
         {
-            dgvLote.DataSource = LogLote.Instancia.ListarLote();
+            dgvDiagnostico.DataSource = LogDiagnostico.Instancia.ListarDiagnostico();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (IdLote == null)
+            if (IdDiagnostico == null)
             {
                 MessageBox.Show("Seleccione una fila", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -43,26 +44,26 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
         }
 
-        private void dgvLote_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDiagnostico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdLote = dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString();
+            IdDiagnostico = dgvDiagnostico.Rows[e.RowIndex].Cells["IDdIAGNOSTICO"].Value.ToString();
         }
 
         private void txtItem_TextChanged(object sender, EventArgs e)
         {
             txtItem.Focus();
-            EntLote rut = new EntLote();
-            rut.IdLote = Convert.ToInt32(txtItem.Text);
+            EntDiagnostico rut = new EntDiagnostico();
+            rut.IdDiagnostico = Convert.ToInt32(txtItem.Text);
             DataTable dt = new DataTable();
-            dt = LogLote.Instancia.BuscarLoteCodigo(rut.IdLote);
-            if (txtItem.Text != "" && (rut.EstadoLote = true))
+            dt = LogDiagnostico.Instancia.BuscarDiagnosticoId(rut.IdDiagnostico);
+            if (txtItem.Text != "" )
             {
-                dgvLote.DataSource = dt;
+                dgvDiagnostico.DataSource = dt;
             }
             else
             {
 
-                dgvLote.DataSource = LogLote.Instancia.ListarLote();
+                dgvDiagnostico.DataSource = LogDiagnostico.Instancia.ListarDiagnostico();
             }
         }
     }
