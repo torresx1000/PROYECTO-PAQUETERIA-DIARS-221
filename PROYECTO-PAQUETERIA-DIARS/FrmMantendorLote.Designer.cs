@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.gbDatosDelLote = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbestado = new System.Windows.Forms.CheckBox();
             this.dtPickerFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtIdLote = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelBotones = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -43,9 +46,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLote = new System.Windows.Forms.DataGridView();
-            this.cbestado = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.gbDatosDelLote.SuspendLayout();
             this.PanelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLote)).BeginInit();
@@ -62,13 +62,34 @@
             this.gbDatosDelLote.Controls.Add(this.label2);
             this.gbDatosDelLote.Controls.Add(this.label1);
             this.gbDatosDelLote.Location = new System.Drawing.Point(16, 15);
-            this.gbDatosDelLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosDelLote.Margin = new System.Windows.Forms.Padding(4);
             this.gbDatosDelLote.Name = "gbDatosDelLote";
-            this.gbDatosDelLote.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDatosDelLote.Padding = new System.Windows.Forms.Padding(4);
             this.gbDatosDelLote.Size = new System.Drawing.Size(1100, 231);
             this.gbDatosDelLote.TabIndex = 0;
             this.gbDatosDelLote.TabStop = false;
             this.gbDatosDelLote.Text = "DATOS DE LOTE:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Estado Lote:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // cbestado
+            // 
+            this.cbestado.AutoSize = true;
+            this.cbestado.Location = new System.Drawing.Point(219, 131);
+            this.cbestado.Name = "cbestado";
+            this.cbestado.Size = new System.Drawing.Size(72, 20);
+            this.cbestado.TabIndex = 8;
+            this.cbestado.Text = "Estado";
+            this.cbestado.UseVisualStyleBackColor = true;
             // 
             // dtPickerFecha
             // 
@@ -109,6 +130,16 @@
             this.txtIdLote.Size = new System.Drawing.Size(228, 34);
             this.txtIdLote.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "IDENTIFICADOR:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -129,9 +160,9 @@
             this.PanelBotones.Controls.Add(this.btnBuscar);
             this.PanelBotones.Controls.Add(this.btnAgregar);
             this.PanelBotones.Location = new System.Drawing.Point(16, 254);
-            this.PanelBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelBotones.Margin = new System.Windows.Forms.Padding(4);
             this.PanelBotones.Name = "PanelBotones";
-            this.PanelBotones.Size = new System.Drawing.Size(1104, 71);
+            this.PanelBotones.Size = new System.Drawing.Size(1100, 71);
             this.PanelBotones.TabIndex = 1;
             // 
             // btnLimpiar
@@ -139,7 +170,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(823, 10);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 46);
             this.btnLimpiar.TabIndex = 8;
@@ -152,7 +183,7 @@
             this.btnModificar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(467, 9);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(136, 46);
             this.btnModificar.TabIndex = 8;
@@ -165,7 +196,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.GreenYellow;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(971, 10);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 46);
             this.btnSalir.TabIndex = 8;
@@ -178,7 +209,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(659, 10);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(121, 46);
             this.btnEliminar.TabIndex = 46;
@@ -191,7 +222,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.GreenYellow;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(11, 9);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 47);
             this.btnNuevo.TabIndex = 8;
@@ -229,43 +260,12 @@
             // 
             this.dgvLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLote.Location = new System.Drawing.Point(16, 332);
-            this.dgvLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLote.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLote.Name = "dgvLote";
             this.dgvLote.RowHeadersWidth = 51;
             this.dgvLote.Size = new System.Drawing.Size(1100, 229);
             this.dgvLote.TabIndex = 2;
             this.dgvLote.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLote_CellDoubleClick);
-            // 
-            // cbestado
-            // 
-            this.cbestado.AutoSize = true;
-            this.cbestado.Location = new System.Drawing.Point(219, 131);
-            this.cbestado.Name = "cbestado";
-            this.cbestado.Size = new System.Drawing.Size(72, 20);
-            this.cbestado.TabIndex = 8;
-            this.cbestado.Text = "Estado";
-            this.cbestado.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IDENTIFICADOR:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Estado Lote:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FrmMantendorLote
             // 
@@ -275,7 +275,7 @@
             this.Controls.Add(this.dgvLote);
             this.Controls.Add(this.PanelBotones);
             this.Controls.Add(this.gbDatosDelLote);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMantendorLote";
             this.Text = "FrmMantendorLote";
             this.gbDatosDelLote.ResumeLayout(false);
