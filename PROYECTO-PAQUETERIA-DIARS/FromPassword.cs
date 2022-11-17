@@ -38,41 +38,25 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-           /* //para convertir imagen
-            MemoryStream archivoMemoria = new MemoryStream();
-            pbPerfilTrabajador.Image.Save(archivoMemoria, ImageFormat.Jpeg);
+          
             try
             {
                 EntTrabajador Tra = new EntTrabajador();
-                Tra.Id_Trabajador = Convert.ToInt32(txtIdTrabajador.Text.Trim());
-                Tra.Dni = Convert.ToInt32(txtDni.Text.Trim());
-                Tra.Nombres = txtNombres.Text.Trim();
-                Tra.ApPaterno = txtApellidoPaterno.Text.Trim();
-                Tra.ApMaterno = txtApellidoMaterno.Text.Trim();
-                Tra.FechaNac = dtFechaNacimiento.Value;
-                Tra.Sexo = txtSexo.Text.Trim();
-                Tra.EstCivil = cmbxEstadoCivil.Text.Trim();
-                Tra.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
-                Tra.Direccion = txtDireccion.Text.Trim();
-                Tra.Distrito = txtDistrito.Text.Trim();
-                Tra.Provincia = txtProvincia.Text.Trim();
-                Tra.Departamento = txtDepartamento.Text.Trim();
-                Tra.FechaContrato = dtFechaContrato.Value;
+                Tra.Nombres = cboNombre.Text.Trim();
                 Tra.Usuario = txtUsuario.Text.Trim();
-                Tra.Password = txtClave.Text.Trim();
-                Tra.Cargo = txtCargo.Text.Trim();
-                Tra.EstadoTrabajador = cbEstadoTrabajador.Checked;
-                Tra.PerfilTrabajador = archivoMemoria.GetBuffer();
+                Tra.Password = txtContraAnt.Text.Trim();
+                Tra.Password = txtContraNueva.Text.Trim();
+                
 
-                LogTrabajador.Instancia.EditarTrabajador(Tra);
+                LogModificarPaswword.Instancia.ModificarContraseña(Tra);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al actualizar: " + ex);
             }
-            gbDatosDelTrabajador.Enabled = false;
-            ListarTrabajador();
-            LimpiarVariables();*/
+           
+            //ListarTrabajador();
+          //  LimpiarVariables();
         }
     }
 }
