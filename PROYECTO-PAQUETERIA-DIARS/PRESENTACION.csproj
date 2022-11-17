@@ -284,6 +284,12 @@
     <Compile Include="FrmRuta.Designer.cs">
       <DependentUpon>FrmRuta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromPassword.Designer.cs">
+      <DependentUpon>FromPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRuta.resx">
       <DependentUpon>FrmRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromPassword.resx">
+      <DependentUpon>FromPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

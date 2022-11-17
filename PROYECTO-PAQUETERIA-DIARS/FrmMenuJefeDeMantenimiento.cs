@@ -1,8 +1,12 @@
-﻿using System;
+﻿using CAPAENTIDAD;
+using CAPALOGICA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +41,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnRegistrarDiagnostico_Click(object sender, EventArgs e)
         {
             AbrirFrmInPanel(new FrmDiagnostico());
+        }
+
+        private void btnConfigLogin_Click(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FromPassword());
         }
     }
 }
