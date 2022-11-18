@@ -59,7 +59,7 @@ go
 create procedure spListarTrabajador
 as
 select IdTrabajador, Dni,Nombres,ApPaterno,ApMaterno,FechaNac,Sexo,EstCivil,Ubigeo,Direccion, Distrito, Provincia, Departamento, FechaContrato, Usuario,Password,Cargo,EstadoTrabajador,PerfilTrabajador 
-	from Trabajadores where EstadoTrabajador='1'
+	from Trabajadores where EstadoTrabajador='1';
 	go
 
 --Procedimiento para modificar trabajador
@@ -1361,3 +1361,15 @@ as begin
 select * from  ListaRepuestos where Codigo =@Codigo
 end
 GO
+
+
+---modificar contraseña
+create procedure spModificarContrasena(
+@nombre varchar(50),
+@usuario varchar(20),
+@password varchar(20)
+)
+as 
+begin
+update Trabajadores set  Password=@password  where Nombres=@nombre and Usuario=@usuario
+end;

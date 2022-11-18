@@ -79,10 +79,10 @@
             this.PanelLogin.Controls.Add(this.pictureBox2);
             this.PanelLogin.Controls.Add(this.label1);
             this.PanelLogin.Controls.Add(this.pictureBox5);
-            this.PanelLogin.Location = new System.Drawing.Point(455, 76);
+            this.PanelLogin.Location = new System.Drawing.Point(438, 76);
             this.PanelLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelLogin.Name = "PanelLogin";
-            this.PanelLogin.Size = new System.Drawing.Size(389, 375);
+            this.PanelLogin.Size = new System.Drawing.Size(459, 375);
             this.PanelLogin.TabIndex = 1;
             // 
             // label3
@@ -91,7 +91,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(83, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Contraseña:";
             // 
@@ -117,7 +117,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(83, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Usuario:";
             // 
@@ -130,7 +130,7 @@
             this.textPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textPassword.Multiline = true;
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(173, 36);
+            this.textPassword.Size = new System.Drawing.Size(229, 36);
             this.textPassword.TabIndex = 6;
             this.textPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPassword_KeyPress);
             // 
@@ -143,7 +143,7 @@
             this.textUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUsuario.Multiline = true;
             this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(173, 34);
+            this.textUsuario.Size = new System.Drawing.Size(229, 34);
             this.textUsuario.TabIndex = 5;
             this.textUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUsuario_KeyPress);
             // 
@@ -177,7 +177,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(41, 217);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(327, 89);
+            this.pictureBox3.Size = new System.Drawing.Size(383, 89);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -188,7 +188,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(41, 118);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(327, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(383, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -199,7 +199,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(80, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 31);
+            this.label1.Size = new System.Drawing.Size(228, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "BIENVENIDO!";
             // 
@@ -226,7 +226,7 @@
             this.lblHora.Location = new System.Drawing.Point(36, 11);
             this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(99, 33);
+            this.lblHora.Size = new System.Drawing.Size(126, 42);
             this.lblHora.TabIndex = 3;
             this.lblHora.Text = "HORA";
             this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
@@ -239,7 +239,7 @@
             this.lblFecha.Location = new System.Drawing.Point(16, 54);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(49, 17);
+            this.lblFecha.Size = new System.Drawing.Size(63, 20);
             this.lblFecha.TabIndex = 4;
             this.lblFecha.Text = "FECHA";
             // 
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(875, 481);
+            this.ClientSize = new System.Drawing.Size(925, 481);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);

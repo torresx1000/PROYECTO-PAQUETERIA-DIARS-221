@@ -23,5 +23,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void btnConfigLogin_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

@@ -134,6 +134,7 @@
             this.btnAdminLogin.TabIndex = 0;
             this.btnAdminLogin.Text = "ADMINISTRAR LOGIN";
             this.btnAdminLogin.UseVisualStyleBackColor = true;
+            this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click_1);
             // 
             // panel2
             // 

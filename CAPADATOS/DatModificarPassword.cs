@@ -28,12 +28,11 @@ namespace CAPADATOS
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("modificar_contrasena", cn);
+                cmd = new SqlCommand("spModificarContrasena", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombre", Tra.Nombres);
                 cmd.Parameters.AddWithValue("@usuario", Tra.Usuario);
-                cmd.Parameters.AddWithValue("@password", Tra.Password);
-                cmd.Parameters.AddWithValue("@passwordnueva", Tra.Password);
+                cmd.Parameters.AddWithValue("@password", Tra.Password);           
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

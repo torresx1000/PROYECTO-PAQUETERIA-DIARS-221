@@ -25,10 +25,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void ListarNombres()
         {
-            // cboNombre.Items.ToString
             cboNombre.DataSource = LogTrabajador.Instancia.ListarTrabajador();
             cboNombre.DisplayMember = "Nombres";
-           // cboNombre.ValueMember = "idtrabajador";
+          
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -44,10 +43,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 EntTrabajador Tra = new EntTrabajador();
                 Tra.Nombres = cboNombre.Text.Trim();
                 Tra.Usuario = txtUsuario.Text.Trim();
-                Tra.Password = txtContraAnt.Text.Trim();
                 Tra.Password = txtContraNueva.Text.Trim();
                 
-
                 LogModificarPaswword.Instancia.ModificarContraseña(Tra);
             }
             catch (Exception ex)

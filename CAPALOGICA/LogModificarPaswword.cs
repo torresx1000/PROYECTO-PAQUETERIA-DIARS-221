@@ -26,8 +26,7 @@ namespace CAPALOGICA
 
         public Boolean ModificarContraseña(EntTrabajador Tra)
         {
-            return 
-                DatModificarPassword.Instancia.ModificarContraseña(Tra);
+            return DatModificarPassword.Instancia.ModificarContraseña(Tra);
         }
     }
 }

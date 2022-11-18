@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromPassword));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cboNombre = new System.Windows.Forms.ComboBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraAnt = new System.Windows.Forms.TextBox();
             this.txtContraNueva = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -50,43 +47,35 @@
             // 
             // cboNombre
             // 
-            this.cboNombre.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNombre.FormattingEnabled = true;
             this.cboNombre.Location = new System.Drawing.Point(355, 74);
             this.cboNombre.Name = "cboNombre";
-            this.cboNombre.Size = new System.Drawing.Size(256, 23);
+            this.cboNombre.Size = new System.Drawing.Size(256, 31);
             this.cboNombre.TabIndex = 0;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(355, 119);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(256, 24);
             this.txtUsuario.TabIndex = 1;
             // 
-            // txtContraAnt
-            // 
-            this.txtContraAnt.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraAnt.Location = new System.Drawing.Point(355, 164);
-            this.txtContraAnt.Multiline = true;
-            this.txtContraAnt.Name = "txtContraAnt";
-            this.txtContraAnt.Size = new System.Drawing.Size(256, 24);
-            this.txtContraAnt.TabIndex = 2;
-            // 
             // txtContraNueva
             // 
-            this.txtContraNueva.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraNueva.Location = new System.Drawing.Point(355, 219);
+            this.txtContraNueva.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraNueva.Location = new System.Drawing.Point(355, 164);
             this.txtContraNueva.Multiline = true;
             this.txtContraNueva.Name = "txtContraNueva";
             this.txtContraNueva.Size = new System.Drawing.Size(256, 24);
-            this.txtContraNueva.TabIndex = 3;
+            this.txtContraNueva.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(120, 74);
             this.label1.Name = "label1";
@@ -101,8 +90,8 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuThinButton21.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Black_Modern_Geometric_Gaming_Logo1;
             this.bunifuThinButton21.ButtonText = "CANCELAR";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,15 +116,15 @@
             this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Black_Modern_Geometric_Gaming_Logo1;
             this.bunifuThinButton22.ButtonText = "ACTUALIZAR";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleBorderThickness = 1;
             this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.Location = new System.Drawing.Point(64, 315);
@@ -162,33 +151,22 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(120, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 23);
+            this.label3.Size = new System.Drawing.Size(222, 23);
             this.label3.TabIndex = 8;
-            this.label3.Text = "CONTRASEÑA  ANT";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(120, 222);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "CONTRASEÑA NUEVA";
+            this.label3.Text = "CONTRASEÑA  NUEVA";
             // 
             // FromPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuThinButton22);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContraNueva);
-            this.Controls.Add(this.txtContraAnt);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.cboNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -202,14 +180,12 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContraNueva;
-        private System.Windows.Forms.TextBox txtContraAnt;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ComboBox cboNombre;
     }
