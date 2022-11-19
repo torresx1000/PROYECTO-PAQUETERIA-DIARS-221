@@ -869,7 +869,7 @@ select IdPagoUtilidades, IdPlanilla, IdTrabajador ,TotalRemuneraciones ,TotalDes
 
 
 	 -----------------------------------------------------------------------------------------------------------------
--- Para Mantenedor PEDIDO
+-- Para Mantenedor secretaria
 ------------------------------------------------------------------------------------------------------------------
 --Tabla PEDIDO
 CREATE TABLE PEDIDO(

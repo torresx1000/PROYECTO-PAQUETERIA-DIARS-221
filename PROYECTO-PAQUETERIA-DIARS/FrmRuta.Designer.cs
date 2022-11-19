@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(11, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(380, 350);
             this.panel1.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             this.checkBoxEstadoRuta.AutoSize = true;
             this.checkBoxEstadoRuta.Location = new System.Drawing.Point(268, 164);
-            this.checkBoxEstadoRuta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxEstadoRuta.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEstadoRuta.Name = "checkBoxEstadoRuta";
             this.checkBoxEstadoRuta.Size = new System.Drawing.Size(85, 17);
             this.checkBoxEstadoRuta.TabIndex = 16;
@@ -102,7 +102,7 @@
             // txtObservaciones
             // 
             this.txtObservaciones.Location = new System.Drawing.Point(13, 228);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(347, 120);
@@ -122,7 +122,7 @@
             // txtPuntoLlegada
             // 
             this.txtPuntoLlegada.Location = new System.Drawing.Point(154, 104);
-            this.txtPuntoLlegada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPuntoLlegada.Margin = new System.Windows.Forms.Padding(2);
             this.txtPuntoLlegada.Multiline = true;
             this.txtPuntoLlegada.Name = "txtPuntoLlegada";
             this.txtPuntoLlegada.Size = new System.Drawing.Size(206, 26);
@@ -131,7 +131,7 @@
             // txtPuntoPartida
             // 
             this.txtPuntoPartida.Location = new System.Drawing.Point(153, 58);
-            this.txtPuntoPartida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPuntoPartida.Margin = new System.Windows.Forms.Padding(2);
             this.txtPuntoPartida.Multiline = true;
             this.txtPuntoPartida.Name = "txtPuntoPartida";
             this.txtPuntoPartida.Size = new System.Drawing.Size(207, 26);
@@ -140,7 +140,7 @@
             // txtIdRuta
             // 
             this.txtIdRuta.Location = new System.Drawing.Point(153, 12);
-            this.txtIdRuta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdRuta.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdRuta.Multiline = true;
             this.txtIdRuta.Name = "txtIdRuta";
             this.txtIdRuta.Size = new System.Drawing.Size(207, 26);
@@ -183,7 +183,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(339, 174);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -201,7 +201,7 @@
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Location = new System.Drawing.Point(31, 376);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(849, 50);
             this.panel2.TabIndex = 27;
@@ -211,7 +211,7 @@
             this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(374, 6);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 39);
             this.btnBuscar.TabIndex = 39;
@@ -224,7 +224,7 @@
             this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(761, 6);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(74, 39);
             this.btnSalir.TabIndex = 38;
@@ -236,7 +236,7 @@
             this.btnLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.BackgroundImage")));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(632, 6);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(99, 39);
             this.btnLimpiar.TabIndex = 37;
@@ -249,7 +249,7 @@
             this.btnInhabilitar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInhabilitar.BackgroundImage")));
             this.btnInhabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInhabilitar.Location = new System.Drawing.Point(483, 6);
-            this.btnInhabilitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInhabilitar.Margin = new System.Windows.Forms.Padding(2);
             this.btnInhabilitar.Name = "btnInhabilitar";
             this.btnInhabilitar.Size = new System.Drawing.Size(118, 39);
             this.btnInhabilitar.TabIndex = 36;
@@ -262,7 +262,7 @@
             this.btnActualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizar.BackgroundImage")));
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Location = new System.Drawing.Point(107, 6);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(118, 39);
             this.btnActualizar.TabIndex = 35;
@@ -275,7 +275,7 @@
             this.btnRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.BackgroundImage")));
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(248, 6);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(99, 39);
             this.btnRegistrar.TabIndex = 34;
@@ -288,7 +288,7 @@
             this.btnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.BackgroundImage")));
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(9, 6);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(74, 39);
             this.btnNuevo.TabIndex = 33;
@@ -490,7 +490,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmRuta";
             this.Text = "FrmRuta";
             this.panel1.ResumeLayout(false);

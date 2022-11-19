@@ -278,5 +278,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
             
         }
 
+        private void SalirVentana_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
