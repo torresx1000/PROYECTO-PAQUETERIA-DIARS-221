@@ -26,7 +26,7 @@ namespace CAPADATOS
             //OSNI
             cn.ConnectionString = "Data Source=35.192.86.18; Initial Catalog = BDPROYECTODIARS; user=sqlserver; Password=M.Torres.Flores";
             //Cleiner
-            cn.ConnectionString = "Data Source=DESKTOP-R0RTQRL; Initial Catalog = PAQUETERIADIARS; Integrated Security=true"; //cadena dos
+            //cn.ConnectionString = "Data Source=DESKTOP-R0RTQRL; Initial Catalog = PAQUETERIADIARS; Integrated Security=true"; //cadena dos
             //Yeyson
             //cn.ConnectionString = "Data Source=DESKTOP-A1OPPUQ\\SQLEXPRESS; Initial Catalog = BDPROYECTODIARS; Integrated Security=true"; //cadena uno            
             return cn;

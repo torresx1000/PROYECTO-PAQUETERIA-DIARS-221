@@ -296,12 +296,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Minijuego.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Minijuego.Designer.cs">
-      <DependentUpon>Minijuego.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pantalla de Carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,9 +408,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Minijuego.resx">
-      <DependentUpon>Minijuego.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla de Carga.resx">
       <DependentUpon>Pantalla de Carga.cs</DependentUpon>
