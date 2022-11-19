@@ -35,12 +35,12 @@
             this.btnEstado = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCheck = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnGastos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Panelima = new System.Windows.Forms.Panel();
             this.PanelConductor = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.PanelConductor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,9 +56,9 @@
             this.panel1.Controls.Add(this.btnEstado);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.btnGastos);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.Panelima);
             this.panel1.Location = new System.Drawing.Point(-1, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 519);
             this.panel1.TabIndex = 2;
@@ -128,14 +128,14 @@
             this.btnGastos.UseVisualStyleBackColor = true;
             this.btnGastos.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // panel2
+            // Panelima
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(12, 11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 171);
-            this.panel2.TabIndex = 1;
+            this.Panelima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Panelima.Location = new System.Drawing.Point(12, 11);
+            this.Panelima.Margin = new System.Windows.Forms.Padding(2);
+            this.Panelima.Name = "Panelima";
+            this.Panelima.Size = new System.Drawing.Size(191, 171);
+            this.Panelima.TabIndex = 1;
             // 
             // PanelConductor
             // 
@@ -149,20 +149,6 @@
             this.PanelConductor.Name = "PanelConductor";
             this.PanelConductor.Size = new System.Drawing.Size(761, 558);
             this.PanelConductor.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(757, 559);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -194,6 +180,20 @@
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(757, 559);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmMenuConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +204,7 @@
             this.Controls.Add(this.PanelConductor);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuConductor";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -221,7 +221,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Panelima;
         private System.Windows.Forms.Panel PanelConductor;
         private MaterialSkin.Controls.MaterialRaisedButton btnGastos;
         private MaterialSkin.Controls.MaterialRaisedButton btnCheck;

@@ -17,7 +17,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmMenuConductor()
         {
             InitializeComponent();
-            
+            AbrirPanelistaIma(new Fondos());
         }
         private void formulario()
         {
@@ -40,6 +40,18 @@ namespace PROYECTO_PAQUETERIA_DIARS
             fh.Dock = DockStyle.Fill;
             this.PanelConductor.Controls.Add(fh);
             this.PanelConductor.Tag = fh;
+            fh.Show();
+        }
+
+        public void AbrirPanelistaIma(object FormHijo)
+        {
+            if (this.Panelima.Controls.Count > 0)
+                this.Panelima.Controls.RemoveAt(0);
+            Form fh = FormHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Panelima.Controls.Add(fh);
+            this.Panelima.Tag = fh;
             fh.Show();
         }
         private void btnRegistrarFichaDeEstadoVehicular_Click(object sender, EventArgs e)
@@ -92,6 +104,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void materialRaisedButton1_Click_3(object sender, EventArgs e)
         {
             AbrirFrmInPanel(new FromPassword());
+            
         }
     }
 }

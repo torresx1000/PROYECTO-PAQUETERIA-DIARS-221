@@ -98,6 +98,12 @@
     <Compile Include="FmrRegistroCheckList.Designer.cs">
       <DependentUpon>FmrRegistroCheckList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fondos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fondos.Designer.cs">
+      <DependentUpon>Fondos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     </Compile>
     <EmbeddedResource Include="FmrRegistroCheckList.resx">
       <DependentUpon>FmrRegistroCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fondos.resx">
+      <DependentUpon>Fondos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCotizacion.resx">
       <DependentUpon>FrmCotizacion.cs</DependentUpon>

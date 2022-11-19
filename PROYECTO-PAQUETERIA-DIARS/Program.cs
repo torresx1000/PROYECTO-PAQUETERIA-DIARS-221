@@ -16,7 +16,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            //Application.Run(new Pantalla_de_Carga());
+            //Application.Run(new Login());
             //Application.Run(new FrmRemitente_Destinatario());
             //Application.Run(new FrmMenuGerente("ADMINISTRADOR","SISTEMAS"));
             //Application.Run(new FrmMenuSecretaria());
@@ -25,7 +26,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuJefeDeOperaciones());
             //Application.Run(new FrmMenuCajero());
-            //Application.Run(new FrmMenuConductor());
+            Application.Run(new FrmMenuConductor());
             //Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
@@ -45,8 +46,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmPagoUtilidades());
             //Application.Run(new FrmFichaDeEstadoVehiculo());
             //Application.Run(new FrmGastosDeViaje());
-            Application.Run(new Pantalla_de_Carga());
-            Application.Run(new Login());
+
+          
         }
     }
 }
