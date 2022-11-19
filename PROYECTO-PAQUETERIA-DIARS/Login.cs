@@ -146,6 +146,27 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
 
         }
+
+        private void textUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)) {
+                /* string msjusu=textUsuario.Text.Trim();
+                 textPassword.Focus();
+                 textUsuario.Text=msjusu;*/
+                MessageBox.Show("No se Permite el enter :V", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void textPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+               btnIngresar.PerformClick();
+
+            }
+        }
     }
 
       

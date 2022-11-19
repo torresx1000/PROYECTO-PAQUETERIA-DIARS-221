@@ -74,6 +74,7 @@
             this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "CONFIGURAR LOGIN";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click_3);
             // 
             // bgtnSalir
             // 

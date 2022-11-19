@@ -88,5 +88,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void materialRaisedButton1_Click_3(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FromPassword());
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             AbrirFrmInPanel(new FrmProgramacionSalida());
         }
+
+        private void btnConfigLogin_Click(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FromPassword());
+        }
     }
 }

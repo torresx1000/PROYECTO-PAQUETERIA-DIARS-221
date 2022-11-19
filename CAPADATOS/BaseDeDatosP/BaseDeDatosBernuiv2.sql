@@ -59,7 +59,7 @@ go
 create procedure spListarTrabajador
 as
 select IdTrabajador, Dni,Nombres,ApPaterno,ApMaterno,FechaNac,Sexo,EstCivil,Ubigeo,Direccion, Distrito, Provincia, Departamento, FechaContrato, Usuario,Password,Cargo,EstadoTrabajador,PerfilTrabajador 
-	from Trabajadores where EstadoTrabajador='1'
+	from Trabajadores where EstadoTrabajador='1';
 	go
 
 --Procedimiento para modificar trabajador
@@ -867,6 +867,71 @@ select IdPagoUtilidades, IdPlanilla, IdTrabajador ,TotalRemuneraciones ,TotalDes
 	from PagoDeUtilidades
 	go
 
+	----------------------------------------------------------------------------------------
+	---Mantenedor Lote
+	-----------------------------------------------------------------------------------------
+	
+--CREACION DE LA TABLA LOTE 
+CREATE TABLE LOTE(
+IdLote int not null primary key identity(1,1),
+Identificador varchar(50),
+EstadoLote bit,
+Fecha date
+)
+
+--CREAR PROCEDIMIENTO LISTARLOTE
+create procedure spListarLote
+as
+select IdLote,Identificador,EstadoLote,Fecha
+	from LOTE 
+	go
+
+--CREAR PROCEDIMIENTO INSERTAR LOTE
+create procedure spInsertarLote(
+@Identificador varchar(50),
+@EstadoLote bit,
+@Fecha date
+)
+as begin
+insert into LOTE(Identificador,EstadoLote,Fecha) values 
+(@Identificador,@EstadoLote,@Fecha)
+end 
+go
+
+--CREAR PROCEDIMIENTO MODIFICAR LOTE
+create procedure spModificarLote(
+@IdLote int,
+@Identificador varchar(50),
+@EstadoLote bit,
+@Fecha date
+)as begin update LOTE set 
+ Identificador=@Identificador,
+ EstadoLote=@EstadoLote,
+ Fecha=@Fecha 
+ where IdLote=@IdLote
+ end
+ go
+
+--CREAR PROCEDIMIENTO ELIMINAR LOTE
+CREATE PROCEDURE spEliminarLote(
+@IdLote int
+)
+AS
+BEGIN
+delete LOTE
+	WHERE IdLote =@IdLote
+END
+GO
+
+--CREAR PROCEDIMIENTO PARA BUSCAR LOTE
+CREATE PROCEDURE  spBuscarLote(
+	@IdLote int 
+)
+as begin
+select * from  LOTE where IdLote = @IdLote
+end
+GO
+
 
 	 -----------------------------------------------------------------------------------------------------------------
 -- Para Mantenedor secretaria
@@ -904,7 +969,7 @@ constraint FkIdEncargadoPed foreign key(IdEncargado) references Trabajadores (Id
 constraint FkIdLotePed foreign key(IdLote) references LOTE (IdLote)
 );
 GO
-
+-----------------------------------------------------------------
 select *from PEDIDO
           --procedimiento almacenado para insertar un nuevo PAQUETE/PEDIDO
 CREATE PROCEDURE spinsertarPedido(
@@ -1073,7 +1138,8 @@ go
  @id int
  as  begin
  select *from Cotizacion where IdCotizacion like @id;
- end
+ end;
+ go
  --ELIMINAR COTIZACION
 create procedure spEliminarCotizacion
 @Id int
@@ -1093,7 +1159,8 @@ LetoneriayPintura varchar(500),
 Otros varchar(500),
 constraint Fk_IdConductorFE foreign key(IdConductor) references Trabajadores(IdTrabajador),
 constraint Fk_IdVehiculoFE foreign key(IdVehiculo) references Vehiculo(IdVehiculo) 
-)
+);
+go
 
 --Procedimiento para insertar ficha estado vehiculo
 create procedure spInsertarFichaEstadoVehiculo( 
@@ -1169,7 +1236,8 @@ Otros varchar(200),
 preciosotros float,
 Total float,
 constraint Fk_IdProgramacionSalida foreign key(IdProgramaciondesalida) references ProgramacionSalida(IdProgramacionSalida)
-)
+);
+go
  
 --Insertar GastosDeViaje
 Create procedure spInsertarGastosViaje( 
@@ -1185,7 +1253,7 @@ Create procedure spInsertarGastosViaje(
 )as begin
 insert into GastosViaje(IdProgramaciondesalida,Fecha,Viaticos, preciosviaticos, Combustible, precioscombustible, Otros, preciosotros,Total ) values 
 (@IdProgramaciondesalida,@Fecha,@Viaticos,@preciosviaticos, @Combustible, @precioscombustible, @Otros, @precioscombustible,@Total)
-end 
+end ;
 go
 
 --Procedimiento para listar gastos de viaje 
@@ -1238,68 +1306,6 @@ as
 delete from GastosViaje where IdGastosViaje=@IdGastosViaje
 go
 
---CREACION DE LA TABLA LOTE 
-CREATE TABLE LOTE(
-IdLote int not null primary key identity(1,1),
-Identificador varchar(50),
-EstadoLote bit,
-Fecha date
-)
-
---CREAR PROCEDIMIENTO LISTARLOTE
-create procedure spListarLote
-as
-select IdLote,Identificador,EstadoLote,Fecha
-	from LOTE 
-	go
-
---CREAR PROCEDIMIENTO INSERTAR LOTE
-create procedure spInsertarLote(
-@Identificador varchar(50),
-@EstadoLote bit,
-@Fecha date
-)
-as begin
-insert into LOTE(Identificador,EstadoLote,Fecha) values 
-(@Identificador,@EstadoLote,@Fecha)
-end 
-go
-
---CREAR PROCEDIMIENTO MODIFICAR LOTE
-create procedure spModificarLote(
-@IdLote int,
-@Identificador varchar(50),
-@EstadoLote bit,
-@Fecha date
-)as begin update LOTE set 
- Identificador=@Identificador,
- EstadoLote=@EstadoLote,
- Fecha=@Fecha 
- where IdLote=@IdLote
- end
- go
-
---CREAR PROCEDIMIENTO ELIMINAR LOTE
-CREATE PROCEDURE spEliminarLote(
-@IdLote int
-)
-AS
-BEGIN
-delete LOTE
-	WHERE IdLote =@IdLote
-END
-GO
-
---CREAR PROCEDIMIENTO PARA BUSCAR LOTE
-CREATE PROCEDURE  spBuscarLote(
-	@IdLote int 
-)
-as begin
-select * from  LOTE where IdLote = @IdLote
-end
-GO
-
-
 --Tabla para lista de repuestos
 create table ListaRepuestos(
 Codigo int not null primary key identity(1,1),
@@ -1307,7 +1313,8 @@ IdDiagnostico int,
 Fecha date,
 DescripcionRepuestos varchar(500),
 constraint Fk_IdDiagnostico foreign key (IdDiagnostico) references DIAGNOSTICO (IDdIAGNOSTICO)
-)
+);
+go
 
 --CREAR PROCEDIMIENTO LISTAR REPUESTOS
 create procedure spListarListaRepuestos
@@ -1361,3 +1368,15 @@ as begin
 select * from  ListaRepuestos where Codigo =@Codigo
 end
 GO
+
+
+---modificar contraseña
+create procedure spModificarContrasena(
+@nombre varchar(50),
+@usuario varchar(20),
+@password varchar(20)
+)
+as 
+begin
+update Trabajadores set  Password=@password  where Nombres=@nombre and Usuario=@usuario
+end;

@@ -38,5 +38,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             AbrirFrmInPanel(new FrmMantendorLote());
         }
+
+        private void btnConfigLogin_Click(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FromPassword());
+        }
     }
 }

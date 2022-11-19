@@ -79,6 +79,7 @@
             this.btnConfigLogin.TabIndex = 1;
             this.btnConfigLogin.Text = "CONFIGURAR LOGIN";
             this.btnConfigLogin.UseVisualStyleBackColor = true;
+            this.btnConfigLogin.Click += new System.EventHandler(this.btnConfigLogin_Click);
             // 
             // panel2
             // 
