@@ -200,12 +200,6 @@
     <Compile Include="FrmOrdenDeCompra.Designer.cs">
       <DependentUpon>FrmOrdenDeCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPagoCotizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPagoCotizacion.Designer.cs">
-      <DependentUpon>FrmPagoCotizacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPagoUtilidades.cs">
       <SubType>Form</SubType>
     </Compile>
