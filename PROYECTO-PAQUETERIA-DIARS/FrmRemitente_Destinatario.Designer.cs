@@ -185,6 +185,7 @@
             this.txtDepartamentoR.Name = "txtDepartamentoR";
             this.txtDepartamentoR.Size = new System.Drawing.Size(467, 18);
             this.txtDepartamentoR.TabIndex = 0;
+            this.txtDepartamentoR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDepartamentoR_KeyPress);
             // 
             // label3
             // 
@@ -205,6 +206,7 @@
             this.txtProvinciaR.Name = "txtProvinciaR";
             this.txtProvinciaR.Size = new System.Drawing.Size(503, 24);
             this.txtProvinciaR.TabIndex = 0;
+            this.txtProvinciaR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvinciaR_KeyPress);
             // 
             // label7
             // 
@@ -225,6 +227,7 @@
             this.txtDistritoR.Name = "txtDistritoR";
             this.txtDistritoR.Size = new System.Drawing.Size(520, 21);
             this.txtDistritoR.TabIndex = 0;
+            this.txtDistritoR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistritoR_KeyPress);
             // 
             // btnBuscarR
             // 
@@ -277,6 +280,7 @@
             this.txtDniR.Name = "txtDniR";
             this.txtDniR.Size = new System.Drawing.Size(303, 21);
             this.txtDniR.TabIndex = 0;
+            this.txtDniR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniR_KeyPress);
             // 
             // txtNombresR
             // 
@@ -286,6 +290,8 @@
             this.txtNombresR.Name = "txtNombresR";
             this.txtNombresR.Size = new System.Drawing.Size(459, 22);
             this.txtNombresR.TabIndex = 0;
+            this.txtNombresR.TextChanged += new System.EventHandler(this.txtNombresR_TextChanged);
+            this.txtNombresR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombresR_KeyPress);
             // 
             // txtTelefonoR
             // 
@@ -295,6 +301,7 @@
             this.txtTelefonoR.Name = "txtTelefonoR";
             this.txtTelefonoR.Size = new System.Drawing.Size(159, 30);
             this.txtTelefonoR.TabIndex = 0;
+            this.txtTelefonoR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoR_KeyPress);
             // 
             // label4
             // 
@@ -409,6 +416,7 @@
             this.txtDepartamentoD.Name = "txtDepartamentoD";
             this.txtDepartamentoD.Size = new System.Drawing.Size(467, 21);
             this.txtDepartamentoD.TabIndex = 0;
+            this.txtDepartamentoD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDepartamentoD_KeyPress);
             // 
             // label22
             // 
@@ -429,6 +437,8 @@
             this.txtProvinciaD.Name = "txtProvinciaD";
             this.txtProvinciaD.Size = new System.Drawing.Size(508, 24);
             this.txtProvinciaD.TabIndex = 0;
+            this.txtProvinciaD.TextChanged += new System.EventHandler(this.txtProvinciaD_TextChanged);
+            this.txtProvinciaD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvinciaD_KeyPress);
             // 
             // txtDistritoD
             // 
@@ -438,6 +448,7 @@
             this.txtDistritoD.Name = "txtDistritoD";
             this.txtDistritoD.Size = new System.Drawing.Size(508, 21);
             this.txtDistritoD.TabIndex = 0;
+            this.txtDistritoD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistritoD_KeyPress);
             // 
             // label20
             // 
@@ -490,6 +501,7 @@
             this.txtNombresD.Name = "txtNombresD";
             this.txtNombresD.Size = new System.Drawing.Size(449, 22);
             this.txtNombresD.TabIndex = 0;
+            this.txtNombresD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombresD_KeyPress);
             // 
             // txtDniD
             // 
@@ -499,6 +511,7 @@
             this.txtDniD.Name = "txtDniD";
             this.txtDniD.Size = new System.Drawing.Size(303, 21);
             this.txtDniD.TabIndex = 5;
+            this.txtDniD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniD_KeyPress);
             // 
             // txtTelefonoD
             // 
@@ -508,6 +521,7 @@
             this.txtTelefonoD.Name = "txtTelefonoD";
             this.txtTelefonoD.Size = new System.Drawing.Size(159, 30);
             this.txtTelefonoD.TabIndex = 0;
+            this.txtTelefonoD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoD_KeyPress);
             // 
             // label21
             // 

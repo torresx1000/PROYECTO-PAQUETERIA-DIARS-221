@@ -26,8 +26,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuJefeDeOperaciones());
             //Application.Run(new FrmMenuCajero());
+<<<<<<< HEAD
             //Application.Run(new FrmMenuConductor());
             //Application.Run(new FrmPlanilla());
+=======
+           //Application.Run(new FrmMenuConductor());
+            Application.Run(new FrmPlanilla());
+>>>>>>> validacion Pedido PLanilla
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
             //Application.Run(new FrmRuta());
