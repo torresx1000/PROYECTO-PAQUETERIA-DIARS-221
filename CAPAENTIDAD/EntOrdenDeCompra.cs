@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CAPAENTIDAD
 {
-    internal class EntOrdenDeCompra
+    public class EntOrdenDeCompra
     {
+        public int Codigo { get; set; }
+        public int IdLista { get; set; }
+        public string FirmaNom { get; set; }
+        public string Descripcion { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }
