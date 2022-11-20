@@ -19,7 +19,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             InitializeComponent();
             ListarCheck();
             Desactivar();
-            
+
         }
         public void ListarCheck()
         {
@@ -52,11 +52,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
                     dgvCheckLista.DataSource = LogCheckList.Instancia.ListarCheckLista();
                 }
-                Limpiar();
+
             }
             else
             {
                 ListarCheck();
+                MessageBox.Show("Ingrese un dato correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
             }
         }
 
@@ -83,19 +86,20 @@ namespace PROYECTO_PAQUETERIA_DIARS
             txtInspeccion.Clear();
             txtKilometraje.Clear();
             txtvehiculo.Clear();
-           
-            
+
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            try { 
             FrmReporteVehiculo FrmReporteVehiculo = new FrmReporteVehiculo();
             FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
             EntCheckList check = new EntCheckList();
-   
+
             check.FechaCheck = DtFecha.Value;
             check.Combustible = txtCombustible.Text.Trim();
-            check.Horometro = txtHorometro.Text.Trim(); 
+            check.Horometro = txtHorometro.Text.Trim();
             check.Inspeccion = txtInspeccion.Text.Trim();
             check.Kilometraje = txtKilometraje.Text.Trim();
             check.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
@@ -105,12 +109,24 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Limpiar();
             Desactivar();
             ListarCheck();
+            }
+             catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void dgvCheckLista_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = dgvCheckLista.Rows[e.RowIndex].Cells["IdCheck"].Value.ToString();
-            txtIdCheck.Text = id;
+            try
+            {
+                string id = dgvCheckLista.Rows[e.RowIndex].Cells["IdCheck"].Value.ToString();
+                txtIdCheck.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -131,12 +147,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 check.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
 
                 LogCheckList.Instancia.EditarCheckLista(check);
-            
+
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show("Error al actualizar: " + ex);
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             Limpiar();
             ListarCheck();
@@ -149,7 +165,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnActualizar.Visible = true;
             btnRegistrar.Enabled = false;
         }
-        private void Activar() 
+        private void Activar()
         {
             btnNuevo.Enabled = false;
             btnRegistrar.Enabled = true;
@@ -162,10 +178,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //TEXBOX
             txtIdCheck.Enabled = false;
             txtHorometro.Enabled = true;
-            txtChofer.Enabled = true;
+            txtChofer.Enabled = false;
             DtFecha.Enabled = true;
             txtCombustible.Enabled = true;
-            txtvehiculo.Enabled = true;
+            txtvehiculo.Enabled = false;
             txtKilometraje.Enabled = true;
             txtInspeccion.Enabled = true;
         }
@@ -192,23 +208,30 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtIdCheck.Text != "")
             {
+                try
+                {
 
-                EntCheckList check = new EntCheckList();
-                //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
-                check.IdCheck = Convert.ToInt32(txtIdCheck.Text.Trim());
+                    EntCheckList check = new EntCheckList();
+                    //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
+                    check.IdCheck = Convert.ToInt32(txtIdCheck.Text.Trim());
 
 
-                LogCheckList.Instancia.Elimminar(check);
+                    LogCheckList.Instancia.Elimminar(check);
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar: " + ex);
+                }
+                Limpiar();
+                ListarCheck();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al actualizar: " + ex);
+                MessageBox.Show("Ingresa ID para poder realizar tu accion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Limpiar();
-            ListarCheck();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -216,13 +239,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Limpiar();
             //BOTONES 
             Activar();
-       
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-            Desactivar();   
+            Desactivar();
+            ListarCheck();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -238,6 +262,39 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void SalirVentana_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+                
+
+        private void txtIdCheck_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+            ListarCheck();
+        }
+
+        private void txtHorometro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtKilometraje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

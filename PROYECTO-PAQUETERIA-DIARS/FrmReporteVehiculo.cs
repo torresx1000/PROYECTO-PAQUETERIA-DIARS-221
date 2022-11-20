@@ -59,10 +59,18 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvVehiculo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idVehiculo= dgvVehiculo.Rows[e.RowIndex].Cells["IdVehiculo"].Value.ToString();
-            Color = dgvVehiculo.Rows[e.RowIndex].Cells["Color"].Value.ToString();
-            Modelo = dgvVehiculo.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
-            placa = dgvVehiculo.Rows[e.RowIndex].Cells["Placa"].Value.ToString();
+            try
+            {
+                idVehiculo = dgvVehiculo.Rows[e.RowIndex].Cells["IdVehiculo"].Value.ToString();
+                Color = dgvVehiculo.Rows[e.RowIndex].Cells["Color"].Value.ToString();
+                Modelo = dgvVehiculo.Rows[e.RowIndex].Cells["Modelo"].Value.ToString();
+                placa = dgvVehiculo.Rows[e.RowIndex].Cells["Placa"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnSeleccionarConductores_Click(object sender, EventArgs e)

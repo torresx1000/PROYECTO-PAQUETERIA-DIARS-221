@@ -159,6 +159,7 @@
             this.txtKilometraje.Name = "txtKilometraje";
             this.txtKilometraje.Size = new System.Drawing.Size(93, 22);
             this.txtKilometraje.TabIndex = 17;
+            this.txtKilometraje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKilometraje_KeyPress);
             // 
             // label8
             // 
@@ -211,6 +212,7 @@
             this.txtHorometro.Name = "txtHorometro";
             this.txtHorometro.Size = new System.Drawing.Size(85, 21);
             this.txtHorometro.TabIndex = 11;
+            this.txtHorometro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHorometro_KeyPress);
             // 
             // btnSelVehiculo
             // 
@@ -259,6 +261,7 @@
             this.txtIdCheck.Size = new System.Drawing.Size(82, 21);
             this.txtIdCheck.TabIndex = 6;
             this.txtIdCheck.TextChanged += new System.EventHandler(this.txtIdCheck_TextChanged);
+            this.txtIdCheck.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdCheck_KeyPress_1);
             // 
             // label6
             // 
