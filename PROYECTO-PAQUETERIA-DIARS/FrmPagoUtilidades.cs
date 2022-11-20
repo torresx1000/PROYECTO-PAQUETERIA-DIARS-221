@@ -535,5 +535,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 return;
             }
         }
+
+        private void txtCuentaAhorro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
