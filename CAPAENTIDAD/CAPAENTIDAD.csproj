@@ -49,6 +49,7 @@
     <Compile Include="EntGastosDeViaje.cs" />
     <Compile Include="EntListaRespuesto.cs" />
     <Compile Include="EntLote.cs" />
+    <Compile Include="EntOrdenDeCompra.cs" />
     <Compile Include="EntPagoUtilidades.cs" />
     <Compile Include="EntPedido.cs" />
     <Compile Include="EntPlanilla.cs" />
