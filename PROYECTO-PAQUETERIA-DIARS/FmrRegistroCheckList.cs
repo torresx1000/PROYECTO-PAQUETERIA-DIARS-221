@@ -230,7 +230,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             else
             {
-                MessageBox.Show("Ingresa ID para poder realizar tu accion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingresa ID valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtIdCheck.Clear(); 
             }
         }
 

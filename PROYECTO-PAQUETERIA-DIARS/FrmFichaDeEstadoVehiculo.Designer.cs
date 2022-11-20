@@ -245,6 +245,7 @@
             this.txtestadodevehiculo.Name = "txtestadodevehiculo";
             this.txtestadodevehiculo.Size = new System.Drawing.Size(87, 22);
             this.txtestadodevehiculo.TabIndex = 3;
+            this.txtestadodevehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtestadodevehiculo_KeyPress);
             // 
             // label3
             // 
