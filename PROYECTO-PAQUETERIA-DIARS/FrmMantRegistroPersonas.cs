@@ -24,16 +24,41 @@ namespace PROYECTO_PAQUETERIA_DIARS
             InitializeComponent();
             ListarTrabajador();
             LimpiarVariables();
-            gbDatosDelTrabajador.Enabled = false;
-            //dataGridViewTrabajador.Enabled = false;
-            
+            gbDatosDelTrabajador.Enabled = true;
+            btnRegistrar.Enabled= false;
+            btnBuscarTrabajador.Enabled= false;
+            btnActualizar.Enabled= false;
+            btnInhabilitar.Enabled= false;
+            txtDni.Enabled = true;
+            DeshabilitarCampos();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             
         }
-        
+
+        public void DeshabilitarCampos()
+        {
+            
+            txtNombres.Enabled=false;
+            txtApellidoPaterno.Enabled = false;
+            txtApellidoMaterno.Enabled = false;
+            dtFechaNacimiento.Enabled = false;
+            txtSexo.Enabled = false;
+            cmbxEstadoCivil.Enabled = false;
+            txtUbigeo.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtDistrito.Enabled = false;
+            txtProvincia.Enabled = false;
+            txtDepartamento.Enabled = false;
+            dtFechaContrato.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtClave.Enabled = false;
+            txtCargo.Enabled = false;
+            cbEstadoTrabajador.Enabled = false;
+            pbPerfilTrabajador.Enabled = false;
+        }
         public void LimpiarVariables() {
             txtIdTrabajador.Text=("");
             txtDni.Text = ("");
@@ -122,6 +147,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             LogTrabajador.Instancia.InsertarTrabajador(Tra);
             ListarTrabajador();
             LimpiarVariables();
+            gbDatosDelTrabajador.Enabled = true;
+            btnRegistrar.Enabled = false;
+            btnBuscarTrabajador.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtDni.Enabled = true;
+            DeshabilitarCampos();
+
 
         }
 
@@ -190,6 +223,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             gbDatosDelTrabajador.Enabled=false;
             ListarTrabajador();
             LimpiarVariables();
+            gbDatosDelTrabajador.Enabled = true;
+            btnRegistrar.Enabled = false;
+            btnBuscarTrabajador.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtDni.Enabled = true;
+            btnBuscar.Enabled = true;
+            DeshabilitarCampos();
         }
         public void ListarTrabajador()
         {
@@ -199,17 +240,26 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarVariables();
-           
+            gbDatosDelTrabajador.Enabled = true;
+            btnRegistrar.Enabled = false;
+            btnBuscarTrabajador.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtDni.Enabled = true;
+            btnBuscar.Enabled = true;
+            DeshabilitarCampos();
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             gbDatosDelTrabajador.Enabled = true;
-            btnRegistrar.Visible = true;
-            LimpiarVariables();
+            btnBuscarTrabajador.Enabled = true;
+            btnRegistrar.Enabled = true;
             btnActualizar.Enabled = false;
             btnInhabilitar.Enabled = false;
-            btnBuscar.Enabled=true; 
+            btnBuscar.Enabled=false;
+            LimpiarVariables();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -246,7 +296,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             btnActualizar.Enabled = true;
             btnInhabilitar.Enabled = true;
-            btnBuscar.Enabled = true;
+            btnBuscar.Enabled = false;
             btnRegistrar.Enabled = false;
         }
 
@@ -267,6 +317,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
             LimpiarVariables();
             gbDatosDelTrabajador.Enabled = false;
             ListarTrabajador();
+            gbDatosDelTrabajador.Enabled = true;
+            btnRegistrar.Enabled = false;
+            btnBuscarTrabajador.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtDni.Enabled = true;
+            btnBuscar.Enabled = true;
+            DeshabilitarCampos();
         }
         //valida solo numeros
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
