@@ -96,16 +96,31 @@ namespace PROYECTO_PAQUETERIA_DIARS
             FrmReporteVehiculo FrmReporteVehiculo = new FrmReporteVehiculo();
             FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
             EntCheckList check = new EntCheckList();
+                if (txtIdCheck.Text != "")
+                {
+                    MessageBox.Show("El id lo gestiona el sistema");
 
-            check.FechaCheck = DtFecha.Value;
-            check.Combustible = txtCombustible.Text.Trim();
-            check.Horometro = txtHorometro.Text.Trim();
-            check.Inspeccion = txtInspeccion.Text.Trim();
-            check.Kilometraje = txtKilometraje.Text.Trim();
-            check.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
-            check.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
+                    txtIdCheck.Clear();
 
-            LogCheckList.Instancia.InsertaCheckList(check);
+                }
+                check.FechaCheck = DtFecha.Value;
+                check.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
+                check.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
+                check.Combustible = txtCombustible.Text.Trim();
+                if (txtInspeccion.Text==""|| txtInspeccion.Text == ""|| txtHorometro.Text == "")
+                {
+                    txtInspeccion.Text = "Sin especificación";
+                    txtKilometraje.Text = "Sin especificación";
+                    txtHorometro.Text = "Sin especificación";
+                }
+                
+                check.Inspeccion = txtInspeccion.Text.Trim();
+                check.Kilometraje = txtKilometraje.Text.Trim();
+                check.Horometro = txtHorometro.Text.Trim();
+
+
+
+                LogCheckList.Instancia.InsertaCheckList(check);
             Limpiar();
             Desactivar();
             ListarCheck();
@@ -137,14 +152,20 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
                 EntCheckList check = new EntCheckList();
                 //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
-                check.IdCheck = Convert.ToInt32(txtIdCheck.Text.Trim());
                 check.FechaCheck = DtFecha.Value;
-                check.Combustible = txtCombustible.Text.Trim();
-                check.Horometro = txtHorometro.Text.Trim();
-                check.Inspeccion = txtInspeccion.Text.Trim();
-                check.Kilometraje = txtKilometraje.Text.Trim();
                 check.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
                 check.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
+                check.Combustible = txtCombustible.Text.Trim();
+                if (txtInspeccion.Text == "" || txtInspeccion.Text == "" || txtHorometro.Text == "")
+                {
+                    txtInspeccion.Text = "Sin especificación";
+                    txtKilometraje.Text = "Sin especificación";
+                    txtHorometro.Text = "Sin especificación";
+                }
+
+                check.Inspeccion = txtInspeccion.Text.Trim();
+                check.Kilometraje = txtKilometraje.Text.Trim();
+                check.Horometro = txtHorometro.Text.Trim();
 
                 LogCheckList.Instancia.EditarCheckLista(check);
 
@@ -161,9 +182,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Activar();
-            btnActualizar.Visible = true;
-            btnRegistrar.Enabled = false;
+            if (txtIdCheck.Text == "")
+            {
+                MessageBox.Show("Ingresa id para completar la accion");
+                Desactivar();
+
+            }
+            else {
+
+                Activar();
+                btnActualizar.Visible = true;
+                btnRegistrar.Enabled = false;
+            }
+     
         }
         private void Activar()
         {
@@ -193,6 +224,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnBuscar.Enabled = true;
             btnEditar.Enabled = true;
             btnActualizar.Visible = false;
+            btnQuitar.Enabled = true;
             btnSelConductor.Enabled = false;
             btnSelVehiculo.Enabled = false;
             //TEXBOX

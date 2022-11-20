@@ -154,6 +154,7 @@
             this.txtpreciostotal.Size = new System.Drawing.Size(100, 30);
             this.txtpreciostotal.TabIndex = 21;
             this.txtpreciostotal.TextChanged += new System.EventHandler(this.txtpreciostotal_TextChanged);
+            this.txtpreciostotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpreciostotal_KeyPress);
             // 
             // label10
             // 
@@ -174,6 +175,7 @@
             this.txtpreciosotros.Size = new System.Drawing.Size(100, 46);
             this.txtpreciosotros.TabIndex = 19;
             this.txtpreciosotros.TextChanged += new System.EventHandler(this.txtpreciosotros_TextChanged);
+            this.txtpreciosotros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpreciosotros_KeyPress);
             // 
             // label8
             // 
@@ -213,6 +215,7 @@
             this.txtprecioscombustible.Size = new System.Drawing.Size(100, 35);
             this.txtprecioscombustible.TabIndex = 15;
             this.txtprecioscombustible.TextChanged += new System.EventHandler(this.txtprecioscombustible_TextChanged);
+            this.txtprecioscombustible.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecioscombustible_KeyPress);
             // 
             // label6
             // 
@@ -252,6 +255,7 @@
             this.txtpreciosviaticos.Size = new System.Drawing.Size(100, 37);
             this.txtpreciosviaticos.TabIndex = 11;
             this.txtpreciosviaticos.TextChanged += new System.EventHandler(this.txtpreciosviaticos_TextChanged);
+            this.txtpreciosviaticos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpreciosviaticos_KeyPress);
             // 
             // label5
             // 
@@ -319,6 +323,7 @@
             this.txtidgastosdeviaje.Name = "txtidgastosdeviaje";
             this.txtidgastosdeviaje.Size = new System.Drawing.Size(100, 22);
             this.txtidgastosdeviaje.TabIndex = 1;
+            this.txtidgastosdeviaje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidgastosdeviaje_KeyPress);
             // 
             // label1
             // 
@@ -332,11 +337,14 @@
             // 
             // dgvdatosgastosdeviaje
             // 
+            this.dgvdatosgastosdeviaje.AllowUserToAddRows = false;
+            this.dgvdatosgastosdeviaje.AllowUserToDeleteRows = false;
             this.dgvdatosgastosdeviaje.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvdatosgastosdeviaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdatosgastosdeviaje.Location = new System.Drawing.Point(10, 361);
             this.dgvdatosgastosdeviaje.Name = "dgvdatosgastosdeviaje";
+            this.dgvdatosgastosdeviaje.ReadOnly = true;
             this.dgvdatosgastosdeviaje.RowHeadersWidth = 51;
             this.dgvdatosgastosdeviaje.Size = new System.Drawing.Size(735, 186);
             this.dgvdatosgastosdeviaje.TabIndex = 1;

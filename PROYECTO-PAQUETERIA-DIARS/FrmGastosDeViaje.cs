@@ -75,23 +75,43 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            FrmReporteProgramacionSalida FrmReporteProgramacionSalida = new FrmReporteProgramacionSalida();
-            EntGastosDeViaje gas = new EntGastosDeViaje();
+            try
+            {
+                FrmReporteProgramacionSalida FrmReporteProgramacionSalida = new FrmReporteProgramacionSalida();
+                EntGastosDeViaje gas = new EntGastosDeViaje();
+                if (txtidgastosdeviaje.Text != "")
+                {
+                    MessageBox.Show("El id lo gestiona el sistema");
 
-            gas.IdProgramaciondesalida = Convert.ToInt32(FrmReporteProgramacionSalida.IdPS.Trim());
-            gas.Fecha = dtpfecha.Value;
-            gas.Viaticos = txtviaticos.Text.Trim();
-            gas.preciosviaticos = Convert.ToDouble(txtpreciosviaticos.Text.Trim());
-            gas.Combustible = txtcombustible.Text.Trim();
-            gas.precioscombustible = Convert.ToDouble(txtprecioscombustible.Text.Trim());
-            gas.Otros = txtotros.Text.Trim();
-            gas.preciosotros = Convert.ToDouble(txtpreciosotros.Text.Trim());
-            gas.Total = Convert.ToDouble(txtpreciostotal.Text.Trim());
-            LogGastosDeViaje.Instancia.InsertaGastosDeViaje(gas);
-            factura();
-            Inabilitar();
-            Limpiar();
-            ListarGastosViaje();
+                    txtidgastosdeviaje.Clear();
+
+                }
+                gas.IdProgramaciondesalida = Convert.ToInt32(FrmReporteProgramacionSalida.IdPS.Trim());
+                gas.Fecha = dtpfecha.Value;
+                gas.preciosviaticos = Convert.ToDouble(txtpreciosviaticos.Text.Trim());
+                gas.precioscombustible = Convert.ToDouble(txtprecioscombustible.Text.Trim());
+                gas.preciosotros = Convert.ToDouble(txtpreciosotros.Text.Trim());
+                gas.Total = Convert.ToDouble(txtpreciostotal.Text.Trim());
+                if (txtviaticos.Text == "" || txtcombustible.Text == "" || txtotros.Text == "")
+                {
+                    txtviaticos.Text = "Sin especificación";
+                    txtcombustible.Text = "Sin especificación";
+                    txtotros.Text = "Sin especificación";
+                }
+                gas.Viaticos = txtviaticos.Text.Trim();
+                gas.Combustible = txtcombustible.Text.Trim();
+                gas.Otros = txtotros.Text.Trim();
+                LogGastosDeViaje.Instancia.InsertaGastosDeViaje(gas);
+                factura();
+                Inabilitar();
+                Limpiar();
+                ListarGastosViaje();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
         public void Habilitar()
         {
@@ -128,7 +148,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            if (txtidgastosdeviaje.Text != "")
+            try
             {
                 txtidgastosdeviaje.Focus();
                 EntGastosDeViaje D = new EntGastosDeViaje();
@@ -148,10 +168,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     dgvdatosgastosdeviaje.DataSource = LogDiagnostico.Instancia.ListarDiagnostico();
                 }
                 Inabilitar();
-                Limpiar();
+                
             }
-            else
+            catch (Exception)    
             {
+                MessageBox.Show("Ingrese un dato correcto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 ListarGastosViaje();
                
             }
@@ -159,26 +181,28 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnquitar_Click(object sender, EventArgs e)
         {
+            
+                try
+                {
 
-            try
-            {
-
-                EntGastosDeViaje gas = new EntGastosDeViaje();
-                //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
-                gas.IdGastosdeViaje = Convert.ToInt32(txtidgastosdeviaje.Text.Trim());
+                    EntGastosDeViaje gas = new EntGastosDeViaje();
+                    //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
+                    gas.IdGastosdeViaje = Convert.ToInt32(txtidgastosdeviaje.Text.Trim());
 
 
-                LogGastosDeViaje.Instancia.Elimminar(gas);
+                    LogGastosDeViaje.Instancia.Elimminar(gas);
 
+                }
+                catch (Exception)
+                {
+                MessageBox.Show("Ingresa ID valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtidgastosdeviaje.Clear();
+                 }
+                Inabilitar();
+                Limpiar();
+                ListarGastosViaje();
+          
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al actualizar: " + ex);
-            }
-            Inabilitar();
-            Limpiar();
-            ListarGastosViaje();
-        }
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
@@ -218,9 +242,15 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvdatosgastosdeviaje_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try { 
             string id = dgvdatosgastosdeviaje.Rows[e.RowIndex].Cells["IdGastosdeViaje"].Value.ToString();
             txtidgastosdeviaje.Text = id;
         }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+}
 
         private void factura()
         {
@@ -281,6 +311,47 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void SalirVentana_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtidgastosdeviaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 45 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros Y un (.)permitidos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtpreciosviaticos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 45 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros Y un (.)permitidos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtprecioscombustible_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 45 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros Y un (.)permitidos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+
+        }
+
+        private void txtpreciosotros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtpreciostotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

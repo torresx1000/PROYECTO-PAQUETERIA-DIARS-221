@@ -187,6 +187,7 @@ namespace CAPADATOS
             }
             catch (Exception e)
             {
+                
                 throw e;
             }
             finally

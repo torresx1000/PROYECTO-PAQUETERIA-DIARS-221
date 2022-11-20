@@ -187,6 +187,7 @@
             this.txtsistemaelectrico.Name = "txtsistemaelectrico";
             this.txtsistemaelectrico.Size = new System.Drawing.Size(262, 31);
             this.txtsistemaelectrico.TabIndex = 9;
+            this.txtsistemaelectrico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsistemaelectrico_KeyPress);
             // 
             // label4
             // 
@@ -276,6 +277,8 @@
             // 
             // dgvfichadeestado
             // 
+            this.dgvfichadeestado.AllowUserToAddRows = false;
+            this.dgvfichadeestado.AllowUserToDeleteRows = false;
             this.dgvfichadeestado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvfichadeestado.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
@@ -283,6 +286,7 @@
             this.dgvfichadeestado.GridColor = System.Drawing.Color.Gray;
             this.dgvfichadeestado.Location = new System.Drawing.Point(6, 423);
             this.dgvfichadeestado.Name = "dgvfichadeestado";
+            this.dgvfichadeestado.ReadOnly = true;
             this.dgvfichadeestado.RowHeadersWidth = 51;
             this.dgvfichadeestado.Size = new System.Drawing.Size(739, 124);
             this.dgvfichadeestado.TabIndex = 1;

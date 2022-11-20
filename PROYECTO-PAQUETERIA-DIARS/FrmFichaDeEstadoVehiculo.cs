@@ -83,6 +83,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             try
             {
+               
                 FrmReporteVehiculo FrmReporteVehiculo = new FrmReporteVehiculo();
                 FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
                 EntFichaDeEstadoVehiculo fich = new EntFichaDeEstadoVehiculo();
@@ -90,6 +91,23 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 fich.Conductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id);
                 fich.Vehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
                 fich.Fecha = dtpfecha.Value;
+
+                if(txtestadodevehiculo.Text!="")
+                {
+                    MessageBox.Show("El id lo gestiona el sistema");
+
+                    txtestadodevehiculo.Clear();
+
+                }
+
+                if ((txtsistemaelectrico.Text == "") || (txtlatoneriaypintura.Text == "") || (txtotros.Text == "") || (txtsistemamecanico.Text == ""))
+                {
+                    txtsistemaelectrico.Text = "Sin especificación";
+                    txtlatoneriaypintura.Text = "Sin especificación";
+                    txtsistemamecanico.Text = "Sin especificación";
+                    txtotros.Text = "Sin especificación";
+
+                }
                 fich.SistemaElectrico = txtsistemaelectrico.Text.Trim();
                 fich.SistemaMecanico = txtsistemamecanico.Text.Trim();
                 fich.LetoneriayPintura = txtlatoneriaypintura.Text.Trim();
@@ -102,7 +120,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             catch (Exception)
             {
-                MessageBox.Show("Ingresa ID para poder realizar tu accion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -159,6 +177,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             else
             {
                 ListarFichaEstado();
+                MessageBox.Show("Ingrese un dato correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -166,7 +185,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnquitar_Click(object sender, EventArgs e)
         {
-            if (txtestadodevehiculo.Text==" ") 
+            if (txtestadodevehiculo.Text!=" ") 
             { 
 
             try
@@ -231,6 +250,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 return;
             }
             ListarFichaEstado();
+        }
+
+        private void txtsistemaelectrico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }
