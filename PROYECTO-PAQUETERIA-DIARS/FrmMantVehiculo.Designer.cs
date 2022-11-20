@@ -231,6 +231,7 @@
             this.txtAncho.Name = "txtAncho";
             this.txtAncho.Size = new System.Drawing.Size(84, 19);
             this.txtAncho.TabIndex = 97;
+            this.txtAncho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAncho_KeyPress);
             // 
             // dtFechaTitulo
             // 
@@ -281,6 +282,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(84, 19);
             this.txtAltura.TabIndex = 96;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             // 
             // txtCarrocerias
             // 
@@ -323,6 +325,7 @@
             this.txtLongitud.Name = "txtLongitud";
             this.txtLongitud.Size = new System.Drawing.Size(84, 19);
             this.txtLongitud.TabIndex = 95;
+            this.txtLongitud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLongitud_KeyPress);
             // 
             // txtPlacaAnterior
             // 
@@ -386,6 +389,7 @@
             this.txtCargaUtil.Name = "txtCargaUtil";
             this.txtCargaUtil.Size = new System.Drawing.Size(84, 19);
             this.txtCargaUtil.TabIndex = 94;
+            this.txtCargaUtil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargaUtil_KeyPress);
             // 
             // label34
             // 
@@ -472,6 +476,7 @@
             this.txtPesoNeto.Name = "txtPesoNeto";
             this.txtPesoNeto.Size = new System.Drawing.Size(84, 19);
             this.txtPesoNeto.TabIndex = 93;
+            this.txtPesoNeto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesoNeto_KeyPress);
             // 
             // label30
             // 
@@ -536,6 +541,7 @@
             this.txtPesoBruto.Name = "txtPesoBruto";
             this.txtPesoBruto.Size = new System.Drawing.Size(78, 19);
             this.txtPesoBruto.TabIndex = 92;
+            this.txtPesoBruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesoBruto_KeyPress);
             // 
             // label18
             // 
