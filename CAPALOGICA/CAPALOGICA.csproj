@@ -51,6 +51,7 @@
     <Compile Include="LogListarRepuestos.cs" />
     <Compile Include="LogLote.cs" />
     <Compile Include="LogModificarPaswword.cs" />
+    <Compile Include="LogOrdenCompra.cs" />
     <Compile Include="LogPagoUtilidades.cs" />
     <Compile Include="LogPedido.cs" />
     <Compile Include="LogPlanilla.cs" />
