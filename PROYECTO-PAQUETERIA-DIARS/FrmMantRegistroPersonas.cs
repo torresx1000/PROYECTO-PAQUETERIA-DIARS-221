@@ -37,7 +37,27 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             
         }
+        public void HabilitarCampos()
+        {
 
+            txtNombres.Enabled = true;
+            txtApellidoPaterno.Enabled = true;
+            txtApellidoMaterno.Enabled = true;
+            dtFechaNacimiento.Enabled = true;
+            txtSexo.Enabled = true;
+            cmbxEstadoCivil.Enabled = true;
+            txtUbigeo.Enabled = true;
+            txtDireccion.Enabled = true;
+            txtDistrito.Enabled = true;
+            txtProvincia.Enabled = true;
+            txtDepartamento.Enabled = true;
+            dtFechaContrato.Enabled = true;
+            txtUsuario.Enabled = true;
+            txtClave.Enabled = true;
+            txtCargo.Enabled = true;
+            cbEstadoTrabajador.Enabled = true;
+            pbPerfilTrabajador.Enabled = true;
+        }
         public void DeshabilitarCampos()
         {
             
@@ -259,6 +279,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnActualizar.Enabled = false;
             btnInhabilitar.Enabled = false;
             btnBuscar.Enabled=false;
+            HabilitarCampos();
             LimpiarVariables();
         }
 
@@ -365,6 +386,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
