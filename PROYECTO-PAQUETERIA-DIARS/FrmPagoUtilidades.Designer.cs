@@ -171,6 +171,7 @@
             this.txtAdicionalR.Size = new System.Drawing.Size(135, 24);
             this.txtAdicionalR.TabIndex = 40;
             this.txtAdicionalR.Text = "0";
+            this.txtAdicionalR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdicionalR_KeyPress);
             // 
             // bunifuCustomLabel5
             // 
@@ -196,6 +197,7 @@
             this.txtCts.TabIndex = 9;
             this.txtCts.Text = "0";
             this.txtCts.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCts_MouseClick);
+            this.txtCts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCts_KeyPress);
             // 
             // bunifuCustomLabel8
             // 
@@ -219,6 +221,7 @@
             this.txtMovAsist.TabIndex = 7;
             this.txtMovAsist.Text = "0";
             this.txtMovAsist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMovAsist_MouseClick);
+            this.txtMovAsist.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMovAsist_KeyPress);
             // 
             // bunifuCustomLabel3
             // 
@@ -242,6 +245,7 @@
             this.txtReumVac.TabIndex = 5;
             this.txtReumVac.Text = "0";
             this.txtReumVac.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtReumVac_MouseClick);
+            this.txtReumVac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReumVac_KeyPress);
             // 
             // bunifuCustomLabel4
             // 
@@ -265,6 +269,7 @@
             this.txtAsigFam.TabIndex = 3;
             this.txtAsigFam.Text = "0";
             this.txtAsigFam.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAsigFam_MouseClick);
+            this.txtAsigFam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAsigFam_KeyPress);
             // 
             // bunifuCustomLabel2
             // 
@@ -288,6 +293,7 @@
             this.txtSueldoComp.TabIndex = 1;
             this.txtSueldoComp.Text = "0";
             this.txtSueldoComp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSueldoComp_MouseClick);
+            this.txtSueldoComp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoComp_KeyPress);
             // 
             // bunifuCustomLabel1
             // 
@@ -369,6 +375,7 @@
             this.txttotalDescuentos.Size = new System.Drawing.Size(218, 23);
             this.txttotalDescuentos.TabIndex = 39;
             this.txttotalDescuentos.Text = "0";
+            this.txttotalDescuentos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotalDescuentos_KeyPress);
             // 
             // bunifuCustomLabel6
             // 
@@ -392,6 +399,7 @@
             this.txtAdelantos.TabIndex = 31;
             this.txtAdelantos.Text = "0";
             this.txtAdelantos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAdelantos_MouseClick);
+            this.txtAdelantos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdelantos_KeyPress);
             // 
             // txtAfpFondo
             // 
@@ -403,6 +411,7 @@
             this.txtAfpFondo.TabIndex = 17;
             this.txtAfpFondo.Text = "0";
             this.txtAfpFondo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpFondo_MouseClick);
+            this.txtAfpFondo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAfpFondo_KeyPress);
             // 
             // bunifuCustomLabel9
             // 
@@ -436,6 +445,7 @@
             this.txtRetenJud.TabIndex = 29;
             this.txtRetenJud.Text = "0";
             this.txtRetenJud.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtRetenJud_MouseClick);
+            this.txtRetenJud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRetenJud_KeyPress);
             // 
             // bunifuCustomLabel15
             // 
@@ -469,6 +479,7 @@
             this.txtAfpCom.TabIndex = 19;
             this.txtAfpCom.Text = "0";
             this.txtAfpCom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpCom_MouseClick);
+            this.txtAfpCom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAfpCom_KeyPress);
             // 
             // txtretenc5
             // 
@@ -480,6 +491,7 @@
             this.txtretenc5.TabIndex = 27;
             this.txtretenc5.Text = "0";
             this.txtretenc5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtretenc5_MouseClick);
+            this.txtretenc5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtretenc5_KeyPress);
             // 
             // bunifuCustomLabel14
             // 
@@ -513,6 +525,7 @@
             this.txtAfpSeguro.TabIndex = 21;
             this.txtAfpSeguro.Text = "0";
             this.txtAfpSeguro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAfpSeguro_MouseClick);
+            this.txtAfpSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAfpSeguro_KeyPress);
             // 
             // txtFaltas
             // 
@@ -524,6 +537,7 @@
             this.txtFaltas.TabIndex = 25;
             this.txtFaltas.Text = "0";
             this.txtFaltas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFaltas_MouseClick);
+            this.txtFaltas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFaltas_KeyPress);
             // 
             // bunifuCustomLabel13
             // 
@@ -557,6 +571,7 @@
             this.txtOnpMonto.TabIndex = 23;
             this.txtOnpMonto.Text = "0";
             this.txtOnpMonto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtOnpMonto_MouseClick);
+            this.txtOnpMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnpMonto_KeyPress);
             // 
             // groupBox6
             // 
@@ -613,6 +628,7 @@
             this.txtAportesTotal.Size = new System.Drawing.Size(140, 19);
             this.txtAportesTotal.TabIndex = 1;
             this.txtAportesTotal.Text = "0";
+            this.txtAportesTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAportesTotal_KeyPress);
             // 
             // bunifuCustomLabel20
             // 
@@ -637,6 +653,7 @@
             this.txtSctr.TabIndex = 35;
             this.txtSctr.Text = "0";
             this.txtSctr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSctr_MouseClick);
+            this.txtSctr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSctr_KeyPress);
             // 
             // bunifuCustomLabel17
             // 
@@ -660,6 +677,7 @@
             this.txtEsalud.TabIndex = 33;
             this.txtEsalud.Text = "0";
             this.txtEsalud.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEsalud_MouseClick);
+            this.txtEsalud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEsalud_KeyPress);
             // 
             // bunifuCustomLabel18
             // 
@@ -750,6 +768,7 @@
             this.txtNetoPago.Name = "txtNetoPago";
             this.txtNetoPago.Size = new System.Drawing.Size(180, 64);
             this.txtNetoPago.TabIndex = 38;
+            this.txtNetoPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetoPago_KeyPress);
             // 
             // bunifuCustomLabel7
             // 
@@ -800,6 +819,7 @@
             this.txtpagoutilidades.Name = "txtpagoutilidades";
             this.txtpagoutilidades.Size = new System.Drawing.Size(142, 20);
             this.txtpagoutilidades.TabIndex = 46;
+            this.txtpagoutilidades.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpagoutilidades_KeyPress);
             // 
             // txtTrabajador
             // 
@@ -808,6 +828,7 @@
             this.txtTrabajador.Name = "txtTrabajador";
             this.txtTrabajador.Size = new System.Drawing.Size(142, 20);
             this.txtTrabajador.TabIndex = 47;
+            this.txtTrabajador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTrabajador_KeyPress);
             // 
             // btnLimpiar
             // 
@@ -926,6 +947,7 @@
             this.txtPlanilla.Name = "txtPlanilla";
             this.txtPlanilla.Size = new System.Drawing.Size(70, 20);
             this.txtPlanilla.TabIndex = 57;
+            this.txtPlanilla.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlanilla_KeyPress);
             // 
             // label4
             // 
