@@ -35,15 +35,17 @@
             this.btnEstado = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCheck = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnGastos = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.Panelima = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelConductor = new System.Windows.Forms.Panel();
-            this.Panelima = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,6 +130,15 @@
             this.btnGastos.UseVisualStyleBackColor = true;
             this.btnGastos.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
+            // Panelima
+            // 
+            this.Panelima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Panelima.Location = new System.Drawing.Point(12, 11);
+            this.Panelima.Margin = new System.Windows.Forms.Padding(2);
+            this.Panelima.Name = "Panelima";
+            this.Panelima.Size = new System.Drawing.Size(191, 171);
+            this.Panelima.TabIndex = 1;
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -161,6 +172,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblFecha);
             this.panel2.Controls.Add(this.lblHora);
@@ -177,7 +189,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(57, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 28);
             this.label1.TabIndex = 7;
@@ -196,14 +208,16 @@
             this.PanelConductor.Size = new System.Drawing.Size(777, 597);
             this.PanelConductor.TabIndex = 3;
             // 
-            // Panelima
+            // pictureBox1
             // 
-            this.Panelima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Panelima.Location = new System.Drawing.Point(12, 11);
-            this.Panelima.Margin = new System.Windows.Forms.Padding(2);
-            this.Panelima.Name = "Panelima";
-            this.Panelima.Size = new System.Drawing.Size(191, 171);
-            this.Panelima.TabIndex = 1;
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmMenuConductor
             // 
@@ -224,6 +238,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +259,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

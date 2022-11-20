@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichaDeEstadoVehiculo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.txtotros = new System.Windows.Forms.TextBox();
@@ -58,11 +57,12 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfichadeestado)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,19 +93,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(523, 362);
+            this.groupBox1.Size = new System.Drawing.Size(523, 342);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.images_removebg_preview__3_1;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 159);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 221);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
             // 
             // dtpfecha
             // 
@@ -284,11 +274,11 @@
             this.dgvfichadeestado.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvfichadeestado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfichadeestado.GridColor = System.Drawing.Color.Gray;
-            this.dgvfichadeestado.Location = new System.Drawing.Point(6, 423);
+            this.dgvfichadeestado.Location = new System.Drawing.Point(6, 409);
             this.dgvfichadeestado.Name = "dgvfichadeestado";
             this.dgvfichadeestado.ReadOnly = true;
             this.dgvfichadeestado.RowHeadersWidth = 51;
-            this.dgvfichadeestado.Size = new System.Drawing.Size(739, 124);
+            this.dgvfichadeestado.Size = new System.Drawing.Size(723, 76);
             this.dgvfichadeestado.TabIndex = 1;
             this.dgvfichadeestado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfichadeestado_CellClick);
             // 
@@ -304,7 +294,7 @@
             this.panel1.Controls.Add(this.btnbuscar);
             this.panel1.Location = new System.Drawing.Point(553, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(176, 362);
+            this.panel1.Size = new System.Drawing.Size(176, 342);
             this.panel1.TabIndex = 2;
             // 
             // btnNuenvo
@@ -394,6 +384,16 @@
             this.SalirVentana.Zoom = 10;
             this.SalirVentana.Click += new System.EventHandler(this.SalirVentana_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.images_removebg_preview__3_1;
+            this.pictureBox1.Location = new System.Drawing.Point(348, 159);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 221);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmFichaDeEstadoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,10 +410,10 @@
             this.Text = "FrmFichaDeEstadoVehiculo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfichadeestado)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

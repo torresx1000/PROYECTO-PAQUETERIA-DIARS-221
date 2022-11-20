@@ -83,6 +83,16 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1792350 {
+            get {
+                object obj = ResourceManager.GetObject("1792350", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2086025 {
             get {
                 object obj = ResourceManager.GetObject("2086025", resourceCulture);
@@ -103,9 +113,39 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2400123 {
+            get {
+                object obj = ResourceManager.GetObject("2400123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2413744 {
+            get {
+                object obj = ResourceManager.GetObject("2413744", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2481723 {
             get {
                 object obj = ResourceManager.GetObject("2481723", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _360473 {
+            get {
+                object obj = ResourceManager.GetObject("360473", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +286,16 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         internal static System.Drawing.Bitmap Captura_de_pantalla_2022_11_12_185602 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2022-11-12 185602", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_11_20_155822 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-11-20 155822", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
