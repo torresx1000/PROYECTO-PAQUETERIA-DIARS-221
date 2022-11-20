@@ -64,5 +64,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

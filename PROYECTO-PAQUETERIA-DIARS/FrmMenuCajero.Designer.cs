@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
@@ -35,14 +36,15 @@
             this.btnRegistrarPagoUtilidades = new System.Windows.Forms.Button();
             this.btnRegistrarPagoDeCotizacion = new System.Windows.Forms.Button();
             this.Panelcajero = new System.Windows.Forms.Panel();
+            this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.Cajero = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.Panelcajero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +56,7 @@
             this.panel1.Controls.Add(this.btnRegistrarPagoUtilidades);
             this.panel1.Controls.Add(this.btnRegistrarPagoDeCotizacion);
             this.panel1.Location = new System.Drawing.Point(0, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 529);
             this.panel1.TabIndex = 2;
@@ -63,7 +65,7 @@
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Location = new System.Drawing.Point(112, 476);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 32);
             this.btnSalir.TabIndex = 5;
@@ -75,7 +77,7 @@
             // 
             this.btnConfigLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfigLogin.Location = new System.Drawing.Point(17, 203);
-            this.btnConfigLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfigLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfigLogin.Name = "btnConfigLogin";
             this.btnConfigLogin.Size = new System.Drawing.Size(186, 42);
             this.btnConfigLogin.TabIndex = 1;
@@ -87,7 +89,7 @@
             // 
             this.SalvaPantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.SalvaPantalla.Location = new System.Drawing.Point(11, 22);
-            this.SalvaPantalla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SalvaPantalla.Margin = new System.Windows.Forms.Padding(2);
             this.SalvaPantalla.Name = "SalvaPantalla";
             this.SalvaPantalla.Size = new System.Drawing.Size(191, 171);
             this.SalvaPantalla.TabIndex = 1;
@@ -96,7 +98,7 @@
             // 
             this.btnRegistrarPagoUtilidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPagoUtilidades.Location = new System.Drawing.Point(17, 327);
-            this.btnRegistrarPagoUtilidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarPagoUtilidades.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarPagoUtilidades.Name = "btnRegistrarPagoUtilidades";
             this.btnRegistrarPagoUtilidades.Size = new System.Drawing.Size(186, 42);
             this.btnRegistrarPagoUtilidades.TabIndex = 3;
@@ -108,7 +110,7 @@
             // 
             this.btnRegistrarPagoDeCotizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPagoDeCotizacion.Location = new System.Drawing.Point(17, 263);
-            this.btnRegistrarPagoDeCotizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarPagoDeCotizacion.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarPagoDeCotizacion.Name = "btnRegistrarPagoDeCotizacion";
             this.btnRegistrarPagoDeCotizacion.Size = new System.Drawing.Size(186, 42);
             this.btnRegistrarPagoDeCotizacion.TabIndex = 2;
@@ -119,7 +121,7 @@
             // Panelcajero
             // 
             this.Panelcajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.Panelcajero.Controls.Add(this.pictureBox1);
+            this.Panelcajero.Controls.Add(this.txthora);
             this.Panelcajero.Controls.Add(this.label1);
             this.Panelcajero.Controls.Add(this.lblFecha);
             this.Panelcajero.Controls.Add(this.lblHora);
@@ -128,6 +130,17 @@
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1117, 75);
             this.Panelcajero.TabIndex = 8;
+            // 
+            // txthora
+            // 
+            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
+            this.txthora.Location = new System.Drawing.Point(12, 22);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(61, 31);
+            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txthora.TabIndex = 8;
+            this.txthora.TabStop = false;
+            this.txthora.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -147,11 +160,11 @@
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
-            this.lblFecha.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(1025, 56);
+            this.lblFecha.Location = new System.Drawing.Point(1007, 44);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(59, 19);
+            this.lblFecha.Size = new System.Drawing.Size(70, 21);
             this.lblFecha.TabIndex = 6;
             this.lblFecha.Text = "FECHA";
             // 
@@ -160,11 +173,11 @@
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(1038, 25);
+            this.lblHora.Location = new System.Drawing.Point(1054, 9);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(46, 16);
+            this.lblHora.Size = new System.Drawing.Size(51, 18);
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
             // 
@@ -176,16 +189,10 @@
             this.Cajero.Size = new System.Drawing.Size(889, 516);
             this.Cajero.TabIndex = 9;
             // 
-            // pictureBox1
+            // timer1
             // 
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmMenuCajero
             // 
@@ -196,13 +203,13 @@
             this.Controls.Add(this.Panelcajero);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuCajero";
             this.Text = "FrmMenuCajero";
             this.panel1.ResumeLayout(false);
             this.Panelcajero.ResumeLayout(false);
             this.Panelcajero.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txthora)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,6 +227,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel Cajero;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox txthora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
