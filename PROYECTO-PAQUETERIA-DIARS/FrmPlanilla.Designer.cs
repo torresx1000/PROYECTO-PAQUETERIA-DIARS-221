@@ -338,6 +338,7 @@
             this.txtIdPlanilla.Name = "txtIdPlanilla";
             this.txtIdPlanilla.Size = new System.Drawing.Size(143, 21);
             this.txtIdPlanilla.TabIndex = 13;
+            this.txtIdPlanilla.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPlanilla_KeyPress);
             // 
             // label28
             // 
@@ -432,6 +433,7 @@
             this.txtDiasNoLAb.Name = "txtDiasNoLAb";
             this.txtDiasNoLAb.Size = new System.Drawing.Size(51, 31);
             this.txtDiasNoLAb.TabIndex = 27;
+            this.txtDiasNoLAb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiasNoLAb_KeyPress);
             // 
             // txtHrExtr
             // 
@@ -442,6 +444,7 @@
             this.txtHrExtr.Name = "txtHrExtr";
             this.txtHrExtr.Size = new System.Drawing.Size(51, 31);
             this.txtHrExtr.TabIndex = 26;
+            this.txtHrExtr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHrExtr_KeyPress);
             // 
             // txtHrTrab
             // 
@@ -452,6 +455,7 @@
             this.txtHrTrab.Name = "txtHrTrab";
             this.txtHrTrab.Size = new System.Drawing.Size(51, 31);
             this.txtHrTrab.TabIndex = 25;
+            this.txtHrTrab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHrTrab_KeyPress);
             // 
             // txtDiasLAb
             // 
@@ -462,6 +466,7 @@
             this.txtDiasLAb.Name = "txtDiasLAb";
             this.txtDiasLAb.Size = new System.Drawing.Size(35, 31);
             this.txtDiasLAb.TabIndex = 24;
+            this.txtDiasLAb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiasLAb_KeyPress);
             // 
             // label27
             // 
@@ -539,6 +544,7 @@
             this.txtDiasVac.Name = "txtDiasVac";
             this.txtDiasVac.Size = new System.Drawing.Size(90, 23);
             this.txtDiasVac.TabIndex = 23;
+            this.txtDiasVac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiasVac_KeyPress);
             // 
             // dtmFechCese
             // 
@@ -562,6 +568,7 @@
             this.dtmInitVac.Name = "dtmInitVac";
             this.dtmInitVac.Size = new System.Drawing.Size(135, 22);
             this.dtmInitVac.TabIndex = 21;
+            this.dtmInitVac.ValueChanged += new System.EventHandler(this.dtmInitVac_ValueChanged);
             // 
             // label22
             // 
@@ -605,6 +612,7 @@
             this.dtmFechIngreso.Name = "dtmFechIngreso";
             this.dtmFechIngreso.Size = new System.Drawing.Size(123, 22);
             this.dtmFechIngreso.TabIndex = 17;
+            this.dtmFechIngreso.ValueChanged += new System.EventHandler(this.dtmFechIngreso_ValueChanged);
             // 
             // bunifuGradientPanel2
             // 
@@ -675,6 +683,15 @@
             // cboCargo
             // 
             this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Secretaria",
+            "Jefe de operaciones",
+            "Jefe mantenimiento",
+            "Contador",
+            "Conductor",
+            "Cajero",
+            "Almacenero"});
             this.cboCargo.Location = new System.Drawing.Point(71, 28);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(91, 24);
@@ -688,6 +705,7 @@
             this.txtAfp.Name = "txtAfp";
             this.txtAfp.Size = new System.Drawing.Size(79, 24);
             this.txtAfp.TabIndex = 15;
+            this.txtAfp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAfp_KeyPress);
             // 
             // label16
             // 
@@ -734,6 +752,7 @@
             this.txtOnp.Name = "txtOnp";
             this.txtOnp.Size = new System.Drawing.Size(58, 24);
             this.txtOnp.TabIndex = 11;
+            this.txtOnp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOnp_KeyPress);
             // 
             // label12
             // 
@@ -804,6 +823,7 @@
             this.txtIdTr.Name = "txtIdTr";
             this.txtIdTr.Size = new System.Drawing.Size(58, 21);
             this.txtIdTr.TabIndex = 14;
+            this.txtIdTr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdTr_KeyPress);
             // 
             // txtApellidos
             // 
@@ -845,6 +865,7 @@
             // 
             this.cboHijos.FormattingEnabled = true;
             this.cboHijos.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -891,6 +912,7 @@
             this.txtDniTr.Name = "txtDniTr";
             this.txtDniTr.Size = new System.Drawing.Size(126, 23);
             this.txtDniTr.TabIndex = 9;
+            this.txtDniTr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniTr_KeyPress);
             // 
             // btnBuscarDni
             // 
@@ -1039,6 +1061,7 @@
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(104, 21);
             this.txtRuc.TabIndex = 0;
+            this.txtRuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRuc_KeyPress);
             // 
             // FrmPlanilla
             // 
