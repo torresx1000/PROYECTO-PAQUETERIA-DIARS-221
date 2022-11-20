@@ -1380,3 +1380,70 @@ as
 begin
 update Trabajadores set  Password=@password  where Nombres=@nombre and Usuario=@usuario
 end;
+
+-- para tabla de orden de compra
+create table OrdenCompra(
+Codigo int not null primary key identity (1,1),
+IdLista int,
+FirmaNom varchar(50),
+Descripcion varchar(200),
+Fecha date,
+constraint Fk_IdListaOC foreign key(IdLista) references ListaRepuestos(Codigo)
+);
+go
+
+--CREAR PROCEDIMIENTO LISTAR Orden de compra
+create procedure spListarListarOrdenDeCompra
+as
+select Codigo,IdLista,FirmaNom,Descripcion, Fecha
+	from OrdenCompra 
+	go
+
+--CREAR PROCEDIMIENTO INSERTAR Orden de compra
+create procedure spInsertarOrdenDeCompra(
+@IdLista int,
+@FirmaNom varchar(50),
+@Descripcion varchar(200),
+@Fecha date
+)
+as begin
+insert into OrdenCompra(IdLista,FirmaNom,Descripcion, Fecha) values 
+(@IdLista,@FirmaNom,@Descripcion, @Fecha)
+end 
+go
+
+--CREAR PROCEDIMIENTO MODIFICAR Orden de compra
+create procedure spModificarOrdenDeCompra(
+@Codigo int,
+@IdLista int,
+@FirmaNom varchar(50),
+@Descripcion varchar(200),
+@Fecha date
+)as begin update OrdenCompra set 
+ IdLista=@IdLista,
+ FirmaNom=@FirmaNom,
+ Descripcion=@Descripcion,
+ Fecha=@Fecha
+ where Codigo=@Codigo
+ end
+ go
+
+--CREAR PROCEDIMIENTO ELIMINAR Orden compra
+CREATE PROCEDURE spEliminarOrdenCompra(
+@Codigo int
+)
+AS
+BEGIN
+delete OrdenCompra
+	WHERE Codigo =@Codigo
+END
+GO
+
+--CREAR PROCEDIMIENTO PARA BUSCAR Orden Compra
+CREATE PROCEDURE  spBuscarOrdenCompra(
+	@Codigo int 
+)
+as begin
+select * from  OrdenCompra where Codigo =@Codigo
+end
+GO

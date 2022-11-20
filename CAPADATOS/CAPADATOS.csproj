@@ -87,6 +87,7 @@
     <Compile Include="DatListaRespuestos.cs" />
     <Compile Include="DatLote.cs" />
     <Compile Include="DatModificarPassword.cs" />
+    <Compile Include="DatOrdenDeCompra.cs" />
     <Compile Include="DatPagoUtilidades.cs" />
     <Compile Include="DatPedido.cs" />
     <Compile Include="DatPlanilla.cs" />
