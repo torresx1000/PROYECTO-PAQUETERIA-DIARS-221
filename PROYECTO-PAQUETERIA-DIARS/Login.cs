@@ -17,7 +17,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public Login()
         {
             InitializeComponent();
-            OcultarPassword();
+            OcultarPassword(); 
         }
 
         public void OcultarPassword() {
@@ -125,9 +125,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             /*
             FrmRemitente_Destinatario rem = new FrmRemitente_Destinatario();
         rem.ShowDialog();*/
-            
 
-           
+            textUsuario.Clear();
+            textPassword.Clear();
+
 
         }
 

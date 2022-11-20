@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WhatsApp Image 2022-11-12 at 5.59.40 PM (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\68d89367-ca5a-4c2b-aa1d-eb09a02e9e1e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Black Modern Geometric Gaming Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Black Modern Geometric Gaming Logo1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-clipart-computer-icons-mask-anonymous-anonymous-mask-face-people-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-clipart-computer-icons-mask-anonymous-anonymous-mask-face-people-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +147,9 @@
   </data>
   <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2022-11-12 at 5.59.40 PM (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="080eb9d6-5405-4974-b7b1-bcd83c5ab64c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,9 +196,6 @@
   <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="WhatsApp Image 2022-11-12 at 5.592" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2)2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,6 +217,9 @@
   <data name="iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconos-de-calendario-y-reloj-icono-aislado-ilustración-vectorial-194001239-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2086025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2086025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Trasportes torres ima" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trasportes torres ima.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,7 +229,7 @@
   <data name="Black Modern Geometric Gaming Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black Modern Geometric Gaming Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Black Modern Geometric Gaming Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Black Modern Geometric Gaming Logo1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20860251" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20860251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

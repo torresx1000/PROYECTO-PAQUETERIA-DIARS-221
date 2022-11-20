@@ -35,15 +35,15 @@
             this.btnEstado = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCheck = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnGastos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.Panelima = new System.Windows.Forms.Panel();
-            this.PanelConductor = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PanelConductor = new System.Windows.Forms.Panel();
+            this.Panelima = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.PanelConductor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,28 +128,6 @@
             this.btnGastos.UseVisualStyleBackColor = true;
             this.btnGastos.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // Panelima
-            // 
-            this.Panelima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Panelima.Location = new System.Drawing.Point(12, 11);
-            this.Panelima.Margin = new System.Windows.Forms.Padding(2);
-            this.Panelima.Name = "Panelima";
-            this.Panelima.Size = new System.Drawing.Size(191, 171);
-            this.Panelima.TabIndex = 1;
-            // 
-            // PanelConductor
-            // 
-            this.PanelConductor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelConductor.AutoSize = true;
-            this.PanelConductor.BackColor = System.Drawing.Color.Gray;
-            this.PanelConductor.Controls.Add(this.pictureBox1);
-            this.PanelConductor.Location = new System.Drawing.Point(222, 65);
-            this.PanelConductor.Name = "PanelConductor";
-            this.PanelConductor.Size = new System.Drawing.Size(761, 558);
-            this.PanelConductor.TabIndex = 3;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -160,8 +138,8 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFecha.Location = new System.Drawing.Point(862, 42);
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Location = new System.Drawing.Point(864, 25);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(59, 19);
             this.lblFecha.TabIndex = 6;
@@ -174,25 +152,58 @@
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(890, 26);
+            this.lblHora.Location = new System.Drawing.Point(890, 9);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(46, 16);
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblFecha);
+            this.panel2.Controls.Add(this.lblHora);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(972, 61);
+            this.panel2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 28);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "MENU CONDUCTOR";
+            // 
+            // PanelConductor
+            // 
+            this.PanelConductor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(757, 559);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PanelConductor.AutoSize = true;
+            this.PanelConductor.BackColor = System.Drawing.Color.Gray;
+            this.PanelConductor.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Trasportes_torres_ima1;
+            this.PanelConductor.Location = new System.Drawing.Point(222, 65);
+            this.PanelConductor.Name = "PanelConductor";
+            this.PanelConductor.Size = new System.Drawing.Size(777, 597);
+            this.PanelConductor.TabIndex = 3;
+            // 
+            // Panelima
+            // 
+            this.Panelima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Panelima.Location = new System.Drawing.Point(12, 11);
+            this.Panelima.Margin = new System.Windows.Forms.Padding(2);
+            this.Panelima.Name = "Panelima";
+            this.Panelima.Size = new System.Drawing.Size(191, 171);
+            this.Panelima.TabIndex = 1;
             // 
             // FrmMenuConductor
             // 
@@ -200,10 +211,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(972, 591);
-            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.PanelConductor);
-            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuConductor";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -211,8 +222,8 @@
             this.Text = "MENU DE CONDUCTOR";
             this.Load += new System.EventHandler(this.FrmMenuConductor_Load);
             this.panel1.ResumeLayout(false);
-            this.PanelConductor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,6 +242,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

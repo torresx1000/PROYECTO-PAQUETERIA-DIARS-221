@@ -83,6 +83,26 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2086025 {
+            get {
+                object obj = ResourceManager.GetObject("2086025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20860251 {
+            get {
+                object obj = ResourceManager.GetObject("20860251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2481723 {
             get {
                 object obj = ResourceManager.GetObject("2481723", resourceCulture);

@@ -433,7 +433,7 @@
             this.SalirVentana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
             this.SalirVentana.Image = ((System.Drawing.Image)(resources.GetObject("SalirVentana.Image")));
             this.SalirVentana.ImageActive = null;
-            this.SalirVentana.Location = new System.Drawing.Point(704, 3);
+            this.SalirVentana.Location = new System.Drawing.Point(677, 3);
             this.SalirVentana.Margin = new System.Windows.Forms.Padding(2);
             this.SalirVentana.Name = "SalirVentana";
             this.SalirVentana.Size = new System.Drawing.Size(43, 30);

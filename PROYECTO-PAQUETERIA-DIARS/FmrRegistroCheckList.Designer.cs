@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmrRegistroCheckList));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -50,18 +51,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCheckLista = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckLista)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -310,22 +313,6 @@
             this.dgvCheckLista.TabIndex = 2;
             this.dgvCheckLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckLista_CellClick);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.SeaShell;
-            this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.btnNuevo);
-            this.panel1.Controls.Add(this.btnLimpiar);
-            this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.btnQuitar);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Location = new System.Drawing.Point(570, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(169, 343);
-            this.panel1.TabIndex = 3;
-            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Aquamarine;
@@ -349,18 +336,6 @@
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(19, 298);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(131, 42);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnRegistrar
             // 
@@ -408,6 +383,50 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "CHECK LIST";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(19, 298);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(131, 42);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.SeaShell;
+            this.panel1.Controls.Add(this.btnEditar);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Controls.Add(this.btnLimpiar);
+            this.panel1.Controls.Add(this.btnRegistrar);
+            this.panel1.Controls.Add(this.btnQuitar);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Location = new System.Drawing.Point(570, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(169, 343);
+            this.panel1.TabIndex = 3;
+            // 
+            // SalirVentana
+            // 
+            this.SalirVentana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SalirVentana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(240)))));
+            this.SalirVentana.Image = ((System.Drawing.Image)(resources.GetObject("SalirVentana.Image")));
+            this.SalirVentana.ImageActive = null;
+            this.SalirVentana.Location = new System.Drawing.Point(696, 9);
+            this.SalirVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.SalirVentana.Name = "SalirVentana";
+            this.SalirVentana.Size = new System.Drawing.Size(43, 30);
+            this.SalirVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SalirVentana.TabIndex = 51;
+            this.SalirVentana.TabStop = false;
+            this.SalirVentana.Zoom = 10;
+            this.SalirVentana.Click += new System.EventHandler(this.SalirVentana_Click);
+            // 
             // FmrRegistroCheckList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +434,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(757, 559);
+            this.Controls.Add(this.SalirVentana);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCheckLista);
             this.Controls.Add(this.groupBox1);
@@ -427,6 +447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckLista)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalirVentana)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,8 +475,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvCheckLista;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnBuscar;
@@ -464,5 +483,8 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuImageButton SalirVentana;
     }
 }

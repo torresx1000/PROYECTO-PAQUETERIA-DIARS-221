@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
-    public partial class FrmMenuConductor : MaterialSkin.Controls.MaterialForm
+    public partial class FrmMenuConductor : Form
     {
       
         public FrmMenuConductor()
@@ -19,11 +19,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
         }
-        private void formulario()
-        {
-            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            SkinManager.ColorScheme = new ColorScheme(Primary.Green600,Primary.Green900, Primary.Blue600,Accent.Lime100,TextShade.WHITE);
-        }
+     
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -87,7 +83,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void bgtnSalir_Click(object sender, EventArgs e)
         {
-            Close();    
+            this.Close();
+            Program.inicio.Show();
         }
 
         private void FrmMenuConductor_Load(object sender, EventArgs e)

@@ -11,12 +11,14 @@ namespace PROYECTO_PAQUETERIA_DIARS
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static Login inicio;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Pantalla_de_Carga());
+            Application.Run(new Pantalla_de_Carga());
+            Application.Run(inicio =new Login());
             //Application.Run(new Login());
             //Application.Run(new FrmRemitente_Destinatario());
             //Application.Run(new FrmMenuGerente("ADMINISTRADOR","SISTEMAS"));
@@ -26,7 +28,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuJefeDeOperaciones());
             //Application.Run(new FrmMenuCajero());
-            Application.Run(new FrmMenuConductor());
+            //Application.Run(new FrmMenuConductor());
             //Application.Run(new FrmPlanilla());
             //Application.Run(new FrmMantRegistroPersonas());
             //Application.Run(new FrmMantVehiculo());
@@ -47,7 +49,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmFichaDeEstadoVehiculo());
             //Application.Run(new FrmGastosDeViaje());
 
-          
+
         }
     }
 }
