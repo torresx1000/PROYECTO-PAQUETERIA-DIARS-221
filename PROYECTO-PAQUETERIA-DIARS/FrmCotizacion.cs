@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CAPAENTIDAD;
 using CAPALOGICA;
-using CAPAENTIDAD;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace PROYECTO_PAQUETERIA_DIARS
 {
@@ -20,7 +14,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             ListarCotizacion();
             ListarItemns();
             habiliatar();
-            
+
         }
         public void ListarCotizacion()
         {
@@ -59,13 +53,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void Limpiar()
         {
             txtCodcot.Clear();
-            txtDecripcion.Clear(); 
+            txtDecripcion.Clear();
             txtPrecio.Clear();
             cbIdPedido.Text = " ";
         }
         private void SalirVentana_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void SalirVentana_Click_1(object sender, EventArgs e)
@@ -79,17 +73,17 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void ListarItemns()
         {
-            cbIdPedido.DataSource=LogPedido.Instancia.ListarPedido();
+            cbIdPedido.DataSource = LogPedido.Instancia.ListarPedido();
             cbIdPedido.ValueMember = "IDPEDIDO";
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             EntCotizacion cot = new EntCotizacion();
-            
+
 
             cot.Descripcion = txtDecripcion.Text.Trim();
-            cot.precio=Convert.ToDouble(txtPrecio.Text.Trim());
+            cot.precio = Convert.ToDouble(txtPrecio.Text.Trim());
             cot.IDPEDIDO = Convert.ToInt32(cbIdPedido.Text);
             LogCotizacion.Instancia.InsertaCotizacion(cot);
             habiliatar();
@@ -103,7 +97,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
 
                 EntCotizacion cot = new EntCotizacion();
-                
+
                 cot.IdCotizacion = Convert.ToInt32(txtCodcot.Text.Trim());
 
 
@@ -121,7 +115,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void DgvCotizacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void DgvCotizacion_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -192,7 +186,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-           
+
             Inabilitar();
             BtnActualizar.Visible = true;
         }
@@ -225,7 +219,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255)||e.KeyChar==46)
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255) || e.KeyChar == 46)
             {
                 MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
