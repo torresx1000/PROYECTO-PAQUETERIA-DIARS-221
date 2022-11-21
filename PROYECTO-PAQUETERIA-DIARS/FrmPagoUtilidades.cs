@@ -184,7 +184,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnRegistrar.Enabled = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
-
+            btnBuscar.Enabled = true;
+            txtpagoutilidades.Enabled = true;
         }
         private void comprobantePago()
         {
@@ -288,6 +289,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnRegistrar.Enabled = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
+            txtpagoutilidades.Enabled = true;
             // Limpiar();
         }
 
@@ -319,6 +322,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnRegistrar.Enabled = false;
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
+            txtpagoutilidades.Enabled = true;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
