@@ -24,7 +24,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmMenuGerente("ADMINISTRADOR","SISTEMAS"));
             //Application.Run(new FrmMenuSecretaria());
             //Application.Run(new FrmMenuJefeDeMantenimiento());
-            Application.Run(new FrmMenuAlmacenero());
+            //Application.Run(new FrmMenuAlmacenero());
             //Application.Run(new FrmMenuContador());
             //Application.Run(new FrmMenuCajero());
             //Application.Run(new FrmMenuJefeDeOperaciones());
