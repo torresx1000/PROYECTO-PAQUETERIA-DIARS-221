@@ -35,6 +35,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
             this.Pantalla = new System.Windows.Forms.Panel();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.btnManPlanilla = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.Panelcajero = new System.Windows.Forms.Panel();
@@ -43,10 +45,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCargo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.Pantalla.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.SuspendLayout();
@@ -102,13 +101,31 @@
             // Pantalla
             // 
             this.Pantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Pantalla.Controls.Add(this.lblNombre);
-            this.Pantalla.Controls.Add(this.lblCargo);
             this.Pantalla.Location = new System.Drawing.Point(3, 12);
             this.Pantalla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pantalla.Name = "Pantalla";
             this.Pantalla.Size = new System.Drawing.Size(255, 210);
             this.Pantalla.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(543, 11);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(104, 25);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(503, 36);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(90, 25);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "CARGO";
             // 
             // btnManPlanilla
             // 
@@ -138,13 +155,15 @@
             // Panelcajero
             // 
             this.Panelcajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.Panelcajero.Controls.Add(this.lblNombre);
+            this.Panelcajero.Controls.Add(this.lblCargo);
             this.Panelcajero.Controls.Add(this.txthora);
             this.Panelcajero.Controls.Add(this.label1);
             this.Panelcajero.Controls.Add(this.lblFecha);
             this.Panelcajero.Controls.Add(this.lblHora);
             this.Panelcajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panelcajero.Location = new System.Drawing.Point(0, 0);
-            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4);
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1848, 84);
             this.Panelcajero.TabIndex = 11;
@@ -153,7 +172,7 @@
             // 
             this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
             this.txthora.Location = new System.Drawing.Point(16, 33);
-            this.txthora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txthora.Margin = new System.Windows.Forms.Padding(4);
             this.txthora.Name = "txthora";
             this.txthora.Size = new System.Drawing.Size(81, 38);
             this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,26 +226,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(81, 138);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(104, 25);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "NOMBRE";
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(41, 163);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(90, 25);
-            this.lblCargo.TabIndex = 2;
-            this.lblCargo.Text = "CARGO";
-            // 
             // FrmMenuContador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,8 +242,6 @@
             this.Text = "FrmMenuContador";
             this.Load += new System.EventHandler(this.FrmMenuContador_Load);
             this.panel1.ResumeLayout(false);
-            this.Pantalla.ResumeLayout(false);
-            this.Pantalla.PerformLayout();
             this.Panelcajero.ResumeLayout(false);
             this.Panelcajero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).EndInit();

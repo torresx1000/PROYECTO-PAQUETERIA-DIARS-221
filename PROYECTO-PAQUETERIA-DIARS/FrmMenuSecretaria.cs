@@ -92,5 +92,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             this.Close();
             Program.inicio.Show(); 
         }
+
+        private void btnAdministrarVehiculo_Click(object sender, EventArgs e)
+        {
+            AbrirFrmInPanel(new FrmMantVehiculo());
+        }
     }
 }

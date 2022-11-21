@@ -16,8 +16,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
-            lblCargo.Text = cargo;
-            lblNombre.Text = nombre;
+            labelCargo.Text = cargo;
+            labelNombre.Text = nombre;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
