@@ -110,7 +110,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
              string usu, pas;
              usu = textUsuario.Text.Trim();
              pas = textPassword.Text.Trim();
-            if (textUsuario.Text == "accesosecreto" && textPassword.Text == "upneslamejor")
+            if (textUsuario.Text == "SECRETACCES" && textPassword.Text == "SECRETACCESDIARS")
             {
                 FrmMenuGerente formMenuGerente = new FrmMenuGerente("ADMINISTRADOR", "SISTEMAS");
                 formMenuGerente.ShowDialog();
