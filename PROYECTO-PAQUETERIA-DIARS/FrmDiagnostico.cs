@@ -284,5 +284,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 return;
             }
         }
+
+        private void FrmDiagnostico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
