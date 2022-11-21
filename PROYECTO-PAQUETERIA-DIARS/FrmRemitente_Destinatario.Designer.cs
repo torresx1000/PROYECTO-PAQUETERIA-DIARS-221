@@ -673,6 +673,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1271, 135);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
@@ -714,6 +715,7 @@
             this.txtLote.Name = "txtLote";
             this.txtLote.Size = new System.Drawing.Size(61, 22);
             this.txtLote.TabIndex = 12;
+            this.txtLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLote_KeyPress);
             // 
             // label27
             // 
@@ -751,6 +753,7 @@
             this.txtCantidadPaquete.Name = "txtCantidadPaquete";
             this.txtCantidadPaquete.Size = new System.Drawing.Size(48, 22);
             this.txtCantidadPaquete.TabIndex = 8;
+            this.txtCantidadPaquete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadPaquete_KeyPress);
             // 
             // txtCodigoPaquete
             // 

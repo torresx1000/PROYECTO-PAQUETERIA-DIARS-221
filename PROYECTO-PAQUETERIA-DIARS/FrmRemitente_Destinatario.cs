@@ -27,6 +27,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             LimpiarVariables();
             gbRemitente.Enabled = false;
             gbDestinatario.Enabled = false;
+            btnRegistrar.Enabled=false;
+            btnActualizar.Enabled = false;
+            btnInabilitar.Enabled = false;
+            txtIdPedido.Enabled = true;
             GenerarAleatorio();
         }
         public void LimpiarVariables()
@@ -101,6 +105,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             gbRemitente.Enabled = false;
             gbDestinatario.Enabled = false;
             ListarPedido();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInabilitar.Enabled = false;
+            txtIdPedido.Enabled = true;
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -111,6 +119,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             LimpiarVariables();
             GenerarAleatorio();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInabilitar.Enabled = false;
+            txtIdPedido.Enabled = true;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -118,11 +130,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             gbRemitente.Enabled = true;
             gbDestinatario.Enabled = true;
             LimpiarVariables();
-            btnRegistrar.Visible = true;
+            btnRegistrar.Enabled = true;
             btnActualizar.Enabled = false;
             btnInabilitar.Enabled = false;
-            txtResponsable.Enabled = true;
-         
+            txtResponsable.Enabled = false;
+            btnBuscar.Enabled = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -165,7 +177,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             gbRemitente.Enabled = true;
             gbDestinatario.Enabled = true;
-            btnRegistrar.Visible = false;
+            btnRegistrar.Enabled = false;
             btnActualizar.Enabled = true;
             btnInabilitar.Enabled = true;
             btnBuscar.Enabled = true;
@@ -174,7 +186,46 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                EntPedido c = new EntPedido();
+                c.IdPedido = Convert.ToInt32(txtIdPedido.Text.Trim());
+                c.IdEncargado = Convert.ToInt32(FrmReporteSecretaria.id);
+                c.Responsable = txtResponsable.Text.Trim();
+                c.DniR = Convert.ToInt32(txtDniR.Text.Trim());
+                c.NombreR = txtNombresR.Text.Trim();
+                c.CorreoR = txtCorreoR.Text.Trim();
+                c.TelefonoR = int.Parse(txtTelefonoR.Text.Trim());
+                c.DireccionR = txtDireccionR.Text.Trim();
+                c.DistritoR = txtDistritoR.Text.Trim();
+                c.ProvinciaR = txtProvinciaR.Text.Trim();
+                c.DepartamentoR = txtDepartamentoR.Text.Trim();
 
+                c.DniD = Convert.ToInt32(txtDniD.Text.Trim());
+                c.NombreD = txtNombresD.Text.Trim();
+                c.CorreoD = txtCorreoD.Text.Trim();
+                c.TelefonoD = Convert.ToInt32(txtTelefonoD.Text.Trim());
+                c.DireccionD = txtDireccionD.Text.Trim();
+                c.DistritoD = txtDistritoD.Text.Trim();
+                c.ProvinciaD = txtProvinciaD.Text.Trim();
+                c.DepartamentoD = txtDepartamentoD.Text.Trim();
+
+                c.CodigoPaquete = Convert.ToInt32(txtCodigoPaquete.Text.Trim());
+                c.CantidadPaquete = Convert.ToInt32(txtCantidadPaquete.Text.Trim());
+                c.CategoriaPedido = cbCategoriaPaquete.Text.Trim();
+                c.DescripcionPedido = txtDescripcionPaquete.Text.Trim();
+                c.IdLote = Convert.ToInt32(txtLote.Text.Trim());
+
+                LogPedido.Instancia.EditarPedido(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar: " + ex);
+            }
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInabilitar.Enabled = false;
+            txtIdPedido.Enabled = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -206,6 +257,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             cbCategoriaPaquete.Text = filaActual.Cells[21].Value.ToString();
             txtDescripcionPaquete.Text = filaActual.Cells[22].Value.ToString();
             txtLote.Text = filaActual.Cells[23].Value.ToString();
+
+
         }
 
     private void SalirVentana_Click(object sender, EventArgs e)
@@ -261,7 +314,20 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnInabilitar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                EntPedido p = new EntPedido();
+                p.IdPedido = int.Parse(txtIdPedido.Text.Trim());
+                LogPedido.Instancia.DeshabilitarPedido(p);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInabilitar.Enabled = false;
+            txtIdPedido.Enabled = true;
         }
 
         private void btnSeleccionarLote_Click(object sender, EventArgs e)
@@ -405,6 +471,39 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
 
         private void txtTelefonoR_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dataGridView1.Rows[e.RowIndex].Cells["IDPEDIDO"].Value.ToString();
+                txtIdPedido.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtCantidadPaquete_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtLote_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
