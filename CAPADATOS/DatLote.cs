@@ -35,12 +35,12 @@ namespace CAPADATOS
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    EntLote Lot = new EntLote(); //objetoLote
-                    Lot.IdLote = Convert.ToInt32(dr["IdLote"]);
-                    Lot.Identificador = dr["Identificador"].ToString();
-                    Lot.EstadoLote =Convert.ToBoolean(dr["EstadoLote"]);
-                    Lot.Fecha = Convert.ToDateTime(dr["Fecha"]);                    
-                    Lista.Add(Lot);
+                    EntLote lot = new EntLote(); //objetoLote
+                    lot.IdLote = Convert.ToInt32(dr["IdLote"]);
+                    lot.Identificador = dr["Identificador"].ToString();
+                    lot.EstadoLote =Convert.ToBoolean(dr["EstadoLote"]);
+                    lot.Fecha = Convert.ToDateTime(dr["Fecha"]);                    
+                    Lista.Add(lot);
                 }
             }
             catch (Exception e)

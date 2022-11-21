@@ -110,7 +110,7 @@ create procedure spModificarTrabajador(
  create procedure spBuscarTrabajador
  @Dni int
  as  begin
- select *from Trabajadores where Dni like @Dni and EstadoTrabajador=1;
+ select *from Trabajadores where Dni like @Dni ;
  end 
  go
 
