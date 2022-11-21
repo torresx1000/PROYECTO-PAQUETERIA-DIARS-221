@@ -90,7 +90,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void materialRaisedButton3_Click(object sender, EventArgs e)
         {
-            Close();    
+            this.Close();
+            Program.inicio.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -19,11 +19,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmMantendorLote()
         {
             InitializeComponent();
-            gbDatosDelLote.Enabled = true;
+            
             ListarLote();
-            btnAgregar.Enabled=false;
-            btnModificar.Enabled=false;
-            btnEliminar.Enabled=false;
+            Desabilitar();
+
+
         }
 
         public void LimpiarVariables()
@@ -45,34 +45,38 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             try
             {
+                if (txtIdLote.Text != "")
+                {
+                    MessageBox.Show("El id lo gestiona el sistema");
+
+                    txtIdLote.Clear();
+
+                }
                 EntLote lo = new EntLote();               
                 lo.Identificador = txtNombres.Text.Trim();
                 lo.EstadoLote = cbestado.Checked;
                 lo.Fecha = dtPickerFecha.Value;
                 LogLote.Instancia.InsertarLote(lo);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error.." + ex);
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            LimpiarVariables();
+            Limpiar();
             ListarLote();
-            btnAgregar.Enabled = false;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
+            Desabilitar();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            btnAgregar.Enabled = true;
-            txtIdLote.Enabled= false;
-            btnBuscar.Enabled = false;
+            Limpiar();
+            Habilitar();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            LimpiarVariables();
+            Limpiar();
+            Desabilitar();
         }
 
         private void btnEdita_Click(object sender, EventArgs e)
@@ -92,14 +96,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error.." + ex);
+                MessageBox.Show("Ingresa ID valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            LimpiarVariables();
+            Limpiar();
             ListarLote();
-            btnAgregar.Enabled = false;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
+            Desabilitar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -117,19 +118,55 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
                 MessageBox.Show("Error.." + ex);
             }
-            LimpiarVariables();
+            Limpiar();
+            Desabilitar();
             ListarLote();
-            btnAgregar.Enabled = false;
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void Habilitar()
+        {
+            txtIdLote.Enabled = false;
+            txtNombres.Enabled = true;
+            cbestado.Enabled = true;
 
+            btnAgregar.Enabled = true;
+            btnBuscar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnLimpiar.Enabled = true;
+            btnModificar.Enabled = false;
+            btnNuevo.Enabled = false; 
+            btnEditar.Enabled = false;
+            dtPickerFecha.Enabled = true;  
+
+        }
+        private void Desabilitar()
+        {
+            txtIdLote.Enabled = true;
+            txtNombres.Enabled = false;
+            cbestado.Enabled = false;
+
+            btnAgregar.Enabled = false;
+            btnBuscar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnLimpiar.Enabled = true;
+            btnModificar.Enabled = false;
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            dtPickerFecha.Enabled = false;
+
+        }
+        private void Limpiar()
+        {
+            txtIdLote.Clear();
+            txtNombres.Clear();
+            cbestado.Checked = false;
+
+        }
         private void dgvLote_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvLote.Rows[e.RowIndex]; //
@@ -165,6 +202,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             else
             {
+                MessageBox.Show("Ingrese un dato correcto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 ListarLote();
 
             }
@@ -185,6 +224,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 e.Handled = true;
                 return;
             }
+            ListarLote();
 
         }
 
@@ -197,6 +237,43 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 return;
             }
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (txtIdLote.Text == "")
+            {
+                MessageBox.Show("Ingresa id para completar la accion");
+                Desabilitar();
+
+            }
+            else
+            {
+
+             
+            
+            Habilitar();
+            btnAgregar.Enabled = false;
+            btnModificar.Enabled = true;
+            }
+        }
+
+        private void dgvLote_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString();
+                txtIdLote.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

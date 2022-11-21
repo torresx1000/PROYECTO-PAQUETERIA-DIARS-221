@@ -245,7 +245,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             try { 
             string id = dgvdatosgastosdeviaje.Rows[e.RowIndex].Cells["IdGastosdeViaje"].Value.ToString();
             txtidgastosdeviaje.Text = id;
-        }
+            }
             catch (Exception)
             {
                 MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
