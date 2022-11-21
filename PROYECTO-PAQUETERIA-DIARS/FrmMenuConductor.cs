@@ -14,10 +14,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
     public partial class FrmMenuConductor : Form
     {
       
-        public FrmMenuConductor()
+        public FrmMenuConductor(string cargo, string nombre)
         {
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
+            labelCargo.Text = cargo;
+            labelNombre.Text = nombre;
         }
      
 

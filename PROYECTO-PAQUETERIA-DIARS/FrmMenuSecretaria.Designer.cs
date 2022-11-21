@@ -41,9 +41,11 @@
             this.btnConfigLogin = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdministrarVehiculo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnAdministrarVehiculo = new System.Windows.Forms.Button();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelCargo = new System.Windows.Forms.Label();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,13 +54,15 @@
             // Panelcajero
             // 
             this.Panelcajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.Panelcajero.Controls.Add(this.labelNombre);
+            this.Panelcajero.Controls.Add(this.labelCargo);
             this.Panelcajero.Controls.Add(this.txthora);
             this.Panelcajero.Controls.Add(this.label1);
             this.Panelcajero.Controls.Add(this.lblFecha);
             this.Panelcajero.Controls.Add(this.lblHora);
             this.Panelcajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panelcajero.Location = new System.Drawing.Point(0, 0);
-            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4);
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1599, 105);
             this.Panelcajero.TabIndex = 11;
@@ -67,7 +71,7 @@
             // 
             this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
             this.txthora.Location = new System.Drawing.Point(16, 27);
-            this.txthora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txthora.Margin = new System.Windows.Forms.Padding(4);
             this.txthora.Name = "txthora";
             this.txthora.Size = new System.Drawing.Size(81, 38);
             this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,6 +202,18 @@
             this.panel1.Size = new System.Drawing.Size(289, 689);
             this.panel1.TabIndex = 1;
             // 
+            // btnAdministrarVehiculo
+            // 
+            this.btnAdministrarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrarVehiculo.Location = new System.Drawing.Point(22, 499);
+            this.btnAdministrarVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdministrarVehiculo.Name = "btnAdministrarVehiculo";
+            this.btnAdministrarVehiculo.Size = new System.Drawing.Size(248, 52);
+            this.btnAdministrarVehiculo.TabIndex = 7;
+            this.btnAdministrarVehiculo.Text = "ADMINISTRAR VEHICULO";
+            this.btnAdministrarVehiculo.UseVisualStyleBackColor = true;
+            this.btnAdministrarVehiculo.Click += new System.EventHandler(this.btnAdministrarVehiculo_Click);
+            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,17 +239,29 @@
             this.panelContenedor.Size = new System.Drawing.Size(1297, 667);
             this.panelContenedor.TabIndex = 12;
             // 
-            // btnAdministrarVehiculo
+            // labelNombre
             // 
-            this.btnAdministrarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarVehiculo.Location = new System.Drawing.Point(22, 499);
-            this.btnAdministrarVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdministrarVehiculo.Name = "btnAdministrarVehiculo";
-            this.btnAdministrarVehiculo.Size = new System.Drawing.Size(248, 52);
-            this.btnAdministrarVehiculo.TabIndex = 7;
-            this.btnAdministrarVehiculo.Text = "ADMINISTRAR VEHICULO";
-            this.btnAdministrarVehiculo.UseVisualStyleBackColor = true;
-            this.btnAdministrarVehiculo.Click += new System.EventHandler(this.btnAdministrarVehiculo_Click);
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(1194, 27);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(107, 22);
+            this.labelNombre.TabIndex = 10;
+            this.labelNombre.Text = "NOMBRES";
+            // 
+            // labelCargo
+            // 
+            this.labelCargo.AutoSize = true;
+            this.labelCargo.BackColor = System.Drawing.Color.Transparent;
+            this.labelCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCargo.ForeColor = System.Drawing.Color.White;
+            this.labelCargo.Location = new System.Drawing.Point(1221, 56);
+            this.labelCargo.Name = "labelCargo";
+            this.labelCargo.Size = new System.Drawing.Size(81, 22);
+            this.labelCargo.TabIndex = 11;
+            this.labelCargo.Text = "CARGO";
             // 
             // FrmMenuSecretaria
             // 
@@ -273,5 +301,7 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdministrarVehiculo;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelCargo;
     }
 }

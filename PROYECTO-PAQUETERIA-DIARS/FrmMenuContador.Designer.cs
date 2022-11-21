@@ -35,9 +35,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
             this.Pantalla = new System.Windows.Forms.Panel();
+            this.btnManPlanilla = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.btnManPlanilla = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.Panelcajero = new System.Windows.Forms.Panel();
             this.txthora = new System.Windows.Forms.PictureBox();
@@ -107,26 +107,6 @@
             this.Pantalla.Size = new System.Drawing.Size(255, 210);
             this.Pantalla.TabIndex = 1;
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(543, 11);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(104, 25);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "NOMBRE";
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(503, 36);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(90, 25);
-            this.lblCargo.TabIndex = 2;
-            this.lblCargo.Text = "CARGO";
-            // 
             // btnManPlanilla
             // 
             this.btnManPlanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +118,28 @@
             this.btnManPlanilla.Text = "MANTENEDOR PLANILLA";
             this.btnManPlanilla.UseVisualStyleBackColor = true;
             this.btnManPlanilla.Click += new System.EventHandler(this.btnManPlanilla_Click);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(1291, 9);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(104, 25);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(1291, 36);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(90, 25);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "CARGO";
             // 
             // panelContenedor
             // 

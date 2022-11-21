@@ -49,7 +49,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Secretaria")
                     {
-                        FrmMenuSecretaria formMenuSecretaria = new FrmMenuSecretaria();
+                        FrmMenuSecretaria formMenuSecretaria = new FrmMenuSecretaria(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
                         formMenuSecretaria.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Jefe de operaciones")
@@ -59,7 +59,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Jefe mantenimiento")
                     {
-                        FrmMenuJefeDeMantenimiento frmMenuJefeDeMantenimiento = new FrmMenuJefeDeMantenimiento();   
+                        FrmMenuJefeDeMantenimiento frmMenuJefeDeMantenimiento = new FrmMenuJefeDeMantenimiento(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());   
                         frmMenuJefeDeMantenimiento.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Contador")
@@ -69,7 +69,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Conductor")
                     {
-                        FrmMenuConductor frmMenuConductor = new FrmMenuConductor();
+                        FrmMenuConductor frmMenuConductor = new FrmMenuConductor(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
                         frmMenuConductor.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Cajero")
@@ -79,7 +79,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Almacenero")
                     {
-                        FrmMenuAlmacenero frmMenuAlmacenero = new FrmMenuAlmacenero();
+                        FrmMenuAlmacenero frmMenuAlmacenero = new FrmMenuAlmacenero(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
                         frmMenuAlmacenero.ShowDialog();
                     }
 

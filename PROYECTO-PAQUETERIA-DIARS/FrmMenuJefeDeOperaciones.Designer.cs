@@ -36,14 +36,15 @@
             this.PANTALLA = new System.Windows.Forms.Panel();
             this.btnManRuta = new System.Windows.Forms.Button();
             this.Panelcajero = new System.Windows.Forms.Panel();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelCargo = new System.Windows.Forms.Label();
             this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OPERACIONES = new System.Windows.Forms.Panel();
-            this.labelCargo = new System.Windows.Forms.Label();
-            this.labelNombre = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnConfigLogin);
             this.panel1.Controls.Add(this.PANTALLA);
@@ -118,16 +120,40 @@
             this.Panelcajero.Controls.Add(this.lblHora);
             this.Panelcajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panelcajero.Location = new System.Drawing.Point(0, 0);
-            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4);
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1533, 92);
             this.Panelcajero.TabIndex = 10;
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.BackColor = System.Drawing.Color.Transparent;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(1192, 11);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(134, 28);
+            this.labelNombre.TabIndex = 9;
+            this.labelNombre.Text = "NOMBRES";
+            // 
+            // labelCargo
+            // 
+            this.labelCargo.AutoSize = true;
+            this.labelCargo.BackColor = System.Drawing.Color.Transparent;
+            this.labelCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCargo.ForeColor = System.Drawing.Color.White;
+            this.labelCargo.Location = new System.Drawing.Point(1219, 40);
+            this.labelCargo.Name = "labelCargo";
+            this.labelCargo.Size = new System.Drawing.Size(101, 28);
+            this.labelCargo.TabIndex = 9;
+            this.labelCargo.Text = "CARGO";
             // 
             // txthora
             // 
             this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
             this.txthora.Location = new System.Drawing.Point(16, 27);
-            this.txthora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txthora.Margin = new System.Windows.Forms.Padding(4);
             this.txthora.Name = "txthora";
             this.txthora.Size = new System.Drawing.Size(81, 38);
             this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,28 +212,22 @@
             // 
             this.OPERACIONES.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.e334394f_eff7_4963_90a6_fac908fcd589;
             this.OPERACIONES.Location = new System.Drawing.Point(293, 100);
-            this.OPERACIONES.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OPERACIONES.Margin = new System.Windows.Forms.Padding(4);
             this.OPERACIONES.Name = "OPERACIONES";
             this.OPERACIONES.Size = new System.Drawing.Size(1240, 703);
             this.OPERACIONES.TabIndex = 11;
             // 
-            // labelCargo
+            // button1
             // 
-            this.labelCargo.AutoSize = true;
-            this.labelCargo.Location = new System.Drawing.Point(637, 47);
-            this.labelCargo.Name = "labelCargo";
-            this.labelCargo.Size = new System.Drawing.Size(55, 16);
-            this.labelCargo.TabIndex = 9;
-            this.labelCargo.Text = "CARGO";
-            // 
-            // labelNombre
-            // 
-            this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(622, 27);
-            this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(75, 16);
-            this.labelNombre.TabIndex = 9;
-            this.labelNombre.Text = "NOMBRES";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 494);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(248, 52);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "REGISTRAR CHECKIST";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMenuJefeDeOperaciones
             // 
@@ -221,6 +241,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMenuJefeDeOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuJefeDeOperaciones";
             this.panel1.ResumeLayout(false);
             this.Panelcajero.ResumeLayout(false);
@@ -248,5 +269,6 @@
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelCargo;
+        private System.Windows.Forms.Button button1;
     }
 }

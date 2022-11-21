@@ -34,10 +34,10 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
             this.SalvaPantalla = new System.Windows.Forms.Panel();
-            this.lblCargo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.btnRegistrarPagoUtilidades = new System.Windows.Forms.Button();
             this.btnRegistrarPagoDeCotizacion = new System.Windows.Forms.Button();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.Panelcajero = new System.Windows.Forms.Panel();
             this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,26 +97,6 @@
             this.SalvaPantalla.Size = new System.Drawing.Size(255, 210);
             this.SalvaPantalla.TabIndex = 1;
             // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(446, 56);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(90, 25);
-            this.lblCargo.TabIndex = 2;
-            this.lblCargo.Text = "CARGO";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(474, 31);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(104, 25);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "NOMBRE";
-            // 
             // btnRegistrarPagoUtilidades
             // 
             this.btnRegistrarPagoUtilidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,6 +121,28 @@
             this.btnRegistrarPagoDeCotizacion.UseVisualStyleBackColor = true;
             this.btnRegistrarPagoDeCotizacion.Click += new System.EventHandler(this.btnRegistrarPagoDeCotizacion_Click);
             // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(1139, 42);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(90, 25);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "CARGO";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(1139, 11);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(104, 25);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "NOMBRE";
+            // 
             // Panelcajero
             // 
             this.Panelcajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
@@ -152,7 +154,7 @@
             this.Panelcajero.Controls.Add(this.lblHora);
             this.Panelcajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panelcajero.Location = new System.Drawing.Point(0, 0);
-            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4);
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1489, 92);
             this.Panelcajero.TabIndex = 8;
@@ -161,7 +163,7 @@
             // 
             this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
             this.txthora.Location = new System.Drawing.Point(16, 27);
-            this.txthora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txthora.Margin = new System.Windows.Forms.Padding(4);
             this.txthora.Name = "txthora";
             this.txthora.Size = new System.Drawing.Size(81, 38);
             this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,7 +222,7 @@
             // 
             this.Cajero.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Captura_de_pantalla_2022_11_20_155822;
             this.Cajero.Location = new System.Drawing.Point(293, 100);
-            this.Cajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cajero.Margin = new System.Windows.Forms.Padding(4);
             this.Cajero.Name = "Cajero";
             this.Cajero.Size = new System.Drawing.Size(1185, 635);
             this.Cajero.TabIndex = 9;

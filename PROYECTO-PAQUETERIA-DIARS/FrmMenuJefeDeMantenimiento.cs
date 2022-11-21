@@ -16,10 +16,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmMenuJefeDeMantenimiento : Form
     {
-        public FrmMenuJefeDeMantenimiento()
+        public FrmMenuJefeDeMantenimiento(string cargo, string nombre)
         {
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
+            labelCargo.Text = cargo;
+            labelNombre.Text = nombre;
         }
         public void AbrirFrmInPanel(object FormHijo)
         {
