@@ -22,6 +22,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             ListarPlanilla();
             groupBox1.Enabled = false;
             //llenarDatosComboIdAlumno();
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         ApisPeru ApisPeru = new ApisPeru();
@@ -104,6 +108,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarDatos();
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         private void btnBuscarDni_Click(object sender, EventArgs e)
@@ -150,11 +158,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             //nuevo
            groupBox1.Enabled = true;
-            btnAgregar.Visible = true;
             LimpiarDatos();
             btnActualizar.Enabled = false;
-            btnInhabilitar.Enabled = true;
-            btnBuscar.Visible = true;
+            btnAgregar.Enabled = true;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = false;
 
         }/*
         private void llenarDatosComboIdAlumno()
@@ -168,44 +176,53 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }*/
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            EntPlanilla Ent = new EntPlanilla();
-            //  Ent.IdPlanilla = Convert.ToInt32(txtIdPlanilla.Text.Trim());
-            Ent.Ruc = Convert.ToDouble(txtRuc.Text.Trim());
-            Ent.RazSocial = txtRazSocial.Text.Trim();
-            Ent.Rubro = txtRubro.Text.Trim();
-            Ent.Direccion = txtDireccion.Text.Trim();
+            try
+            {
+                EntPlanilla Ent = new EntPlanilla();
+                //  Ent.IdPlanilla = Convert.ToInt32(txtIdPlanilla.Text.Trim());
+                Ent.Ruc = Convert.ToDouble(txtRuc.Text.Trim());
+                Ent.RazSocial = txtRazSocial.Text.Trim();
+                Ent.Rubro = txtRubro.Text.Trim();
+                Ent.Direccion = txtDireccion.Text.Trim();
 
 
-            Ent.IdTr = Convert.ToInt32(txtIdTr.Text.Trim());
-            Ent.DniTr = Convert.ToDouble(txtDniTr.Text.Trim());
-            Ent.nomTr = txtnomTr.Text.Trim();
-            Ent.AppTr = txtAppTr.Text.Trim();
-            Ent.Hijos = Convert.ToInt32(cboHijos.Text.Trim());
-            Ent.FechNacTr = Convert.ToDateTime(txtFechNacTr.Text.Trim());
-            Ent.DirTr = txtDirTr.Text.Trim();
+                Ent.IdTr = Convert.ToInt32(txtIdTr.Text.Trim());
+                Ent.DniTr = Convert.ToDouble(txtDniTr.Text.Trim());
+                Ent.nomTr = txtnomTr.Text.Trim();
+                Ent.AppTr = txtAppTr.Text.Trim();
+                Ent.Hijos = Convert.ToInt32(cboHijos.Text.Trim());
+                Ent.FechNacTr = Convert.ToDateTime(txtFechNacTr.Text.Trim());
+                Ent.DirTr = txtDirTr.Text.Trim();
 
-            Ent.Cargo = cboCargo.Text.Trim();
-            Ent.Categoria = cboCategoria.Text.Trim();
-            Ent.PerPago = cboPerPago.Text.Trim();
-            Ent.Onp = txtOnp.Text.Trim();
-            Ent.Afp = txtAfp.Text.Trim();
-            Ent.Cuspp = txtCuspp.Text.Trim();
-            Ent.ImportOtro = Convert.ToDouble(txtImportOtro.Text.Trim());
+                Ent.Cargo = cboCargo.Text.Trim();
+                Ent.Categoria = cboCategoria.Text.Trim();
+                Ent.PerPago = cboPerPago.Text.Trim();
+                Ent.Onp = txtOnp.Text.Trim();
+                Ent.Afp = txtAfp.Text.Trim();
+                Ent.Cuspp = txtCuspp.Text.Trim();
+                Ent.ImportOtro = Convert.ToDouble(txtImportOtro.Text.Trim());
 
-            Ent.FechIngreso = Convert.ToDateTime(dtmFechIngreso.Text.Trim());
-            Ent.FechCese = Convert.ToDateTime(dtmFechCese.Text.Trim());
-            Ent.InitVac = Convert.ToDateTime(dtmInitVac.Text.Trim());
-            Ent.FindVac = Convert.ToDateTime(dtmFindVac.Text.Trim());
-            Ent.DiasVac = Convert.ToInt32(txtDiasVac.Text.Trim());
-            Ent.DiasLAb = Convert.ToInt32(txtDiasLAb.Text.Trim());
-            Ent.HrTrab = Convert.ToInt32(txtHrTrab.Text.Trim());
-            Ent.HrExtr = Convert.ToInt32(txtHrExtr.Text.Trim());
-            Ent.DiasNoLAb = Convert.ToInt32(txtDiasNoLAb.Text.Trim());
-            LogPlanilla.Instancia.InsertaPlanilla(Ent);
-            ListarPlanilla();
-            groupBox1.Enabled = false;
-
-
+                Ent.FechIngreso = Convert.ToDateTime(dtmFechIngreso.Text.Trim());
+                Ent.FechCese = Convert.ToDateTime(dtmFechCese.Text.Trim());
+                Ent.InitVac = Convert.ToDateTime(dtmInitVac.Text.Trim());
+                Ent.FindVac = Convert.ToDateTime(dtmFindVac.Text.Trim());
+                Ent.DiasVac = Convert.ToInt32(txtDiasVac.Text.Trim());
+                Ent.DiasLAb = Convert.ToInt32(txtDiasLAb.Text.Trim());
+                Ent.HrTrab = Convert.ToInt32(txtHrTrab.Text.Trim());
+                Ent.HrExtr = Convert.ToInt32(txtHrExtr.Text.Trim());
+                Ent.DiasNoLAb = Convert.ToInt32(txtDiasNoLAb.Text.Trim());
+                LogPlanilla.Instancia.InsertaPlanilla(Ent);
+                ListarPlanilla();
+                groupBox1.Enabled = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -259,6 +276,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnInhabilitar.Enabled = true;
             btnBuscar.Enabled = true;
             btnAgregar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -307,6 +325,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             ListarPlanilla();
             LimpiarDatos();
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         private void btnInhabilitar_Click(object sender, EventArgs e)
@@ -325,6 +347,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             LimpiarDatos();
             ListarPlanilla();
+            btnActualizar.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdPlanilla.Enabled = true;
         }
 
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
@@ -511,6 +537,26 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void dtmFechIngreso_ValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void cboHijos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtImportOtro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

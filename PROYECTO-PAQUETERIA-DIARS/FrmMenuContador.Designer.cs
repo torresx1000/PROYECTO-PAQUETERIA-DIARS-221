@@ -43,7 +43,10 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.Pantalla.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.SuspendLayout();
@@ -58,27 +61,27 @@
             this.panel1.Controls.Add(this.btnConfigLogin);
             this.panel1.Controls.Add(this.Pantalla);
             this.panel1.Controls.Add(this.btnManPlanilla);
-            this.panel1.Location = new System.Drawing.Point(1, 63);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 78);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 742);
+            this.panel1.Size = new System.Drawing.Size(276, 913);
             this.panel1.TabIndex = 2;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(220, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(293, 1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(578, 517);
+            this.panel3.Size = new System.Drawing.Size(771, 636);
             this.panel3.TabIndex = 3;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(111, 500);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(148, 615);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(92, 32);
+            this.btnSalir.Size = new System.Drawing.Size(123, 39);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -87,10 +90,10 @@
             // btnConfigLogin
             // 
             this.btnConfigLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfigLogin.Location = new System.Drawing.Point(11, 221);
-            this.btnConfigLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfigLogin.Location = new System.Drawing.Point(15, 272);
+            this.btnConfigLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfigLogin.Name = "btnConfigLogin";
-            this.btnConfigLogin.Size = new System.Drawing.Size(186, 42);
+            this.btnConfigLogin.Size = new System.Drawing.Size(248, 52);
             this.btnConfigLogin.TabIndex = 1;
             this.btnConfigLogin.Text = "CONFIGURAR LOGIN";
             this.btnConfigLogin.UseVisualStyleBackColor = true;
@@ -99,19 +102,21 @@
             // Pantalla
             // 
             this.Pantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Pantalla.Location = new System.Drawing.Point(2, 10);
-            this.Pantalla.Margin = new System.Windows.Forms.Padding(2);
+            this.Pantalla.Controls.Add(this.lblNombre);
+            this.Pantalla.Controls.Add(this.lblCargo);
+            this.Pantalla.Location = new System.Drawing.Point(3, 12);
+            this.Pantalla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pantalla.Name = "Pantalla";
-            this.Pantalla.Size = new System.Drawing.Size(191, 171);
+            this.Pantalla.Size = new System.Drawing.Size(255, 210);
             this.Pantalla.TabIndex = 1;
             // 
             // btnManPlanilla
             // 
             this.btnManPlanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManPlanilla.Location = new System.Drawing.Point(9, 284);
-            this.btnManPlanilla.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManPlanilla.Location = new System.Drawing.Point(12, 350);
+            this.btnManPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManPlanilla.Name = "btnManPlanilla";
-            this.btnManPlanilla.Size = new System.Drawing.Size(186, 42);
+            this.btnManPlanilla.Size = new System.Drawing.Size(248, 52);
             this.btnManPlanilla.TabIndex = 2;
             this.btnManPlanilla.Text = "MANTENEDOR PLANILLA";
             this.btnManPlanilla.UseVisualStyleBackColor = true;
@@ -124,10 +129,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelContenedor.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._080eb9d6_5405_4974_b7b1_bcd83c5ab64c1;
-            this.panelContenedor.Location = new System.Drawing.Point(211, 73);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedor.Location = new System.Drawing.Point(281, 90);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1175, 613);
+            this.panelContenedor.Size = new System.Drawing.Size(1567, 754);
             this.panelContenedor.TabIndex = 3;
             // 
             // Panelcajero
@@ -139,16 +144,18 @@
             this.Panelcajero.Controls.Add(this.lblHora);
             this.Panelcajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panelcajero.Location = new System.Drawing.Point(0, 0);
+            this.Panelcajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panelcajero.Name = "Panelcajero";
-            this.Panelcajero.Size = new System.Drawing.Size(1386, 68);
+            this.Panelcajero.Size = new System.Drawing.Size(1848, 84);
             this.Panelcajero.TabIndex = 11;
             // 
             // txthora
             // 
             this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
-            this.txthora.Location = new System.Drawing.Point(12, 27);
+            this.txthora.Location = new System.Drawing.Point(16, 33);
+            this.txthora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txthora.Name = "txthora";
-            this.txthora.Size = new System.Drawing.Size(61, 31);
+            this.txthora.Size = new System.Drawing.Size(81, 38);
             this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.txthora.TabIndex = 8;
             this.txthora.TabStop = false;
@@ -160,9 +167,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 30);
+            this.label1.Location = new System.Drawing.Point(121, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 28);
+            this.label1.Size = new System.Drawing.Size(284, 36);
             this.label1.TabIndex = 7;
             this.label1.Text = "MENU CONTADOR";
             // 
@@ -173,9 +181,10 @@
             this.lblFecha.BackColor = System.Drawing.Color.Transparent;
             this.lblFecha.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(1180, 37);
+            this.lblFecha.Location = new System.Drawing.Point(1573, 46);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(70, 21);
+            this.lblFecha.Size = new System.Drawing.Size(87, 28);
             this.lblFecha.TabIndex = 6;
             this.lblFecha.Text = "FECHA";
             // 
@@ -186,9 +195,10 @@
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(1289, 9);
+            this.lblHora.Location = new System.Drawing.Point(1719, 11);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(51, 18);
+            this.lblHora.Size = new System.Drawing.Size(65, 24);
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
             // 
@@ -197,21 +207,44 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(81, 138);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(104, 25);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(41, 163);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(90, 25);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "CARGO";
+            // 
             // FrmMenuContador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 681);
+            this.ClientSize = new System.Drawing.Size(1848, 838);
             this.Controls.Add(this.Panelcajero);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMenuContador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuContador";
             this.Load += new System.EventHandler(this.FrmMenuContador_Load);
             this.panel1.ResumeLayout(false);
+            this.Pantalla.ResumeLayout(false);
+            this.Pantalla.PerformLayout();
             this.Panelcajero.ResumeLayout(false);
             this.Panelcajero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).EndInit();
@@ -234,5 +267,7 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCargo;
     }
 }

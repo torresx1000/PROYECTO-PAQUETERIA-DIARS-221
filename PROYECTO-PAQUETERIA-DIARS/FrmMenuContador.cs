@@ -12,11 +12,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmMenuContador : Form
     {
-        public FrmMenuContador()
+        public FrmMenuContador(string cargo, string nombre)
         {
             
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
+            lblCargo.Text = cargo;
+            lblNombre.Text = nombre;
         }
         public void AbrirFrmInPanel(object FormHijo)
         {

@@ -64,7 +64,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Contador")
                     {
-                        FrmMenuContador frmMenuContador = new FrmMenuContador();
+                        FrmMenuContador frmMenuContador = new FrmMenuContador(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
                         frmMenuContador.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Conductor")
