@@ -59,7 +59,7 @@
             // 
             this.dgvlistarespuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvlistarespuestos.Location = new System.Drawing.Point(29, 639);
-            this.dgvlistarespuestos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvlistarespuestos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvlistarespuestos.Name = "dgvlistarespuestos";
             this.dgvlistarespuestos.RowHeadersWidth = 51;
             this.dgvlistarespuestos.Size = new System.Drawing.Size(596, 185);
@@ -73,9 +73,9 @@
             this.groupBox2.Controls.Add(this.btnbuscar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(29, 482);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(596, 149);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -147,9 +147,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(29, 97);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(596, 367);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -170,7 +170,7 @@
             // dtFecha
             // 
             this.dtFecha.Location = new System.Drawing.Point(269, 145);
-            this.dtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(265, 22);
             this.dtFecha.TabIndex = 2;
@@ -178,7 +178,7 @@
             // txtdescripcionrespuestos
             // 
             this.txtdescripcionrespuestos.Location = new System.Drawing.Point(288, 194);
-            this.txtdescripcionrespuestos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdescripcionrespuestos.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescripcionrespuestos.Multiline = true;
             this.txtdescripcionrespuestos.Name = "txtdescripcionrespuestos";
             this.txtdescripcionrespuestos.Size = new System.Drawing.Size(247, 153);
@@ -187,26 +187,28 @@
             // txtdiagnostico
             // 
             this.txtdiagnostico.Location = new System.Drawing.Point(288, 80);
-            this.txtdiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdiagnostico.Margin = new System.Windows.Forms.Padding(4);
             this.txtdiagnostico.Multiline = true;
             this.txtdiagnostico.Name = "txtdiagnostico";
             this.txtdiagnostico.Size = new System.Drawing.Size(141, 36);
             this.txtdiagnostico.TabIndex = 1;
+            this.txtdiagnostico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiagnostico_KeyPress);
             // 
             // txtcodigolista
             // 
             this.txtcodigolista.Location = new System.Drawing.Point(288, 25);
-            this.txtcodigolista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcodigolista.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigolista.Multiline = true;
             this.txtcodigolista.Name = "txtcodigolista";
             this.txtcodigolista.Size = new System.Drawing.Size(247, 36);
             this.txtcodigolista.TabIndex = 1;
+            this.txtcodigolista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigolista_KeyPress);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._75863;
             this.pictureBox2.Location = new System.Drawing.Point(75, 230);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(187, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -273,7 +275,7 @@
             // 
             this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._4998821;
             this.pictureBox1.Location = new System.Drawing.Point(561, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,7 +295,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmListaDeRepuestos";
             this.Text = "FrmListaDeRepuestos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistarespuestos)).EndInit();

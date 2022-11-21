@@ -156,6 +156,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             dt.Rows.Add(txtlatitud.Text, txtlongitud.Text);
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

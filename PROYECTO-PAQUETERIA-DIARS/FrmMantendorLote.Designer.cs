@@ -119,6 +119,7 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(228, 34);
             this.txtNombres.TabIndex = 4;
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
             // txtIdLote
             // 
@@ -129,6 +130,7 @@
             this.txtIdLote.Name = "txtIdLote";
             this.txtIdLote.Size = new System.Drawing.Size(228, 34);
             this.txtIdLote.TabIndex = 3;
+            this.txtIdLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdLote_KeyPress);
             // 
             // label2
             // 
