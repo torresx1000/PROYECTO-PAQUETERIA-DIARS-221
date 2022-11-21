@@ -74,7 +74,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Cajero")
                     {
-                        FrmMenuCajero frmMenuCajero = new FrmMenuCajero();
+                        FrmMenuCajero frmMenuCajero = new FrmMenuCajero(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString());
                         frmMenuCajero.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Almacenero")

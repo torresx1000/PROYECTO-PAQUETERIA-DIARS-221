@@ -12,10 +12,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmMenuCajero : Form
     {
-        public FrmMenuCajero()
+        public FrmMenuCajero(string cargo, string nombre)
         {
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
+            lblNombre.Text = nombre;
+            lblCargo.Text = cargo;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
