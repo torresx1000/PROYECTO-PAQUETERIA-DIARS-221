@@ -16,7 +16,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false); 
             //Application.Run(new Pantalla_de_Carga());
             //Application.Run(inicio =new Login());
             //Application.Run(new Login());
