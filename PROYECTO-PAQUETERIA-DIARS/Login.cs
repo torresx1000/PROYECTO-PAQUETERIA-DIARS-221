@@ -54,7 +54,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                     }
                     else if (dt.Rows[0][1].ToString() == "Jefe de operaciones")
                     {
-                        FrmMenuJefeDeOperaciones frmMenuJefeDeOperaciones = new FrmMenuJefeDeOperaciones(); 
+                        FrmMenuJefeDeOperaciones frmMenuJefeDeOperaciones = new FrmMenuJefeDeOperaciones(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString()); 
                         frmMenuJefeDeOperaciones.ShowDialog();
                     }
                     else if (dt.Rows[0][1].ToString() == "Jefe mantenimiento")

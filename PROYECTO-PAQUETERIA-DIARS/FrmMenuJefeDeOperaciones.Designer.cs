@@ -36,13 +36,16 @@
             this.PANTALLA = new System.Windows.Forms.Panel();
             this.btnManRuta = new System.Windows.Forms.Button();
             this.Panelcajero = new System.Windows.Forms.Panel();
+            this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OPERACIONES = new System.Windows.Forms.Panel();
-            this.txthora = new System.Windows.Forms.PictureBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.PANTALLA.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +90,8 @@
             // PANTALLA
             // 
             this.PANTALLA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PANTALLA.Controls.Add(this.lblNombre);
+            this.PANTALLA.Controls.Add(this.lblCargo);
             this.PANTALLA.Location = new System.Drawing.Point(12, 18);
             this.PANTALLA.Margin = new System.Windows.Forms.Padding(2);
             this.PANTALLA.Name = "PANTALLA";
@@ -117,6 +122,17 @@
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1150, 75);
             this.Panelcajero.TabIndex = 10;
+            // 
+            // txthora
+            // 
+            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
+            this.txthora.Location = new System.Drawing.Point(12, 22);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(61, 31);
+            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txthora.TabIndex = 8;
+            this.txthora.TabStop = false;
+            this.txthora.Click += new System.EventHandler(this.txthora_Click);
             // 
             // label1
             // 
@@ -170,16 +186,27 @@
             this.OPERACIONES.Size = new System.Drawing.Size(930, 571);
             this.OPERACIONES.TabIndex = 11;
             // 
-            // txthora
+            // lblNombre
             // 
-            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
-            this.txthora.Location = new System.Drawing.Point(12, 22);
-            this.txthora.Name = "txthora";
-            this.txthora.Size = new System.Drawing.Size(61, 31);
-            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.txthora.TabIndex = 8;
-            this.txthora.TabStop = false;
-            this.txthora.Click += new System.EventHandler(this.txthora_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(61, 107);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(85, 20);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "NOMBRE";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(31, 127);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(73, 20);
+            this.lblCargo.TabIndex = 2;
+            this.lblCargo.Text = "CARGO";
             // 
             // FrmMenuJefeDeOperaciones
             // 
@@ -195,6 +222,8 @@
             this.Name = "FrmMenuJefeDeOperaciones";
             this.Text = "FrmMenuJefeDeOperaciones";
             this.panel1.ResumeLayout(false);
+            this.PANTALLA.ResumeLayout(false);
+            this.PANTALLA.PerformLayout();
             this.Panelcajero.ResumeLayout(false);
             this.Panelcajero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).EndInit();
@@ -216,5 +245,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel OPERACIONES;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCargo;
     }
 }
