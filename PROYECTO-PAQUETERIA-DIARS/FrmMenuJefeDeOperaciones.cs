@@ -12,10 +12,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
 {
     public partial class FrmMenuJefeDeOperaciones : Form
     {
-        public FrmMenuJefeDeOperaciones()
+        public FrmMenuJefeDeOperaciones(string cargo, string nombre)
         {
             InitializeComponent();
             AbrirPanelistaIma(new Fondos());
+            lblCargo.Text = cargo;
+            lblNombre.Text = nombre;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

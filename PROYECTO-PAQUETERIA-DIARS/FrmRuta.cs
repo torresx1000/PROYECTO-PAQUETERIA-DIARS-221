@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPADATOS;
 using CAPAENTIDAD;
 using CAPALOGICA;
 using GMap.NET;
@@ -34,7 +35,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
             ListarRuta();
-        
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
         }
 
         public void LimpiarVariables() {
@@ -216,19 +219,30 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            EntRuta Rut = new EntRuta();
-            //Rut.IdRuta = Convert.ToInt32(txtIdRuta.Text.Trim());
-            Rut.PuntoPartida = txtPuntoPartida.Text.Trim();
-            Rut.PuntoLlegada = txtPuntoLlegada.Text.Trim();
-            Rut.Observaciones = txtObservaciones.Text.Trim();
-            Rut.EstadoRuta = checkBoxEstadoRuta.Checked;
+            try
+            {
+                EntRuta Rut = new EntRuta();
+                //Rut.IdRuta = Convert.ToInt32(txtIdRuta.Text.Trim());
+                Rut.PuntoPartida = txtPuntoPartida.Text.Trim();
+                Rut.PuntoLlegada = txtPuntoLlegada.Text.Trim();
+                Rut.Observaciones = txtObservaciones.Text.Trim();
+                Rut.EstadoRuta = checkBoxEstadoRuta.Checked;
 
-            LogRuta.Instancia.InsertarRuta(Rut);
-            ListarRuta();
-            LimpiarVariables();
+                LogRuta.Instancia.InsertarRuta(Rut);
+                ListarRuta();
+                LimpiarVariables();
+                btnRegistrar.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnInhabilitar.Enabled = false;
+                txtIdRuta.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void dataGridViewRuta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    private void dataGridViewRuta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             EntRuta Rut = new EntRuta();
             DataGridViewRow filaActual = dataGridViewRuta.Rows[e.RowIndex];
@@ -260,6 +274,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             dataGridViewRuta.Enabled = false;
             ListarRuta();
             LimpiarVariables();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdRuta.Enabled = true;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -279,6 +297,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
                 MessageBox.Show("El Trabajdor no existe or esta inhabilitado, verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            btnActualizar.Enabled = true;
+            btnInhabilitar.Enabled = true;
         }
 
         private void btnInhabilitar_Click(object sender, EventArgs e)
@@ -298,6 +318,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             LimpiarVariables();
             dataGridViewRuta.Enabled = false;
             ListarRuta();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            txtIdRuta.Enabled = true;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -318,6 +342,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            btnRegistrar.Enabled = true;
+            btnBuscar.Enabled = false;
+            txtIdRuta.Enabled = false;
+        }
+
+        private void dataGridViewRuta_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dataGridView1.Rows[e.RowIndex].Cells["IdRuta"].Value.ToString();
+            txtIdRuta.Text = id;
         }
     }
 }

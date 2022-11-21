@@ -139,42 +139,48 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //para convertir imagen
-            MemoryStream archivoMemoria=new MemoryStream();
-            pbPerfilTrabajador.Image.Save(archivoMemoria,ImageFormat.Jpeg);
+            try
+            {
+                //para convertir imagen
+                MemoryStream archivoMemoria = new MemoryStream();
+                pbPerfilTrabajador.Image.Save(archivoMemoria, ImageFormat.Jpeg);
 
-            EntTrabajador Tra = new EntTrabajador();
-            //Tra.Id_Trabajador = Convert.ToInt32(txtIdTrabajador.Text.Trim());
-            Tra.Dni=Convert.ToInt32(txtDni.Text.Trim());
-            Tra.Nombres = txtNombres.Text.Trim();
-            Tra.ApPaterno = txtApellidoPaterno.Text.Trim();
-            Tra.ApMaterno = txtApellidoMaterno.Text.Trim();
-            Tra.FechaNac = dtFechaNacimiento.Value;
-            Tra.Sexo = txtSexo.Text.Trim();
-            Tra.EstCivil = cmbxEstadoCivil.Text.Trim();
-            Tra.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
-            Tra.Direccion = txtDireccion.Text.Trim();
-            Tra.Distrito = txtDistrito.Text.Trim();
-            Tra.Provincia = txtProvincia.Text.Trim();
-            Tra.Departamento = txtDepartamento.Text.Trim();
-            Tra.FechaContrato = dtFechaContrato.Value;
-            Tra.Usuario = txtUsuario.Text.Trim();
-            Tra.Password = txtClave.Text.Trim();
-            Tra.Cargo = txtCargo.Text.Trim();
-            Tra.EstadoTrabajador=cbEstadoTrabajador.Checked;
-            Tra.PerfilTrabajador = archivoMemoria.GetBuffer();
+                EntTrabajador Tra = new EntTrabajador();
+                //Tra.Id_Trabajador = Convert.ToInt32(txtIdTrabajador.Text.Trim());
+                Tra.Dni = Convert.ToInt32(txtDni.Text.Trim());
+                Tra.Nombres = txtNombres.Text.Trim();
+                Tra.ApPaterno = txtApellidoPaterno.Text.Trim();
+                Tra.ApMaterno = txtApellidoMaterno.Text.Trim();
+                Tra.FechaNac = dtFechaNacimiento.Value;
+                Tra.Sexo = txtSexo.Text.Trim();
+                Tra.EstCivil = cmbxEstadoCivil.Text.Trim();
+                Tra.Ubigeo = Convert.ToInt32(txtUbigeo.Text.Trim());
+                Tra.Direccion = txtDireccion.Text.Trim();
+                Tra.Distrito = txtDistrito.Text.Trim();
+                Tra.Provincia = txtProvincia.Text.Trim();
+                Tra.Departamento = txtDepartamento.Text.Trim();
+                Tra.FechaContrato = dtFechaContrato.Value;
+                Tra.Usuario = txtUsuario.Text.Trim();
+                Tra.Password = txtClave.Text.Trim();
+                Tra.Cargo = txtCargo.Text.Trim();
+                Tra.EstadoTrabajador = cbEstadoTrabajador.Checked;
+                Tra.PerfilTrabajador = archivoMemoria.GetBuffer();
 
-            LogTrabajador.Instancia.InsertarTrabajador(Tra);
-            ListarTrabajador();
-            LimpiarVariables();
-            gbDatosDelTrabajador.Enabled = true;
-            btnRegistrar.Enabled = false;
-            btnBuscarTrabajador.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnInhabilitar.Enabled = false;
-            txtDni.Enabled = true;
-            DeshabilitarCampos();
-
+                LogTrabajador.Instancia.InsertarTrabajador(Tra);
+                ListarTrabajador();
+                LimpiarVariables();
+                gbDatosDelTrabajador.Enabled = true;
+                btnRegistrar.Enabled = false;
+                btnBuscarTrabajador.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnInhabilitar.Enabled = false;
+                txtDni.Enabled = true;
+                DeshabilitarCampos();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -410,6 +416,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Solo Letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void dataGridViewTrabajador_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dataGridViewTrabajador.Rows[e.RowIndex].Cells["IdTrabajador"].Value.ToString();
+                txtIdTrabajador.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -98,6 +98,7 @@
             this.dataGridViewTrabajador.RowTemplate.Height = 24;
             this.dataGridViewTrabajador.Size = new System.Drawing.Size(1059, 286);
             this.dataGridViewTrabajador.TabIndex = 25;
+            this.dataGridViewTrabajador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTrabajador_CellClick);
             this.dataGridViewTrabajador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTrabajador_CellContentClick);
             // 
             // gbDatosDelTrabajador

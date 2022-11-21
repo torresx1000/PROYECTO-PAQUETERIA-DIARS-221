@@ -79,6 +79,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+            try { 
             EntCotizacion cot = new EntCotizacion();
 
 
@@ -90,6 +91,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             Limpiar();
             ListarCotizacion();
         }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+}
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {

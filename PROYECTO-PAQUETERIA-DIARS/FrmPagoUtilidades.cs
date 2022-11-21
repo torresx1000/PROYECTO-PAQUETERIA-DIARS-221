@@ -164,30 +164,37 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            FrmReportePlanilla frmReportePlanilla = new FrmReportePlanilla();
-            FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
-            EntPagoUtilidades paut = new EntPagoUtilidades();
-            // paut.IdPagoUtilidades=Convert.ToInt32(txtpagoutilidades.Text.Trim());
-            //paut.IdPlanilla = Convert.ToInt32(txtPlanilla.Text.Trim());
-            paut.IdPlanilla = Convert.ToInt32(FrmReportePlanilla.id.Trim());
-            paut.IdTrabajador = Convert.ToInt32(FrmReporteTrabajadores.id.Trim());
-            paut.TotalRemuneraciones = Convert.ToDouble(txtAdicionalR.Text.Trim());
-            paut.TotalDescuentos=Convert.ToDouble(txttotalDescuentos.Text.Trim());
-            paut.TotalAportes = Convert.ToDouble(txtAportesTotal.Text.Trim());
-            paut.CtaAhorros = Convert.ToInt32(txtCuentaAhorro.Text.Trim());
-            paut.FechaPago = dtmFechaBoleta.Value;
-            paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
+            try
+            {
+                FrmReportePlanilla frmReportePlanilla = new FrmReportePlanilla();
+                FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
+                EntPagoUtilidades paut = new EntPagoUtilidades();
+                // paut.IdPagoUtilidades=Convert.ToInt32(txtpagoutilidades.Text.Trim());
+                //paut.IdPlanilla = Convert.ToInt32(txtPlanilla.Text.Trim());
+                paut.IdPlanilla = Convert.ToInt32(FrmReportePlanilla.id.Trim());
+                paut.IdTrabajador = Convert.ToInt32(FrmReporteTrabajadores.id.Trim());
+                paut.TotalRemuneraciones = Convert.ToDouble(txtAdicionalR.Text.Trim());
+                paut.TotalDescuentos = Convert.ToDouble(txttotalDescuentos.Text.Trim());
+                paut.TotalAportes = Convert.ToDouble(txtAportesTotal.Text.Trim());
+                paut.CtaAhorros = Convert.ToInt32(txtCuentaAhorro.Text.Trim());
+                paut.FechaPago = dtmFechaBoleta.Value;
+                paut.NetoAPagar = Convert.ToDouble(txtNetoPago.Text.Trim());
 
-            LogPagoUtilidades.Instancia.InsertaPagoUtilidades(paut);
-            comprobantePago();
-            ListarPagoUtilidades();
-            btnRegistrar.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
-            txtpagoutilidades.Enabled = true;
+                LogPagoUtilidades.Instancia.InsertaPagoUtilidades(paut);
+                comprobantePago();
+                ListarPagoUtilidades();
+                btnRegistrar.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnBuscar.Enabled = true;
+                txtpagoutilidades.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-        private void comprobantePago()
+            private void comprobantePago()
         {
             string fecha = DateTime.Now.ToLongDateString();
             clsFactura.CreaTicket Ticket1 = new clsFactura.CreaTicket();

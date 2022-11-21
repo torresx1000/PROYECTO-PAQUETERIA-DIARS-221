@@ -1,4 +1,5 @@
-﻿using CAPAENTIDAD;
+﻿using CAPADATOS;
+using CAPAENTIDAD;
 using CAPALOGICA;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
         {
             InitializeComponent();
             ListarVehiculo();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled=false;
+            btnInhabilitar.Enabled=false;
         }
 
         private void FrmMantVehiculo_Load(object sender, EventArgs e)
@@ -81,6 +85,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 cbCondicion.Text="Inactivo";
                 Veh.Condicion = cbCondicion.Text;
                 LogVehiculo.Instancia.DeshabilitarVehiculo(Veh);
+
             }
             catch (Exception ex)
             {
@@ -88,6 +93,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             LimpiarVariables();
             ListarVehiculo();
+            btnRegistrar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnInhabilitar.Enabled = false;
+            btnBuscar.Enabled = true;
+            txtIdVehiculo.Enabled = true;
         }
 
         private void txtEjes_TextChanged(object sender, EventArgs e)
@@ -97,48 +107,61 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //para convertir imagen
-            MemoryStream archivoMemoria = new MemoryStream();
-            pbFotoVehiculo.Image.Save(archivoMemoria, ImageFormat.Jpeg);
+            try
+            {
+                //para convertir imagen
+                MemoryStream archivoMemoria = new MemoryStream();
+                pbFotoVehiculo.Image.Save(archivoMemoria, ImageFormat.Jpeg);
 
-            EntVehiculo Veh = new EntVehiculo();
-            //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
-            Veh.Categoria = txtCategoria.Text.Trim();
-            Veh.Modelo = txtModelo.Text.Trim();
-            Veh.Color = txtColor.Text.Trim();
-            Veh.Motor = txtMotor.Text.Trim();
-            Veh.Combustible = cbCombustible.Text.Trim();
-            Veh.FormRodante = txtFormRodante.Text.Trim();
-            Veh.AñoFabricacion = txtAñoFabricacion.Text.Trim();
-            Veh.AñoModelo = txtAñoModelo.Text.Trim();
-            Veh.Version = txtVersion.Text.Trim();
-            Veh.Ejes = Convert.ToInt32(txtEjes.Text.Trim());
-            Veh.Asientos = Convert.ToInt32(txtAsientos.Text.Trim());
-            Veh.Pasajeros = Convert.ToInt32(txtPasajeros.Text.Trim());
-            Veh.Ruedas = Convert.ToInt32(txtRuedas.Text.Trim());
-            Veh.Carroceria = txtCarrocerias.Text.Trim();
-            Veh.Potencia = txtPotencia.Text.Trim();
-            Veh.Cilindros = Convert.ToInt32(txtCilindros.Text.Trim());
-            Veh.Cilindrada = Convert.ToDouble(txtCilindrada.Text.Trim());
-            Veh.PesoBruto = Convert.ToDouble(txtPesoBruto.Text.Trim());
-            Veh.PesoNeto = Convert.ToDouble(txtPesoNeto.Text.Trim());
-            Veh.CargaUtil = Convert.ToDouble(txtCargaUtil.Text.Trim());
-            Veh.Longitud = Convert.ToDouble(txtLongitud.Text.Trim());
-            Veh.Altura = Convert.ToDouble(txtAltura.Text.Trim());
-            Veh.Ancho = Convert.ToDouble(txtAncho.Text.Trim());
-            Veh.ZonaRegistro = txtZonaRegistro.Text.Trim();
-            Veh.DuaDuam = Convert.ToInt32(txtDuaDuam.Text.Trim());
-            Veh.Titulo = Convert.ToInt32(txtTitulo.Text.Trim());
-            Veh.FechaTitulo = dtFechaTitulo.Value;
-            Veh.Condicion = cbCondicion.Text.Trim();
-            Veh.Placa = txtPlaca.Text.Trim();
-            Veh.PlacaAnterior = txtPlacaAnterior.Text.Trim();
-            Veh.FotoVehiculo = archivoMemoria.GetBuffer();
+                EntVehiculo Veh = new EntVehiculo();
+                //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
+                Veh.Categoria = txtCategoria.Text.Trim();
+                Veh.Modelo = txtModelo.Text.Trim();
+                Veh.Color = txtColor.Text.Trim();
+                Veh.Motor = txtMotor.Text.Trim();
+                Veh.Combustible = cbCombustible.Text.Trim();
+                Veh.FormRodante = txtFormRodante.Text.Trim();
+                Veh.AñoFabricacion = txtAñoFabricacion.Text.Trim();
+                Veh.AñoModelo = txtAñoModelo.Text.Trim();
+                Veh.Version = txtVersion.Text.Trim();
+                Veh.Ejes = Convert.ToInt32(txtEjes.Text.Trim());
+                Veh.Asientos = Convert.ToInt32(txtAsientos.Text.Trim());
+                Veh.Pasajeros = Convert.ToInt32(txtPasajeros.Text.Trim());
+                Veh.Ruedas = Convert.ToInt32(txtRuedas.Text.Trim());
+                Veh.Carroceria = txtCarrocerias.Text.Trim();
+                Veh.Potencia = txtPotencia.Text.Trim();
+                Veh.Cilindros = Convert.ToInt32(txtCilindros.Text.Trim());
+                Veh.Cilindrada = Convert.ToDouble(txtCilindrada.Text.Trim());
+                Veh.PesoBruto = Convert.ToDouble(txtPesoBruto.Text.Trim());
+                Veh.PesoNeto = Convert.ToDouble(txtPesoNeto.Text.Trim());
+                Veh.CargaUtil = Convert.ToDouble(txtCargaUtil.Text.Trim());
+                Veh.Longitud = Convert.ToDouble(txtLongitud.Text.Trim());
+                Veh.Altura = Convert.ToDouble(txtAltura.Text.Trim());
+                Veh.Ancho = Convert.ToDouble(txtAncho.Text.Trim());
+                Veh.ZonaRegistro = txtZonaRegistro.Text.Trim();
+                Veh.DuaDuam = Convert.ToInt32(txtDuaDuam.Text.Trim());
+                Veh.Titulo = Convert.ToInt32(txtTitulo.Text.Trim());
+                Veh.FechaTitulo = dtFechaTitulo.Value;
+                Veh.Condicion = cbCondicion.Text.Trim();
+                Veh.Placa = txtPlaca.Text.Trim();
+                Veh.PlacaAnterior = txtPlacaAnterior.Text.Trim();
+                Veh.FotoVehiculo = archivoMemoria.GetBuffer();
 
-            LogVehiculo.Instancia.InsertarVehiculo(Veh);
-            ListarVehiculo();
+                LogVehiculo.Instancia.InsertarVehiculo(Veh);
+                ListarVehiculo();
+                btnRegistrar.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnInhabilitar.Enabled = false;
+                btnBuscar.Enabled = true;
+                txtIdVehiculo.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
+
         public void ListarVehiculo()
         {
             dataGridViewVehiculo.DataSource = LogVehiculo.Instancia.ListarVehiculo();
@@ -197,11 +220,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 
-            btnRegistrar.Visible = true;
+            btnRegistrar.Enabled = true;
             LimpiarVariables();
             btnActualizar.Enabled = false;
             btnInhabilitar.Enabled = false;
-            btnBuscar.Enabled = true;
+            btnBuscar.Enabled = false;
+            txtIdVehiculo.Enabled = false;
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -251,6 +276,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 Veh.FotoVehiculo = archivoMemoria.GetBuffer();
 
                 LogVehiculo.Instancia.EditarVehiculo(Veh);
+                btnRegistrar.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnInhabilitar.Enabled = false;
+                btnBuscar.Enabled = true;
+                txtIdVehiculo.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -258,6 +288,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             ListarVehiculo();
             LimpiarVariables();
+
         }
 
         private void txtEjes_KeyPress(object sender, KeyPressEventArgs e)
@@ -417,6 +448,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Solo Numeros Y un (.)permitidos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void dataGridViewVehiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dataGridViewVehiculo.Rows[e.RowIndex].Cells["IdVehiculo"].Value.ToString();
+                txtIdVehiculo.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

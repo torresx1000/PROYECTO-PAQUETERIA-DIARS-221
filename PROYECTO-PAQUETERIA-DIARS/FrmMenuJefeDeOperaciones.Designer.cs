@@ -43,6 +43,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OPERACIONES = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.PANTALLA.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +88,8 @@
             // PANTALLA
             // 
             this.PANTALLA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PANTALLA.Controls.Add(this.lblNombre);
+            this.PANTALLA.Controls.Add(this.lblCargo);
             this.PANTALLA.Location = new System.Drawing.Point(12, 18);
             this.PANTALLA.Margin = new System.Windows.Forms.Padding(2);
             this.PANTALLA.Name = "PANTALLA";
@@ -195,6 +198,8 @@
             this.Name = "FrmMenuJefeDeOperaciones";
             this.Text = "FrmMenuJefeDeOperaciones";
             this.panel1.ResumeLayout(false);
+            this.PANTALLA.ResumeLayout(false);
+            this.PANTALLA.PerformLayout();
             this.Panelcajero.ResumeLayout(false);
             this.Panelcajero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).EndInit();
@@ -216,5 +221,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel OPERACIONES;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCargo;
     }
 }
