@@ -36,12 +36,12 @@
             this.PANTALLA = new System.Windows.Forms.Panel();
             this.btnManRuta = new System.Windows.Forms.Button();
             this.Panelcajero = new System.Windows.Forms.Panel();
+            this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OPERACIONES = new System.Windows.Forms.Panel();
-            this.txthora = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
@@ -101,7 +101,7 @@
             this.btnManRuta.Name = "btnManRuta";
             this.btnManRuta.Size = new System.Drawing.Size(186, 42);
             this.btnManRuta.TabIndex = 2;
-            this.btnManRuta.Text = "ADEMINISTRAR RUTA";
+            this.btnManRuta.Text = "ADMINISTRAR RUTA";
             this.btnManRuta.UseVisualStyleBackColor = true;
             this.btnManRuta.Click += new System.EventHandler(this.btnManRuta_Click);
             // 
@@ -117,6 +117,17 @@
             this.Panelcajero.Name = "Panelcajero";
             this.Panelcajero.Size = new System.Drawing.Size(1150, 75);
             this.Panelcajero.TabIndex = 10;
+            // 
+            // txthora
+            // 
+            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
+            this.txthora.Location = new System.Drawing.Point(12, 22);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(61, 31);
+            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txthora.TabIndex = 8;
+            this.txthora.TabStop = false;
+            this.txthora.Click += new System.EventHandler(this.txthora_Click);
             // 
             // label1
             // 
@@ -169,17 +180,6 @@
             this.OPERACIONES.Name = "OPERACIONES";
             this.OPERACIONES.Size = new System.Drawing.Size(930, 571);
             this.OPERACIONES.TabIndex = 11;
-            // 
-            // txthora
-            // 
-            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
-            this.txthora.Location = new System.Drawing.Point(12, 22);
-            this.txthora.Name = "txthora";
-            this.txthora.Size = new System.Drawing.Size(61, 31);
-            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.txthora.TabIndex = 8;
-            this.txthora.TabStop = false;
-            this.txthora.Click += new System.EventHandler(this.txthora_Click);
             // 
             // FrmMenuJefeDeOperaciones
             // 

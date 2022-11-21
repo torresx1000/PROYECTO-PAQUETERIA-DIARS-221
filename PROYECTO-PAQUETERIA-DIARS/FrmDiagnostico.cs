@@ -43,12 +43,28 @@ namespace PROYECTO_PAQUETERIA_DIARS
             FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();
             EntDiagnostico Diag = new EntDiagnostico();
             //Veh.IdVehiculo=Convert.ToInt32(txtIdVehiculo.Text.Trim());
-            
-            Diag.Observaciones=txtObservacion.Text.Trim();
-            Diag.Fallas=txtFallas.Text;
+            if (txtIdDiagnostico.Text != "")
+            {
+                MessageBox.Show("El id lo gestiona el sistema");
+
+                txtIdDiagnostico.Clear();
+
+            }
+
             Diag.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
             Diag.fecha = txtFechaDiagnostico.Value;
             Diag.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
+           
+
+            if ((txtObservacion.Text == "") || (txtFallas.Text == "") )
+            {
+                txtObservacion.Text = "Sin especificación";
+                txtFallas.Text = "Sin especificación";
+               
+
+            }
+            Diag.Observaciones = txtObservacion.Text.Trim();
+            Diag.Fallas = txtFallas.Text;
 
             LogDiagnostico.Instancia.InsertaDiagnostico(Diag);
 
@@ -109,19 +125,27 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            btAñadir.Visible = false;
-            txtIdDiagnostico.Enabled = false;
-            txtObservacion.Enabled = true;
-            txtFallas.Enabled = true;
-            txtFechaDiagnostico.Enabled = true;
-            btnSeleccionar.Enabled = true;
-            btnSelVehiculo.Enabled = true;
-            btnnuevoo.Visible = false;
-            button1.Visible = false;
-            button7.Visible = false;
-            btnELIMINAR.Visible = false;
-            btnEditar.Visible = true;
+            if (txtIdDiagnostico.Text == "")
+            {
+                MessageBox.Show("Ingresa id para completar la accion");
+
+
+            }
+            else
+            {
+                btAñadir.Visible = false;
+                txtIdDiagnostico.Enabled = false;
+                txtObservacion.Enabled = true;
+                txtFallas.Enabled = true;
+                txtFechaDiagnostico.Enabled = true;
+                btnSeleccionar.Enabled = true;
+                btnSelVehiculo.Enabled = true;
+                btnnuevoo.Visible = false;
+                button1.Visible = false;
+                button7.Visible = false;
+                btnELIMINAR.Visible = false;
+                btnEditar.Visible = true;
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -145,11 +169,13 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
                     dataGridView1.DataSource = LogDiagnostico.Instancia.ListarDiagnostico();
                 }
-                Limpiar();
+                
             }
             else
             {
                 ListarDiagnostico();
+                MessageBox.Show("Ingrese un dato correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -211,9 +237,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 LogDiagnostico.Instancia.Elimminar(Diag);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error al actualizar: " + ex);
+                MessageBox.Show("Ingresa ID valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtIdDiagnostico.Clear();
             }
             ListarDiagnostico();
             Limpiar();
@@ -235,6 +262,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             button7.Visible = false;
             btnELIMINAR.Visible = false;
             btnEditar.Visible = false;
+
 
 
         }
@@ -266,23 +294,32 @@ namespace PROYECTO_PAQUETERIA_DIARS
             button6.Visible = true;
             button7.Visible = true;
             btnnuevoo.Visible = true;
+            btnELIMINAR.Visible=true;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            try { 
             string id = dataGridView1.Rows[e.RowIndex].Cells["IdDiagnostico"].Value.ToString();
             txtIdDiagnostico.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-        }
+}
 
         private void txtIdDiagnostico_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if((e.KeyChar >= 32 && e.KeyChar <= 43) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo Numeros Y un (.)permitidos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
+            ListarDiagnostico();
         }
 
         private void FrmDiagnostico_Load(object sender, EventArgs e)

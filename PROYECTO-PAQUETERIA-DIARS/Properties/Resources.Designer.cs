@@ -263,6 +263,16 @@ namespace PROYECTO_PAQUETERIA_DIARS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _90282_Trujillo_Plaza_De_Armas {
+            get {
+                object obj = ResourceManager.GetObject("90282-Trujillo-Plaza-De-Armas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9996526ae3c3dd2b4e6ad6eb78e7e03b {
             get {
                 object obj = ResourceManager.GetObject("9996526ae3c3dd2b4e6ad6eb78e7e03b", resourceCulture);

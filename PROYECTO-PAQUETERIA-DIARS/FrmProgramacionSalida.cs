@@ -21,11 +21,8 @@ namespace PROYECTO_PAQUETERIA_DIARS
             InitializeComponent();
             ListarProgramacionSalida();
             LimpiarCampos();
-            btnRegistrar.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
+            Desabilitar();
+            
         }
         public void ListarProgramacionSalida() {
             dataGridViewProgramacion.DataSource = LogProgramacionSalida.Instancia.ListarProgrmacionSalida();
@@ -47,12 +44,12 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 LogProgramacionSalida.Instancia.ElimminarProgramacionSalida(pro);
             }
             catch (Exception ex) {
-                MessageBox.Show("Error.." + ex);
+                MessageBox.Show("Ingresa ID valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtIdProgramacion.Clear();
             }
             ListarProgramacionSalida();
             LimpiarCampos();
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
+            Desabilitar();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -78,59 +75,65 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void button8_Click(object sender, EventArgs e)
         {
-            FrmReporteVehiculo FrmReporteVehiculo = new FrmReporteVehiculo();//no es importtante
-            FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();//no es importtante
-            FrmReporteRuta frmReporteRuta = new FrmReporteRuta();//no es importtante
-            EntProgramacionSalida pro=new EntProgramacionSalida();
-            //pro.IdProgramacionSalida = Convert.ToInt32(txtIdProgramacion.Text.Trim());
-            pro.FechaInicio = dtFechaInicio.Value;
-            pro.FechaFin = dtFechaFin.Value;
-            pro.IdRuta = Convert.ToInt32(FrmReporteRuta.IdRuta.Trim());
-            pro.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
-            pro.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
-            LogProgramacionSalida.Instancia.InsertarProgramacioSalida(pro);
-            ListarProgramacionSalida();
-            LimpiarCampos();
-            btnRegistrar.Enabled = false;
-            txtIdProgramacion.Enabled = true;
+            try
+            {
+                FrmReporteVehiculo FrmReporteVehiculo = new FrmReporteVehiculo();//no es importtante
+                FrmListaConductores_Trabajadores FrmListaConductores_Trabajadores = new FrmListaConductores_Trabajadores();//no es importtante
+                FrmReporteRuta frmReporteRuta = new FrmReporteRuta();//no es importtante
+                EntProgramacionSalida pro = new EntProgramacionSalida();
+                //pro.IdProgramacionSalida = Convert.ToInt32(txtIdProgramacion.Text.Trim());
+                if (txtIdProgramacion.Text != "")
+                {
+                    MessageBox.Show("El id lo gestiona el sistema");
+
+                    txtIdProgramacion.Clear();
+
+                }
+                pro.FechaInicio = dtFechaInicio.Value;
+                pro.FechaFin = dtFechaFin.Value;
+                pro.IdRuta = Convert.ToInt32(FrmReporteRuta.IdRuta.Trim());
+                pro.IdConductor = Convert.ToInt32(FrmListaConductores_Trabajadores.id.Trim());
+                pro.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
+                LogProgramacionSalida.Instancia.InsertarProgramacioSalida(pro);
+                ListarProgramacionSalida();
+                LimpiarCampos();
+                Desabilitar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            /*txtIdProgramacion.Focus();
-            int id = Convert.ToInt32(txtIdProgramacion.Text.Trim());
-            EntProgramacionSalida pro = LogProgramacionSalida.Instancia.BuscarProgramacionSalidaId(id);
-            //EntProgramacionSalida procon = LogProgramacionSalida.Instancia.BuscarProgramacionSalidaCon(id);
-            EntTrabajador tra=new EntTrabajador();
-            if (pro != null)
-            {
-                txtIdProgramacion.Text = Convert.ToString(pro.IdProgramacionSalida);
-                dtFechaInicio.Value = Convert.ToDateTime(pro.FechaInicio);
-                dtFechaFin.Value = Convert.ToDateTime(pro.FechaFin);
-                txtRuta.Text = Convert.ToString(pro.IdRuta);
-                txtConductor.Text = Convert.ToString(tra.Nombres);
-                txtVehiculo.Text = Convert.ToString(pro.IdVehiculo);
-            }
-            else
-            {
-                MessageBox.Show("La programacion de salida no existe, verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
-            txtIdProgramacion.Focus();
-            EntProgramacionSalida pro = new EntProgramacionSalida();
-            pro.IdProgramacionSalida = Convert.ToInt32(txtIdProgramacion.Text);
-            DataTable dt = new DataTable();
-            dt = LogProgramacionSalida.Instancia.BuscarProgramacion(pro.IdProgramacionSalida);
-            if (txtIdProgramacion.Text != "" )
-            {
-                dataGridViewProgramacion.DataSource = dt;
-            }
-            else
+           try
             {
 
-                dataGridViewProgramacion.DataSource = LogProgramacionSalida.Instancia.ListarProgrmacionSalida();
+                txtIdProgramacion.Focus();
+                EntProgramacionSalida pro = new EntProgramacionSalida();
+                pro.IdProgramacionSalida = Convert.ToInt32(txtIdProgramacion.Text);
+                DataTable dt = new DataTable();
+                dt = LogProgramacionSalida.Instancia.BuscarProgramacion(pro.IdProgramacionSalida);
+                if (txtIdProgramacion.Text != "")
+                {
+                    dataGridViewProgramacion.DataSource = dt;
+                }
+                else
+                {
+
+                    dataGridViewProgramacion.DataSource = LogProgramacionSalida.Instancia.ListarProgrmacionSalida();
+                }
+                Desabilitar();
             }
-            btnActualizar.Enabled = true;
-            btnEliminar.Enabled = true;
+            catch (Exception)
+            {
+                ListarProgramacionSalida();
+                MessageBox.Show("Ingrese un dato correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -149,11 +152,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 pro.IdVehiculo = Convert.ToInt32(FrmReporteVehiculo.idVehiculo.Trim());
 
                 LogProgramacionSalida.Instancia.EditarProgramacionSalida(pro);
-            
+
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show("Error al actualizar: " + ex);
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             ListarProgramacionSalida();
             LimpiarCampos();
@@ -168,10 +171,50 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            btnRegistrar.Enabled = true;
-            txtIdProgramacion.Enabled = false;
+            habilitar();
+            LimpiarCampos();
         }
+        private void habilitar (){
+            btnRegistrar.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            selcon.Enabled = true;
+            selplaca.Enabled = true;
+            selrut.Enabled = true;
 
+            txtIdProgramacion.Enabled = false;
+            dtFechaInicio.Enabled = true;
+            dtFechaFin.Enabled = true;
+            txtRuta.Enabled = false;
+            txtConductor.Enabled = false;
+            txtVehiculo.Enabled = false;
+
+        }
+        private void Desabilitar()
+        {
+            btnRegistrar.Enabled = false;
+            btnNuevo.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+            selcon.Enabled = false;
+            selplaca.Enabled = false;
+            selrut.Enabled = false;
+
+            txtIdProgramacion.Enabled = true;
+            dtFechaInicio.Enabled = false;
+            dtFechaFin.Enabled = false;
+            txtRuta.Enabled = false;
+            txtConductor.Enabled = false;
+            txtVehiculo.Enabled = false;
+
+        }
         private void txtIdProgramacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -179,6 +222,47 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+             
+            }
+            ListarProgramacionSalida();
+        }
+
+        private void SalirVentana_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmProgramacionSalida_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (txtIdProgramacion.Text == "")
+            {
+                MessageBox.Show("Ingresa id para completar la accion");
+                Desabilitar();
+
+            }
+            else
+            {
+                habilitar();
+                btnRegistrar.Enabled = false;
+                btnActualizar.Enabled = true;
+            }
+        }
+
+        private void dataGridViewProgramacion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dataGridViewProgramacion.Rows[e.RowIndex].Cells["IdGastosdeViaje"].Value.ToString();
+                txtConductor.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

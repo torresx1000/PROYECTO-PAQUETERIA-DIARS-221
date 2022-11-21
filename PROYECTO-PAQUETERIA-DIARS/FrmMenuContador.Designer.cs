@@ -35,7 +35,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
             this.Pantalla = new System.Windows.Forms.Panel();
-            this.btnGenerarInformeEconomico = new System.Windows.Forms.Button();
             this.btnManPlanilla = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.Panelcajero = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnConfigLogin);
             this.panel1.Controls.Add(this.Pantalla);
-            this.panel1.Controls.Add(this.btnGenerarInformeEconomico);
             this.panel1.Controls.Add(this.btnManPlanilla);
             this.panel1.Location = new System.Drawing.Point(1, 63);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -68,7 +66,7 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(220, 0);
+            this.panel3.Location = new System.Drawing.Point(220, 1);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(578, 517);
@@ -106,18 +104,6 @@
             this.Pantalla.Name = "Pantalla";
             this.Pantalla.Size = new System.Drawing.Size(191, 171);
             this.Pantalla.TabIndex = 1;
-            // 
-            // btnGenerarInformeEconomico
-            // 
-            this.btnGenerarInformeEconomico.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarInformeEconomico.Location = new System.Drawing.Point(11, 353);
-            this.btnGenerarInformeEconomico.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGenerarInformeEconomico.Name = "btnGenerarInformeEconomico";
-            this.btnGenerarInformeEconomico.Size = new System.Drawing.Size(186, 42);
-            this.btnGenerarInformeEconomico.TabIndex = 3;
-            this.btnGenerarInformeEconomico.Text = "GENERAR INFORME ECONOMICO";
-            this.btnGenerarInformeEconomico.UseVisualStyleBackColor = true;
-            this.btnGenerarInformeEconomico.Click += new System.EventHandler(this.btnGenerarInformeEconomico_Click);
             // 
             // btnManPlanilla
             // 
@@ -239,7 +225,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConfigLogin;
         private System.Windows.Forms.Panel Pantalla;
-        private System.Windows.Forms.Button btnGenerarInformeEconomico;
         private System.Windows.Forms.Button btnManPlanilla;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelContenedor;

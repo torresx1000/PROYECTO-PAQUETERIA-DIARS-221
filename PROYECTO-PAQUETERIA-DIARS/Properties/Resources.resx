@@ -202,6 +202,9 @@
   <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1792305" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1792305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,7 +256,7 @@
   <data name="Black Modern Geometric Gaming Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black Modern Geometric Gaming Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1792305" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1792305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="90282-Trujillo-Plaza-De-Armas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\90282-Trujillo-Plaza-De-Armas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
