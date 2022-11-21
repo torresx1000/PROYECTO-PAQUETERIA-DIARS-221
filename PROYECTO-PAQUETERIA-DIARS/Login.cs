@@ -31,7 +31,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             {
                 
                 cn.Open();
-                SqlCommand cmd = new SqlCommand("select Nombres, Cargo from Trabajadores where Usuario=@usuario and Password=@password", cn);
+                SqlCommand cmd = new SqlCommand("select Nombres, Cargo from Trabajadores where Usuario=@usuario and Password=@password and EstadoTrabajador='1'", cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("password", password);
                 SqlDataAdapter datos = new SqlDataAdapter(cmd);
@@ -86,7 +86,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y/o Contraseña Incorrecta");
+                    MessageBox.Show("Usuario y/o Contraseña Incorrecta O Trabajador Inhabilitado");
                     textUsuario.Clear();
                     textPassword.Clear();
                 }
