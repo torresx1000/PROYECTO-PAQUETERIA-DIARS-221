@@ -1,4 +1,5 @@
-﻿using CAPAENTIDAD;
+﻿using CAPADATOS;
+using CAPAENTIDAD;
 using CAPALOGICA;
 using System;
 using System.Collections.Generic;
@@ -35,22 +36,29 @@ namespace PROYECTO_PAQUETERIA_DIARS
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            EntOrdenDeCompra ordenDeCompra= new EntOrdenDeCompra();
-            ordenDeCompra.IdLista=Convert.ToInt32(txtIdListas.Text.Trim());
-            ordenDeCompra.FirmaNom=txtfirma.Text.Trim();
-            ordenDeCompra.Descripcion=txtDescripocion.Text.Trim();
-            ordenDeCompra.Fecha = dtpFechaOrden.Value;
+            try
+            {
+                EntOrdenDeCompra ordenDeCompra = new EntOrdenDeCompra();
+                ordenDeCompra.IdLista = Convert.ToInt32(txtIdListas.Text.Trim());
+                ordenDeCompra.FirmaNom = txtfirma.Text.Trim();
+                ordenDeCompra.Descripcion = txtDescripocion.Text.Trim();
+                ordenDeCompra.Fecha = dtpFechaOrden.Value;
 
-            LogOrdenCompra.Instancia.InsertarOrdenCompra(ordenDeCompra);
-            ListarOrdenCompra();
-            Limpiarxd();
-            btnAñadir.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
+                LogOrdenCompra.Instancia.InsertarOrdenCompra(ordenDeCompra);
+                ListarOrdenCompra();
+                Limpiarxd();
+                btnAñadir.Enabled = false;
+                btnActualizar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnBuscar.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void btnSeleccionarAutoriza_Click(object sender, EventArgs e)
+            private void btnSeleccionarAutoriza_Click(object sender, EventArgs e)
         {
 
         }
@@ -149,6 +157,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string id = dataGridView1.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
+                txtCodigo.Text = id;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
