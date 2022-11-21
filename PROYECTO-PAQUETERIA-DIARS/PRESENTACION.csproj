@@ -605,6 +605,12 @@
   <ItemGroup>
     <None Include="Resources\2413744.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e334394f-eff7-4963-90a6-fac908fcd589.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuCajero));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConfigLogin = new System.Windows.Forms.Button();
@@ -36,12 +37,12 @@
             this.btnRegistrarPagoUtilidades = new System.Windows.Forms.Button();
             this.btnRegistrarPagoDeCotizacion = new System.Windows.Forms.Button();
             this.Panelcajero = new System.Windows.Forms.Panel();
-            this.txthora = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.Cajero = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Cajero = new System.Windows.Forms.Panel();
+            this.txthora = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.Panelcajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txthora)).BeginInit();
@@ -131,17 +132,6 @@
             this.Panelcajero.Size = new System.Drawing.Size(1117, 75);
             this.Panelcajero.TabIndex = 8;
             // 
-            // txthora
-            // 
-            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
-            this.txthora.Location = new System.Drawing.Point(12, 22);
-            this.txthora.Name = "txthora";
-            this.txthora.Size = new System.Drawing.Size(61, 31);
-            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.txthora.TabIndex = 8;
-            this.txthora.TabStop = false;
-            this.txthora.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -181,6 +171,11 @@
             this.lblHora.TabIndex = 5;
             this.lblHora.Text = "HORA";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Cajero
             // 
             this.Cajero.BackgroundImage = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.Captura_de_pantalla_2022_11_20_155822;
@@ -189,10 +184,16 @@
             this.Cajero.Size = new System.Drawing.Size(889, 516);
             this.Cajero.TabIndex = 9;
             // 
-            // timer1
+            // txthora
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.txthora.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources._2413744;
+            this.txthora.Location = new System.Drawing.Point(12, 22);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(61, 31);
+            this.txthora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txthora.TabIndex = 8;
+            this.txthora.TabStop = false;
+            this.txthora.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmMenuCajero
             // 
@@ -203,6 +204,7 @@
             this.Controls.Add(this.Panelcajero);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMenuCajero";
             this.Text = "FrmMenuCajero";

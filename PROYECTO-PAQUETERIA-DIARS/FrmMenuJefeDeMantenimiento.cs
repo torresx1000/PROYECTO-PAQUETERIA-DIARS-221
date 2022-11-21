@@ -19,25 +19,35 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmMenuJefeDeMantenimiento()
         {
             InitializeComponent();
+            AbrirPanelistaIma(new Fondos());
         }
         public void AbrirFrmInPanel(object FormHijo)
         {
-            if (this.panelContenedor2.Controls.Count > 0)
-                this.panelContenedor2.Controls.RemoveAt(0);
+            if (this.mantenimietopanel.Controls.Count > 0)
+                this.mantenimietopanel.Controls.RemoveAt(0);
             Form fh = FormHijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-            this.panelContenedor2.Controls.Add(fh);
-            this.panelContenedor2.Tag = fh;
+            this.mantenimietopanel.Controls.Add(fh);
+            this.mantenimietopanel.Tag = fh;
             fh.Show();
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            Login login = new Login();
-            login.ShowDialog();
+            this.Close();
+            Program.inicio.Show();
         }
-
+        public void AbrirPanelistaIma(object FormHijo)
+        {
+            if (this.pantalla.Controls.Count > 0)
+                this.pantalla.Controls.RemoveAt(0);
+            Form fh = FormHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.pantalla.Controls.Add(fh);
+            this.pantalla.Tag = fh;
+            fh.Show();
+        }
         private void btnRegistrarDiagnostico_Click(object sender, EventArgs e)
         {
             AbrirFrmInPanel(new FrmDiagnostico());
@@ -46,6 +56,17 @@ namespace PROYECTO_PAQUETERIA_DIARS
         private void btnConfigLogin_Click(object sender, EventArgs e)
         {
             AbrirFrmInPanel(new FromPassword());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void txthora_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

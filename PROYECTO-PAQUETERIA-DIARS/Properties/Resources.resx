@@ -139,11 +139,11 @@
   <data name="icono-de-lista-mantenimiento-comprobación-coches-vector-195510702-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icono-de-lista-mantenimiento-comprobación-coches-vector-195510702-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2413744" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2413744.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="75863" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\75863.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +169,11 @@
   <data name="080eb9d6-5405-4974-b7b1-bcd83c5ab64c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\080eb9d6-5405-4974-b7b1-bcd83c5ab64c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-money-bag-currency-symbol-finance-money-bag-sign-commerce-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52811f98-ea96-44fe-a496-f6e59a7e8c6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52811f98-ea96-44fe-a496-f6e59a7e8c6d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diavehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diavehiculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -201,6 +204,9 @@
   </data>
   <data name="WhatsApp Image 2022-11-12 at 5.592" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2022-11-12 at 5.59.40 PM (2)2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2400123" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2400123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +250,7 @@
   <data name="Black Modern Geometric Gaming Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black Modern Geometric Gaming Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2413744" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2413744.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="e334394f-eff7-4963-90a6-fac908fcd589" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e334394f-eff7-4963-90a6-fac908fcd589.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

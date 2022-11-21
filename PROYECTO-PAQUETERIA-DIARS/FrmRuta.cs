@@ -313,5 +313,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
                 return;
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
