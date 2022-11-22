@@ -46,7 +46,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvDiagnostico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdDiagnostico = dgvDiagnostico.Rows[e.RowIndex].Cells["IDdIAGNOSTICO"].Value.ToString();
+            try
+            {
+
+                IdDiagnostico = dgvDiagnostico.Rows[e.RowIndex].Cells["IDdIAGNOSTICO"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void txtItem_TextChanged(object sender, EventArgs e)

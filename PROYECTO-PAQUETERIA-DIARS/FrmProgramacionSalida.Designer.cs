@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProgramacionSalida));
             this.dataGridViewProgramacion = new System.Windows.Forms.DataGridView();
             this.PanelBotones = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdProgramacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.txtConductor = new System.Windows.Forms.TextBox();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.SalirVentana = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProgramacion)).BeginInit();
@@ -66,10 +66,13 @@
             // 
             // dataGridViewProgramacion
             // 
+            this.dataGridViewProgramacion.AllowUserToAddRows = false;
+            this.dataGridViewProgramacion.AllowUserToDeleteRows = false;
             this.dataGridViewProgramacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProgramacion.Location = new System.Drawing.Point(43, 337);
-            this.dataGridViewProgramacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewProgramacion.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewProgramacion.Name = "dataGridViewProgramacion";
+            this.dataGridViewProgramacion.ReadOnly = true;
             this.dataGridViewProgramacion.RowHeadersWidth = 51;
             this.dataGridViewProgramacion.RowTemplate.Height = 24;
             this.dataGridViewProgramacion.Size = new System.Drawing.Size(770, 225);
@@ -90,12 +93,25 @@
             this.PanelBotones.Size = new System.Drawing.Size(209, 294);
             this.PanelBotones.TabIndex = 3;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(23, 101);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(164, 39);
+            this.btnEditar.TabIndex = 44;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(21, 240);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(164, 39);
             this.btnLimpiar.TabIndex = 47;
@@ -108,7 +124,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.GreenYellow;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(23, 8);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(164, 39);
             this.btnNuevo.TabIndex = 46;
@@ -121,7 +137,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(22, 195);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(164, 39);
             this.btnEliminar.TabIndex = 45;
@@ -134,7 +150,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(21, 146);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(164, 39);
             this.btnBuscar.TabIndex = 44;
@@ -142,31 +158,31 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(340, 267);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(129, 29);
-            this.btnActualizar.TabIndex = 43;
-            this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(22, 53);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(164, 39);
             this.btnRegistrar.TabIndex = 41;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(340, 267);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(129, 29);
+            this.btnActualizar.TabIndex = 43;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label1
             // 
@@ -182,7 +198,7 @@
             // txtIdProgramacion
             // 
             this.txtIdProgramacion.Location = new System.Drawing.Point(191, 22);
-            this.txtIdProgramacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdProgramacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdProgramacion.Multiline = true;
             this.txtIdProgramacion.Name = "txtIdProgramacion";
             this.txtIdProgramacion.Size = new System.Drawing.Size(257, 27);
@@ -204,7 +220,7 @@
             // 
             this.dtFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaInicio.Location = new System.Drawing.Point(191, 72);
-            this.dtFechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtFechaInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtFechaInicio.Name = "dtFechaInicio";
             this.dtFechaInicio.Size = new System.Drawing.Size(257, 23);
             this.dtFechaInicio.TabIndex = 3;
@@ -224,7 +240,7 @@
             // 
             this.dtFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaFin.Location = new System.Drawing.Point(191, 113);
-            this.dtFechaFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtFechaFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtFechaFin.Name = "dtFechaFin";
             this.dtFechaFin.Size = new System.Drawing.Size(257, 23);
             this.dtFechaFin.TabIndex = 5;
@@ -312,7 +328,7 @@
             this.panel1.Controls.Add(this.txtIdProgramacion);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(160, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 303);
             this.panel1.TabIndex = 1;
@@ -354,19 +370,6 @@
             this.SalirVentana.Zoom = 10;
             this.SalirVentana.Click += new System.EventHandler(this.SalirVentana_Click);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(23, 101);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(164, 39);
-            this.btnEditar.TabIndex = 44;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PROYECTO_PAQUETERIA_DIARS.Properties.Resources.iconos_de_calendario_y_reloj_icono_aislado_ilustración_vectorial_194001239_removebg_preview;
@@ -401,7 +404,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmProgramacionSalida";
             this.Text = "FrmProgramacionSalida";
             this.Load += new System.EventHandler(this.FrmProgramacionSalida_Load);

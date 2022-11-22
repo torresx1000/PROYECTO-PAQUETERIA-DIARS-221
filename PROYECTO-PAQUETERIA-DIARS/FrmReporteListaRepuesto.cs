@@ -49,7 +49,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvListaRepuesto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdLista = dgvListaRepuesto.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
+            try
+            {
+
+                IdLista = dgvListaRepuesto.Rows[e.RowIndex].Cells["Codigo"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

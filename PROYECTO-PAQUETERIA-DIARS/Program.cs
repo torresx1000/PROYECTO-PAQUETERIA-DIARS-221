@@ -16,10 +16,9 @@ namespace PROYECTO_PAQUETERIA_DIARS
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false); 
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Pantalla_de_Carga());
             Application.Run(inicio =new Login());
-            Application.Run(new Login());
             //Application.Run(new FrmRemitente_Destinatario());
             //Application.Run(new FrmMenuGerente("ADMINISTRADOR","SISTEMAS"));
             //Application.Run(new FrmMenuSecretaria());
@@ -51,6 +50,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             //Application.Run(new FrmGastosDeViaje());
             //Application.Run(new FrmPagoUtilidades());
             //Application.Run(new FrmCotizacion());
+            
         }
     }
 }

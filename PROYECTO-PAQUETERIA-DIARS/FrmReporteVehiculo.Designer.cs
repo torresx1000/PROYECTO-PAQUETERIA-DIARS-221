@@ -73,9 +73,12 @@
             // 
             // dgvVehiculo
             // 
+            this.dgvVehiculo.AllowUserToAddRows = false;
+            this.dgvVehiculo.AllowUserToDeleteRows = false;
             this.dgvVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehiculo.Location = new System.Drawing.Point(12, 178);
             this.dgvVehiculo.Name = "dgvVehiculo";
+            this.dgvVehiculo.ReadOnly = true;
             this.dgvVehiculo.RowHeadersWidth = 51;
             this.dgvVehiculo.Size = new System.Drawing.Size(882, 252);
             this.dgvVehiculo.TabIndex = 5;

@@ -160,6 +160,9 @@
   <data name="istockphoto-1304219430-170667a-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-1304219430-170667a-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_484375014-stock-illustration-allowance-of-weightage-for-international-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,6 +205,9 @@
   <data name="2481723" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2481723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1719697" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1719697.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1792305" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1792305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,8 +223,8 @@
   <data name="2400123" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2400123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4998821" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4998821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="90282-Trujillo-Plaza-De-Armas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\90282-Trujillo-Plaza-De-Armas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5942b881-ae8b-426a-b707-772d10f7a15c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5942b881-ae8b-426a-b707-772d10f7a15c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,7 +262,7 @@
   <data name="Black Modern Geometric Gaming Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black Modern Geometric Gaming Logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="90282-Trujillo-Plaza-De-Armas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\90282-Trujillo-Plaza-De-Armas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="109666" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\109666.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

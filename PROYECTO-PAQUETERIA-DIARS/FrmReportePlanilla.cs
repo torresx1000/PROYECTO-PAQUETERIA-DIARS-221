@@ -45,7 +45,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvPlanilla_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id=dgvPlanilla.Rows[e.RowIndex].Cells["IdPlanilla"].Value.ToString();
+            try
+            {
+
+                id = dgvPlanilla.Rows[e.RowIndex].Cells["IdPlanilla"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }

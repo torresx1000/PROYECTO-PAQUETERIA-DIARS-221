@@ -124,9 +124,9 @@
             this.groupBox4.Controls.Add(this.bunifuCustomLabel1);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 43);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(202, 272);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
@@ -135,7 +135,7 @@
             // btnCalcularRem
             // 
             this.btnCalcularRem.Location = new System.Drawing.Point(118, 140);
-            this.btnCalcularRem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalcularRem.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcularRem.Name = "btnCalcularRem";
             this.btnCalcularRem.Size = new System.Drawing.Size(72, 22);
             this.btnCalcularRem.TabIndex = 42;
@@ -154,7 +154,7 @@
             this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.GreenYellow;
             this.bunifuGradientPanel5.Location = new System.Drawing.Point(-1, 199);
-            this.bunifuGradientPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
             this.bunifuGradientPanel5.Quality = 10;
             this.bunifuGradientPanel5.Size = new System.Drawing.Size(202, 70);
@@ -165,7 +165,7 @@
             this.txtAdicionalR.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAdicionalR.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdicionalR.Location = new System.Drawing.Point(20, 37);
-            this.txtAdicionalR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAdicionalR.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdicionalR.Multiline = true;
             this.txtAdicionalR.Name = "txtAdicionalR";
             this.txtAdicionalR.Size = new System.Drawing.Size(135, 24);
@@ -191,7 +191,7 @@
             this.txtCts.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtCts.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCts.Location = new System.Drawing.Point(157, 112);
-            this.txtCts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCts.Margin = new System.Windows.Forms.Padding(2);
             this.txtCts.Name = "txtCts";
             this.txtCts.Size = new System.Drawing.Size(35, 19);
             this.txtCts.TabIndex = 9;
@@ -215,7 +215,7 @@
             this.txtMovAsist.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtMovAsist.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovAsist.Location = new System.Drawing.Point(157, 92);
-            this.txtMovAsist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMovAsist.Margin = new System.Windows.Forms.Padding(2);
             this.txtMovAsist.Name = "txtMovAsist";
             this.txtMovAsist.Size = new System.Drawing.Size(35, 19);
             this.txtMovAsist.TabIndex = 7;
@@ -239,7 +239,7 @@
             this.txtReumVac.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtReumVac.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReumVac.Location = new System.Drawing.Point(157, 72);
-            this.txtReumVac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReumVac.Margin = new System.Windows.Forms.Padding(2);
             this.txtReumVac.Name = "txtReumVac";
             this.txtReumVac.Size = new System.Drawing.Size(35, 19);
             this.txtReumVac.TabIndex = 5;
@@ -263,7 +263,7 @@
             this.txtAsigFam.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAsigFam.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAsigFam.Location = new System.Drawing.Point(157, 51);
-            this.txtAsigFam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAsigFam.Margin = new System.Windows.Forms.Padding(2);
             this.txtAsigFam.Name = "txtAsigFam";
             this.txtAsigFam.Size = new System.Drawing.Size(35, 19);
             this.txtAsigFam.TabIndex = 3;
@@ -287,7 +287,7 @@
             this.txtSueldoComp.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtSueldoComp.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSueldoComp.Location = new System.Drawing.Point(157, 30);
-            this.txtSueldoComp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSueldoComp.Margin = new System.Windows.Forms.Padding(2);
             this.txtSueldoComp.Name = "txtSueldoComp";
             this.txtSueldoComp.Size = new System.Drawing.Size(35, 19);
             this.txtSueldoComp.TabIndex = 1;
@@ -328,9 +328,9 @@
             this.groupBox5.Controls.Add(this.txtOnpMonto);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(215, 43);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(259, 273);
             this.groupBox5.TabIndex = 18;
             this.groupBox5.TabStop = false;
@@ -339,7 +339,7 @@
             // btnCalcularDes
             // 
             this.btnCalcularDes.Location = new System.Drawing.Point(182, 191);
-            this.btnCalcularDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalcularDes.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcularDes.Name = "btnCalcularDes";
             this.btnCalcularDes.Size = new System.Drawing.Size(72, 22);
             this.btnCalcularDes.TabIndex = 42;
@@ -358,7 +358,7 @@
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.GreenYellow;
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 218);
-            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(259, 52);
@@ -369,7 +369,7 @@
             this.txttotalDescuentos.BorderColor = System.Drawing.Color.SeaGreen;
             this.txttotalDescuentos.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotalDescuentos.Location = new System.Drawing.Point(29, 24);
-            this.txttotalDescuentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttotalDescuentos.Margin = new System.Windows.Forms.Padding(2);
             this.txttotalDescuentos.Multiline = true;
             this.txttotalDescuentos.Name = "txttotalDescuentos";
             this.txttotalDescuentos.Size = new System.Drawing.Size(218, 23);
@@ -393,7 +393,7 @@
             // 
             this.txtAdelantos.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAdelantos.Location = new System.Drawing.Point(142, 170);
-            this.txtAdelantos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAdelantos.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdelantos.Name = "txtAdelantos";
             this.txtAdelantos.Size = new System.Drawing.Size(52, 19);
             this.txtAdelantos.TabIndex = 31;
@@ -405,7 +405,7 @@
             // 
             this.txtAfpFondo.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAfpFondo.Location = new System.Drawing.Point(142, 26);
-            this.txtAfpFondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAfpFondo.Margin = new System.Windows.Forms.Padding(2);
             this.txtAfpFondo.Name = "txtAfpFondo";
             this.txtAfpFondo.Size = new System.Drawing.Size(52, 19);
             this.txtAfpFondo.TabIndex = 17;
@@ -439,7 +439,7 @@
             // 
             this.txtRetenJud.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtRetenJud.Location = new System.Drawing.Point(142, 150);
-            this.txtRetenJud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRetenJud.Margin = new System.Windows.Forms.Padding(2);
             this.txtRetenJud.Name = "txtRetenJud";
             this.txtRetenJud.Size = new System.Drawing.Size(52, 19);
             this.txtRetenJud.TabIndex = 29;
@@ -473,7 +473,7 @@
             // 
             this.txtAfpCom.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAfpCom.Location = new System.Drawing.Point(142, 46);
-            this.txtAfpCom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAfpCom.Margin = new System.Windows.Forms.Padding(2);
             this.txtAfpCom.Name = "txtAfpCom";
             this.txtAfpCom.Size = new System.Drawing.Size(52, 19);
             this.txtAfpCom.TabIndex = 19;
@@ -485,7 +485,7 @@
             // 
             this.txtretenc5.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtretenc5.Location = new System.Drawing.Point(142, 129);
-            this.txtretenc5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtretenc5.Margin = new System.Windows.Forms.Padding(2);
             this.txtretenc5.Name = "txtretenc5";
             this.txtretenc5.Size = new System.Drawing.Size(52, 19);
             this.txtretenc5.TabIndex = 27;
@@ -519,7 +519,7 @@
             // 
             this.txtAfpSeguro.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtAfpSeguro.Location = new System.Drawing.Point(142, 68);
-            this.txtAfpSeguro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAfpSeguro.Margin = new System.Windows.Forms.Padding(2);
             this.txtAfpSeguro.Name = "txtAfpSeguro";
             this.txtAfpSeguro.Size = new System.Drawing.Size(52, 19);
             this.txtAfpSeguro.TabIndex = 21;
@@ -531,7 +531,7 @@
             // 
             this.txtFaltas.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtFaltas.Location = new System.Drawing.Point(142, 109);
-            this.txtFaltas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFaltas.Margin = new System.Windows.Forms.Padding(2);
             this.txtFaltas.Name = "txtFaltas";
             this.txtFaltas.Size = new System.Drawing.Size(52, 19);
             this.txtFaltas.TabIndex = 25;
@@ -565,7 +565,7 @@
             // 
             this.txtOnpMonto.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtOnpMonto.Location = new System.Drawing.Point(142, 89);
-            this.txtOnpMonto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOnpMonto.Margin = new System.Windows.Forms.Padding(2);
             this.txtOnpMonto.Name = "txtOnpMonto";
             this.txtOnpMonto.Size = new System.Drawing.Size(52, 19);
             this.txtOnpMonto.TabIndex = 23;
@@ -583,9 +583,9 @@
             this.groupBox6.Controls.Add(this.bunifuCustomLabel18);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(478, 43);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(169, 273);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
@@ -595,7 +595,7 @@
             // btnCalcularApo
             // 
             this.btnCalcularApo.Location = new System.Drawing.Point(88, 105);
-            this.btnCalcularApo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalcularApo.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcularApo.Name = "btnCalcularApo";
             this.btnCalcularApo.Size = new System.Drawing.Size(72, 22);
             this.btnCalcularApo.TabIndex = 41;
@@ -614,7 +614,7 @@
             this.bunifuGradientPanel7.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel7.GradientTopRight = System.Drawing.Color.GreenYellow;
             this.bunifuGradientPanel7.Location = new System.Drawing.Point(0, 215);
-            this.bunifuGradientPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel7.Name = "bunifuGradientPanel7";
             this.bunifuGradientPanel7.Quality = 10;
             this.bunifuGradientPanel7.Size = new System.Drawing.Size(169, 58);
@@ -623,7 +623,7 @@
             // txtAportesTotal
             // 
             this.txtAportesTotal.Location = new System.Drawing.Point(22, 26);
-            this.txtAportesTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAportesTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtAportesTotal.Name = "txtAportesTotal";
             this.txtAportesTotal.Size = new System.Drawing.Size(140, 19);
             this.txtAportesTotal.TabIndex = 1;
@@ -647,7 +647,7 @@
             this.txtSctr.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtSctr.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSctr.Location = new System.Drawing.Point(109, 69);
-            this.txtSctr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSctr.Margin = new System.Windows.Forms.Padding(2);
             this.txtSctr.Name = "txtSctr";
             this.txtSctr.Size = new System.Drawing.Size(53, 19);
             this.txtSctr.TabIndex = 35;
@@ -671,7 +671,7 @@
             this.txtEsalud.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtEsalud.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEsalud.Location = new System.Drawing.Point(109, 37);
-            this.txtEsalud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEsalud.Margin = new System.Windows.Forms.Padding(2);
             this.txtEsalud.Name = "txtEsalud";
             this.txtEsalud.Size = new System.Drawing.Size(53, 19);
             this.txtEsalud.TabIndex = 33;
@@ -701,7 +701,7 @@
             this.bunifuGradientPanel6.GradientTopLeft = System.Drawing.Color.LawnGreen;
             this.bunifuGradientPanel6.GradientTopRight = System.Drawing.Color.LawnGreen;
             this.bunifuGradientPanel6.Location = new System.Drawing.Point(653, 44);
-            this.bunifuGradientPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel6.Name = "bunifuGradientPanel6";
             this.bunifuGradientPanel6.Quality = 10;
             this.bunifuGradientPanel6.Size = new System.Drawing.Size(227, 116);
@@ -712,7 +712,7 @@
             this.txtCuentaAhorro.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtCuentaAhorro.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuentaAhorro.Location = new System.Drawing.Point(16, 34);
-            this.txtCuentaAhorro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCuentaAhorro.Margin = new System.Windows.Forms.Padding(2);
             this.txtCuentaAhorro.Multiline = true;
             this.txtCuentaAhorro.Name = "txtCuentaAhorro";
             this.txtCuentaAhorro.Size = new System.Drawing.Size(194, 56);
@@ -736,7 +736,7 @@
             this.dtmFechaBoleta.CalendarMonthBackground = System.Drawing.Color.DarkGray;
             this.dtmFechaBoleta.Font = new System.Drawing.Font("Microsoft Yi Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmFechaBoleta.Location = new System.Drawing.Point(652, 183);
-            this.dtmFechaBoleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtmFechaBoleta.Margin = new System.Windows.Forms.Padding(2);
             this.dtmFechaBoleta.Name = "dtmFechaBoleta";
             this.dtmFechaBoleta.Size = new System.Drawing.Size(219, 20);
             this.dtmFechaBoleta.TabIndex = 41;
@@ -753,7 +753,7 @@
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.DarkOliveGreen;
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.GreenYellow;
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(653, 206);
-            this.bunifuGradientPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(218, 110);
@@ -764,7 +764,7 @@
             this.txtNetoPago.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtNetoPago.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetoPago.Location = new System.Drawing.Point(22, 37);
-            this.txtNetoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNetoPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtNetoPago.Multiline = true;
             this.txtNetoPago.Name = "txtNetoPago";
             this.txtNetoPago.Size = new System.Drawing.Size(180, 64);
@@ -816,7 +816,7 @@
             // txtpagoutilidades
             // 
             this.txtpagoutilidades.Location = new System.Drawing.Point(130, 10);
-            this.txtpagoutilidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpagoutilidades.Margin = new System.Windows.Forms.Padding(2);
             this.txtpagoutilidades.Name = "txtpagoutilidades";
             this.txtpagoutilidades.Size = new System.Drawing.Size(142, 20);
             this.txtpagoutilidades.TabIndex = 46;
@@ -825,7 +825,7 @@
             // txtTrabajador
             // 
             this.txtTrabajador.Location = new System.Drawing.Point(616, 7);
-            this.txtTrabajador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTrabajador.Margin = new System.Windows.Forms.Padding(2);
             this.txtTrabajador.Name = "txtTrabajador";
             this.txtTrabajador.Size = new System.Drawing.Size(142, 20);
             this.txtTrabajador.TabIndex = 47;
@@ -836,7 +836,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(710, 321);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(155, 39);
             this.btnLimpiar.TabIndex = 53;
@@ -849,7 +849,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.GreenYellow;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(16, 319);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(108, 39);
             this.btnNuevo.TabIndex = 52;
@@ -862,7 +862,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(541, 321);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(164, 39);
             this.btnEliminar.TabIndex = 51;
@@ -875,7 +875,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(405, 321);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(129, 39);
             this.btnBuscar.TabIndex = 50;
@@ -888,7 +888,7 @@
             this.btnActualizar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Location = new System.Drawing.Point(264, 321);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(136, 39);
             this.btnActualizar.TabIndex = 49;
@@ -901,7 +901,7 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(128, 321);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(131, 39);
             this.btnRegistrar.TabIndex = 48;
@@ -911,10 +911,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 364);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(871, 145);
@@ -924,7 +927,7 @@
             // btnSeleccionarTra
             // 
             this.btnSeleccionarTra.Location = new System.Drawing.Point(770, 7);
-            this.btnSeleccionarTra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionarTra.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionarTra.Name = "btnSeleccionarTra";
             this.btnSeleccionarTra.Size = new System.Drawing.Size(100, 22);
             this.btnSeleccionarTra.TabIndex = 55;
@@ -935,7 +938,7 @@
             // SeleccionarPla
             // 
             this.SeleccionarPla.Location = new System.Drawing.Point(448, 8);
-            this.SeleccionarPla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeleccionarPla.Margin = new System.Windows.Forms.Padding(2);
             this.SeleccionarPla.Name = "SeleccionarPla";
             this.SeleccionarPla.Size = new System.Drawing.Size(100, 22);
             this.SeleccionarPla.TabIndex = 58;
@@ -946,7 +949,7 @@
             // txtPlanilla
             // 
             this.txtPlanilla.Location = new System.Drawing.Point(375, 12);
-            this.txtPlanilla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlanilla.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlanilla.Name = "txtPlanilla";
             this.txtPlanilla.Size = new System.Drawing.Size(70, 20);
             this.txtPlanilla.TabIndex = 57;
@@ -991,7 +994,7 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPagoUtilidades";
             this.Text = "Trabajador:";
             this.Load += new System.EventHandler(this.FrmPagoUtilidades_Load);

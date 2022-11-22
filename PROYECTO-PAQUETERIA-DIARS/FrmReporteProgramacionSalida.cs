@@ -44,7 +44,18 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvPS_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdPS = dgvPS.Rows[e.RowIndex].Cells["IdProgramacionSalida"].Value.ToString();
+
+            try
+            {
+
+                IdPS = dgvPS.Rows[e.RowIndex].Cells["IdProgramacionSalida"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

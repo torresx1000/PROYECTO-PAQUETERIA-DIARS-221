@@ -96,10 +96,13 @@
             // 
             // dgvLote
             // 
+            this.dgvLote.AllowUserToAddRows = false;
+            this.dgvLote.AllowUserToDeleteRows = false;
             this.dgvLote.BackgroundColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLote.Location = new System.Drawing.Point(35, 190);
             this.dgvLote.Name = "dgvLote";
+            this.dgvLote.ReadOnly = true;
             this.dgvLote.RowHeadersWidth = 51;
             this.dgvLote.Size = new System.Drawing.Size(553, 125);
             this.dgvLote.TabIndex = 7;
@@ -136,7 +139,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvLote);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReporteLote";
             this.Text = "FrmReporteLote";
             this.groupBox1.ResumeLayout(false);

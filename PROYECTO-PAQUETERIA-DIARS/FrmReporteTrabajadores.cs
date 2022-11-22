@@ -74,13 +74,21 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvTrabajadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            nombre = dgvTrabajadores.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
-            id = dgvTrabajadores.Rows[e.RowIndex].Cells["Id_Trabajador"].Value.ToString();
-            apellidopat= dgvTrabajadores.Rows[e.RowIndex].Cells["ApPaterno"].Value.ToString();
-            apellidomat= dgvTrabajadores.Rows[e.RowIndex].Cells["ApMaterno"].Value.ToString();
-            fechanac= dgvTrabajadores.Rows[e.RowIndex].Cells["FechaNac"].Value.ToString();
-            direccion= dgvTrabajadores.Rows[e.RowIndex].Cells["Direccion"].Value.ToString();
-            dni= dgvTrabajadores.Rows[e.RowIndex].Cells["Dni"].Value.ToString();
+            try
+            {
+                nombre = dgvTrabajadores.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
+                id = dgvTrabajadores.Rows[e.RowIndex].Cells["Id_Trabajador"].Value.ToString();
+                apellidopat = dgvTrabajadores.Rows[e.RowIndex].Cells["ApPaterno"].Value.ToString();
+                apellidomat = dgvTrabajadores.Rows[e.RowIndex].Cells["ApMaterno"].Value.ToString();
+                fechanac = dgvTrabajadores.Rows[e.RowIndex].Cells["FechaNac"].Value.ToString();
+                direccion = dgvTrabajadores.Rows[e.RowIndex].Cells["Direccion"].Value.ToString();
+                dni = dgvTrabajadores.Rows[e.RowIndex].Cells["Dni"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }

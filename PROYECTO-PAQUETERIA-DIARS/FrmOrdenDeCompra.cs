@@ -18,18 +18,28 @@ namespace PROYECTO_PAQUETERIA_DIARS
         public FrmOrdenDeCompra()
         {
             InitializeComponent();
-            ListarOrdenCompra();    
-            btnAñadir.Enabled= false;
-            btnActualizar.Enabled= false;
-            btnEliminar.Enabled= false;
-            btnBuscar.Enabled= true;
+            ListarOrdenCompra();
+            Limpiarxd();
+
+
         }
         public void Limpiarxd() {
-            txtCodigo.Text = "";
-            txtIdListas.Text = "";
-            txtfirma.Text = "";
-            txtDescripocion.Text = "";
-           // dtpFechaOrden.Value;
+            btnAñadir.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnBuscar.Enabled = true;
+            btnSeleccionarListaRepuesto.Enabled = false;
+            txtCodigo.Clear();
+            txtDescripocion.Clear();
+            txtfirma.Clear();
+            txtIdListas.Clear();
+
+
+            txtCodigo.Enabled = true;
+            txtDescripocion.Enabled = false;
+            txtfirma.Enabled = false;
+            txtIdListas.Enabled = false;
+            dtpFechaOrden.Enabled = false;
         }
         public void ListarOrdenCompra() {
             dataGridView1.DataSource = LogOrdenCompra.Instancia.ListarOrdenCompra();
@@ -72,6 +82,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            btnAñadir.Enabled = false;
+            btnBuscar.Enabled = false;
+            txtCodigo.Enabled = true;
+            txtDescripocion.Enabled = false;
+            txtfirma.Enabled = true;
+            txtIdListas.Enabled = true;
+            txtCodigo.Enabled = false;
+            txtDescripocion.Enabled = true;
+            txtfirma.Enabled = true;
+            txtIdListas.Enabled = true;
             try
             {
                 EntOrdenDeCompra ordenDeCompra = new EntOrdenDeCompra();
@@ -98,6 +118,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            try {     
             txtCodigo.Focus();
             int codigo = Convert.ToInt32(txtCodigo.Text.Trim());
             EntOrdenDeCompra Rut = LogOrdenCompra.Instancia.BuscarOrdenCompraId(codigo);
@@ -117,6 +138,11 @@ namespace PROYECTO_PAQUETERIA_DIARS
             btnActualizar.Enabled = false;
             btnEliminar.Enabled = false;
             btnBuscar.Enabled = true;
+            }
+            catch {
+                MessageBox.Show("ID no valido, verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -129,7 +155,7 @@ namespace PROYECTO_PAQUETERIA_DIARS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error.." + ex);
+                MessageBox.Show("ID no valido, verifique.", "Trabajador: Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             ListarOrdenCompra();
             Limpiarxd();
@@ -141,17 +167,25 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            dtpFechaOrden.Enabled = false;
             btnAñadir.Enabled = true;
             btnBuscar.Enabled = false;
+            btnNuevo.Enabled = false;
+            txtCodigo.Enabled = true;
+            txtDescripocion.Enabled = false;
+            txtfirma.Enabled = true;
+            txtIdListas.Enabled = true;
+            txtCodigo.Enabled = false;
+            txtDescripocion.Enabled = true;
+            txtfirma.Enabled = true;
+            txtIdListas.Enabled = true;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiarxd();
-            btnAñadir.Enabled = false;
-            btnActualizar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnBuscar.Enabled = true;
+              
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -169,6 +203,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
             catch (Exception)
             {
                 MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }

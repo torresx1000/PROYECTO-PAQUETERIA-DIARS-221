@@ -80,8 +80,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvConductores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            nombre = dgvConductores.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
-            id = dgvConductores.Rows[e.RowIndex].Cells["Id_Trabajador"].Value.ToString();
+            try
+            {
+                nombre = dgvConductores.Rows[e.RowIndex].Cells["Nombres"].Value.ToString();
+                id = dgvConductores.Rows[e.RowIndex].Cells["Id_Trabajador"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No permitido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

@@ -65,10 +65,13 @@
             // 
             // dgvPS
             // 
+            this.dgvPS.AllowUserToAddRows = false;
+            this.dgvPS.AllowUserToDeleteRows = false;
             this.dgvPS.BackgroundColor = System.Drawing.Color.Wheat;
             this.dgvPS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPS.Location = new System.Drawing.Point(190, 130);
             this.dgvPS.Name = "dgvPS";
+            this.dgvPS.ReadOnly = true;
             this.dgvPS.RowHeadersWidth = 51;
             this.dgvPS.Size = new System.Drawing.Size(653, 228);
             this.dgvPS.TabIndex = 9;

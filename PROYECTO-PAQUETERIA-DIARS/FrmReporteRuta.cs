@@ -65,7 +65,15 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvRutas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdRuta = dgvRutas.Rows[e.RowIndex].Cells["IdRuta"].Value.ToString();
+            try
+            {
+
+                IdRuta = dgvRutas.Rows[e.RowIndex].Cells["IdRuta"].Value.ToString();
+            }catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void FrmReporteRuta_Load(object sender, EventArgs e)

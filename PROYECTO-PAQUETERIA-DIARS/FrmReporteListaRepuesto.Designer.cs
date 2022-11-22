@@ -93,10 +93,13 @@
             // 
             // dgvListaRepuesto
             // 
+            this.dgvListaRepuesto.AllowUserToAddRows = false;
+            this.dgvListaRepuesto.AllowUserToDeleteRows = false;
             this.dgvListaRepuesto.BackgroundColor = System.Drawing.Color.LightGreen;
             this.dgvListaRepuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaRepuesto.Location = new System.Drawing.Point(124, 152);
             this.dgvListaRepuesto.Name = "dgvListaRepuesto";
+            this.dgvListaRepuesto.ReadOnly = true;
             this.dgvListaRepuesto.RowHeadersWidth = 51;
             this.dgvListaRepuesto.Size = new System.Drawing.Size(553, 201);
             this.dgvListaRepuesto.TabIndex = 7;

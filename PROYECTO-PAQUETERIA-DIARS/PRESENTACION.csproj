@@ -70,7 +70,7 @@
     <ManifestKeyFile>PRESENTACION_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
@@ -648,6 +648,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconoSoft.ico" />
+    <None Include="Resources\109666.jpg" />
+    <None Include="Resources\1719697.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

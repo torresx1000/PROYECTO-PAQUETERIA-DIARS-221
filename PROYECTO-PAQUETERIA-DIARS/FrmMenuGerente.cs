@@ -17,6 +17,19 @@ namespace PROYECTO_PAQUETERIA_DIARS
             InitializeComponent();
             lblCargo.Text = cargo;
             lblNombre.Text = nombre;
+            AbrirPanelistaIma(new Fondos());
+        }
+
+        public void AbrirPanelistaIma(object FormHijo)
+        {
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
+            Form fh = FormHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
+            fh.Show();
         }
         public void AbrirFrmInPanel(object FormHijo)
         {

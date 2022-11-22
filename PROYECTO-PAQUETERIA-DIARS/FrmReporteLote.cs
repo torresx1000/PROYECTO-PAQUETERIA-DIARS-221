@@ -45,7 +45,16 @@ namespace PROYECTO_PAQUETERIA_DIARS
 
         private void dgvLote_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            IdLote = dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString();
+            try
+            {
+
+                IdLote = dgvLote.Rows[e.RowIndex].Cells["IdLote"].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No es perminito", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void txtItem_TextChanged(object sender, EventArgs e)

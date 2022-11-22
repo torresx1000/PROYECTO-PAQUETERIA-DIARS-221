@@ -74,5 +74,10 @@ namespace PROYECTO_PAQUETERIA_DIARS
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             lblFecha.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void txthora_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

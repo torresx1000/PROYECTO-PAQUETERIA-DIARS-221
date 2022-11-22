@@ -72,6 +72,8 @@
             // 
             // dgvRutas
             // 
+            this.dgvRutas.AllowUserToAddRows = false;
+            this.dgvRutas.AllowUserToDeleteRows = false;
             this.dgvRutas.BackgroundColor = System.Drawing.Color.LightGreen;
             this.dgvRutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRutas.Location = new System.Drawing.Point(12, 271);

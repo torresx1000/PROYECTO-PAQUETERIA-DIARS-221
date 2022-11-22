@@ -65,9 +65,12 @@
             // 
             // dgvPlanilla
             // 
+            this.dgvPlanilla.AllowUserToAddRows = false;
+            this.dgvPlanilla.AllowUserToDeleteRows = false;
             this.dgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlanilla.Location = new System.Drawing.Point(6, 183);
             this.dgvPlanilla.Name = "dgvPlanilla";
+            this.dgvPlanilla.ReadOnly = true;
             this.dgvPlanilla.RowHeadersWidth = 51;
             this.dgvPlanilla.Size = new System.Drawing.Size(740, 323);
             this.dgvPlanilla.TabIndex = 15;
@@ -134,7 +137,7 @@
             this.Controls.Add(this.dgvPlanilla);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReportePlanilla";
             this.Text = "FrmReportePlanilla";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanilla)).EndInit();
