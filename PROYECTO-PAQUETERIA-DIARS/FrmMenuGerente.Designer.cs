@@ -70,7 +70,7 @@
             // 
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Location = new System.Drawing.Point(171, 640);
-            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -84,7 +84,7 @@
             // 
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Location = new System.Drawing.Point(25, 551);
-            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -98,7 +98,7 @@
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Location = new System.Drawing.Point(25, 457);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -112,7 +112,7 @@
             // 
             this.btnAtrabajadores.Depth = 0;
             this.btnAtrabajadores.Location = new System.Drawing.Point(25, 364);
-            this.btnAtrabajadores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtrabajadores.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtrabajadores.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAtrabajadores.Name = "btnAtrabajadores";
             this.btnAtrabajadores.Primary = true;
@@ -126,7 +126,7 @@
             // 
             this.btnAdminLogin.Depth = 0;
             this.btnAdminLogin.Location = new System.Drawing.Point(24, 250);
-            this.btnAdminLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdminLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdminLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdminLogin.Name = "btnAdminLogin";
             this.btnAdminLogin.Primary = true;
@@ -148,7 +148,9 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(667, 30);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(104, 25);
@@ -158,7 +160,9 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
+            this.lblCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
             this.lblCargo.Location = new System.Drawing.Point(911, 30);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(90, 25);
